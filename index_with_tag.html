@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+
+
+
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17340076883"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-17340076883');
+  gtag('config', 'G-47FC0D03XH');
+</script>
+
+</head>
+
+<body style="background-image: url('images/background.png'); background-size: cover; background-repeat: no-repeat; background-position: center; background-attachment: fixed; margin: 0; padding: 0;">
+
+<div style="position: absolute; top: 20px; left: 20px; z-index: 1000;">
+<img alt="FrescaClimaTech Logo" src="fct_logo_transparent.svg" style="height: 100px;"/>
+</div>
+<div id="lang-switch" style="position: fixed; top: 10px; right: 10px; z-index: 999;">
+<button onclick="switchLang('es')" style="margin-right: 5px;">🇪🇸 ES</button>
+<button onclick="switchLang('en')">🇬🇧 EN</button>
+</div>
+<header>
+<h1 style="margin-top: 100px;">FrescaClimaTech</h1>
+<h2 id="slogan"><span data-i18n="title"></span></h2>
+</header>
+<section class="services">
+<div class="service"><img src="air_unit_cleaning.png"/><h3></h3><p></p></div>
+<div class="service"><img src="window_cleaning.png"/><h3></h3><p></p></div>
+<div class="service"><img src="fabric_cleaning.png"/><h3></h3><p></p></div>
+<div class="service"><img src="handyman.png"/><h3></h3><p></p></div>
+<div class="service"><img src="inspection.png"/><h3></h3><p></p></div>
+
+
+</section>
+<section class="faq">
+<h2 id="faqTitle"><span data-i18n="title"></span></h2>
+<h3></h3><p class="faq-answer"></p>
+<h3></h3><p class="faq-answer"></p>
+<h3></h3><p class="faq-answer"></p>
+</section>
+<section class="subscribe">
+<h2 id="subTitle"><span data-i18n="title"></span></h2>
+<p id="thankYouMessage" style="display:none; color: green; font-weight: bold;"><span data-i18n="thankyou">¡Gracias! Hemos recibido tu mensaje.</span></p>
+<h2 style="text-align:center;">Suscríbete a nuestras ofertas</h2>
+<form action="thank-you.html" data-netlify="true" method="POST" name="contacto">
+<div class="form-group">
+<label for="nombre">Nombre:</label>
+<input id="nombre" name="name" required="" type="text"/>
+<label for="correo">Correo electrónico:</label>
+<input id="correo" name="email" required="" type="email"/>
+<label for="codigo-postal">Código postal:</label>
+<input id="codigo-postal" name="postal_code" required="" type="text"/>
+<button type="submit">Enviar</button>
+</div>
+</form></h2>
+</section>
+<footer>
+<p>Servicios para Propiedades | Limpieza de Aires · Manitas · Revisiones Preventa</p>
+<p>Costa y Sur de España · Madrid | <a href="mailto:info@frescaclimatech.es">info@frescaclimatech.es</a></p>
+<p><a href="https://www.instagram.com/frescaclimatech/" target="_blank">Instagram</a></p>
+</footer>
+<div class="whatsapp">
+<a href="https://wa.me/34657336353" target="_blank"><img alt="WhatsApp" src="whatsapp_icon.png"/></a>
+</div>
+<script>
+const translations = {
+  es: {
+    slogan: "Aire Fresco, Tejidos Limpios, Decisiones Claras",
+    services: [
+      ["Limpieza de Aire Acondicionado", "Desde 40 € por unidad. Envíe fotos para una cotización precisa."],
+      ["Limpieza de Ventanas", "Desde 30 €. Utilizamos equipos especiales para resultados cristalinos."],
+      ["Limpieza de Tejidos", "Desde 50 €. Sofás, alfombras, colchones. Proceso profundo de extracción."],
+      ["Servicios de Manitas", "Desde 30 €. Ayuda con tareas como colgar estanterías o lámparas."],
+      ["Inspección de Propiedades", "Desde 50 €. Revisiones presenciales o por video. Ideal para ventas."]
+    ],
+    faqTitle: "Preguntas Frecuentes",
+    faqs: [
+      ["¿Cuánto dura una limpieza?", "Normalmente de 1 a 3 horas."],
+      ["¿Qué métodos de pago aceptan?", "Solo efectivo. Próximamente Bizum y transferencias."],
+      ["¿Ofrecen inspecciones remotas?", "¡Sí! Podemos realizarlas por video."]
+    ],
+    subscribeButton: "Suscribirse",
+    thankyou: "¡Gracias! Hemos recibido tu mensaje."
+  },
+  en: {
+    slogan: "Fresh Air, Clean Fabrics, Clear Decisions",
+    services: [
+      ["Air Conditioning Cleaning", "From €40 per unit. Send photos for an accurate quote."],
+      ["Window Cleaning", "From €30. We use special tools for crystal clear results."],
+      ["Fabric Cleaning", "From €50. Deep cleaning for sofas, carpets, and mattresses."],
+      ["Handyman Services", "From €30. Help with tasks like hanging shelves or lights."],
+      ["Property Inspection", "From €50. In-person or video inspections for sales or rentals."]
+    ],
+    faqTitle: "Frequently Asked Questions",
+    faqs: [
+      ["How long does a cleaning take?", "Usually 1 to 3 hours."],
+      ["What payment methods do you accept?", "Cash only. Bizum and bank transfers coming soon."],
+      ["Do you offer remote inspections?", "Yes! We can do video inspections."]
+    ],
+    subscribeTitle: "Subscribe to Our Offers",
+    subscribeButton: "Subscribe",
+    thankyou: "Thank you! We've received your message."
+  }
+};
+
+function switchLang(lang) {
+  document.getElementById("slogan").textContent = translations[lang].slogan;
+  const titles = document.querySelectorAll(".service h3");
+  const descriptions = document.querySelectorAll(".service p");
+  translations[lang].services.forEach((s, i) => {
+    if (titles[i]) titles[i].textContent = s[0];
+    if (descriptions[i]) descriptions[i].textContent = s[1];
+  });
+  document.getElementById("faqTitle").textContent = translations[lang].faqTitle;
+  const q = document.querySelectorAll(".faq h3");
+  const a = document.querySelectorAll(".faq p.faq-answer");
+  translations[lang].faqs.forEach((faq, i) => {
+    if (q[i]) q[i].textContent = faq[0];
+    if (a[i]) a[i].textContent = faq[1];
+  });
+  document.getElementById("subTitle").textContent = translations[lang].subscribeTitle;
+  document.getElementById("subscribeBtn").textContent = translations[lang].subscribeButton;
+  document.querySelector("#thankYouMessage").textContent = translations[lang].thankyou;
+}
+
+document.addEventListener("DOMContentLoaded", () => switchLang("es"));
+document.querySelector(".subscribe form").addEventListener("submit", function(e) {
+  e.preventDefault();
+  const form = this;
+  fetch(form.action, {
+    method: "POST",
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  }).then(response => {
+    if (response.ok) {
+      document.getElementById("thankYouMessage").style.display = "block";
+      form.reset();
+    }
+  });
+});
+</script>
+
+<footer style="text-align:center; padding: 20px; font-size: 14px; background-color: #f8f8f8;">
+    © 2025 FRESCACLIMATECH, SOCIEDAD LIMITADA · <a href="privacy-policy.html" target="_blank">Privacy Policy</a>
+</footer>
+</body>
+</html>

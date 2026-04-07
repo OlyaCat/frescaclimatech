@@ -1,0 +1,670 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>Limpieza de Sofás en Costa Tropical | FrescaClimaTech</title>
+  <meta name="description" content="Limpieza profesional de sofás, colchones, alfombras y tapicería en Costa Tropical. Servicio para apartamentos turísticos, hoteles y viviendas. Presupuesto rápido por WhatsApp." />
+  <link rel="canonical" href="https://frescaclimatech.es/costa-tropical" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Limpieza de Sofás en Costa Tropical | FrescaClimaTech" />
+  <meta property="og:description" content="Servicio profesional · Hoteles y apartamentos turísticos · Productos ecológicos · Atención rápida por WhatsApp." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://frescaclimatech.es/costa-tropical" />
+  <meta property="og:image" content="https://frescaclimatech.es/assets/costa_tropical_sofa.jpg" />
+
+  <!-- Basic styles -->
+  <style>
+    :root{
+      --bg: #fbfaf7;
+      --card: #ffffff;
+      --text: #1f1f1f;
+      --muted: rgba(31,31,31,.72);
+      --border: rgba(31,31,31,.12);
+      --gold: #c9a24a;
+      --shadow: 0 14px 40px rgba(0,0,0,.08);
+      --radius: 18px;
+      --max: 1100px;
+    }
+
+    *{ box-sizing: border-box; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      color: var(--text);
+      background: linear-gradient(180deg, #fbfaf7 0%, #f6f3ed 100%);
+      line-height: 1.35;
+    }
+    a{ color: inherit; text-decoration: none; }
+    .container{ width: min(var(--max), 92vw); margin: 0 auto; }
+
+    /* Top bar */
+    .topbar{
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(10px);
+      background: rgba(251,250,247,.82);
+      border-bottom: 1px solid var(--border);
+    }
+    .topbar-inner{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      padding: 12px 0;
+      gap: 12px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-weight: 700;
+      letter-spacing:.2px;
+    }
+
+    .brand-logo{ height: 34px; width:auto; display:block; }
+    .brand-name{
+      color: var(--gold);
+      font-weight: 700;
+      font-size: 22px;
+      letter-spacing: .2px;
+    }
+
+    .lang{
+      display:flex; gap:8px; align-items:center;
+      font-size:14px; color: var(--muted);
+    }
+    .lang button{
+      border:1px solid var(--border);
+      background: var(--card);
+      padding:7px 10px;
+      border-radius: 999px;
+      cursor:pointer;
+      font-weight:600;
+    }
+    .lang button.active{
+      border-color: rgba(201,162,74,.55);
+      box-shadow: 0 0 0 4px rgba(201,162,74,.12);
+    }
+
+    /* Hero */
+    .hero{ padding: 54px 0 22px; }
+    .hero-grid{
+      display:grid;
+      grid-template-columns: 1.25fr .75fr;
+      gap: 22px;
+      align-items: stretch;
+    }
+    @media (max-width: 860px){
+      .hero-grid{ grid-template-columns: 1fr; }
+    }
+
+    .hero-card{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-card::before{
+      content:"";
+      position:absolute; inset:-1px;
+      background: radial-gradient(900px 340px at 15% 0%, rgba(201,162,74,.16), transparent 55%),
+                  radial-gradient(700px 300px at 90% 20%, rgba(0,0,0,.06), transparent 60%);
+      pointer-events:none;
+    }
+    .hero-card > *{ position: relative; }
+
+    .kicker{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(201,162,74,.10);
+      border: 1px solid rgba(201,162,74,.25);
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: .6px;
+      text-transform: uppercase;
+    }
+
+    h1{
+      margin: 14px 0 10px;
+      font-size: clamp(28px, 3.4vw, 44px);
+      line-height: 1.05;
+      letter-spacing: -.6px;
+    }
+    .subtitle{
+      margin: 0 0 18px;
+      color: var(--muted);
+      font-size: 16px;
+      max-width: 62ch;
+    }
+
+    .cta-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 12px;
+      align-items:center;
+      margin-top: 14px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding: 14px 18px;
+      border-radius: 999px;
+      font-weight: 800;
+      border: 1px solid var(--border);
+      cursor:pointer;
+      transition: transform .06s ease, box-shadow .2s ease;
+      user-select:none;
+    }
+    .btn:active{ transform: translateY(1px); }
+
+    .btn-wa{
+      background: var(--gold);
+      border-color: rgba(0,0,0,.08);
+      box-shadow: 0 10px 22px rgba(201,162,74,.28);
+    }
+    .btn-ghost{ background: var(--card); }
+
+    .trust{
+      margin-top: 14px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .trust strong{ color: var(--text); }
+
+    /* Side image card */
+    .image-card{
+      min-height: 320px;
+      border-radius: var(--radius);
+      overflow:hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      background: #ddd;
+      position: relative;
+    }
+    .image-card .overlay{
+      position:absolute; inset:0;
+      background: linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.25));
+    }
+    .image-card .label{
+      position:absolute;
+      left: 16px; bottom: 16px;
+      background: rgba(255,255,255,.86);
+      border: 1px solid rgba(255,255,255,.65);
+      padding: 10px 12px;
+      border-radius: 14px;
+      font-weight: 800;
+      font-size: 13px;
+    }
+    /* YOUR Costa Tropical image */
+    .image-card{
+      background-image: url("costa-tropical_sofa.jpg");
+      background-size: 120%;
+      background-position: center;
+    }
+
+    /* Sections */
+    section.block{ padding: 26px 0; }
+    .section-title{ font-size: 22px; margin: 0 0 10px; letter-spacing: -.2px; }
+    .section-sub{ margin: 0 0 18px; color: var(--muted); }
+
+    .grid-3{
+      display:grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 14px;
+    }
+    @media (max-width: 860px){
+      .grid-3{ grid-template-columns: 1fr; }
+    }
+
+    .card{
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: 0 10px 26px rgba(0,0,0,.06);
+      padding: 18px;
+    }
+    .card h3{ margin: 0 0 8px; font-size: 16px; }
+    .card p{ margin: 0; color: var(--muted); }
+
+    .pill-list{
+      display:flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .pill{
+      background: rgba(0,0,0,.04);
+      border: 1px solid var(--border);
+      padding: 10px 12px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    .steps{
+      display:grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 14px;
+    }
+    @media (max-width: 860px){
+      .steps{ grid-template-columns: 1fr; }
+    }
+    .step-num{
+      width: 34px; height: 34px;
+      border-radius: 10px;
+      background: rgba(201,162,74,.14);
+      border: 1px solid rgba(201,162,74,.25);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-weight: 900;
+      margin-bottom: 10px;
+    }
+
+    details{
+      border: 1px solid var(--border);
+      background: var(--card);
+      border-radius: 14px;
+      padding: 14px 14px;
+    }
+    details + details{ margin-top: 10px; }
+    summary{ cursor:pointer; font-weight: 800; }
+    details p{ color: var(--muted); margin: 10px 0 0; }
+
+    /* Final CTA */
+    .final-cta{
+      background: radial-gradient(900px 340px at 20% 0%, rgba(201,162,74,.18), transparent 55%),
+                  linear-gradient(180deg, rgba(255,255,255,.8), rgba(255,255,255,.95));
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      padding: 30px 0;
+      margin: 22px 0;
+    }
+    .final-inner{
+      display:flex;
+      flex-wrap:wrap;
+      align-items:center;
+      justify-content:space-between;
+      gap: 14px;
+    }
+    .final-inner h2{ margin: 0; font-size: 22px; }
+    .final-inner p{ margin: 4px 0 0; color: var(--muted); }
+
+    footer{
+      padding: 26px 0 36px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    footer .links{ display:flex; gap:12px; flex-wrap:wrap; margin-top: 10px; }
+    footer a{ text-decoration: underline; }
+  </style>
+
+  <!-- LocalBusiness schema (optimized) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "FrescaClimaTech",
+    "url": "https://frescaclimatech.es/costa-tropical",
+    "areaServed": "Costa Tropical",
+    "telephone": "+34 657 33 63 53",
+    "description": "Limpieza profesional de sofás, colchones, alfombras y tapicería en Costa Tropical. Servicio para hoteles, apartamentos turísticos, villas vacacionales y viviendas particulares."
+  }
+  </script>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-47FC0D03XH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    /* GA4 */
+    gtag('config', 'G-47FC0D03XH');
+
+    /* Google Ads */
+    gtag('config', 'AW-17340076883');
+    gtag('config', 'AW-17385730363');
+  </script>
+</head>
+
+<body>
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="container">
+      <div class="topbar-inner">
+        <div class="brand">
+          <img class="brand-logo" src="fct_logo_transparent.svg" alt="FCT logo">
+          <span class="brand-name">FrescaClimaTech</span>
+        </div>
+
+        <div class="lang">
+          <span id="langLabel">Idioma:</span>
+          <button id="btnES" class="active" type="button">ES</button>
+          <button id="btnEN" type="button">EN</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div class="hero-card">
+          <div class="kicker" data-i18n="kicker">Servicio premium en Costa Tropical</div>
+          <h1 data-i18n="h1">Limpieza profesional de sofás en Costa Tropical</h1>
+          <p class="subtitle" data-i18n="subtitle">
+            Para hoteles, apartamentos turísticos y viviendas. Equipos profesionales · Productos ecológicos · Atención rápida por WhatsApp.
+          </p>
+
+          <div class="cta-row">
+            <a id="waCtaTop" class="btn btn-wa" target="_blank" rel="noopener">
+              💬 <span data-i18n="cta1">Solicitar presupuesto por WhatsApp</span>
+            </a>
+            <a href="https://g.page/r/CVK2NpIvzkvdEBM/review" class="btn btn-ghost" target="_blank" rel="noopener">
+              ⭐ <span data-i18n="cta2">Ver opiniones en Google</span>
+            </a>
+          </div>
+
+          <div class="trust">
+            ⭐⭐⭐⭐⭐ <span data-i18n="trust_line1"></span>
+            <br>
+            <span data-i18n="trust_locations"></span>
+          </div>
+        </div>
+
+        <div class="image-card" aria-label="Costa Tropical sofa cleaning image">
+          <div class="overlay"></div>
+          <div class="label" data-i18n="imgLabel">Hoteles · Apartamentos turísticos · Viviendas</div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- SERVICES -->
+  <section class="block">
+    <div class="container">
+      <h2 class="section-title" data-i18n="servicesTitle">Servicios disponibles en Costa Tropical</h2>
+      <p class="section-sub" data-i18n="servicesSub">
+        Limpieza profunda, resultados visibles y atención cuidada para alojamientos y hogares.
+      </p>
+
+      <div class="pill-list">
+        <div class="pill" data-i18n="s1">Sofás</div>
+        <div class="pill" data-i18n="s2">Colchones</div>
+        <div class="pill" data-i18n="s3">Alfombras</div>
+        <div class="pill" data-i18n="s4">Tapicería / sillas</div>
+        <div class="pill" data-i18n="s5">Eliminación de olores</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFITS -->
+  <section class="block">
+    <div class="container">
+      <h2 class="section-title" data-i18n="benefitsTitle">Por qué nos eligen</h2>
+
+      <div class="grid-3">
+        <div class="card">
+          <h3 data-i18n="b1t">Ideal para alta rotación</h3>
+          <p data-i18n="b1d">Perfecto para apartamentos turísticos y hoteles: limpieza rápida y organizada.</p>
+        </div>
+        <div class="card">
+          <h3 data-i18n="b2t">Resultados profesionales</h3>
+          <p data-i18n="b2d">Eliminamos manchas, ácaros y olores con equipos especializados.</p>
+        </div>
+        <div class="card">
+          <h3 data-i18n="b3t">Productos ecológicos</h3>
+          <p data-i18n="b3d">Seguros para huéspedes, niños, mascotas y tejidos delicados.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="block">
+    <div class="container">
+      <h2 class="section-title" data-i18n="howTitle">Cómo funciona</h2>
+      <p class="section-sub" data-i18n="howSub">Simple, rápido y sin llamadas largas.</p>
+
+      <div class="steps">
+        <div class="card">
+          <div class="step-num">1</div>
+          <h3 data-i18n="st1t">Escribe por WhatsApp</h3>
+          <p data-i18n="st1d">Indica zona, tipo de mueble y tamaño. Puedes enviar fotos.</p>
+        </div>
+        <div class="card">
+          <div class="step-num">2</div>
+          <h3 data-i18n="st2t">Te damos una estimación</h3>
+          <p data-i18n="st2d">Respuesta rápida con precio orientativo y disponibilidad.</p>
+        </div>
+        <div class="card">
+          <div class="step-num">3</div>
+          <h3 data-i18n="st3t">Servicio en tu propiedad</h3>
+          <p data-i18n="st3d">Limpieza profesional con cuidado del tejido y acabado premium.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="block">
+    <div class="container">
+      <h2 class="section-title" data-i18n="faqTitle">Preguntas frecuentes</h2>
+
+      <details>
+        <summary data-i18n="q1">¿Puedo enviar fotos por WhatsApp?</summary>
+        <p data-i18n="a1">Sí. Las fotos nos ayudan a estimar mejor el precio y el tipo de tratamiento.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="q2">¿El servicio es seguro para huéspedes y familias?</summary>
+        <p data-i18n="a2">Sí. Usamos productos ecológicos y métodos profesionales adecuados para hogares y alojamientos.</p>
+      </details>
+
+      <details>
+        <summary data-i18n="q3">¿Cuánto tarda en secar?</summary>
+        <p data-i18n="a3">Depende del tejido y ventilación.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="container">
+      <div class="final-inner">
+        <div>
+          <h2 data-i18n="finalTitle">¿Listo para un presupuesto rápido?</h2>
+          <p data-i18n="finalSub">Escríbenos por WhatsApp y envía fotos si quieres.</p>
+        </div>
+        <a id="waCtaBottom" class="btn btn-wa" target="_blank" rel="noopener">
+          💬 <span data-i18n="finalBtn">Contactar por WhatsApp</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div><strong>FrescaClimaTech</strong> · <span data-i18n="footerArea">Costa Tropical</span></div>
+      <div class="links">
+        <a href="mailto:info@frescaclimatech.es">info@frescaclimatech.es</a>
+        <a href="/" data-i18n="footerHome">Inicio</a>
+        <a href="/politica-privacidad" data-i18n="footerPrivacy">Política de privacidad</a>
+      </div>
+      <div style="margin-top:10px;">© <span id="year"></span> FrescaClimaTech. All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    // ===== WHATSAPP CONFIG =====
+    const PHONE = "34657336353"; // without +
+
+    function buildWaLink(lang){
+      const messageES = `Hola, quisiera solicitar un presupuesto para limpieza en Costa Tropical.
+
+Zona:
+Tipo de servicio:
+Tamaño aproximado:
+
+Adjuntaré fotos para referencia. Gracias.`;
+
+      const messageEN = `Hello, I’d like a quote for cleaning in Costa Tropical.
+
+Area:
+Type of service:
+Approximate size:
+
+I will attach photos for reference. Thank you.`;
+
+      const message = lang === "es" ? messageES : messageEN;
+      return `https://wa.me/${PHONE}?text=${encodeURIComponent(message)}`;
+    }
+
+    // i18n
+    const dict = {
+      es: {
+        langLabel: "Idioma:",
+        kicker: "Servicio profesional en Costa Tropical",
+        h1: "Limpieza profesional de sofás en Costa Tropical",
+        subtitle: "Para hoteles, apartamentos turísticos y viviendas. Equipos profesionales · Productos ecológicos · Atención rápida por WhatsApp.",
+        cta1: "Solicitar presupuesto por WhatsApp",
+        cta2: "Ver opiniones en Google",
+        trust_line1: "<strong>Clientes satisfechos</strong> · Respuesta rápida · Puedes enviar fotos por WhatsApp",
+        trust_locations: "📍 Almuñécar · La Herradura · Salobreña · Motril · Torrenueva · Calahonda",
+        imgLabel: "Hoteles · Apartamentos turísticos · Viviendas",
+        servicesTitle: "Servicios disponibles en Costa Tropical",
+        servicesSub: "Limpieza profunda, resultados visibles y atención cuidada para alojamientos y hogares.",
+        s1: "Sofás", s2: "Colchones", s3: "Alfombras", s4: "Tapicería / sillas", s5: "Eliminación de olores",
+        benefitsTitle: "Por qué nos eligen",
+        b1t: "Ideal para alta rotación",
+        b1d: "Perfecto para apartamentos turísticos y hoteles: limpieza rápida y organizada.",
+        b2t: "Resultados profesionales",
+        b2d: "Eliminamos manchas, ácaros y olores con equipos especializados.",
+        b3t: "Productos ecológicos",
+        b3d: "Seguros para huéspedes, niños, mascotas y tejidos delicados.",
+        howTitle: "Cómo funciona",
+        howSub: "Simple, rápido y sin llamadas largas.",
+        st1t: "Escribe por WhatsApp",
+        st1d: "Indica zona, tipo de mueble y tamaño. Puedes enviar fotos.",
+        st2t: "Te damos una estimación",
+        st2d: "Respuesta rápida con precio orientativo y disponibilidad.",
+        st3t: "Servicio en tu propiedad",
+        st3d: "Limpieza profesional con cuidado del tejido y acabado premium.",
+        faqTitle: "Preguntas frecuentes",
+        q1: "¿Puedo enviar fotos por WhatsApp?",
+        a1: "Sí. Las fotos nos ayudan a estimar mejor el precio y el tipo de tratamiento.",
+        q2: "¿El servicio es seguro para huéspedes y familias?",
+        a2: "Sí. Usamos productos ecológicos y métodos profesionales adecuados para hogares y alojamientos.",
+        q3: "¿Cuánto tarda en secar?",
+        a3: "Depende del tejido y ventilación.",
+        finalTitle: "¿Listo para un presupuesto rápido?",
+        finalSub: "Escríbenos por WhatsApp y envía fotos si quieres.",
+        finalBtn: "Contactar por WhatsApp",
+        footerArea: "Costa Tropical",
+        footerHome: "Inicio",
+        footerPrivacy: "Política de privacidad"
+      },
+      en: {
+        langLabel: "Language:",
+        kicker: "Professional service in Costa Tropical",
+        h1: "Professional sofa cleaning in Costa Tropical",
+        subtitle: "For hotels, holiday apartments and homes. Professional equipment · Eco-friendly products · Fast WhatsApp response.",
+        cta1: "Get a quote via WhatsApp",
+        cta2: "See Google reviews",
+        trust_line1: "<strong>Happy clients</strong> · Fast response · You can send photos via WhatsApp",
+        trust_locations: "📍 Almuñécar · La Herradura · Salobreña · Motril · Torrenueva · Calahonda",
+        imgLabel: "Hotels · Holiday apartments · Homes",
+        servicesTitle: "Services in Costa Tropical",
+        servicesSub: "Deep cleaning, visible results and premium care for rentals and homes.",
+        s1: "Sofas", s2: "Mattresses", s3: "Rugs", s4: "Upholstery / chairs", s5: "Odour removal",
+        benefitsTitle: "Why clients choose us",
+        b1t: "Perfect for high turnover",
+        b1d: "Ideal for holiday rentals and hotels: fast, clean, organised service.",
+        b2t: "Professional results",
+        b2d: "We remove stains, mites and odours with specialised equipment.",
+        b3t: "Eco-friendly products",
+        b3d: "Safe for guests, kids, pets and delicate fabrics.",
+        howTitle: "How it works",
+        howSub: "Simple and fast — no long calls.",
+        st1t: "Message us on WhatsApp",
+        st1d: "Share area, item type and size. You can send photos.",
+        st2t: "We send an estimate",
+        st2d: "Fast reply with an estimated price and availability.",
+        st3t: "Service at your property",
+        st3d: "Professional cleaning with fabric care and a premium finish.",
+        faqTitle: "FAQ",
+        q1: "Can I send photos via WhatsApp?",
+        a1: "Yes. Photos help us estimate price and the right treatment.",
+        q2: "Is it safe for guests and families?",
+        a2: "Yes. We use eco-friendly products and professional methods suitable for homes and hotels.",
+        q3: "How long does it take to dry?",
+        a3: "It depends on fabric and ventilation.",
+        finalTitle: "Ready for a quick quote?",
+        finalSub: "Message us on WhatsApp and send photos if you want.",
+        finalBtn: "Contact via WhatsApp",
+        footerArea: "Costa Tropical",
+        footerHome: "Home",
+        footerPrivacy: "Privacy policy"
+      }
+    };
+
+    function setLang(lang){
+      document.documentElement.lang = lang;
+
+      document.getElementById("btnES").classList.toggle("active", lang==="es");
+      document.getElementById("btnEN").classList.toggle("active", lang==="en");
+
+      document.getElementById("langLabel").textContent = dict[lang].langLabel;
+
+      document.querySelectorAll("[data-i18n]").forEach(el=>{
+        const key = el.getAttribute("data-i18n");
+        const val = dict[lang][key];
+        if(!val) return;
+        el.innerHTML = val;
+      });
+
+      const link = buildWaLink(lang);
+      document.getElementById("waCtaTop").href = link;
+      document.getElementById("waCtaBottom").href = link;
+    }
+
+    document.getElementById("btnES").addEventListener("click", ()=>setLang("es"));
+    document.getElementById("btnEN").addEventListener("click", ()=>setLang("en"));
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+    setLang("es");
+  </script>
+
+  <!-- WhatsApp click tracking -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      document.querySelectorAll('#waCtaTop, #waCtaBottom').forEach(function(btn) {
+        btn.addEventListener("click", function() {
+          if (typeof gtag === "function") {
+            gtag('event', 'whatsapp_click', {
+              event_category: 'contact',
+              event_label: 'Costa Tropical WhatsApp Button',
+              page_location: window.location.href
+            });
+          }
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
