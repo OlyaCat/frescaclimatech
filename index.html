@@ -1,0 +1,3903 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>FrescaClimaTech</title>
+  <link href="favicon.png" rel="icon" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet" />
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Outfit', sans-serif;
+  color: #222;              /* nice soft black */
+}
+
+
+
+
+.hero { position: relative; z-index: 10; text-align: center; }
+.hero img, .hero h1, .hero .logo { vertical-align: middle; margin-top: -6px; }
+
+
+
+    .logo {
+      width: 80px;
+      margin: 0 auto;
+    }
+    h1, h2 {
+      margin: 0.5rem 0;
+    }
+    
+    
+    .faq, .subscribe, footer {
+      text-align: center;
+      padding: 2rem;
+      background: rgba(255,255,255,0.9);
+      max-width: 800px;
+      margin: auto;
+    }
+    .subscribe input {
+      padding: 0.4rem;
+      margin: 0.4rem;
+    }
+    .subscribe button {
+      padding: 0.6rem 1.2rem;
+      background-color: #d4af37;
+      border: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+.stats-proof {
+  padding: 30px 16px 10px;
+}
+
+.stats-proof-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.9);
+  border-radius: 18px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+  padding: 24px 18px;
+  text-align: center;
+}
+
+.stats-kicker {
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #b68714;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.stats-proof-inner h2 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.stats-sub {
+  margin-bottom: 18px;
+  color: #444;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 14px;
+}
+
+@media (min-width: 760px) {
+  .stats-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.stat-card {
+  background: rgba(212,175,55,0.1);
+  border: 1px solid rgba(212,175,55,0.25);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.stat-number {
+  font-size: 34px;
+  font-weight: 800;
+  margin-bottom: 6px;
+}
+
+.stat-label {
+  font-size: 15px;
+  color: #333;
+}
+
+
+/* Subscribe form – vertical column layout */
+.subscribe .form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px; /* spacing between items */
+}
+
+.subscribe label {
+  display: block;
+  font-weight: 600;
+  margin-top: 6px;
+}
+
+.subscribe input {
+  width: min(320px, 100%);
+  box-sizing: border-box;
+}
+
+.subscribe button {
+  margin-top: 10px;
+}
+
+
+footer {
+  background: rgba(0,0,0,0.75);
+  padding: 40px 20px;
+  color: #f3e2a1;
+  text-align: center;
+  font-family: 'Outfit', sans-serif;
+  margin-top: 40px;
+}
+
+footer p {
+  margin: 10px 0;
+  line-height: 1.6;
+  font-size: 16px;
+}
+
+footer strong {
+  color: #d4af37;
+  font-size: 18px;
+  letter-spacing: 0.3px;
+}
+
+footer a {
+  color: #d4af37;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+    
+    .whatsapp {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+    .whatsapp img {
+      width: 50px;
+    }
+    button { border: none !important; outline: none !important; box-shadow: none !important; }
+
+   
+      .whatsapp {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 1000;
+        display: block;
+      }
+      .whatsapp img { width: 50px; }
+      #slogan {
+        margin-top: 80px !important;
+        font-size: 20px;
+        padding: 0 15px;
+        text-align: center;
+      }
+    
+
+
+
+
+
+
+
+
+
+    /* FAQ Accordion */
+    .accordion { max-width: 800px; margin: 0 auto; text-align: left; }
+    .accordion details {
+      background: rgba(255,255,255,0.9);
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 10px;
+      margin: 10px 0;
+      overflow: hidden;
+      transition: box-shadow .2s ease;
+    }
+    .accordion details[open] { box-shadow: 0 6px 18px rgba(0,0,0,0.06); }
+    .accordion summary {
+      cursor: pointer;
+      padding: 16px 56px 16px 16px;
+      font-weight: 700;
+      font-size: 1.05rem;
+      outline: none;
+      list-style: none;
+      position: relative;
+    }
+    .accordion summary::-webkit-details-marker { display: none; }
+    .accordion summary::after {
+      content: "";
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      width: 10px;
+      height: 10px;
+      border-right: 2px solid #222;
+      border-bottom: 2px solid #222;
+      transform: translateY(-50%) rotate(45deg);
+      transition: transform .2s ease;
+    }
+    .accordion details[open] summary::after {
+      transform: translateY(-50%) rotate(-135deg);
+    }
+    .accordion .acc-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .25s ease, padding .25s ease;
+      padding: 0 16px;
+    }
+    .accordion details[open] .acc-content {
+      max-height: 400px;
+      padding: 0 16px 16px;
+    }
+    .accordion .acc-content p { margin: 12px 0 0; line-height: 1.5; }
+
+    /* Service cards */
+    .svc-wrap { display:flex; flex-wrap:wrap; gap:22px; justify-content:center; padding:20px; }
+   
+    .svc-media img, .svc-media video { width:100%; display:block; aspect-ratio: 16/9; object-fit: cover; }
+    .svc-body { padding: 14px 16px 18px; }
+    .svc-body h3 { margin: 0 0 6px; }
+    .svc-meta { display:flex; gap:8px; flex-wrap:wrap; margin:10px 0 14px; }
+    .badge { background:#d4af37; color:#111; padding:4px 10px; border-radius:999px; font-size:.85rem; font-weight:600; }
+    .badge-light { background:#f0e7c0; color:#333; }
+    .svc-actions { display:flex; gap:10px; flex-wrap:wrap; }
+    .btn { padding:10px 14px; border-radius:10px; font-weight:700; cursor:pointer; text-decoration:none; display:inline-block; }
+    .btn-primary { background:#d4af37; color:#111; border:0; }
+    .btn-outline { background:transparent; color:#111; border:2px solid #111; }
+
+    /* Modal */
+    .svc-modal { position:fixed; inset:0; background:rgba(0,0,0,.55); display:none; align-items:center; justify-content:center; padding:20px; z-index:2000; }
+    .svc-modal[aria-hidden="false"] { display:flex; }
+    .svc-modal__dialog {
+  position: relative;
+  background: #fff;
+  border-radius: 16px;
+  max-width: 980px;
+  width: 100%;
+  overflow: hidden;
+
+  /* Better proportions: smaller gallery, bigger content */
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 0;
+
+  /* Prevent overly tall modal */
+  max-height: 86vh;
+}
+
+/* Prevent empty tall feeling */
+.svc-modal__media,
+.svc-modal__content {
+  max-height: 86vh;
+  overflow: auto;
+}
+
+    .svc-modal__close { position:absolute; top:12px; right:16px; background:#000; color:#fff; border:0; width:36px; height:36px; border-radius:50%; cursor:pointer; }
+    .svc-modal__media { padding:16px; display:grid; gap:10px; background:#fafafa; }
+    .svc-modal__media img, .svc-modal__media video { width:100%; border-radius:10px; object-fit:cover; }
+    .svc-modal__content { padding:18px 20px 22px; }
+    .svc-grid { display:grid; grid-template-columns: 1fr 1fr; gap:18px; margin:12px 0 10px; }
+    .svc-info { display:flex; gap:18px; flex-wrap:wrap; padding:8px 0 14px; color:#333; }
+
+    @media (max-width: 900px) {
+      .svc-modal__dialog { grid-template-columns: 1fr; }
+      .svc-grid { grid-template-columns: 1fr; }
+    }
+
+    
+
+    /* clamp teaser text to 3 lines */
+    .clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+
+    /* secondary button (More details) */
+    .btn-secondary { background: transparent; border: 2px solid #111; color: #111; border-radius: 10px; padding: 10px 14px; font-weight: 700; cursor: pointer; }
+    .svc-modal { cursor: pointer; }
+    .svc-modal__dialog { cursor: default; }
+
+/* Ultra-slim black promo bar */
+.promo-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3px;
+  padding: 0 4px;        /* no vertical padding → very slim */
+  height: 16px;          /* fixed slim height */
+  background: #000;
+  color: #f3e2a1;
+  font-size: 11px;
+  line-height: 16px;     /* matches height */
+  border-bottom: 1px solid rgba(0,0,0,.3);
+}
+
+.promo-bar .btn-small {
+  padding: 0 5px;
+  font-size: 11px;
+  line-height: 14px;
+  height: 14px;
+}
+
+.promo-close {
+  top: 0;
+  right: 4px;
+  font-size: 12px;
+  line-height: 16px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Keep header visible under slim bar */
+.has-promo header {
+  margin-top: 10px;   /* almost no push-down */
+}
+
+
+/* Adjust header spacing when promo bar is shown */
+.has-promo header {
+  margin-top: 28px;      /* was 40px / 56px → now smaller so logo stays visible */
+}
+
+#promoBar { display: none !important; }
+
+    .promo-bar.hidden { display: none; }
+    .promo-bar .btn-small { background:#d4af37; color:#111; border-radius:10px; padding:6px 10px; font-weight:700; text-decoration:none; display:inline-block; }
+    .promo-close {
+    position:absolute; right:10px; top:6px;
+    background:transparent; border:none; color:#f3e2a1;
+    font-size:20px; line-height:1; cursor:pointer;
+    }
+
+/* Promo bar — slimmer */
+.promo-bar {
+  position: sticky;
+  top: 0;
+  z-index: 1100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 6px 10px;          /* was ~10–12px → thinner */
+  background: #111;
+  color: #f3e2a1;
+  border-bottom: 1px solid rgba(0,0,0,.1);
+  font-size: 14px;            /* slightly smaller text */
+  line-height: 1.2;
+}
+.promo-bar.hidden { display: none; }
+
+.promo-bar .btn-small {
+  background: #d4af37;
+  color: #111;
+  border-radius: 10px;
+  padding: 4px 10px;          /* was 6px 10px → slimmer */
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;            /* match bar text size */
+}
+
+.promo-close {
+  position: absolute;
+  right: 8px;                 /* tighter */
+  top: 4px;                   /* tighter */
+  background: transparent;
+  border: none;
+  color: #f3e2a1;
+  font-size: 16px;            /* smaller X */
+  line-height: 1;
+  cursor: pointer;
+}
+
+/* Give the hero a little breathing room when the promo bar is visible */
+.has-promo header { 
+  margin-top: 40px;           /* was 56px → matches slimmer bar */
+}
+
+/* Optional: on very small screens make it even tighter */
+@media (max-width: 480px) {
+  .promo-bar {
+    padding: 5px 8px;
+    font-size: 13px;
+  }
+  .promo-bar .btn-small {
+    padding: 3px 8px;
+    font-size: 13px;
+  }
+  .promo-close {
+    top: 2px;
+    right: 6px;
+    font-size: 15px;
+  }
+}
+
+
+    /* Give the hero a little breathing room when the promo bar is visible */
+    .has-promo header { margin-top: 56px; }
+  
+
+@media (max-width: 768px) {
+  body {
+    background-image: url('images/mediterranean_hero.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+#slogan {
+  margin-top: 80px;   /* default for desktop */
+  margin-bottom: 20px;
+  font-family: 'Outfit', sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* On mobile, pull it higher */
+@media (max-width: 768px) {
+  #slogan {
+    margin-top: 40px;
+    font-size: 20px;
+  }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 245, 230, 0.55), /* warm beige glow */
+    rgba(255, 255, 255, 0.20), /* soft fade */
+    rgba(255, 255, 255, 0)     /* transparent */
+  );
+  z-index: -1;
+  pointer-events: none;
+}
+
+
+
+  /* === FINAL STYLE FOR SERVICE CARDS === */
+.svc-card {
+  width: clamp(280px, 100%, 420px);
+  background: rgba(255, 255, 255, 0.92);  /* a bit more transparent */
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  margin: 0 auto 24px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Outfit', sans-serif;
+}
+
+.svc-card img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.svc-body {
+  padding: 18px 22px 22px;
+}
+
+.svc-body h3 {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111;              /* same deep color as footer text */
+}
+
+.svc-body p {
+  margin: 0 0 12px;
+  line-height: 1.5;
+  color: #333;
+  font-size: 0.98rem;
+}
+
+.price {
+  font-weight: 700;
+  margin: 6px 0 10px;
+  color: #111;
+}
+
+.micro-list {
+  margin: 10px 0 16px;
+  padding: 0;
+  list-style: none;
+  font-size: 0.86rem;
+  color: #444;
+  opacity: 0.85;
+  font-family: 'Outfit', sans-serif;
+}
+
+.micro-list li::before {
+  content: "✔ ";
+  color: #b68714;
+  font-weight: 700;
+}
+
+
+/* Buttons in cards */
+.svc-actions .btn {
+  background: #d4af37;
+  color: #111;
+  text-decoration: none;
+  padding: 10px 18px;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+.svc-actions .btn-secondary {
+  background: transparent;
+  border: 2px solid #111;
+  color: #111;
+  border-radius: 12px;
+  padding: 10px 18px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.svc-actions .btn:hover,
+.svc-actions .btn-secondary:hover {
+  filter: brightness(1.05);
+}
+
+
+
+/* === FINAL STYLE FOR SERVICE CARDS === */
+.svc-card {
+  width: clamp(280px, 100%, 420px);         /* 1 per row on mobile */
+  background: rgba(255, 255, 255, 0.92);    /* transparent white */
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  margin: 0 auto 24px;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Outfit', sans-serif;
+}
+
+/* Desktop: 3 cards per row */
+@media (min-width: 768px) {
+  .services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 22px;
+    padding: 20px;
+  }
+
+  .svc-card {
+    width: clamp(300px, 31%, 420px);        /* ≈ 3 across */
+  }
+}
+
+/* ===========================
+   HERO CLEAN + FINAL VERSION
+   =========================== */
+
+.hero {
+  position: relative;
+  z-index: 1;
+  padding-top: 8px !important;
+  padding-bottom: 20px !important;
+  text-align: center;
+}
+
+.hero-inner {
+  max-width: 780px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-trust {
+  margin: 8px 0 10px;
+  font-size: 14px;
+}
+
+.hero-trust-link {
+  color: #111;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.hero-trust-link:hover {
+  text-decoration: underline;
+}
+
+.hero-micro {
+  margin: 10px 0 0;
+  font-size: 14px;
+  color: #333;
+  opacity: 0.9;
+}
+
+/* =========================
+   LAYER 2: PROOF SECTION
+   ========================= */
+
+.proof {
+  padding: 26px 16px 10px;
+}
+
+.proof-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.88);
+  border-radius: 18px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+  padding: 20px 18px 18px;
+}
+
+.proof-title {
+  margin: 0 0 6px;
+  font-size: 22px;
+  font-weight: 800;
+  color: #111;
+  text-align: center;
+}
+
+.proof-sub {
+  margin: 0 0 14px;
+  text-align: center;
+  color: #333;
+  opacity: 0.9;
+  font-size: 15px;
+}
+
+.ba-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+@media (min-width: 820px) {
+  .ba-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* =========================
+   PRICE CALCULATOR
+   ========================= */
+.calc {
+  padding: 26px 16px 10px;
+}
+
+.calc-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.88);
+  border-radius: 18px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+  padding: 24px 18px 22px;
+}
+
+.calc-title {
+  margin: 0 0 6px;
+  font-size: 22px;
+  font-weight: 800;
+  color: #111;
+  text-align: center;
+}
+
+.calc-sub {
+  margin: 0 0 18px;
+  text-align: center;
+  color: #333;
+  opacity: 0.9;
+  font-size: 15px;
+}
+
+.calc-grid {
+  display: grid;
+  gap: 14px;
+}
+
+@media (min-width: 860px) {
+  .calc-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.calc-field label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: #111;
+}
+
+.calc-field select {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(0,0,0,0.12);
+  background: rgba(255,255,255,0.94);
+  font-family: 'Outfit', sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+.calc-actions {
+  text-align: center;
+  margin-top: 18px;
+}
+
+.calc-btn {
+  background: #d4af37;
+  color: #111;
+  border-radius: 999px;
+  padding: 14px 26px;
+  font-weight: 800;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.calc-result {
+  margin-top: 18px;
+  background: rgba(212,175,55,0.10);
+  border: 1px solid rgba(212,175,55,0.28);
+  border-radius: 16px;
+  padding: 18px 16px;
+  text-align: center;
+}
+
+.calc-result h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  color: #111;
+}
+
+.calc-result p {
+  margin: 6px 0;
+  color: #333;
+}
+
+.calc-wa {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 13px 22px;
+  border-radius: 999px;
+  background: #d4af37;
+  color: #111;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+
+.calc-cart {
+  margin-top: 18px;
+  background: rgba(255,255,255,0.72);
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 16px;
+  padding: 16px;
+}
+
+.calc-cart-title {
+  margin: 0 0 12px;
+  font-size: 18px;
+  color: #111;
+}
+
+.calc-cart-items {
+  display: grid;
+  gap: 10px;
+}
+
+.calc-cart-empty {
+  color: #666;
+  font-size: 15px;
+}
+
+.calc-cart-row {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 10px;
+  align-items: center;
+  background: rgba(212,175,55,0.08);
+  border: 1px solid rgba(212,175,55,0.18);
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.calc-cart-main {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.calc-cart-name {
+  font-weight: 700;
+  color: #111;
+}
+
+.calc-cart-meta {
+  font-size: 14px;
+  color: #555;
+}
+
+.calc-cart-price {
+  font-weight: 800;
+  color: #111;
+  white-space: nowrap;
+}
+
+.calc-remove {
+  background: transparent;
+  border: 1px solid rgba(0,0,0,0.14) !important;
+  border-radius: 999px;
+  width: 34px;
+  height: 34px;
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  color: #111;
+}
+
+.calc-remove:hover {
+  background: rgba(0,0,0,0.04);
+}
+
+.calc-btn-light {
+  background: transparent;
+  border: 2px solid #111 !important;
+}
+
+.calc-actions-secondary {
+  margin-top: 12px;
+}
+
+.calc-tip{
+  text-align:center;
+  margin: 8px 0 18px;
+  font-size: 14px;
+  color:#666;
+}
+
+@media (max-width: 680px) {
+  .calc-cart-row {
+    grid-template-columns: 1fr auto;
+  }
+
+  .calc-remove {
+    grid-column: 2;
+    justify-self: end;
+  }
+}
+
+.ba-card {
+  margin: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+.ba-card img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+}
+
+.ba-cap {
+  padding: 10px 12px;
+  font-size: 13px;
+  color: #222;
+  font-weight: 600;
+}
+
+/* Bullets row */
+.proof-bullets {
+  display: grid;
+  gap: 8px;
+  margin: 14px 0 14px;
+}
+
+@media (min-width: 820px) {
+  .proof-bullets {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+}
+
+.pb {
+  background: rgba(212, 175, 55, 0.14);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-size: 13.5px;
+  color: #111;
+  font-weight: 600;
+  text-align: center;
+}
+
+
+.proof-cta {
+  text-align: center;
+  margin-top: 6px;
+}
+
+.proof-wa {
+  display: inline-block;
+  padding: 14px 22px;
+  border-radius: 999px;
+  background: #d4af37;
+  color: #111;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.proof-note {
+  margin: 8px 0 0;
+  color: #333;
+  font-size: 13.5px;
+  opacity: 0.9;
+}
+
+
+/* Floating tagline */
+.hero-tag-floating {
+  position: absolute;
+  top: 28px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+}
+
+/* Tagline style */
+.hero-tagline {
+  font-size: 14px;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: #222;
+  margin: 0;
+}
+
+/* Slogan */
+#slogan {
+  margin: 18px 0 12px;
+  margin-top: 30px !important;     /* was 32px */
+  margin-bottom: 10px !important;
+  font-size: 26px;
+  font-weight: 700;
+  color: #111;
+}
+
+
+/* Buttons row */
+.hero-ctas {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 10px;
+}
+
+.hero-wa {
+  font-size: 16px;
+  padding: 14px 26px;
+  background: #d4af37;
+  border-radius: 999px;
+  color: #111;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+
+.hero-cities {
+    margin-top: 14px;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    color: #7a7a7a;
+    text-align: center;
+}
+
+.hero-cities strong {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 4px;
+}
+
+/* Move the small tagline higher */
+.hero-tagline{
+  margin: 4px 0 8px;
+  margin-top: -10px;   /* try -6px to -16px */
+  margin-bottom: 10px;
+}
+
+
+
+.hero-secondary {
+  border-radius: 999px;
+  padding: 12px 22px;
+  border: 2px solid #111;
+  background: transparent;
+  font-size: 14px;
+  color: #111;
+  font-weight: 700;
+}
+
+/* Note under buttons */
+.hero-note {
+  margin-top: 8px !important;      /* was 16px */
+  font-size: 15px;
+  color: #444;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .hero {
+    padding: 60px 16px 30px;
+  }
+  #slogan {
+    font-size: 26px;
+  }
+  .hero-tag-floating {
+    top: 20px;
+  }
+}
+/* Push the services section further down from the hero */
+.services {
+  margin-top: -10px !important;
+}
+
+/* ===== Premium modal content blocks ===== */
+.svc-sections { margin-top: 6px; }
+.svc-section { margin: 14px 0 0; padding-top: 12px; border-top: 1px solid rgba(0,0,0,0.06); }
+.svc-section:first-child { border-top: 0; padding-top: 0; }
+.svc-h4 { margin: 0 0 8px; font-size: 14px; letter-spacing: .08em; text-transform: uppercase; color: #222; opacity: .85; }
+.svc-ul { margin: 0; padding-left: 18px; }
+.svc-ul li { margin: 6px 0; line-height: 1.45; }
+.svc-pillrow { display:flex; flex-wrap:wrap; gap:8px; margin: 10px 0 4px; }
+.svc-pill {
+  background: rgba(212,175,55,0.16);
+  border: 1px solid rgba(212,175,55,0.25);
+  border-radius: 999px;
+  padding: 6px 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #111;
+}
+
+/* ===== Media gallery inside modal ===== */
+.svc-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.svc-gallery a { display:block; }
+.svc-gallery img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 12px;
+  display:block;
+  border: 1px solid rgba(0,0,0,0.06);
+}
+
+/* Video block (no autoplay) */
+.svc-video-wrap { margin-top: 12px; }
+.svc-video {
+  width: 100%;
+  border-radius: 12px;
+  border: 1px solid rgba(0,0,0,0.06);
+  background: #000;
+}
+.svc-video-note {
+  margin: 8px 0 0;
+  font-size: 13px;
+  color: #333;
+  opacity: .85;
+}
+/* Modal premium content styling */
+.svc-details { font-family: 'Outfit', sans-serif; }
+.svc-block { margin: 14px 0 0; }
+.svc-kicker { font-size: 12px; letter-spacing: .12em; text-transform: uppercase; font-weight: 700; color:#111; opacity:.75; }
+.svc-lead { margin: 8px 0 0; color:#222; line-height: 1.5; }
+.svc-list { margin: 8px 0 0; padding-left: 18px; }
+.svc-list li { margin: 6px 0; line-height: 1.45; }
+.svc-tags { display:flex; flex-wrap:wrap; gap:8px; margin-top: 8px; }
+.svc-tag { background: rgba(212,175,55,0.16); border: 1px solid rgba(212,175,55,0.25); border-radius:999px; padding:6px 10px; font-size:13px; font-weight:700; }
+
+ /* =========================
+   LAYER 1.5 – CLIMATE BLOCK
+   ========================= */
+
+.clima {
+  padding: 26px 16px;
+}
+
+.clima-inner {
+  max-width: 980px;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.88);
+  border-radius: 18px;
+  padding: 22px;
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+  text-align: center;
+}
+
+.clima-title {
+  margin: 0 0 8px;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.clima-text {
+  margin: 0 0 14px;
+  font-size: 15px;
+  color: #333;
+}
+
+.clima-cards {
+  display: grid;
+  gap: 10px;
+  margin: 14px 0;
+}
+
+@media (min-width: 720px) {
+  .clima-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.clima-card {
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(212,175,55,0.14);
+  font-weight: 700;
+}
+
+.clima-status {
+  background: rgba(0,0,0,0.05);
+}
+
+.clima-tip {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #444;
+}
+ 
+.areas-links{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:center;
+  margin-top:14px;
+}
+
+.area-pill{
+  display:inline-block;
+  padding:10px 14px;
+  border-radius:999px;
+  background: rgba(255,255,255,0.88);
+  border: 1px solid rgba(0,0,0,0.08);
+  text-decoration:none;
+  color:#111;
+  font-weight:700;
+}
+
+.area-pill:hover{
+  transform: translateY(-1px);
+}
+
+footer p:first-child {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+/* ===== CLEAN TOP BAR (like your screenshot) ===== */
+.site-topbar{
+  position: sticky;
+  top: 0;
+  z-index: 3000;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 16px;
+
+  padding: 14px 18px;
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+}
+
+
+.site-brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-family:'Outfit', sans-serif;
+  text-decoration:none;
+}
+.site-brand:visited{ color: inherit; }
+.site-brand:hover{ text-decoration:none; }
+
+/* hide the dot if you keep it somewhere */
+.brand-dot{ display:none; }
+
+.brand-logo{
+  height: 44px;      /* попробуй 36–52px */
+  width: auto;
+  display:block;
+}
+
+.brand-name{
+  font-weight: 700;
+  font-size: 28px;   /* как на твоём примере */
+  color: #b68714;    /* золотой */
+  letter-spacing: 0.2px;
+}
+
+/* Mobile tuning */
+@media (max-width: 820px){
+  .brand-logo{ height: 36px; }
+  .brand-name{ font-size: 22px; }
+}
+
+.site-right{
+  display:flex;
+  align-items:center;
+  gap: 14px;
+}
+
+/* Nav links */
+.site-nav a{
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.10em;
+  color: #b68714;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.site-nav a:hover{ text-decoration: underline; }
+
+.site-nav .nav-sep{
+  color:#b68714;
+  opacity: .6;
+  padding: 0 6px;
+}
+
+/* Language pills */
+.lang-pills{
+  display:flex;
+  align-items:center;
+  gap: 8px;
+}
+
+.lang-pill{
+  border: 1px solid rgba(0,0,0,0.14) !important;
+  background: rgba(255,255,255,0.9);
+  padding: 8px 12px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 800;
+  font-size: 13px;
+  color: #111;
+}
+
+.lang-pill.is-active{
+  border-color: rgba(212,175,55,0.65) !important;
+  box-shadow: 0 0 0 4px rgba(212,175,55,0.18);
+}
+
+/* Mobile: hide menu text, keep language pills */
+@media (max-width: 820px){
+  .site-nav{ display:none; }
+  .brand-name{ font-size: 18px; }
+}
+
+
+
+
+  
+  </style>
+
+ 
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-47FC0D03XH"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  /* GA4 */
+gtag('config', 'G-47FC0D03XH', { 'debug_mode': true });
+
+
+  /* Google Ads conversions */
+  gtag('config', 'AW-17340076883');
+  gtag('config', 'AW-17385730363');
+</script>
+
+
+
+</head>
+
+
+
+
+<body style="background-image: url('images/mediterranean_hero.jpg'); background-size: cover; background-repeat: no-repeat; background-position: center; background-attachment: fixed; margin: 0; padding: 0;">
+
+
+   
+
+<!-- TOP BAR (new clean header like your screenshot) -->
+<div class="site-topbar">
+ <a aria-label='FrescaClimaTech — Home' class='site-brand' href='/'>
+  <img class="brand-logo" src="fct_logo_transparent.svg" alt="FrescaClimaTech logo">
+  <span class="brand-name">FrescaClimaTech</span>
+</a>
+
+
+  <div class="site-right">
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#servicios" data-i18n="nav_servicios">Servicios</a>
+      <span class="nav-sep">|</span>
+      <a href="#areas" data-i18n="nav_areas">Áreas</a>
+      <span class="nav-sep">|</span>
+      <a href="#faq" data-i18n="nav_faq">FAQ</a>
+      <span class="nav-sep">|</span>
+      <a href="#contacto" data-i18n="nav_contacto">Contacto</a>
+    </nav>
+
+    <div class="lang-pills" role="group" aria-label="Idioma">
+      <button type="button" class="lang-pill" data-lang="es" onclick="switchLang('es')">ES</button>
+      <button type="button" class="lang-pill" data-lang="en" onclick="switchLang('en')">EN</button>
+    </div>
+  </div>
+</div>
+
+
+
+  <!-- Limited-time promo -->
+  <div id="promoBar" class="promo-bar hidden" role="status" aria-live="polite">
+    <span id="promoText" data-i18n="promo_text"></span>
+    <a id="promoCTA" class="btn-small" target="_blank" rel="noopener" data-i18n="promo_cta"></a>
+    <button id="promoClose" class="promo-close" aria-label="Close">×</button>
+  </div>
+
+ <header class="hero">
+
+  <div class="hero-inner">
+
+    <p class="hero-tagline" data-i18n="hero_tagline">
+      Frescura Mediterránea para tu Hogar
+    </p>
+
+    <h2 id="slogan"></h2>
+
+
+<!-- ✅ Trust line (Google reviews) -->
+<p class="hero-trust">
+  <a class="hero-trust-link" href="https://g.page/r/CVK2NpIvzkvdEBM/review" target="_blank" rel="noopener"
+     data-i18n="hero_trust">
+    ⭐⭐⭐⭐⭐ Opiniones reales en Google · Clientes satisfechos
+  </a>
+</p>
+
+<div class="hero-ctas">
+
+<a href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto%20para%20limpieza%20de%20tapicer%C3%ADa.%20Puedo%20enviar%20fotos%20ahora."
+   target="_blank"
+   class="btn hero-wa js-wa">
+   Solicitar presupuesto por WhatsApp
+</a>
+
+
+
+
+
+
+    </div>
+
+    <p class="hero-note" data-i18n="hero_note">
+      Respondemos normalmente en menos de 15 minutos con un precio aproximado
+    </p>
+<p class="hero-micro" data-i18n="hero_micro">
+  Sofás · Tapicería · Alfombras · Aire acondicionado
+</p>
+
+<p class="hero-cities">
+  <strong data-i18n="service_available_label">📍 Servicio disponible en:</strong>
+  <span data-i18n="service_available_cities">
+    Barcelona · Lloret de Mar · Marbella · Sevilla · Granada · Almuñécar · Motril · Salobreña
+  </span>
+</p>
+
+
+
+
+
+
+
+  </div>
+
+</header>
+
+</header>
+
+<!-- ✅ STATS SECTION -->
+<section class="stats-proof">
+  <div class="stats-proof-inner">
+    <p class="stats-kicker">Resultados reales</p>
+    <h2>Confianza construida con trabajo real</h2>
+    <p class="stats-sub">
+      Ayudamos a hogares y propiedades en distintas zonas de España.
+    </p>
+
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-number">80+</div>
+        <div class="stat-label">clientes atendidos</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-number">100+</div>
+        <div class="stat-label">sofás y tapicería limpiados</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-number">20+</div>
+        <div class="stat-label">colchones higienizados</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================
+     LAYER 1.5: CLIMATE / WEATHER TRIGGER
+========================= -->
+
+<!-- =========================
+     LAYER 1.5: CLIMATE / WEATHER TRIGGER
+     ========================= -->
+<section class="clima" id="clima">
+  <div class="clima-inner">
+    <h2 class="clima-title" data-i18n="clima_title">Condiciones de limpieza hoy</h2>
+
+    <p class="clima-text">
+      <span data-i18n="clima_intro">Según la temperatura y humedad de hoy, la limpieza de tapicería y alfombras</span>
+      <strong id="clima-recommendation" data-i18n="clima_rec_good">es ideal</strong>.
+    </p>
+
+    <!-- City selector -->
+<div class="clima-city" style="margin:12px 0;">
+  <label for="clima-city" style="font-weight:500;margin-right:8px;" data-i18n="clima_city_label">
+  Ciudad:
+</label>
+
+<select id="clima-city"
+  style="padding:8px 14px;border-radius:12px;border:1px solid rgba(0,0,0,.15);">
+
+  <option value="lloret" selected>Lloret de Mar</option>
+  <option value="barcelona">Barcelona</option>
+  <option value="marbella">Marbella</option>
+  <option value="sevilla">Sevilla</option>
+  <option value="granada">Granada</option>
+  <option value="costatropical">Costa Tropical</option>
+
+</select>
+
+<p class="areas-note" data-i18n="areas_note">
+  Costa Tropical incluye: Almuñécar · Motril · Salobreña
+</p>
+
+
+
+</div>
+
+<!-- Best day this week -->
+<div class="clima-bestday" id="clima-bestday" style="margin:12px auto 4px; text-align:center;">
+  <div id="clima-bestday-title" style="font-weight:700; font-size:18px;"></div>
+  <div id="clima-bestday-sub" style="opacity:.9; margin-top:4px;"></div>
+</div>
+
+
+<div class="clima-cards">
+
+  <div class="clima-card">
+    🌡️ <span data-i18n="clima_temp_label">Temperatura</span>:
+    <strong id="clima-temp">—</strong>°C
+  </div>
+
+  <div class="clima-card">
+    💧 <span data-i18n="clima_hum_label">Humedad</span>:
+    <strong id="clima-humidity">—</strong>%
+  </div>
+
+  <div class="clima-card">
+    🌿 <span data-i18n="clima_dry_index_label">Índice de secado</span>:
+    <strong id="clima-index">—</strong>/100
+  </div>
+
+</div>
+
+<p id="clima-status" style="margin:10px 0 0; font-weight:700;">
+  Comprobando condiciones…
+</p>
+
+
+    <p id="clima-tip" class="clima-tip" data-i18n="clima_tip_default">
+      El buen tiempo ayuda a que los tejidos se sequen antes y evita olores.
+    </p>
+  </div>
+</section>
+
+<!-- =========================
+     QUICK PRICE CALCULATOR v2
+     ========================= -->
+<section class="calc" id="calc">
+  <div class="calc-inner">
+    <h2 class="calc-title" data-i18n="calc_title">Calcula tu precio orientativo</h2>
+    <p class="calc-sub" data-i18n="calc_sub_multi">
+      Añade varios artículos para recibir una estimación total antes de enviarnos fotos por WhatsApp.
+    </p>
+
+    <p class="calc-tip" data-i18n="calc_discount_tip"></p>
+
+    <div class="calc-grid">
+      <div class="calc-field">
+        <label for="calc-service" data-i18n="calc_service_label">Servicio</label>
+        <select id="calc-service">
+          <option value="sofa" data-i18n="calc_service_sofa">Sofá / tapicería</option>
+          <option value="mattress" data-i18n="calc_service_mattress">Colchón</option>
+          <option value="carpet" data-i18n="calc_service_carpet">Alfombra</option>
+          <option value="chairs" data-i18n="calc_service_chairs">Sillas</option>
+        </select>
+      </div>
+
+      <div class="calc-field">
+        <label for="calc-type" data-i18n="calc_type_label">Tamaño / tipo</label>
+        <select id="calc-type"></select>
+      </div>
+
+      <div class="calc-field">
+        <label for="calc-qty" data-i18n="calc_qty_label">Cantidad</label>
+        <select id="calc-qty">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10+</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="calc-actions">
+      <button type="button" class="calc-btn" id="calc-add" data-i18n="calc_add_btn">
+        Añadir artículo
+      </button>
+    </div>
+
+    <div class="calc-cart" id="calc-cart">
+      <h3 class="calc-cart-title" data-i18n="calc_cart_title">Tu pedido</h3>
+      <div id="calc-cart-items" class="calc-cart-items"></div>
+    </div>
+
+    <div class="calc-result" id="calc-result" aria-live="polite">
+      <h3 id="calc-result-price">—</h3>
+      <p id="calc-result-subtotal"></p>
+      <p id="calc-result-discount"></p>
+      <p id="calc-result-note" data-i18n="calc_note">
+        El precio final se confirma tras ver fotos y el nivel real de suciedad.
+      </p>
+
+      <div class="calc-actions calc-actions-secondary">
+        <button type="button" class="calc-btn calc-btn-light" id="calc-clear" data-i18n="calc_clear_btn">
+          Vaciar pedido
+        </button>
+      </div>
+
+      <a
+        id="calc-wa"
+        class="calc-wa"
+        href="https://wa.me/34657336353"
+        target="_blank"
+        rel="noopener"
+        data-i18n="calc_wa"
+      >
+        📲 Enviar fotos por WhatsApp
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- =========================
+     LAYER 2: PROOF + BENEFITS
+     ========================= -->
+<section class="proof" id="prueba">
+
+  <div class="proof-inner">
+
+    <h2 class="proof-title" data-i18n="proof_title">
+      Resultados reales. Limpieza profesional.
+    </h2>
+
+    <p class="proof-sub" data-i18n="proof_sub">
+      Envíanos fotos por WhatsApp y te respondemos con precio + disponibilidad.
+    </p>
+
+    <!-- Before/After mini gallery -->
+    <div class="ba-grid">
+      <!-- Card 1 -->
+      <figure class="ba-card">
+  <a href="images/ba_sofa_01.png" target="_blank">
+    <img
+      src="images/ba_sofa_01.png"
+      alt="Antes y después – sofá"
+      loading="lazy"
+    >
+  </a>
+
+  <figcaption class="ba-cap">
+    Sofá · Antes / Después
+  </figcaption>
+</figure>
+
+
+
+      <!-- Card 2 -->
+      <figure class="ba-card">
+  <a href="images/ba_carpet_01.png" target="_blank">
+    <img
+      src="images/ba_carpet_01.png"
+      alt="Antes y después – alfombra"
+      loading="lazy"
+    >
+  </a>
+
+  <figcaption class="ba-cap">
+    Alfombra · Antes / Después
+  </figcaption>
+</figure>
+
+
+      <!-- Card 3 -->
+      <figure class="ba-card">
+  <a href="images/ba_mattress_01.png" target="_blank">
+    <img
+      src="images/ba_mattress_01.png"
+      alt="Antes y después – colchón"
+      loading="lazy"
+    >
+  </a>
+
+  <figcaption class="ba-cap">
+    Colchón · Antes / Después
+  </figcaption>
+</figure>
+</div>
+
+    <!-- 3 quick trust bullets -->
+    <div class="proof-bullets">
+      <div class="pb" data-i18n="pb_1">✔ Productos profesionales y seguros para tejidos</div>
+      <div class="pb" data-i18n="pb_2">✔ Eliminación de manchas y olores</div>
+      <div class="pb" data-i18n="pb_3">✔ Servicio a domicilio · Bizum / efectivo</div>
+    </div>
+
+    <!-- CTA -->
+    <div class="proof-cta">
+      <a class="btn proof-wa js-wa"
+   href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto%20para%20limpieza%20de%20tapicer%C3%ADa.%20Puedo%20enviar%20fotos%20ahora."
+   target="_blank"
+   rel="noopener"
+   data-i18n="proof_cta">
+   📱 Enviar fotos por WhatsApp
+</a>
+      <p class="proof-note" data-i18n="proof_note">
+        Tip: indica tu código postal para confirmar disponibilidad.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+
+
+  <section class="services" id="servicios">
+
+<!-- A/C Cleaning -->
+<div class="svc-card">
+  <img src="card_air.jpg" alt="Limpieza de Aire Acondicionado" />
+  <div class="svc-body">
+    <h3 data-i18n="svc_ac_title"></h3>
+    <p class="clamp-3" data-i18n="svc_ac_teaser"></p>
+    <p class="price" data-i18n="svc_ac_price"></p>
+
+    <!-- micro list -->
+    <ul class="micro-list">
+      <li data-i18n="micro_ac_1"></li>
+      <li data-i18n="micro_ac_2"></li>
+      <li data-i18n="micro_ac_3"></li>
+    </ul>
+
+    <div class="svc-actions">
+      <a href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto%20para%20limpieza%20y%20mantenimiento%20de%20aire%20acondicionado.%20Puedo%20enviar%20fotos%20ahora."
+   target="_blank"
+   rel="noopener"
+   class="btn"
+   data-i18n="btn_whatsapp">
+</a>
+      <button class="btn-secondary" data-open="ac" data-i18n="btn_details"></button>
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Fabric / Upholstery -->
+<div class="svc-card">
+  <img src="card_sofa.jpg" alt="Limpieza de Tapicería" />
+  <div class="svc-body">
+    <h3 data-i18n="svc_fab_title"></h3>
+    <p class="clamp-3" data-i18n="svc_fab_teaser"></p>
+    <p class="price" data-i18n="svc_fab_price"></p>
+
+    <!-- micro list -->
+    <ul class="micro-list">
+      <li data-i18n="micro_fab_1"></li>
+      <li data-i18n="micro_fab_2"></li>
+      <li data-i18n="micro_fab_3"></li>
+    </ul>
+
+    <div class="svc-actions">
+      <a href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto%20para%20limpieza%20de%20tapicer%C3%ADa.%20Puedo%20enviar%20fotos%20ahora."
+   target="_blank"
+   rel="noopener"
+   class="btn"
+   data-i18n="btn_whatsapp">
+</a>
+      <button class="btn-secondary" data-open="fab" data-i18n="btn_details"></button>
+    </div>
+  </div>
+</div>
+
+<!-- Carpets & Mattresses -->
+<div class="svc-card">
+  <img src="card_carpet.png" alt="Limpieza de Alfombras y Colchones" />
+  <div class="svc-body">
+    <h3 data-i18n="svc_cm_title"></h3>
+    <p class="clamp-3" data-i18n="svc_cm_teaser"></p>
+    <p class="price" data-i18n="svc_cm_price"></p>
+
+    <!-- micro list -->
+    <ul class="micro-list">
+      <li data-i18n="micro_cm_1"></li>
+      <li data-i18n="micro_cm_2"></li>
+      <li data-i18n="micro_cm_3"></li>
+    </ul>
+
+    <div class="svc-actions">
+      <a href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto%20para%20limpieza%20de%20alfombras%20y%20colchones.%20Puedo%20enviar%20fotos%20ahora."
+   target="_blank"
+   rel="noopener"
+   class="btn"
+   data-i18n="btn_whatsapp">
+</a>
+      <button class="btn-secondary" data-open="cm" data-i18n="btn_details"></button>
+    </div>
+  </div>
+</div>
+
+
+<!-- Windows & Toldos -->
+<div class="svc-card">
+  <img src="card_window.png" alt="Limpieza de Ventanas y Toldos" />
+  <div class="svc-body">
+    <h3 data-i18n="svc_win_title"></h3>
+    <p class="clamp-3" data-i18n="svc_win_teaser"></p>
+    <p class="price" data-i18n="svc_win_price"></p>
+
+    <!-- micro list -->
+    <ul class="micro-list">
+      <li data-i18n="micro_win_1"></li>
+      <li data-i18n="micro_win_2"></li>
+      <li data-i18n="micro_win_3"></li>
+    </ul>
+
+    <div class="svc-actions">
+      <a href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto%20para%20limpieza%20profesional%20de%20ventanas%20y%20toldos.%20Puedo%20enviar%20fotos%20ahora."
+   target="_blank"
+   rel="noopener"
+   class="btn"
+   data-i18n="btn_whatsapp">
+</a>
+      <button class="btn-secondary" data-open="win" data-i18n="btn_details"></button>
+    </div>
+  </div>
+</div>
+
+<!-- Handyman -->
+<div class="svc-card">
+  <img src="card_handyman.png" alt="Servicios de Manitas" />
+  <div class="svc-body">
+    <h3 data-i18n="svc_hm_title"></h3>
+    <p class="clamp-3" data-i18n="svc_hm_teaser"></p>
+    <p class="price" data-i18n="svc_hm_price"></p>
+
+    <!-- micro list -->
+    <ul class="micro-list">
+      <li data-i18n="micro_hm_1"></li>
+      <li data-i18n="micro_hm_2"></li>
+      <li data-i18n="micro_hm_3"></li>
+    </ul>
+
+    <div class="svc-actions">
+      <a href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20presupuesto%20para%20servicios%20de%20mantenimiento%20y%20reparaciones%20(manitas).%20Puedo%20enviar%20fotos%20ahora."
+   target="_blank"
+   rel="noopener"
+   class="btn"
+   data-i18n="btn_whatsapp">
+</a>
+      <button class="btn-secondary" data-open="hm" data-i18n="btn_details"></button>
+    </div>
+  </div>
+</div>
+
+<!-- Property Inspection -->
+<div class="svc-card">
+  <img src="card_inspection.jpg" alt="Inspección de Propiedades" />
+  <div class="svc-body">
+    <h3 data-i18n="svc_ins_title"></h3>
+    <p class="clamp-3" data-i18n="svc_ins_teaser"></p>
+    <p class="price" data-i18n="svc_ins_price"></p>
+
+    <!-- micro list -->
+    <ul class="micro-list">
+      <li data-i18n="micro_ins_1"></li>
+      <li data-i18n="micro_ins_2"></li>
+      <li data-i18n="micro_ins_3"></li>
+    </ul>
+
+    <div class="svc-actions">
+      <a href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20presupuesto%20para%20inspecci%C3%B3n%20t%C3%A9cnica%20de%20propiedad%20antes%20de%20compra%20o%20alquiler.%20Puedo%20enviar%20ubicaci%C3%B3n%20y%20detalles%20ahora."
+   target="_blank"
+   rel="noopener"
+   class="btn"
+   data-i18n="btn_whatsapp">
+</a>
+      <button class="btn-secondary" data-open="ins" data-i18n="btn_details"></button>
+    </div>
+  </div>
+</div>
+</section><!-- 👈 closes <section class="services" id="servicios"> -->
+
+
+  <!-- FAQ -->
+  <section class="faq" id="faq">
+
+    <h2 id="faqTitle"></h2>
+    <div id="faqList" class="accordion"></div>
+  </section>
+
+  <!-- Subscribe -->
+  <section class="subscribe" id="contacto">
+
+    <h2 id="subTitle"><span data-i18n="subscribeTitle"></span></h2>
+    <p id="thankYouMessage" style="display:none; color: green; font-weight: bold;">
+      <span data-i18n="thankyou">¡Gracias! Hemos recibido tu mensaje.</span>
+    </p>
+    <form action="thank-you" method="POST" name="contacto">
+      <input type="hidden" name="form-name" value="contacto" />
+      <div class="form-group">
+        <label for="nombre"><span data-i18n="labelName">Nombre:</span></label>
+        <input id="nombre" name="name" required type="text" />
+        <label for="correo"><span data-i18n="labelEmail">Correo electrónico:</span></label>
+        <input id="correo" name="email" required type="email" />
+        <label for="codigo-postal"><span data-i18n="labelPostal">Código postal:</span></label>
+        <input id="codigo-postal" name="postal_code" required type="text" />
+        <button type="submit" id="subscribeBtn"><span data-i18n="subscribeButton">Enviar</span></button>
+      </div>
+    </form>
+  </section>
+
+<section id="areas" style="text-align:center; padding:40px 20px;">
+  <h2 style="font-family:'Outfit',sans-serif; font-weight:700; color:#333;" data-i18n="areas_title">
+    Áreas de Servicio
+  </h2>
+
+  <p style="font-size:18px; margin-top:10px; color:#444;" data-i18n="areas_sub">
+    Elige tu zona para ver servicios y precios orientativos:
+  </p>
+
+  <div class="areas-links">
+    <a class='area-pill' href='/barcelona'>Barcelona</a>
+    <a class='area-pill' href='/lloret'>Lloret de Mar</a>
+    <a class='area-pill' href='/marbella'>Marbella</a>
+    <a class='area-pill' href='/sevilla'>Sevilla</a>
+    <a class='area-pill' href='/granada'>Granada</a>
+    <a class='area-pill' href='/costa-tropical'>Costa Tropical</a>
+  </div>
+</section>
+
+
+
+
+ <footer>
+     <p>© 2026 FrescaClimaTech. All rights reserved.</p>
+  <p>
+    <strong>FrescaClimaTech</strong>
+    ·
+    <span data-i18n="footerServices">
+      Servicios para Propiedades | Limpieza de Aires · Tapicería · Revisiones Preventa
+    </span>
+  </p>
+
+  <p>
+    <span data-i18n="footer_areas">
+Servicio en Cataluña y Andalucía
+</span> | 
+<a href="mailto:info@frescaclimatech.es">info@frescaclimatech.es</a>
+
+  </p>
+
+  <p>
+    <a href="https://www.instagram.com/frescaclimatech/" target="_blank">
+      <span data-i18n="footerInstagram">Instagram</span>
+    </a>
+    ·
+    <a href="/privacy" target="_blank">
+      <span data-i18n="footerPrivacy">Política de privacidad</span>
+    </a>
+    ·
+    <a href="https://g.page/r/CVK2NpIvzkvdEBM/review" target="_blank">
+      <span data-i18n="footerReviews">⭐ Opiniones en Google</span>
+    </a>
+  </p>
+</footer>
+
+
+  <!-- ✅ ONE SCRIPT FOR ALL APP JS -->
+  <script>
+    const translations = {
+      es: {
+        slogan: "Aire Fresco, Tejidos Limpios, Decisiones Claras",
+        nav_servicios: "Servicios",
+        nav_areas: "Áreas",
+        nav_faq: "FAQ",
+        nav_contacto: "Contacto",
+        subscribeTitle: "Suscríbete a nuestras ofertas",
+        subscribeButton: "Suscribirse",
+        thankyou: "¡Gracias! Hemos recibido tu mensaje.",
+        labelName: "Nombre:",
+        labelEmail: "Correo electrónico:",
+        labelPostal: "Código postal:",
+        footerPrivacy: "Política de privacidad",
+        requestQuote: "Solicita Presupuesto",
+        hero_tagline: "Frescura Mediterránea para tu Hogar",
+        hero_whatsapp_cta: "Pide tu limpieza por WhatsApp",
+        hero_view_services: "Ver Servicios",
+        hero_note: "Respondemos normalmente en menos de 15 minutos con un precio aproximado",
+        hero_trust: "⭐⭐⭐⭐⭐ Opiniones reales en Google · Clientes satisfechos",
+        hero_micro: "Sofás · Tapicería · Alfombras · Aire acondicionado",
+        service_available_label: "📍 Servicio disponible en:",
+        service_available_cities: "Barcelona · Lloret de Mar · Marbella · Sevilla · Granada · Almuñécar · Motril · Salobreña",
+
+        proof_title: "Resultados reales. Limpieza profesional.",
+        proof_sub: "Envíanos fotos por WhatsApp y te respondemos con precio + disponibilidad.",
+        clima_title: "Condiciones de limpieza hoy",
+        clima_intro: "Según la temperatura y humedad de hoy, la limpieza de tapicería y alfombras",
+        clima_temp_label: "Temperatura",
+        clima_hum_label: "Humedad",
+        clima_status_loading: "Comprobando condiciones…",
+        clima_tip_default: "El buen tiempo ayuda a que los tejidos se sequen antes y evita olores.",
+        clima_status_good: "Buenas condiciones de secado",
+        clima_status_humid: "Humedad alta",
+        clima_rec_good: "es ideal",
+        clima_rec_ok: "es posible con ventilación",
+        clima_tip_good: "Con humedad baja, los textiles se secan más rápido y hay menos riesgo de olor.",
+        clima_tip_humid: "En días húmedos recomendamos buena ventilación o elegir un día más soleado.",
+        clima_city_label: "Ciudad:",
+        clima_status_great: "Condiciones ideales ✅",
+        clima_status_not_ideal: "No ideal ⚠️",
+        clima_status_moderate: "Condiciones moderadas ⚠️",
+        clima_tip_fast: "Día de secado rápido: ventila 20–30 min después de la limpieza.",
+        clima_tip_higher_humidity: "La humedad alta ralentiza el secado. Ventila bien o usa el A/C en modo seco.",
+        clima_tip_moderate: "Si la humedad es moderada, deja un poco más de tiempo de secado.",
+        clima_best_title: "Mejor día esta semana para limpiar",
+        clima_best_fallback_title: "Mejor día esta semana para limpiar: —",
+        clima_best_fallback_sub: "No se pudo cargar el pronóstico semanal.",
+        clima_best_sub: "Suele ser el día más seco para un secado más rápido",
+        clima_best_bits_max: "Máx",
+        clima_best_bits_hum: "Humedad",
+        clima_best_bits_rain: "Lluvia",
+        clima_dry_index_label: "Índice de secado",
+        clima_best_title: "Mejor día para limpiar esta semana",
+        calc_title: "Calcula tu precio orientativo",
+calc_sub: "Responde 3 preguntas y recibe una estimación rápida antes de enviarnos fotos por WhatsApp.",
+calc_service_label: "Servicio",
+calc_type_label: "Tamaño / tipo",
+calc_qty_label: "Cantidad",
+calc_btn: "Calcular",
+calc_note: "El precio final se confirma tras ver fotos y el nivel real de suciedad.",
+calc_wa: "📲 Enviar fotos por WhatsApp",
+
+calc_service_sofa: "Sofá / tapicería",
+calc_service_mattress: "Colchón",
+calc_service_carpet: "Alfombra",
+calc_service_chairs: "Sillas",
+
+calc_type_2seater: "Sofá 2 plazas",
+calc_type_3seater: "Sofá 3 plazas",
+calc_type_4seater: "Sofá 4 plazas",
+calc_type_chaise: "Chaise longue",
+calc_type_corner: "Sofá rinconera",
+calc_type_armchair: "Sillón",
+
+calc_type_kids_mattress: "Colchón infantil",
+calc_type_single: "Colchón individual (90 cm)",
+calc_type_double: "Colchón doble (135–150 cm)",
+calc_type_large_mattress: "Colchón grande (160–180 cm)",
+
+calc_type_carpet_small: "Alfombra pequeña",
+calc_type_carpet_medium: "Alfombra mediana",
+calc_type_carpet_large: "Alfombra grande",
+
+calc_type_dining_chair: "Silla de comedor",
+calc_type_office_chair: "Silla de oficina",
+
+calc_estimated_price: "Precio orientativo",
+calc_discount_applied: "Descuento aplicado",
+calc_discount_none: "Sin descuento",
+calc_discount_2: "10% por 2 artículos",
+calc_discount_3: "15% por 3 artículos",
+calc_discount_4: "20% por 4 o más artículos",
+calc_sub_multi: "Añade varios artículos para recibir una estimación total antes de enviarnos fotos por WhatsApp.",
+calc_add_btn: "Añadir artículo",
+calc_clear_btn: "Vaciar pedido",
+calc_cart_title: "Tu pedido",
+calc_cart_empty: "Todavía no has añadido artículos.",
+calc_subtotal: "Subtotal",
+calc_total_estimated: "Precio orientativo total",
+calc_remove: "Eliminar",
+calc_add_btn: "Añadir al pedido",
+calc_clear_btn: "Empezar de nuevo",
+calc_order_title: "Tu pedido",
+
+calc_discount_tip: "Añade varios artículos para desbloquear hasta un 20% de descuento.",
+calc_discount_unlocked: "Descuento desbloqueado",
+
+calc_progress_1: "Has añadido 1 artículo",
+calc_progress_2: "Ya tienes 10% de descuento",
+calc_progress_3: "Ya tienes 15% de descuento",
+calc_progress_4: "¡Has desbloqueado 20% de descuento!",
+
+calc_wa_confirm: "📲 Enviar fotos y confirmar precio",
+calc_cta_top: "Calcular precio",
+        ba_cap_1: "Sofá · Antes / Después",
+        ba_cap_2: "Alfombra · Antes / Después",
+        ba_cap_3: "Colchón · Antes / Después",
+        pb_1: "✔ Productos profesionales y seguros para tejidos",
+        pb_2: "✔ Eliminación de manchas y olores",
+        pb_3: "✔ Servicio a domicilio · Bizum / efectivo",
+        proof_cta: "📱 Enviar fotos por WhatsApp",
+        proof_note: "Tip: indica tu código postal para confirmar disponibilidad.",
+
+        micro_ac_1: "Desinfección profesional",
+        micro_ac_2: "Eliminación de moho",
+        micro_ac_3: "Mejora del aire interior",
+
+        micro_win_1: "Limpieza sin marcas",
+        micro_win_2: "Eliminación de suciedad ambiental",
+        micro_win_3: "Perfecto para zonas con brisa marina",
+
+        micro_fab_1: "Secado rápido (según zona)",
+        micro_fab_2: "Productos seguros para tejidos",
+        micro_fab_3: "Eliminación de olores",
+
+        micro_cm_1: "Eliminación de ácaros y alérgenos",
+        micro_cm_2: "Limpieza profunda sin dañar fibras",
+        micro_cm_3: "Ideal para hogares, alquileres y hoteles",
+
+        micro_hm_1: "Mano de obra profesional",
+        micro_hm_2: "Tareas pequeñas y rápidas",
+        micro_hm_3: "Materiales no incluidos",
+
+        micro_ins_1: "Informe con fotos",
+        micro_ins_2: "Presencial o por vídeo",
+        micro_ins_3: "Entrega rápida de resultados",
+    
+
+        request_whatsapp: "📱 Pide tu limpieza por WhatsApp",
+        areas_title: "Áreas de Servicio",
+        areas_sub: "Elige tu zona para ver servicios y precios orientativos:",
+        areas_note: "Costa Tropical incluye: Almuñécar · Motril · Salobreña",
+
+        footerServices: "Servicios para Propiedades | Limpieza de Aires · Tapicería · Revisiones Preventa",
+        footer_areas: "Servicio en Cataluña y Andalucía",
+
+        footerInstagram: "Instagram",
+        footerReviews: "⭐ Opiniones en Google",
+        btn_whatsapp: "Pedir por WhatsApp",
+        svc_ac_teaser: "Limpieza de unidad interior y exterior con desinfección y eliminación de moho.",
+        svc_win_teaser: "Cristales y toldos exteriores con acabado sin marcas.",
+        svc_fab_teaser: "Sofás, sillones, sillas, cabeceros, cortinas y tapicería náutica.",
+        svc_cm_teaser: "Higienización profunda para un descanso más saludable y tejidos frescos.",
+        svc_hm_teaser:  "Pequeñas reparaciones y tareas del hogar.",
+        svc_ins_teaser: "Inspecciones presenciales o por vídeo con informe.",
+        btn_details: "Más detalles",
+        promo_text: "📲 Envíanos hoy tu código postal por WhatsApp para reservar tu LIMPIEZA DE ALFOMBRA GRATIS (esta semana)",
+        promo_cta:  "Reservar por WhatsApp",
+        promo_prefill: "Hola, mi código postal es ____ y quiero reservar la limpieza de alfombra GRATIS",
+        svc_ac_title: "Limpieza de Aire Acondicionado",
+        svc_ac_body:
+        
+  "<div class='svc-details'>" +
+
+    // Kicker + lead
+    "<div class='svc-block'>" +
+      "<div class='svc-kicker'>Salud · Ahorro · Aire limpio</div>" +
+      "<p class='svc-lead'>Limpieza completa de <strong>unidad interior y exterior</strong> con desinfección profesional. Ideal para hogares y apartamentos turísticos.</p>" +
+    "</div>" +
+
+    // Two columns: What + Why
+    "<div class='svc-grid'>" +
+
+      "<div class='svc-block'>" +
+        "<h4>✔ Qué limpiamos</h4>" +
+        "<ul class='svc-list'>" +
+          "<li>Unidad interior: <strong>filtros, turbina, bandeja</strong> y carcasa</li>" +
+          "<li>Unidad exterior: <strong>serpentín</strong> y zonas de ventilación</li>" +
+          "<li>Eliminación de <strong>moho</strong>, polvo y bacterias</li>" +
+          "<li>Desinfección de superficies y revisión visual</li>" +
+        "</ul>" +
+      "</div>" +
+
+      "<div class='svc-block'>" +
+        "<h4>✔ Por qué importa</h4>" +
+        "<ul class='svc-list'>" +
+          "<li>Mejora la <strong>calidad del aire interior</strong></li>" +
+          "<li>Reduce <strong>alergias</strong> y malos olores</li>" +
+          "<li>Menor <strong>consumo eléctrico</strong></li>" +
+          "<li>Mayor <strong>vida útil</strong> del equipo</li>" +
+        "</ul>" +
+      "</div>" +
+
+    "</div>" +
+
+    // Tags
+    "<div class='svc-block'>" +
+      "<h4>Para quién</h4>" +
+      "<div class='svc-tags'>" +
+        "<span class='svc-tag'>🏠 Viviendas</span>" +
+        "<span class='svc-tag'>👶 Familias con niños</span>" +
+        "<span class='svc-tag'>🐾 Mascotas</span>" +
+        "<span class='svc-tag'>🏡 Airbnb / alquiler vacacional</span>" +
+        "<span class='svc-tag'>🏢 Oficinas pequeñas</span>" +
+      "</div>" +
+    "</div>" +
+
+    // B2C / B2B
+    "<div class='svc-grid'>" +
+
+      "<div class='svc-block'>" +
+        "<h4>B2C · Viviendas</h4>" +
+        "<ul class='svc-list'>" +
+          "<li>Recomendado: <strong>1 vez al año</strong> (o cada 6 meses con mascotas)</li>" +
+          "<li>Duración habitual: <strong>60–90 min</strong> por equipo</li>" +
+          "<li>Secado: normalmente <strong>rápido</strong> (según equipo y acceso)</li>" +
+        "</ul>" +
+      "</div>" +
+
+      "<div class='svc-block'>" +
+        "<h4>B2B · Airbnb, hostelería y gestión</h4>" +
+        "<ul class='svc-list'>" +
+          "<li>Servicio planificado para <strong>turnos</strong> y cambios de huésped</li>" +
+          "<li>Ideal para <strong>mantenimiento preventivo</strong> y reseñas</li>" +
+          "<li>Soporte para <strong>varios equipos</strong> y visitas recurrentes</li>" +
+        "</ul>" +
+      "</div>" +
+
+    "</div>" +
+
+    // Availability note (keep your original)
+    "<div class='svc-block'>" +
+      "<p class='svc-note'><strong>Disponible solo en Barcelona y Lloret de Mar.</strong></p>" +
+    "</div>" +
+
+    // Quote hint
+    "<div class='svc-block svc-cta-hint'>" +
+      "<h4>Para un presupuesto exacto</h4>" +
+      "<p class='svc-note'>Envíanos por WhatsApp: <strong>1 foto de la unidad interior</strong> y <strong>1 de la exterior</strong> (o el modelo/ubicación si está en altura).</p>" +
+    "</div>" +
+
+  "</div>",
+
+        svc_ac_price: "Desde 90 €",
+        svc_win_title: "Limpieza de Ventanas y Toldos",
+        svc_win_body:
+          "Limpieza profesional de cristales y <strong>toldos exteriores</strong> " +
+          "con herramientas de alta calidad para un acabado <strong>sin marcas</strong>. " +
+          "Eliminamos polvo, salitre y suciedad ambiental.<br><br>" +
+          "Para un precio exacto, envíanos <strong>fotos</strong> e indica la altura/acceso.",
+        svc_win_price: "Desde 75 €",
+        svc_fab_title: "Limpieza de Tapicería",
+        svc_fab_body:
+        "<div class='svc-details'>" +
+
+    "<div class='svc-block'>" +
+      "<div class='svc-kicker'>Textiles · Olores · Manchas</div>" +
+      "<p class='svc-lead'>Limpieza en profundidad de <strong>sofás, sillones, sillas, cabeceros, tapicería náutica</strong> y <strong>cortinas</strong>. Eliminamos suciedad acumulada y olores con equipos profesionales, cuidando el tejido.</p>" +
+    "</div>" +
+
+    "<div class='svc-grid'>" +
+
+      "<div class='svc-block'>" +
+        "<h4>✔ Qué limpiamos</h4>" +
+        "<ul class='svc-list'>" +
+          "<li><strong>Sofás</strong> y chaise longue</li>" +
+          "<li><strong>Sillones</strong> y butacas</li>" +
+          "<li><strong>Sillas</strong> (comedor / oficina)</li>" +
+          "<li><strong>Cabeceros</strong> tapizados</li>" +
+          "<li><strong>Tapicería náutica</strong> (barcos)</li>" +
+          "<li><strong>Cortinas</strong> (consulta tipo y acceso)</li>" +
+        "</ul>" +
+      "</div>" +
+
+      "<div class='svc-block'>" +
+        "<h4>✔ Qué conseguimos</h4>" +
+        "<ul class='svc-list'>" +
+          "<li>Reducción de <strong>manchas</strong> y cercos</li>" +
+          "<li>Eliminación de <strong>olores</strong> (cocina, mascotas, humedad)</li>" +
+          "<li>Mejor sensación de <strong>frescura</strong> en el hogar</li>" +
+          "<li>Cuidado del tejido con productos <strong>seguros</strong></li>" +
+        "</ul>" +
+      "</div>" +
+
+    "</div>" +
+
+    "<div class='svc-block'>" +
+      "<h4>Para quién</h4>" +
+      "<div class='svc-tags'>" +
+        "<span class='svc-tag'>🏠 Viviendas</span>" +
+        "<span class='svc-tag'>🏡 Airbnb / alquiler vacacional</span>" +
+        "<span class='svc-tag'>🐾 Mascotas</span>" +
+        "<span class='svc-tag'>🍷 Olores / manchas</span>" +
+        "<span class='svc-tag'>🛥 Tapicería náutica</span>" +
+      "</div>" +
+    "</div>" +
+
+    "<div class='svc-grid'>" +
+
+      "<div class='svc-block'>" +
+        "<h4>Antes de venir</h4>" +
+        "<ul class='svc-list'>" +
+          "<li>Envíanos <strong>2–3 fotos</strong> (general + detalles de manchas)</li>" +
+          "<li>Indica <strong>ciudad</strong> y <strong>código postal</strong></li>" +
+          "<li>Si es sofá: nº de plazas / chaise longue</li>" +
+        "</ul>" +
+      "</div>" +
+
+      "<div class='svc-block'>" +
+        "<h4>Secado</h4>" +
+        "<ul class='svc-list'>" +
+          "<li>Varía según tejido, humedad y ventilación</li>" +
+          "<li>Consulta disponibilidad de <strong>secado exprés</strong> según zona</li>" +
+          "<li>Normalmente se puede usar con cuidado el mismo día</li>" +
+        "</ul>" +
+      "</div>" +
+
+    "</div>" +
+
+    "<div class='svc-block'>" +
+      "<p class='svc-note'><strong>Tip:</strong> si el tejido es delicado o antiguo, envía una foto de la etiqueta/material.</p>" +
+    "</div>" +
+
+    // Video (optional, controlled by svcMap.fab.video)
+    "<div class='svc-block'>" +
+      "<h4>Video (10–30s)</h4>" +
+      "<p class='svc-note'>Sin autoplay — el usuario elige verlo.</p>" +
+    "</div>" +
+
+    "<div class='svc-block svc-cta-hint'>" +
+      "<h4>Para un presupuesto exacto</h4>" +
+      "<p class='svc-note'>Envíanos por WhatsApp: <strong>foto general</strong> + <strong>foto de manchas</strong> + <strong>código postal</strong>.</p>" +
+    "</div>" +
+
+  "</div>",
+        svc_fab_price: "Desde 80 €",
+        svc_cm_title: "Limpieza de Alfombras y Colchones", 
+        svc_cm_body:
+  "<div class='svc-details'>" +
+
+    "<div class='svc-block'>" +
+      "<div class='svc-kicker'>Higiene · Descanso · Textiles frescos</div>" +
+      "<p class='svc-lead'>Limpieza profesional en profundidad de <strong>alfombras</strong> y <strong>colchones</strong>, eliminando suciedad acumulada, polvo, alérgenos y olores <strong>sin dañar las fibras</strong>.</p>" +
+    "</div>" +
+
+    "<div class='svc-grid'>" +
+
+      "<div class='svc-block'>" +
+        "<h4>✔ Qué limpiamos</h4>" +
+        "<ul class='svc-list'>" +
+          "<li><strong>Alfombras</strong> (salón, dormitorios, pasillos)</li>" +
+          "<li><strong>Colchones</strong> (manchas, olor y frescura)</li>" +
+          "<li><strong>Topper</strong> y protectores (consulta)</li>" +
+        "</ul>" +
+      "</div>" +
+
+      "<div class='svc-block'>" +
+        "<h4>✔ Cómo trabajamos</h4>" +
+        "<ul class='svc-list'>" +
+          "<li>Sistema de <strong>inyección–extracción</strong> según el tejido</li>" +
+          "<li>Productos específicos y <strong>seguros</strong> para colores y texturas</li>" +
+          "<li>Enfoque en <strong>manchas</strong>, olores y suciedad profunda</li>" +
+        "</ul>" +
+      "</div>" +
+
+    "</div>" +
+
+    "<div class='svc-block'>" +
+      "<h4>Para quién</h4>" +
+      "<div class='svc-tags'>" +
+        "<span class='svc-tag'>🏠 Viviendas</span>" +
+        "<span class='svc-tag'>🏡 Airbnb / alquiler vacacional</span>" +
+        "<span class='svc-tag'>🏨 Hoteles</span>" +
+        "<span class='svc-tag'>👶 Familias</span>" +
+        "<span class='svc-tag'>🐾 Mascotas</span>" +
+      "</div>" +
+    "</div>" +
+
+    "<div class='svc-grid'>" +
+
+      "<div class='svc-block'>" +
+        "<h4>Antes de venir</h4>" +
+        "<ul class='svc-list'>" +
+          "<li>Envíanos <strong>2 fotos</strong>: general + detalle de manchas</li>" +
+          "<li>Indica <strong>ciudad</strong> y <strong>código postal</strong></li>" +
+          "<li>Alfombras: medidas aproximadas · Colchón: tamaño (90/135/150/180)</li>" +
+        "</ul>" +
+      "</div>" +
+
+      "<div class='svc-block'>" +
+        "<h4>Secado</h4>" +
+        "<ul class='svc-list'>" +
+          "<li>Depende de humedad, ventilación y grosor</li>" +
+          "<li>Normalmente se puede usar con cuidado el mismo día</li>" +
+          "<li>Consulta opciones de <strong>secado exprés</strong> (según zona)</li>" +
+        "</ul>" +
+      "</div>" +
+
+    "</div>" +
+
+    // ✅ NEW: Mattress bleaching note
+    "<div class='svc-block'>" +
+      "<h4>Servicio adicional: blanqueado de colchón</h4>" +
+      "<ul class='svc-list'>" +
+        "<li>Recomendado para manchas amarillas / marcas antiguas</li>" +
+        "<li>Disponible <strong>solo en Barcelona</strong></li>" +
+        "<li>Requiere evaluación por foto (no siempre es necesario)</li>" +
+      "</ul>" +
+    "</div>" +
+
+    "<div class='svc-block'>" +
+      "<p class='svc-note'><strong>Zonas:</strong> Barcelona, Marbella, Granada, Costa Tropical y Sevilla.</p>" +
+    "</div>" +
+
+    "<div class='svc-block svc-cta-hint'>" +
+      "<h4>Para un presupuesto exacto</h4>" +
+      "<p class='svc-note'>Envíanos por WhatsApp: <strong>foto general</strong> + <strong>foto de manchas</strong> + <strong>medidas/tamaño</strong> + <strong>código postal</strong>.</p>" +
+    "</div>" +
+
+  "</div>",
+        svc_cm_price: "Desde 70 €",
+        svc_hm_title: "Servicios de Manitas",
+        svc_hm_body:
+          "Ayuda fiable para <strong>pequeñas reparaciones</strong> y tareas del hogar: " +
+          "colgar estanterías, montar muebles, cambiar grifos o luminarias, ajustar puertas, etc.<br><br>" +
+          "Cuéntanos qué necesitas y envíanos <strong>fotos o vídeo</strong> para estimar tiempo y coste.",
+        svc_hm_price: "Desde 30 €",
+        svc_ins_title: "Inspección de Propiedades",
+        svc_ins_body:
+          "Revisiones <strong>presenciales o por vídeo</strong> para compradores, vendedores y alquileres. " +
+          "Incluye resumen con fotos, observaciones y lista de tareas. Servicio disponible también en <strong>inglés</strong>.<br><br>" +
+          "Indica dirección y objetivo de la visita para organizar fecha y acceso.",
+        svc_ins_price: "Desde 50 €",
+        
+
+        faqTitle: "Preguntas Frecuentes",
+        faqs: [
+          ["¿Cuánto dura una limpieza?", "Normalmente de 1 a 3 horas, dependiendo del artículo y su estado."],
+          ["¿Ofrecen servicio de secado?", "Sí, ofrecemos secado exprés para tapicería en Marbella y Sevilla. Los muebles suelen estar secos y listos para usar en unas 4–6 horas después de la limpieza."],
+          ["¿Pueden limpiar muebles de exterior o cojines de barcos?", "Sí, estamos especializados en la limpieza de tapicería náutica, muebles de terraza y tejidos exteriores."],
+          ["¿Usan productos ecológicos?", "Sí, priorizamos el uso de soluciones de limpieza seguras, no tóxicas y respetuosas con el medio ambiente."],
+          ["¿Es seguro para niños y mascotas?", "Por supuesto. Usamos productos profesionales que son seguros una vez que las superficies están secas."],
+          ["¿Puedo pedir cita los fines de semana?", "Sí, ofrecemos citas flexibles, incluidos sábados y domingos."],
+          ["¿Cómo puedo pedir un presupuesto?", "Puedes escribirnos por WhatsApp. Solo envíanos fotos y describe lo que necesitas limpiar."],
+          ["¿Ofrecen limpieza antes de la venta de una propiedad?", "¡Sí! Ofrecemos limpieza de tapicería y de aire acondicionado para propiedades en venta — con un descuento especial por servicios combinados."],
+          ["¿Ofrecen inspecciones de propiedades a distancia?", "¡Sí! Ofrecemos inspecciones de propiedades por vídeo en inglés. También realizamos inspecciones presenciales en Barcelona y alrededores."],
+          ["¿Qué métodos de pago aceptan?", "Efectivo o Bizum. Próximamente transferencias."]
+        ]
+      },
+      en: {
+        slogan: "Fresh Air, Clean Fabrics, Clear Decisions",
+        nav_servicios: "Services",
+        nav_areas: "Areas",
+        nav_faq: "FAQ",
+        nav_contacto: "Contact",
+        subscribeTitle: "Subscribe to Our Offers",
+        subscribeButton: "Subscribe",
+        thankyou: "Thank you! We've received your message.",
+        labelName: "Name:",
+        labelEmail: "Email:",
+        labelPostal: "Postal Code:",
+        requestQuote: "Request a Quote",
+        hero_tagline: "Mediterranean Freshness for Your Home",
+        hero_whatsapp_cta: "Book your cleaning on WhatsApp",
+        hero_view_services: "View Services",
+        hero_note: "We usually reply within 15 minutes with a price estimate",
+        hero_trust: "⭐⭐⭐⭐⭐ Real Google reviews · Happy clients",
+        hero_micro: "Sofas · Upholstery · Carpets · Air conditioning",
+        service_available_label: "📍 Service available in:",
+        service_available_cities: "Barcelona · Lloret de Mar · Marbella · Seville · Granada · Almuñécar · Motril · Salobreña",
+
+        proof_title: "Real results. Professional cleaning.",
+        proof_sub: "Send photos on WhatsApp and we’ll reply with price + availability.",
+        clima_title: "Today's cleaning conditions",
+        clima_intro: "Based on today’s temperature and humidity, upholstery and carpet cleaning",
+        clima_temp_label: "Temperature",
+        clima_hum_label: "Humidity",
+        clima_status_loading: "Checking conditions…",
+        clima_tip_default: "Dry weather helps fabrics dry faster and prevents odours.",
+        clima_status_good: "Good drying conditions",
+        clima_status_humid: "High humidity",
+        clima_rec_good: "is ideal",
+        clima_rec_ok: "is possible with ventilation",
+        clima_tip_good: "Low humidity helps textiles dry faster and reduces odour risk.",
+        clima_tip_humid: "On humid days we recommend good airflow or choosing a sunnier day.",
+        clima_city_label: "City:",
+        clima_status_great: "Great conditions ✅",
+        clima_status_not_ideal: "Not ideal ⚠️",
+        clima_status_moderate: "Moderate conditions ⚠️",
+        clima_tip_fast: "Fast drying day: open windows for 20–30 min after cleaning.",
+        clima_tip_higher_humidity: "Higher humidity slows drying. Ventilate well or use A/C on dry mode.",
+        clima_tip_moderate: "If humidity stays moderate, leave a bit more drying time.",
+        clima_best_title: "Best day this week to clean",
+        clima_best_fallback_title: "Best day this week to clean: —",
+        clima_best_fallback_sub: "We couldn’t load the weekly forecast.",
+        clima_best_sub: "Typically the driest day for faster drying",
+        clima_best_bits_max: "Max",
+        clima_best_bits_hum: "Humidity",
+        clima_best_bits_rain: "Rain",
+        clima_dry_index_label: "Drying index",
+        clima_best_title: "Best day to clean this week",
+        calc_title: "Calculate your estimated price",
+calc_sub: "Answer 3 questions and get a quick estimate before sending us photos on WhatsApp.",
+calc_service_label: "Service",
+calc_type_label: "Size / type",
+calc_qty_label: "Quantity",
+calc_btn: "Calculate",
+calc_note: "Final price is confirmed after reviewing photos and the real level of dirt.",
+calc_wa: "📲 Send photos on WhatsApp",
+
+calc_service_sofa: "Sofa / upholstery",
+calc_service_mattress: "Mattress",
+calc_service_carpet: "Carpet",
+calc_service_chairs: "Chairs",
+
+calc_type_2seater: "2-seater sofa",
+calc_type_3seater: "3-seater sofa",
+calc_type_4seater: "4-seater sofa",
+calc_type_chaise: "Chaise longue",
+calc_type_corner: "Corner sofa",
+calc_type_armchair: "Armchair",
+
+calc_type_kids_mattress: "Kids mattress",
+calc_type_single: "Single mattress (90 cm)",
+calc_type_double: "Double mattress (135–150 cm)",
+calc_type_large_mattress: "Large mattress (160–180 cm)",
+
+calc_type_carpet_small: "Small carpet",
+calc_type_carpet_medium: "Medium carpet",
+calc_type_carpet_large: "Large carpet",
+
+calc_type_dining_chair: "Dining chair",
+calc_type_office_chair: "Office chair",
+
+calc_estimated_price: "Estimated price",
+calc_discount_applied: "Discount applied",
+calc_discount_none: "No discount",
+calc_discount_2: "10% for 2 items",
+calc_discount_3: "15% for 3 items",
+calc_discount_4: "20% for 4+ items",
+calc_sub_multi: "Add multiple items to get a total estimate before sending us photos on WhatsApp.",
+calc_add_btn: "Add item",
+calc_clear_btn: "Clear order",
+calc_cart_title: "Your order",
+calc_cart_empty: "You have not added any items yet.",
+calc_subtotal: "Subtotal",
+calc_total_estimated: "Estimated total",
+calc_remove: "Remove",
+calc_add_btn: "Add to order",
+calc_clear_btn: "Start over",
+calc_order_title: "Your order",
+
+calc_discount_tip: "Add multiple items to unlock up to 20% discount.",
+calc_discount_unlocked: "Discount unlocked",
+
+calc_progress_1: "You added 1 item",
+calc_progress_2: "You unlocked 10% discount",
+calc_progress_3: "You unlocked 15% discount",
+calc_progress_4: "You unlocked 20% discount!",
+
+calc_wa_confirm: "📲 Send photos to confirm price",
+calc_cta_top: "Calculate price",
+        ba_cap_1: "Sofa · Before / After",
+        ba_cap_2: "Carpet · Before / After",
+        ba_cap_3: "Mattress · Before / After",
+        pb_1: "✔ Professional products, fabric-safe",
+        pb_2: "✔ Removes stains & odours",
+        pb_3: "✔ On-site service · Bizum / cash",
+        proof_cta: "📱 Send photos on WhatsApp",
+        proof_note: "Tip: include your postal code to confirm availability.",
+
+        micro_ac_1: "Professional disinfection",
+        micro_ac_2: "Mold removal",
+        micro_ac_3: "Improved indoor air quality",
+
+        micro_win_1: "Streak-free cleaning",
+        micro_win_2: "Removes outdoor buildup",
+        micro_win_3: "Ideal for coastal areas",
+
+        micro_fab_1: "Fast drying (depending on area)",
+        micro_fab_2: "Fabric-safe products",
+        micro_fab_3: "Odour removal",
+
+        micro_cm_1: "Removal of dust mites and allergens",
+        micro_cm_2: "Deep cleaning without damaging fibers",
+        micro_cm_3: "Ideal for homes, rentals, and hotels",
+
+
+        micro_hm_1: "Professional workmanship",
+        micro_hm_2: "Small quick repairs",
+        micro_hm_3: "Materials not included",
+
+        micro_ins_1: "Photo report",
+        micro_ins_2: "On-site or video",
+        micro_ins_3: "Fast results delivery",
+        request_whatsapp: "📱 Request your cleaning via WhatsApp",
+
+        areas_title: "Service Areas",
+        areas_sub: "Choose your area to see services and indicative prices:",
+        areas_note: "Costa Tropical includes: Almuñécar · Motril · Salobreña",
+
+        footerServices: "Property Services | A/C Cleaning · Fabric Cleaning · Pre-sale Inspections",
+        footer_areas: "Service available in Catalonia and Andalusia",
+
+        footerInstagram: "Instagram",
+        footerReviews: "⭐ Google Reviews",
+        btn_whatsapp: "Request via WhatsApp",
+        footerPrivacy: "Privacy Policy",
+        svc_ac_teaser: "Indoor & outdoor unit cleaning with disinfection and mold removal.",
+        svc_win_teaser: "Windows and outdoor awnings with a streak-free finish.",
+        svc_fab_teaser: "Sofas, armchairs, chairs, headboards, curtains and boat upholstery.",
+        svc_cm_teaser: "Deep hygienic cleaning for healthier sleep and fresh textiles.",
+        svc_hm_teaser:  "Small repairs and home tasks.",
+        svc_ins_teaser: "On-site or video inspections with a report.",
+        btn_details: "More details",
+        promo_text: "📲 Send your ZIP code on WhatsApp today to book your FREE rug cleaning (this week).",
+        promo_cta:  "Book on WhatsApp",
+        promo_prefill: "Hi! My ZIP code is ____ and I’d like to book the FREE rug cleaning.",
+        svc_ac_title: "Air Conditioning Cleaning",
+        svc_ac_body: "<div class='svc-details'>" +
+
+    // Kicker + lead
+    "<div class='svc-block'>" +
+      "<div class='svc-kicker'>Health · Savings · Clean air</div>" +
+      "<p class='svc-lead'>Complete cleaning of <strong>indoor and outdoor units</strong> with professional disinfection. Ideal for homes and short-term rentals.</p>" +
+    "</div>" +
+
+    // Two columns: What + Why
+    "<div class='svc-grid'>" +
+
+      "<div class='svc-block'>" +
+        "<h4>✔ What we clean</h4>" +
+        "<ul class='svc-list'>" +
+          "<li>Indoor unit: <strong>filters, fan turbine, drain tray</strong> and casing</li>" +
+          "<li>Outdoor unit: <strong>condenser coil</strong> and ventilation areas</li>" +
+          "<li>Removal of <strong>mold</strong>, dust and bacteria</li>" +
+          "<li>Surface disinfection and visual inspection</li>" +
+        "</ul>" +
+      "</div>" +
+
+      "<div class='svc-block'>" +
+        "<h4>✔ Why it matters</h4>" +
+        "<ul class='svc-list'>" +
+          "<li>Improves <strong>indoor air quality</strong></li>" +
+          "<li>Reduces <strong>allergies</strong> and unpleasant odors</li>" +
+          "<li>Lower <strong>energy consumption</strong></li>" +
+          "<li>Extends the <strong>lifespan</strong> of the system</li>" +
+        "</ul>" +
+      "</div>" +
+
+    "</div>" +
+
+    // Tags
+    "<div class='svc-block'>" +
+      "<h4>Who it’s for</h4>" +
+      "<div class='svc-tags'>" +
+        "<span class='svc-tag'>🏠 Private homes</span>" +
+        "<span class='svc-tag'>👶 Families with children</span>" +
+        "<span class='svc-tag'>🐾 Pets</span>" +
+        "<span class='svc-tag'>🏡 Airbnb / holiday rentals</span>" +
+        "<span class='svc-tag'>🏢 Small offices</span>" +
+      "</div>" +
+    "</div>" +
+
+    // B2C / B2B
+    "<div class='svc-grid'>" +
+
+      "<div class='svc-block'>" +
+        "<h4>B2C · Residential</h4>" +
+        "<ul class='svc-list'>" +
+          "<li>Recommended: <strong>once per year</strong> (every 6 months with pets)</li>" +
+          "<li>Typical duration: <strong>60–90 min</strong> per unit</li>" +
+          "<li>Drying time: usually <strong>fast</strong> (depends on unit & access)</li>" +
+        "</ul>" +
+      "</div>" +
+
+      "<div class='svc-block'>" +
+        "<h4>B2B · Airbnb, hospitality & property management</h4>" +
+        "<ul class='svc-list'>" +
+          "<li>Scheduled service for <strong>guest turnover</strong></li>" +
+          "<li>Ideal for <strong>preventive maintenance</strong> and better reviews</li>" +
+          "<li>Support for <strong>multiple units</strong> and recurring visits</li>" +
+        "</ul>" +
+      "</div>" +
+
+    "</div>" +
+
+    // Availability
+    "<div class='svc-block'>" +
+      "<p class='svc-note'><strong>Available only in Barcelona and Lloret de Mar.</strong></p>" +
+    "</div>" +
+
+
+
+    // Quote hint
+    "<div class='svc-block svc-cta-hint'>" +
+      "<h4>For an exact quote</h4>" +
+      "<p class='svc-note'>Please send us via WhatsApp: <strong>1 photo of the indoor unit</strong> and <strong>1 of the outdoor unit</strong> (or the model/location if installed at height).</p>" +
+    "</div>" +
+
+  "</div>",
+
+        svc_ac_price: "From €90",
+        svc_win_title: "Window & Awning Cleaning",
+        svc_win_body:
+          "Professional cleaning of windows and <strong>outdoor awnings</strong> " +
+          "with high-quality tools for a <strong>streak-free</strong> finish. " +
+          "We remove dust, sea salt, and environmental dirt.<br><br>" +
+          "For accurate pricing, send <strong>photos</strong> and note height/access.",
+        svc_win_price: "From €75",
+        svc_fab_title: "Fabric & Upholstery Cleaning",
+        svc_fab_body:
+        "<div class='svc-details'>" +
+
+    "<div class='svc-block'>" +
+      "<div class='svc-kicker'>Textiles · Odours · Stains</div>" +
+      "<p class='svc-lead'>Deep cleaning for <strong>sofas, armchairs, chairs, upholstered headboards, boat upholstery</strong> and <strong>curtains</strong>. We remove built-up dirt and odours using professional equipment while protecting the fabric.</p>" +
+    "</div>" +
+
+    "<div class='svc-grid'>" +
+
+      "<div class='svc-block'>" +
+        "<h4>✔ What we clean</h4>" +
+        "<ul class='svc-list'>" +
+          "<li><strong>Sofas</strong> and chaise longues</li>" +
+          "<li><strong>Armchairs</strong> and lounge chairs</li>" +
+          "<li><strong>Chairs</strong> (dining / office)</li>" +
+          "<li><strong>Upholstered headboards</strong></li>" +
+          "<li><strong>Boat upholstery</strong></li>" +
+          "<li><strong>Curtains</strong> (please confirm type & access)</li>" +
+        "</ul>" +
+      "</div>" +
+
+      "<div class='svc-block'>" +
+        "<h4>✔ Results</h4>" +
+        "<ul class='svc-list'>" +
+          "<li>Reduced <strong>stains</strong> and marks</li>" +
+          "<li>Odour removal (cooking, pets, humidity)</li>" +
+          "<li>A fresher <strong>feel</strong> at home</li>" +
+          "<li>Fabric-safe professional solutions</li>" +
+        "</ul>" +
+      "</div>" +
+
+    "</div>" +
+
+    "<div class='svc-block'>" +
+      "<h4>Best for</h4>" +
+      "<div class='svc-tags'>" +
+        "<span class='svc-tag'>🏠 Homes</span>" +
+        "<span class='svc-tag'>🏡 Airbnb / rentals</span>" +
+        "<span class='svc-tag'>🐾 Pets</span>" +
+        "<span class='svc-tag'>🍷 Odours / stains</span>" +
+        "<span class='svc-tag'>🛥 Boat upholstery</span>" +
+      "</div>" +
+    "</div>" +
+
+    "<div class='svc-grid'>" +
+
+      "<div class='svc-block'>" +
+        "<h4>Before we arrive</h4>" +
+        "<ul class='svc-list'>" +
+          "<li>Send <strong>2–3 photos</strong> (wide + stain close-ups)</li>" +
+          "<li>Include <strong>city</strong> + <strong>ZIP code</strong></li>" +
+          "<li>For sofas: number of seats / chaise longue</li>" +
+        "</ul>" +
+      "</div>" +
+
+      "<div class='svc-block'>" +
+        "<h4>Drying</h4>" +
+        "<ul class='svc-list'>" +
+          "<li>Depends on fabric, humidity and ventilation</li>" +
+          "<li>Ask about <strong>express drying</strong> by area</li>" +
+          "<li>Usually usable carefully the same day</li>" +
+        "</ul>" +
+      "</div>" +
+
+    "</div>" +
+
+    "<div class='svc-block'>" +
+      "<p class='svc-note'><strong>Tip:</strong> for delicate/older fabrics, send a photo of the label/material.</p>" +
+    "</div>" +
+
+    "<div class='svc-block'>" +
+      "<h4>Video (10–30s)</h4>" +
+      "<p class='svc-note'>No autoplay — the user chooses when to watch.</p>" +
+    "</div>" +
+
+    "<div class='svc-block svc-cta-hint'>" +
+      "<h4>For an exact quote</h4>" +
+      "<p class='svc-note'>WhatsApp us: <strong>wide photo</strong> + <strong>stain close-ups</strong> + <strong>ZIP code</strong>.</p>" +
+    "</div>" +
+
+  "</div>",
+        svc_fab_price: "From €80",
+        svc_cm_title: "Carpet & Mattress Cleaning",
+        svc_cm_body:
+  "<div class='svc-details'>" +
+
+    "<div class='svc-block'>" +
+      "<div class='svc-kicker'>Hygiene · Better rest · Fresh textiles</div>" +
+      "<p class='svc-lead'>Professional deep cleaning for <strong>carpets</strong> and <strong>mattresses</strong>, removing built-up dirt, dust, allergens and odours <strong>without damaging fibres</strong>.</p>" +
+    "</div>" +
+
+    "<div class='svc-grid'>" +
+
+      "<div class='svc-block'>" +
+        "<h4>✔ What we clean</h4>" +
+        "<ul class='svc-list'>" +
+          "<li><strong>Carpets</strong> (living rooms, bedrooms, hallways)</li>" +
+          "<li><strong>Mattresses</strong> (stains, odour, freshness)</li>" +
+          "<li><strong>Toppers</strong> and protectors (on request)</li>" +
+        "</ul>" +
+      "</div>" +
+
+      "<div class='svc-block'>" +
+        "<h4>✔ How we work</h4>" +
+        "<ul class='svc-list'>" +
+          "<li><strong>Injection–extraction</strong> method depending on fabric</li>" +
+          "<li>Fabric-safe solutions that respect <strong>colours and textures</strong></li>" +
+          "<li>Focus on <strong>stains</strong>, odours and deep soil</li>" +
+        "</ul>" +
+      "</div>" +
+
+    "</div>" +
+
+    "<div class='svc-block'>" +
+      "<h4>Best for</h4>" +
+      "<div class='svc-tags'>" +
+        "<span class='svc-tag'>🏠 Homes</span>" +
+        "<span class='svc-tag'>🏡 Holiday rentals</span>" +
+        "<span class='svc-tag'>🏨 Hotels</span>" +
+        "<span class='svc-tag'>👶 Families</span>" +
+        "<span class='svc-tag'>🐾 Pets</span>" +
+      "</div>" +
+    "</div>" +
+
+    "<div class='svc-grid'>" +
+
+      "<div class='svc-block'>" +
+        "<h4>Before we arrive</h4>" +
+        "<ul class='svc-list'>" +
+          "<li>Send <strong>2 photos</strong>: wide shot + stain close-ups</li>" +
+          "<li>Include <strong>city</strong> + <strong>ZIP code</strong></li>" +
+          "<li>Carpets: approximate size · Mattress: size (90/135/150/180)</li>" +
+        "</ul>" +
+      "</div>" +
+
+      "<div class='svc-block'>" +
+        "<h4>Drying</h4>" +
+        "<ul class='svc-list'>" +
+          "<li>Depends on humidity, ventilation and thickness</li>" +
+          "<li>Usually usable carefully the same day</li>" +
+          "<li>Ask about <strong>express drying</strong> options (by area)</li>" +
+        "</ul>" +
+      "</div>" +
+
+    "</div>" +
+
+    // ✅ NEW: Mattress bleaching note
+    "<div class='svc-block'>" +
+      "<h4>Add-on: mattress bleaching</h4>" +
+      "<ul class='svc-list'>" +
+        "<li>Recommended for yellowing / older stains</li>" +
+        "<li>Available <strong>only in Barcelona</strong></li>" +
+        "<li>Requires photo assessment (not always needed)</li>" +
+      "</ul>" +
+    "</div>" +
+
+    "<div class='svc-block'>" +
+      "<p class='svc-note'><strong>Areas:</strong> Barcelona, Marbella, Granada, Costa Tropical, and Sevilla.</p>" +
+    "</div>" +
+
+    "<div class='svc-block svc-cta-hint'>" +
+      "<h4>For an exact quote</h4>" +
+      "<p class='svc-note'>WhatsApp us: <strong>wide photo</strong> + <strong>stain close-ups</strong> + <strong>size</strong> + <strong>ZIP code</strong>.</p>" +
+    "</div>" +
+
+  "</div>",
+
+        svc_cm_price: "From €70",
+        svc_hm_title: "Handyman Services",
+        svc_hm_body:
+          "Reliable help for <strong>small repairs</strong> and home tasks: " +
+          "hanging shelves, assembling furniture, replacing taps or lights, adjusting doors, etc.<br><br>" +
+          "Tell us what you need and send <strong>photos or video</strong> for time and cost estimates.",
+        svc_hm_price: "From €30",
+        svc_ins_title: "Property Inspection",
+        svc_ins_body:
+          "<strong>In-person or video</strong> inspections for buyers, sellers, and rentals. " +
+          "You receive a summary with photos, notes, and a task list. Service also available in <strong>English</strong>.<br><br>" +
+          "Provide the address and inspection goal so we can arrange the date and access.",
+        svc_ins_price: "From €50",
+
+        faqTitle: "Frequently Asked Questions",
+        faqs: [
+          ["How long does a cleaning take?", "Usually 1 to 3 hours, depending on the item and condition."],
+          ["Do you offer drying service?", "Yes, we offer express drying for upholstery in Marbella and Sevilla. Your furniture is usually dry and ready to use within 4–6 hours after cleaning."],
+          ["Can you clean outdoor furniture or boat cushions?", "Yes, we specialize in cleaning boat upholstery, terrace furniture, and outdoor fabrics."],
+          ["Do you use eco-friendly products?", "Yes, we prioritize safe, non-toxic, and eco-friendly cleaning solutions."],
+          ["Is it safe for children and pets?", "Absolutely. We use professional products that are safe once the cleaned surfaces are dry."],
+          ["Can I schedule a service on weekends?", "Yes, we offer flexible appointments, including Saturdays and Sundays."],
+          ["How do I request a quote?", "You can contact us via WhatsApp. Just send photos and describe your cleaning needs."],
+          ["Do you offer pre-sale cleaning?", "Yes! We offer upholstery and air conditioner cleaning for properties before sale — with a special discount for combined services."],
+          ["Do you offer remote property inspections?", "Yes! We offer video property inspections in English. We also provide on-site property inspections in Barcelona and surrounding areas."],
+          ["What payment methods do you accept?", "Cash or Bizum. Bank transfers coming soon."]
+        ]
+      }
+    };
+
+    // --- Promo helpers (declare BEFORE using) ---
+    const PROMO = { phone: "34657336353" };
+
+    // Prefill text for WhatsApp per language
+    function promoMessage(lang) {
+      return (translations[lang] && translations[lang].promo_prefill)
+        ? translations[lang].promo_prefill
+        : "Hi! My ZIP code is ____ and I’d like to book the FREE rug cleaning.";
+    }
+
+    // Write text + link into the promo bar (call on load and on lang change)
+    function updatePromoCTA(lang) {
+      const textEl = document.getElementById("promoText");
+      const ctaEl  = document.getElementById("promoCTA");
+      const bar    = document.getElementById("promoBar");
+      if (!bar || !textEl || !ctaEl) return;
+
+      textEl.textContent = translations[lang]?.promo_text || "";
+      ctaEl.textContent  = translations[lang]?.promo_cta  || "Book on WhatsApp";
+
+      const msg = encodeURIComponent(promoMessage(lang));
+      ctaEl.href = `https://wa.me/${PROMO.phone}?text=${msg}`;
+
+      bar.classList.remove("hidden");
+    
+
+      // 👇 ensure tracking is bound to the CTA
+  bindWhatsAppTracking();
+}
+
+// Refresh clima texts + best-day in current language
+
+
+
+
+
+
+
+    // Build FAQ accordion
+    function renderFAQ(lang) {
+      const list = document.getElementById("faqList");
+      if (!list) return;
+      const faqs = (translations[lang] && translations[lang].faqs) ? translations[lang].faqs : [];
+      list.innerHTML = faqs.map(([q, a]) => `
+        <details class="acc-item">
+          <summary>${q}</summary>
+          <div class="acc-content"><p>${a}</p></div>
+        </details>
+      `).join("");
+      // allow only one open
+      list.querySelectorAll('details').forEach(d => {
+        d.addEventListener('toggle', () => {
+          if (d.open) list.querySelectorAll('details[open]').forEach(o => { if (o !== d) o.open = false; });
+        });
+      });
+    }
+
+    // Language switch (with memory + prevent flicker)
+    function switchLang(lang) {
+      if (window.__currentLang === lang) return;
+      window.__currentLang = lang;
+
+      try { localStorage.setItem('lang', lang); } catch (e) {}
+      document.documentElement.setAttribute("lang", lang);
+
+      // Slogan
+      const sloganEl = document.getElementById("slogan");
+      if (sloganEl) sloganEl.textContent = translations[lang].slogan || "";
+
+      // FAQ
+      const faqTitle = document.getElementById("faqTitle");
+      if (faqTitle) faqTitle.textContent = translations[lang].faqTitle || "";
+      renderFAQ(lang);
+
+      // Subscribe section text (keep these here so they re-translate on switch)
+      const subTitle = document.querySelector('#subTitle [data-i18n="subscribeTitle"]') || document.getElementById('subTitle');
+      const subBtn   = document.getElementById("subscribeBtn");
+      const thanks   = document.querySelector("#thankYouMessage [data-i18n='thankyou']") || document.getElementById("thankYouMessage");
+      if (subTitle) subTitle.textContent = translations[lang].subscribeTitle || "";
+      if (subBtn)   subBtn.textContent   = translations[lang].subscribeButton || "";
+      if (thanks)   thanks.textContent   = translations[lang].thankyou || "";
+
+      // Generic [data-i18n]
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (translations[lang] && translations[lang][key]) el.textContent = translations[lang][key];
+      });
+      // Elements that contain HTML in translations
+      document.querySelectorAll('[data-i18n-html]').forEach(el => {
+        const key = el.getAttribute('data-i18n-html');
+        if (translations[lang] && translations[lang][key]) el.innerHTML = translations[lang][key];
+      });
+
+      // Promo for this language
+      updatePromoCTA(lang);
+
+      // refresh calculator when language changes
+try {
+  fillCalcTypes();
+  renderCalcCart();
+} catch (e) {}
+      
+      // Refresh clima block in the new language
+try {
+  const cityKey = document.getElementById("clima-city")?.value || "lloret";
+  updateClima(cityKey);
+} catch (e) {}
+
+// ✅ instant re-render of "best day" in the new language (no waiting)
+try {
+  if (window.__climaLast?.best) renderBestDay(window.__climaLast.best, lang);
+} catch (e) {}
+
+
+    }
+
+
+
+
+    // One-time setup of the bar (close button + first render) — ONLY place that toggles has-promo and close
+    function initPromoBar() {
+      const bar   = document.getElementById("promoBar");
+      const close = document.getElementById("promoClose");
+      if (!bar) return;
+
+      // first render using current language
+      updatePromoCTA(window.__currentLang || "es");
+
+      // push the hero down a bit while the bar is visible
+      document.body.classList.add('has-promo');
+
+      close?.addEventListener("click", () => {
+        bar.style.display = "none";
+        document.body.classList.remove('has-promo');
+      });
+    }
+
+
+
+
+// === GA4 helper (send reliably via beacon) ===
+function gaEvent(name, params = {}) {
+  if (typeof gtag === "function") {
+    gtag('event', name, {
+      transport_type: 'beacon',
+      page_location: location.href,
+      ...params
+    });
+  }
+}
+
+// === Attach GA to all WhatsApp links ===
+function bindWhatsAppTracking() {
+  const nodes = document.querySelectorAll('a[href^="https://wa.me/"]');
+  nodes.forEach(a => {
+    if (a.dataset.tracked) return;  // avoid double-binding
+    a.dataset.tracked = "1";
+
+    const ui_location =
+      a.id === 'promoCTA' ? 'promo_bar'
+      : a.id === 'svcModalCTA' ? 'modal'
+      : a.closest('header') ? 'hero'
+      : a.closest('.svc-card') ? 'service_card'
+      : 'page';
+
+    a.addEventListener('click', () => {
+      const lang = window.__currentLang || document.documentElement.getAttribute('lang') || 'es';
+      gaEvent('whatsapp_click', {   // ✅ fixed
+        ui_location,
+        language: lang,
+        link_url: a.href,
+        link_text: (a.textContent || '').trim() || 'icon'
+      });
+    });
+  });
+}
+
+
+
+
+// =========================
+// CLIMA (Weather → cleaning tip) using Open-Meteo (no API key)
+// =========================
+const CLIMA_CITIES = {
+  barcelona: { name: { es: "Barcelona", en: "Barcelona" }, lat: 41.3874, lon: 2.1686 },
+  lloret: { name: { es: "Lloret de Mar", en: "Lloret de Mar" }, lat: 41.6999, lon: 2.8456 },
+  marbella: { name: { es: "Marbella", en: "Marbella" }, lat: 36.5101, lon: -4.8824 },
+  granada: { name: { es: "Granada", en: "Granada" }, lat: 37.1773, lon: -3.5986 },
+  sevilla: { name: { es: "Sevilla", en: "Seville" }, lat: 37.3891, lon: -5.9845 },
+  costatropical: { name: { es: "Costa Tropical", en: "Costa Tropical" }, lat: 36.7470, lon: -3.5160 }
+};
+
+function formatWeekday(dateStr, lang = "es") {
+  const d = new Date(dateStr + "T00:00:00");
+  return d.toLocaleDateString(
+    lang === "en" ? "en-GB" : "es-ES",
+    { weekday: "long" }
+  );
+}
+
+function pickBestCleaningDay(daily, lang = "es") {
+  const tMax   = daily?.temperature_2m_max || [];
+  const humMin = daily?.relative_humidity_2m_min || []; // ✅ use MIN humidity
+  const rain   = daily?.precipitation_sum || [];
+  const time   = daily?.time || [];
+
+  if (!time.length) return null;
+
+  let bestIdx = -1;
+  let bestScore = -1;
+
+  for (let i = 0; i < time.length; i++) {
+    const temp = Number(tMax[i] ?? 0);
+    const hum  = Number(humMin[i] ?? 70);
+    const r    = Number(rain[i] ?? 0);
+
+    const score = dryingIndexDaily(temp, hum, r);
+
+    if (score > bestScore) {
+      bestScore = score;
+      bestIdx = i;
+    }
+  }
+
+  if (bestIdx === -1) return null;
+
+  return {
+    date: time[bestIdx],
+    weekday: formatWeekday(time[bestIdx], lang),
+    tempMax: Number(tMax[bestIdx] ?? 0),
+    humidityMin: Number(humMin[bestIdx] ?? 0),
+    rain: Number(rain[bestIdx] ?? 0),
+    index: bestScore
+  };
+}
+
+function renderBestDay(best, lang = "es") {
+  const titleEl = document.getElementById("clima-bestday-title");
+  const subEl   = document.getElementById("clima-bestday-sub");
+  if (!titleEl || !subEl) return;
+
+  const t = translations[lang] || translations.es;
+
+  if (!best) {
+    titleEl.textContent = t.clima_best_fallback_title || "Mejor día esta semana para limpiar: —";
+    subEl.textContent   = t.clima_best_fallback_sub   || "No se pudo cargar el pronóstico semanal.";
+    return;
+  }
+
+  const weekdayCap = best.weekday
+    ? best.weekday.charAt(0).toUpperCase() + best.weekday.slice(1)
+    : "";
+
+  titleEl.textContent = `${t.clima_best_title || "Mejor día esta semana para limpiar"}: ${weekdayCap}`;
+
+  const bits = [];
+  bits.push(`${t.clima_best_bits_max || "Máx"} ${best.tempMax}°C`);
+
+  if (best.humidityMin !== null && best.humidityMin !== undefined) {
+    bits.push(`${t.clima_best_bits_hum || "Humedad"} min ${best.humidityMin}%`);
+  }
+
+  if (best.rain > 0) {
+    bits.push(`${t.clima_best_bits_rain || "Lluvia"} ${best.rain}mm`);
+  }
+
+  subEl.textContent =
+    `${t.clima_best_sub || "Suele ser el día más seco para un secado más rápido"} (${bits.join(" • ")}).`;
+}
+
+
+async function fetchClima(cityKey, lang = "es") {
+  const city = CLIMA_CITIES[cityKey] || CLIMA_CITIES.lloret;
+  const { lat, lon } = city;
+
+  // Current + daily forecast (7 days)
+  // daily: temp max, precipitation sum, humidity max (if supported by your Open-Meteo endpoint)
+ const url = `/.netlify/functions/weather?lat=${lat}&lon=${lon}`;
+
+const res = await fetch(url);
+if (!res.ok) throw new Error("Weather fetch failed");
+return await res.json();
+}
+
+// ✅ Helper (put it here, above updateClima)
+function getWindowAverages(hourly, dateStr, startHour = 12, endHour = 16) {
+  const times = hourly?.time || [];
+  const temps = hourly?.temperature_2m || [];
+  const hums  = hourly?.relative_humidity_2m || [];
+
+  const t = [];
+  const h = [];
+
+  for (let i = 0; i < times.length; i++) {
+    const iso = times[i];           // "2026-03-04T12:00"
+    const d = iso.slice(0,10);      // "2026-03-04"
+    const hour = Number(iso.slice(11,13));
+
+    if (d !== dateStr) continue;
+    if (hour < startHour || hour > endHour) continue;
+
+    const tv = Number(temps[i]);
+    const hv = Number(hums[i]);
+
+    if (Number.isFinite(tv)) t.push(tv);
+    if (Number.isFinite(hv)) h.push(hv);
+  }
+
+  if (!t.length || !h.length) return null;
+
+  return {
+    tempAvg: t.reduce((a,b)=>a+b,0) / t.length,
+    humAvg:  h.reduce((a,b)=>a+b,0) / h.length
+  };
+}
+
+function clamp(n, min, max) {
+  return Math.max(min, Math.min(max, n));
+}
+
+// Average temp/humidity + rain sum between 12:00 and 16:00 (inclusive)
+function middayWindowStats(data) {
+  const tArr = data.hourly?.temperature_2m || [];
+  const hArr = data.hourly?.relative_humidity_2m || [];
+  const pArr = data.hourly?.precipitation || [];
+  const time = data.hourly?.time || [];
+
+  if (!time.length) return null;
+
+  const today = new Date(time[0]).toISOString().slice(0, 10); // YYYY-MM-DD
+  const idxs = [];
+
+  for (let i = 0; i < time.length; i++) {
+    const ts = time[i]; // e.g. 2026-03-04T12:00
+    if (!ts.startsWith(today)) continue;
+
+    const hour = Number(ts.slice(11, 13)); // 0..23
+    if (hour >= 12 && hour <= 16) idxs.push(i);
+  }
+
+  if (!idxs.length) return null;
+
+  let tSum = 0, hSum = 0, pSum = 0, n = 0;
+
+  idxs.forEach(i => {
+    const t = Number(tArr[i]);
+    const h = Number(hArr[i]);
+    const p = Number(pArr[i] ?? 0);
+    if (Number.isFinite(t) && Number.isFinite(h)) {
+      tSum += t;
+      hSum += h;
+      pSum += Number.isFinite(p) ? p : 0;
+      n++;
+    }
+  });
+
+  if (!n) return null;
+
+  return {
+    tAvg: tSum / n,
+    hAvg: hSum / n,
+    rainSum: pSum
+  };
+}
+
+// Drying index 0–100 using temp + humidity + rain (simple, stable)
+function dryingIndex(tempC, humidityPct, rainMm = 0) {
+  // temperature score: best around 24–30C, ok around 16C
+  const tempScore = clamp(((tempC - 10) / (28 - 10)) * 45, 0, 45);
+
+  // humidity score: best below ~55%, gets bad >75%
+  const humScore = clamp(((75 - humidityPct) / (75 - 35)) * 45, 0, 45);
+
+  // rain penalty
+  const rainPenalty = clamp(rainMm * 8, 0, 30); // 0–30
+
+  return Math.round(clamp(tempScore + humScore - rainPenalty, 0, 100));
+}
+
+// For each day: compute a comparable index from daily max temp + max humidity + rain sum
+function dryingIndexDaily(tempMax, humMax, rainSum) {
+  return dryingIndex(tempMax, humMax, rainSum);
+}
+
+
+async function updateClima(cityKey) {
+  const lang = window.__currentLang || document.documentElement.getAttribute("lang") || "es";
+
+  const tempEl = document.getElementById("clima-temp");
+  const humEl = document.getElementById("clima-humidity");
+  const indexEl = document.getElementById("clima-index");
+  const statusEl = document.getElementById("clima-status");
+  const recEl = document.getElementById("clima-recommendation");
+  const tipEl = document.getElementById("clima-tip");
+
+  try {
+    if (statusEl) statusEl.textContent = (lang === "en") ? "Checking conditions…" : "Comprobando condiciones…";
+
+    const data = await fetchClima(cityKey, lang);
+
+  // Calculate averages for today between 12:00 and 16:00
+const today = (data?.daily?.time && data.daily.time[0])
+  ? data.daily.time[0]
+  : new Date().toISOString().slice(0,10);
+
+const win = getWindowAverages(data.hourly, today, 12, 16);
+
+if (!win) throw new Error("No hourly window data");
+
+const t = Math.round(win.tempAvg);
+const h = Math.round(win.humAvg);
+
+if (tempEl) tempEl.textContent = t;
+if (humEl) humEl.textContent = h;
+
+const idx = dryingIndex(t, h, 0);
+if (indexEl) indexEl.textContent = idx;
+
+    // 1) Today recommendation (simple, clear)
+    // You can tune thresholds anytime:
+    // Ideal: humidity <= 55 AND temp >= 18
+    // Moderate: humidity 56-65 OR temp 14-17
+    // Not ideal: humidity > 65 OR temp < 14
+    let level = "moderate";
+    if (h <= 55 && t >= 18) level = "good";
+    else if (h > 65 || t < 14) level = "bad";
+
+    if (level === "good") {
+      if (statusEl) statusEl.textContent = (lang === "en") ? "Great conditions ✅" : "Condiciones ideales ✅";
+      if (recEl) recEl.textContent = (lang === "en") ? "is ideal" : "es ideal";
+      if (tipEl) tipEl.textContent = (lang === "en")
+        ? "Fast drying day: open windows for 20–30 min after cleaning."
+        : "Día de secado rápido: ventila 20–30 min después de la limpieza.";
+    } else if (level === "bad") {
+      if (statusEl) statusEl.textContent = (lang === "en") ? "Not ideal ⚠️" : "No ideal ⚠️";
+      if (recEl) recEl.textContent = (lang === "en") ? "may need extra drying time" : "puede requerir más tiempo de secado";
+      if (tipEl) tipEl.textContent = (lang === "en")
+        ? "Higher humidity slows drying. Ventilate well or use A/C on dry mode."
+        : "La humedad alta ralentiza el secado. Ventila bien o usa el A/C en modo seco.";
+    } else {
+      if (statusEl) statusEl.textContent = (lang === "en") ? "Moderate conditions ⚠️" : "Condiciones moderadas ⚠️";
+      if (recEl) recEl.textContent = (lang === "en") ? "may need extra drying time" : "puede requerir más tiempo de secado";
+      if (tipEl) tipEl.textContent = (lang === "en")
+        ? "If humidity stays moderate, leave a bit more drying time."
+        : "Si la humedad es moderada, deja un poco más de tiempo de secado.";
+    }
+
+    // 2) Best day this week ✅
+    const best = pickBestCleaningDay(data.daily, lang);   // pass full data (hourly + daily)
+renderBestDay(best, lang);
+
+    // Store last clima values globally (for WhatsApp automation)
+    window.__climaLast = {
+      cityKey,
+      cityName: (CLIMA_CITIES[cityKey] || CLIMA_CITIES.lloret).name?.[lang] || cityKey,
+      temp: t,
+      humidity: h,
+      level,
+      best
+    };
+
+  } catch (e) {
+    if (statusEl) statusEl.textContent = (lang === "en") ? "Weather unavailable" : "Tiempo no disponible";
+    renderBestDay(null, lang);
+  }
+}
+
+
+function initClimaWidget() {
+  const citySelect = document.getElementById("clima-city");
+  if (!citySelect) return;
+
+  // 1) pick default city
+  let cityKey = "lloret";
+  try {
+    const savedCity = localStorage.getItem("clima_city");
+    if (savedCity && CLIMA_CITIES[savedCity]) cityKey = savedCity;
+  } catch (e) {}
+
+  // 2) set dropdown + fetch
+  citySelect.value = cityKey;
+  updateClima(cityKey);
+
+  // 3) refetch when user changes city
+  citySelect.addEventListener("change", () => {
+    const key = citySelect.value;
+    try { localStorage.setItem("clima_city", key); } catch (e) {}
+    updateClima(key);
+  });
+}
+
+async function fetchAndRenderClima(cityKey) {
+  const tempEl = document.getElementById("clima-temp");
+  const humEl  = document.getElementById("clima-humidity");
+  const statusEl = document.getElementById("clima-status");
+  const recEl = document.getElementById("clima-recommendation");
+  const tipEl = document.getElementById("clima-tip");
+
+  if (!tempEl || !humEl || !statusEl) return;
+
+  const city = CLIMA_CITIES[cityKey] || CLIMA_CITIES.lloret;
+  statusEl.textContent = (window.__currentLang === "en") ? "Checking conditions..." : "Comprobando condiciones...";
+
+  try {
+    const url =
+      `https://api.open-meteo.com/v1/forecast?latitude=${city.lat}&longitude=${city.lon}` +
+      `&current=temperature_2m,relative_humidity_2m&timezone=auto`;
+
+    const res = await fetch(url);
+
+if (!res.ok) {
+  throw new Error(`Weather HTTP error: ${res.status}`);
+}
+
+const data = await res.json();
+
+    const t = data?.current?.temperature_2m;
+    const h = data?.current?.relative_humidity_2m;
+
+    if (typeof t !== "number" || typeof h !== "number") throw new Error("No current data");
+
+    tempEl.textContent = Math.round(t);
+    humEl.textContent = Math.round(h);
+
+    // simple rule: good drying if humidity <= 65 and temp >= 18
+    const good = (h <= 65 && t >= 18);
+
+    if (recEl) recEl.textContent = good
+      ? ((window.__currentLang === "en") ? "is ideal" : "es ideal")
+      : ((window.__currentLang === "en") ? "may need longer drying time" : "puede requerir más tiempo de secado");
+
+    statusEl.textContent = good
+      ? ((window.__currentLang === "en") ? "Good conditions ✅" : "Buenas condiciones ✅")
+      : ((window.__currentLang === "en") ? "Moderate conditions ⚠️" : "Condiciones moderadas ⚠️");
+
+    if (tipEl) tipEl.textContent = good
+      ? ((window.__currentLang === "en") ? "Good weather helps fabrics dry faster and prevents odors." : "El buen tiempo ayuda a que los tejidos se sequen antes y evita olores.")
+      : ((window.__currentLang === "en") ? "If humidity is high, ventilate well and allow extra drying time." : "Si la humedad es alta, ventila bien y deja más tiempo de secado.");
+
+  } catch (err) {
+    tempEl.textContent = "—";
+    humEl.textContent = "—";
+    statusEl.textContent = (window.__currentLang === "en") ? "Unable to load weather" : "No se pudo cargar el clima";
+  }
+}
+
+/* =========================
+   JS PRICE CALCULATOR v2
+   ========================= */
+
+const CALC_DATA = {
+  sofa: {
+    types: {
+      "2seater": { esKey: "calc_type_2seater", enKey: "calc_type_2seater", min: 80, max: 80 },
+      "3seater": { esKey: "calc_type_3seater", enKey: "calc_type_3seater", min: 90, max: 90 },
+      "4seater": { esKey: "calc_type_4seater", enKey: "calc_type_4seater", min: 110, max: 110 },
+      "chaise":  { esKey: "calc_type_chaise",  enKey: "calc_type_chaise",  min: 95, max: 120 },
+      "corner":  { esKey: "calc_type_corner",  enKey: "calc_type_corner",  min: 120, max: 130 },
+      "armchair":{ esKey: "calc_type_armchair",enKey: "calc_type_armchair",min: 40, max: 55 }
+    }
+  },
+  mattress: {
+  types: {
+    "kid": {
+      esKey: "calc_type_kids_mattress",
+      enKey: "calc_type_kids_mattress",
+      min: 60,
+      max: 60
+    },
+    "single": {
+      esKey: "calc_type_single",
+      enKey: "calc_type_single",
+      min: 70,
+      max: 70
+    },
+    "double": {
+      esKey: "calc_type_double",
+      enKey: "calc_type_double",
+      min: 80,
+      max: 80
+    },
+    "large": {
+      esKey: "calc_type_large_mattress",
+      enKey: "calc_type_large_mattress",
+      min: 90,
+      max: 100
+    }
+  }
+},
+  
+  carpet: {
+    types: {
+      "small":  { esKey: "calc_type_carpet_small",  enKey: "calc_type_carpet_small",  min: 25, max: 40 },
+      "medium": { esKey: "calc_type_carpet_medium", enKey: "calc_type_carpet_medium", min: 40, max: 65 },
+      "large":  { esKey: "calc_type_carpet_large",  enKey: "calc_type_carpet_large",  min: 65, max: 110 }
+    }
+  },
+  chairs: {
+    types: {
+      "dining": { esKey: "calc_type_dining_chair", enKey: "calc_type_dining_chair", min: 35, max: 40 },
+      "office": { esKey: "calc_type_office_chair", enKey: "calc_type_office_chair", min: 25, max: 30 }
+    }
+  }
+};
+
+let calcCart = [];
+
+function getCalcDiscount(qty) {
+  if (qty >= 4) return 0.20;
+  if (qty === 3) return 0.15;
+  if (qty === 2) return 0.10;
+  return 0;
+}
+
+function getCalcDiscountLabel(qty, lang) {
+  const t = translations[lang] || translations.es;
+  if (qty >= 4) return t.calc_discount_4;
+  if (qty === 3) return t.calc_discount_3;
+  if (qty === 2) return t.calc_discount_2;
+  return t.calc_discount_none;
+}
+
+function formatPriceRange(min, max) {
+  if (Math.round(min) === Math.round(max)) return `${Math.round(min)} €`;
+  return `${Math.round(min)}–${Math.round(max)} €`;
+}
+
+function fillCalcTypes() {
+  const lang = window.__currentLang || "es";
+  const serviceEl = document.getElementById("calc-service");
+  const typeEl = document.getElementById("calc-type");
+  if (!serviceEl || !typeEl) return;
+
+  const service = serviceEl.value;
+  const config = CALC_DATA[service];
+  if (!config) {
+    typeEl.innerHTML = "";
+    return;
+  }
+
+  typeEl.innerHTML = Object.entries(config.types).map(([value, item]) => {
+    const key = lang === "en" ? item.enKey : item.esKey;
+    const label = translations[lang]?.[key] || translations.es?.[key] || value;
+    return `<option value="${value}">${label}</option>`;
+  }).join("");
+}
+
+function getTypeLabel(service, type, lang) {
+  const item = CALC_DATA[service]?.types?.[type];
+  if (!item) return type;
+  const key = lang === "en" ? item.enKey : item.esKey;
+  return translations[lang]?.[key] || translations.es?.[key] || type;
+}
+
+function addCalcItem() {
+  const serviceEl = document.getElementById("calc-service");
+  const typeEl = document.getElementById("calc-type");
+  const qtyEl = document.getElementById("calc-qty");
+
+  if (!serviceEl || !typeEl || !qtyEl) return;
+
+  const service = serviceEl.value;
+  const type = typeEl.value;
+  const qty = Number(qtyEl.value);
+
+  const item = CALC_DATA[service]?.types?.[type];
+  if (!item) return;
+
+  calcCart.push({
+    service,
+    type,
+    qty,
+    min: item.min,
+    max: item.max
+  });
+
+  renderCalcCart();
+}
+
+function removeCalcItem(index) {
+  calcCart.splice(index, 1);
+  renderCalcCart();
+}
+
+function clearCalcCart() {
+  calcCart = [];
+  renderCalcCart();
+}
+
+function getCalcProgressText(totalQty, lang) {
+  const t = translations[lang] || translations.es;
+
+  if (totalQty >= 4) return t.calc_progress_4;
+  if (totalQty === 3) return t.calc_progress_3;
+  if (totalQty === 2) return t.calc_progress_2;
+  if (totalQty === 1) return t.calc_progress_1;
+
+  return "";
+}
+
+
+function renderCalcCart() {
+  const lang = window.__currentLang || "es";
+  const t = translations[lang] || translations.es;
+
+  const cartItemsEl = document.getElementById("calc-cart-items");
+  const priceEl = document.getElementById("calc-result-price");
+  const subtotalEl = document.getElementById("calc-result-subtotal");
+  const discountEl = document.getElementById("calc-result-discount");
+  const waEl = document.getElementById("calc-wa");
+  const progressEl = document.getElementById("calc-progress");
+
+  if (!cartItemsEl || !priceEl || !subtotalEl || !discountEl || !waEl) return;
+
+  if (!calcCart.length) {
+    cartItemsEl.innerHTML = `<div class="calc-cart-empty">${t.calc_cart_empty}</div>`;
+    priceEl.textContent = "—";
+    subtotalEl.textContent = "";
+    discountEl.textContent = "";
+    if (progressEl) progressEl.textContent = "";
+    waEl.href = "https://wa.me/34657336353";
+    return;
+  }
+
+  cartItemsEl.innerHTML = calcCart.map((row, index) => {
+    const label = getTypeLabel(row.service, row.type, lang);
+    const lineMin = row.min * row.qty;
+    const lineMax = row.max * row.qty;
+
+    return `
+      <div class="calc-cart-row">
+        <div class="calc-cart-main">
+          <div class="calc-cart-name">${label}</div>
+          <div class="calc-cart-meta">× ${row.qty}</div>
+        </div>
+        <div class="calc-cart-price">${formatPriceRange(lineMin, lineMax)}</div>
+        <button type="button" class="calc-remove" onclick="removeCalcItem(${index})" aria-label="${t.calc_remove}">×</button>
+      </div>
+    `;
+  }).join("");
+
+  const totalQty = calcCart.reduce((sum, row) => sum + row.qty, 0);
+  const subtotalMin = calcCart.reduce((sum, row) => sum + (row.min * row.qty), 0);
+  const subtotalMax = calcCart.reduce((sum, row) => sum + (row.max * row.qty), 0);
+
+  const discount = getCalcDiscount(totalQty);
+  const totalMin = subtotalMin * (1 - discount);
+  const totalMax = subtotalMax * (1 - discount);
+
+  priceEl.textContent = `${t.calc_total_estimated}: ${formatPriceRange(totalMin, totalMax)}`;
+  subtotalEl.textContent = `${t.calc_subtotal}: ${formatPriceRange(subtotalMin, subtotalMax)}`;
+  discountEl.textContent = `${t.calc_discount_applied}: ${getCalcDiscountLabel(totalQty, lang)}`;
+
+  if (progressEl) {
+  progressEl.textContent = getCalcProgressText(totalQty, lang);
+}
+
+  const lines = calcCart.map(row => {
+    const label = getTypeLabel(row.service, row.type, lang);
+    return `- ${label} × ${row.qty}`;
+  }).join("%0A");
+
+  const totalText = formatPriceRange(totalMin, totalMax);
+
+  const msg = lang === "en"
+    ? `Hi, I used the calculator on your website.%0A%0AOrder:%0A${lines}%0A%0AEstimated total: ${totalText}%0ADiscount applied: ${getCalcDiscountLabel(totalQty, lang)}%0A%0AI am sending photos to confirm the final price.`
+    : `Hola, he usado la calculadora de su web.%0A%0APedido:%0A${lines}%0A%0APrecio orientativo total: ${totalText}%0ADescuento aplicado: ${getCalcDiscountLabel(totalQty, lang)}%0A%0ALes envío fotos para confirmar el precio final.`;
+
+  waEl.href = `https://wa.me/34657336353?text=${msg}`;
+}
+
+function initCalculator() {
+  const serviceEl = document.getElementById("calc-service");
+  const addEl = document.getElementById("calc-add");
+  const clearEl = document.getElementById("calc-clear");
+
+  if (!serviceEl || !addEl || !clearEl) return;
+
+  fillCalcTypes();
+  renderCalcCart();
+
+  serviceEl.addEventListener("change", fillCalcTypes);
+  addEl.addEventListener("click", addCalcItem);
+  clearEl.addEventListener("click", clearCalcCart);
+}
+
+
+    // Init + form submit
+    document.addEventListener("DOMContentLoaded", () => {
+      // Use saved language if available; fall back to Spanish
+      let saved = "es";
+      try {
+        const s = localStorage.getItem("lang");
+        if (s) saved = s;
+      } catch (e) {}
+
+      switchLang(saved);
+      initClimaWidget();   
+      initPromoBar();
+      initCalculator();
+     
+      /* ===========================
+   CLIMATE / WEATHER TRIGGER
+   =========================== */
+
+// ✅ bind tracking to all WhatsApp links now in the DOM
+bindWhatsAppTracking();
+
+
+ // Form submit handler
+const form = document.querySelector(".subscribe form");
+if (form) {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    fetch(form.action, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { Accept: "application/json" },
+    }).then((response) => {
+      if (response.ok) {
+        const thx = document.getElementById("thankYouMessage");
+        if (thx) thx.style.display = "block";
+
+        // ✅ GA4 conversion for lead form
+        gaEvent('generate_lead', { method: 'subscribe_form', form_id: 'contacto' });
+
+        form.reset();
+      }
+    });
+  });
+}
+    });
+
+    // Modal map & handlers
+    const svcMap = {
+  ac: {
+    title: 'svc_ac_title',
+    body:  'svc_ac_body',
+    img:   'card_air.jpg', // <-- keep this for fallback / card image
+
+    gallery: [
+      'outdoor.jpg',
+      'outdoor_action.jpg',
+      'cassette.jpg',
+      'filter.png'
+    ],
+    video: 'air_cleaning.mp4', // ✅ THIS is correct
+    video_note_key: 'svc_ac_video_note'
+    
+  },
+
+  win: { title: 'svc_win_title', body: 'svc_win_body', img: 'card_window.png' },
+  fab: {
+  title: 'svc_fab_title',
+  body:  'svc_fab_body',
+  img:   'card_sofa.jpg',
+
+  // ✅ put your real images here (same pattern as A/C)
+  gallery: [
+    'sofa_process1.jpg',
+    'sofa_process2.jpg',
+    'sofa_process3.jpg',
+    'sofa_process4.jpg',
+    'sofa_result.jpg'
+  ],
+
+  video: 'sofa_cleaning.mp4',
+  video_note_key: 'svc_fab_video_note'
+},
+  cm: {
+  title: 'svc_cm_title',
+  body:  'svc_cm_body',
+  img:   'card_carpet.png',
+  gallery: [
+    'carpet_1.jpg',
+    'carpet_3.png',
+    'mattress_1.png'
+  ]
+  // video: 'mattress_cleaning.mp4' // optional if you have one
+},
+
+  hm:  { title: 'svc_hm_title',  body: 'svc_hm_body',  img: 'card_handyman.png' },
+  ins: { title: 'svc_ins_title', body: 'svc_ins_body', img: 'card_inspection.jpg' },
+};
+
+
+ function openSvcModal(code) {
+  const lang = window.__currentLang || 'es';
+  const t = translations[lang] || {};
+  const cfg = svcMap[code];
+  if (!cfg) return;
+
+  // Title + body
+  document.getElementById('svcModalTitle').textContent = t[cfg.title] || '';
+  document.getElementById('svcModalBody').innerHTML   = t[cfg.body]  || '';
+
+  // CTA text
+  const cta = document.getElementById('svcModalCTA');
+  if (cta) cta.textContent = t.btn_whatsapp || 'WhatsApp';
+
+  // ✅ Gallery
+  const galleryEl = document.getElementById('svcModalGallery');
+  if (galleryEl) {
+    const imgs = Array.isArray(cfg.gallery)
+      ? cfg.gallery
+      : (cfg.img ? [cfg.img] : []);
+
+    galleryEl.innerHTML = imgs.map(src => `
+      <a href="${src}" target="_blank" rel="noopener">
+        <img src="${src}" alt="${t[cfg.title] || 'Service photo'}" loading="lazy">
+      </a>
+    `).join('');
+  }
+
+   // ✅ Optional video (robust switching)
+  const wrap = document.getElementById('svcModalVideoWrap');
+  const vid  = document.getElementById('svcModalVideo');
+  const note = document.getElementById('svcModalVideoNote');
+
+  if (wrap && vid) {
+    // stop previous playback
+    vid.pause();
+    vid.currentTime = 0;
+
+    if (cfg.video) {
+      wrap.style.display = 'block';
+
+      // IMPORTANT: set src directly (more reliable than innerHTML)
+      vid.removeAttribute('src');
+      vid.innerHTML = '';          // clear <source> tags if any
+      vid.src = cfg.video;         // ✅ set new video
+      vid.load();                  // ✅ force refresh
+
+      if (note) note.textContent =
+        (cfg.video_note_key && t[cfg.video_note_key]) ? t[cfg.video_note_key] : '';
+    } else {
+      wrap.style.display = 'none';
+      vid.removeAttribute('src');
+      vid.innerHTML = '';
+      vid.load();
+      if (note) note.textContent = '';
+    }
+  }
+
+
+  // Show modal
+  document.getElementById('svcModal').setAttribute('aria-hidden', 'false');
+}
+
+function closeSvcModal() {
+  const vid = document.getElementById('svcModalVideo');
+  if (vid) {
+    vid.pause();
+    vid.currentTime = 0;
+    vid.removeAttribute('src');
+    vid.load();
+  }
+  document.getElementById('svcModal')
+    .setAttribute('aria-hidden', 'true');
+}
+
+
+
+    document.addEventListener('click', (e) => {
+      const openBtn = e.target.closest('button.btn-secondary[data-open]');
+      if (openBtn) openSvcModal(openBtn.dataset.open);
+      if (e.target.closest('.svc-modal__close')) closeSvcModal();
+      if (e.target.id === 'svcModal') closeSvcModal();
+    });
+  </script>
+
+  <!-- Modal -->
+<div class="svc-modal" id="svcModal" aria-hidden="true">
+  <div class="svc-modal__dialog" role="dialog" aria-modal="true">
+    <button class="svc-modal__close" aria-label="Close">×</button>
+
+    <!-- LEFT: gallery + optional video -->
+    <div class="svc-modal__media">
+      <div id="svcModalGallery" class="svc-gallery"></div>
+
+      <div id="svcModalVideoWrap" class="svc-video-wrap" style="display:none;">
+        <video id="svcModalVideo" class="svc-video" controls playsinline preload="metadata"></video>
+        <p id="svcModalVideoNote" class="svc-video-note"></p>
+      </div>
+    </div>
+
+    <!-- RIGHT: structured content -->
+    <div class="svc-modal__content">
+      <h3 id="svcModalTitle"></h3>
+      <div id="svcModalBody"></div>
+
+      <div class="svc-info">
+        <a href="https://wa.me/34657336353" target="_blank" class="btn" id="svcModalCTA" data-i18n="btn_whatsapp"></a>
+      </div>
+    </div>
+  </div>
+</div>
