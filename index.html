@@ -3696,6 +3696,19 @@ function renderCalcCart() {
   if (!cartItemsEl || !priceEl || !subtotalEl || !discountEl || !waEl) return;
 
   if (!calcCart.length) {
+  document.getElementById('calc-cart').style.display = 'none';
+  document.getElementById('calc-result').style.display = 'none';
+  cartItemsEl.innerHTML = `<div class="calc-cart-empty">${t.calc_cart_empty}</div>`;
+  priceEl.textContent = "—";
+  subtotalEl.textContent = "";
+  discountEl.textContent = "";
+  if (progressEl) progressEl.textContent = "";
+  waEl.href = "https://wa.me/34657336353";
+  return;
+}
+
+document.getElementById('calc-cart').style.display = 'block';
+document.getElementById('calc-result').style.display = 'block';
     cartItemsEl.innerHTML = `<div class="calc-cart-empty">${t.calc_cart_empty}</div>`;
     priceEl.textContent = "—";
     subtotalEl.textContent = "";
