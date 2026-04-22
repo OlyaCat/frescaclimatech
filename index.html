@@ -270,54 +270,7 @@ footer a:hover {
     .btn-primary { background:#d4af37; color:#111; border:0; }
     .btn-outline { background:transparent; color:#111; border:2px solid #111; }
 
-    /* Modal */
-    .svc-modal { position:fixed; inset:0; background:rgba(0,0,0,.55); display:none; align-items:center; justify-content:center; padding:20px; z-index:2000; }
-    .svc-modal[aria-hidden="false"] { display:flex; }
-    .svc-modal__dialog {
-  position: relative;
-  background: #fff;
-  border-radius: 16px;
-  max-width: 980px;
-  width: 100%;
-  overflow: hidden;
 
-  /* Better proportions: smaller gallery, bigger content */
-  display: grid;
-  grid-template-columns: 0.85fr 1.15fr;
-  gap: 0;
-
-  /* Prevent overly tall modal */
-  max-height: 86vh;
-}
-
-/* Prevent empty tall feeling */
-.svc-modal__media,
-.svc-modal__content {
-  max-height: 86vh;
-  overflow: auto;
-}
-
-    .svc-modal__close { position:absolute; top:12px; right:16px; background:#000; color:#fff; border:0; width:36px; height:36px; border-radius:50%; cursor:pointer; }
-    .svc-modal__media { padding:16px; display:grid; gap:10px; background:#fafafa; }
-    .svc-modal__media img, .svc-modal__media video { width:100%; border-radius:10px; object-fit:cover; }
-    .svc-modal__content { padding:18px 20px 22px; }
-    .svc-grid { display:grid; grid-template-columns: 1fr 1fr; gap:18px; margin:12px 0 10px; }
-    .svc-info { display:flex; gap:18px; flex-wrap:wrap; padding:8px 0 14px; color:#333; }
-
-    @media (max-width: 900px) {
-      .svc-modal__dialog { grid-template-columns: 1fr; }
-      .svc-grid { grid-template-columns: 1fr; }
-    }
-
-    
-
-    /* clamp teaser text to 3 lines */
-    .clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
-
-    /* secondary button (More details) */
-    .btn-secondary { background: transparent; border: 2px solid #111; color: #111; border-radius: 10px; padding: 10px 14px; font-weight: 700; cursor: pointer; }
-    .svc-modal { cursor: pointer; }
-    .svc-modal__dialog { cursor: default; }
 
 /* Ultra-slim black promo bar */
 .promo-bar {
@@ -1934,7 +1887,7 @@ document.addEventListener('keydown', e => {
 <div class="svc-card">
   <img src="card_sofa.jpg" alt="Limpieza de Tapicería" />
   <div class="svc-body">
-    <h3 data-i18n="svc_fab_title"></h3>
+    <h3 data-i18n="svc_fab_title" onclick="openFsModal('tapiceriaModal')" style="cursor:pointer; text-decoration:underline; text-decoration-color:rgba(0,0,0,0.2); text-underline-offset:3px;"></h3>
     <p class="clamp-3" data-i18n="svc_fab_teaser"></p>
     <p class="price" data-i18n="svc_fab_price"></p>
 
@@ -1952,7 +1905,7 @@ document.addEventListener('keydown', e => {
    class="btn"
    data-i18n="btn_whatsapp">
 </a>
-      <button class="btn-secondary" onclick="openFsModal('tapiceriaModal')" data-i18n="btn_details">Explorar servicio</button>
+      
     </div>
   </div>
 </div>
@@ -4063,12 +4016,7 @@ function closeSvcModal() {
 
 
 
-    document.addEventListener('click', (e) => {
-      const openBtn = e.target.closest('button.btn-secondary[data-open]');
-      if (openBtn) openSvcModal(openBtn.dataset.open);
-      if (e.target.closest('.svc-modal__close')) closeSvcModal();
-      if (e.target.id === 'svcModal') closeSvcModal();
-    });
+   
 
 /* ——— SCROLL FADE IN ——— */
 const observer = new IntersectionObserver((entries) => {
@@ -4113,31 +4061,7 @@ document.querySelectorAll('.stat-number').forEach(el => counterObserver.observe(
     
   </script>
 
-  <!-- Modal -->
-<div class="svc-modal" id="svcModal" aria-hidden="true">
-  <div class="svc-modal__dialog" role="dialog" aria-modal="true">
-    <button class="svc-modal__close" aria-label="Close">×</button>
 
-    <!-- LEFT: gallery + optional video -->
-    <div class="svc-modal__media">
-      <div id="svcModalGallery" class="svc-gallery"></div>
-
-      <div id="svcModalVideoWrap" class="svc-video-wrap" style="display:none;">
-        <video id="svcModalVideo" class="svc-video" controls playsinline preload="metadata"></video>
-        <p id="svcModalVideoNote" class="svc-video-note"></p>
-      </div>
-    </div>
-
-    <!-- RIGHT: structured content -->
-    <div class="svc-modal__content">
-      <h3 id="svcModalTitle"></h3>
-      <div id="svcModalBody"></div>
-
-      <div class="svc-info">
-        <a href="https://wa.me/34657336353" target="_blank" class="btn" id="svcModalCTA" data-i18n="btn_whatsapp"></a>
-      </div>
-    </div>
-  </div>
 
 <!-- ══ TAPICERÍA FULLSCREEN MODAL ══ -->
 <div class="fs-modal" id="tapiceriaModal">
