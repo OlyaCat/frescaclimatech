@@ -1421,10 +1421,10 @@ gtag('config', 'G-47FC0D03XH', { 'debug_mode': true });
       Frescura Mediterránea para tu Hogar
     </p>
 
-    <h1 style="font-size:clamp(28px,5vw,52px); font-weight:900; line-height:1.1; letter-spacing:-1px; margin:12px 0 10px; color:#111;">
-  Limpieza Profesional de<br>
-  <span style="color:#b68714;">Sofás, Tapicería</span><br>
-  y Aire Acondicionado
+   <h1 style="font-size:clamp(28px,5vw,52px); font-weight:900; line-height:1.1; letter-spacing:-1px; margin:12px 0 10px; color:#111;">
+  <span data-i18n="hero_h1_line1">Limpieza Profesional de</span><br>
+  <span style="color:#b68714;" data-i18n="hero_h1_line2">Sofás, Tapicería</span><br>
+  <span data-i18n="hero_h1_line3">y Aire Acondicionado</span>
 </h1>
 
 <p style="font-size:16px; font-style:italic; color:#b68714; font-weight:600; margin:0 0 14px; text-shadow: 0 1px 3px rgba(255,255,255,0.8);">
@@ -1444,20 +1444,14 @@ gtag('config', 'G-47FC0D03XH', { 'debug_mode': true });
 
 <a href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto%20para%20limpieza%20de%20tapicer%C3%ADa.%20Puedo%20enviar%20fotos%20ahora."
    target="_blank"
-   class="btn hero-wa js-wa">
+   class="btn hero-wa js-wa"
+   data-i18n="hero_whatsapp_cta">
    Envía fotos → precio en 15 min
 </a>
 
-
-
-
-
-
     </div>
 
-    <p class="hero-note" data-i18n="hero_note">
-      Respondemos normalmente en menos de 15 minutos con un precio aproximado
-    </p>
+    
 <p class="hero-micro" data-i18n="hero_micro">
   Sofás · Tapicería · Alfombras · Aire acondicionado
 </p>
@@ -2029,6 +2023,9 @@ Servicio en Cataluña y Andalucía
     const translations = {
       es: {
         slogan: "Aire Fresco, Tejidos Limpios, Decisiones Claras",
+        hero_h1_line1: "Limpieza Profesional de",
+        hero_h1_line2: "Sofás, Tapicería",
+        hero_h1_line3: "y Aire Acondicionado",
         nav_servicios: "Servicios",
         nav_areas: "Áreas",
         nav_faq: "FAQ",
@@ -2488,6 +2485,9 @@ calc_cta_top: "Calcular precio",
       },
       en: {
         slogan: "Fresh Air, Clean Fabrics, Clear Decisions",
+        hero_h1_line1: "Professional Cleaning of",
+        hero_h1_line2: "Sofas, Upholstery",
+        hero_h1_line3: "& Air Conditioning",
         nav_servicios: "Services",
         nav_areas: "Areas",
         nav_faq: "FAQ",
