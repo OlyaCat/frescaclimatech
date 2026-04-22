@@ -1371,7 +1371,68 @@ footer p:first-child {
   .brand-name{ font-size: 18px; }
 }
 
-
+.fs-modal{position:fixed;inset:0;z-index:9999;background:#0d0d0d;overflow-y:auto;display:none;flex-direction:column;}
+.fs-modal.open{display:flex;}
+.fs-topbar{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 24px;background:rgba(13,13,13,0.92);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.08);}
+.fs-back{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.7);font-size:14px;font-weight:600;cursor:pointer;border:none;background:none;font-family:'Outfit',sans-serif;transition:color .2s;}
+.fs-back:hover{color:#fff;}
+.fs-back svg{width:18px;height:18px;}
+.fs-brand{font-size:15px;font-weight:800;color:#d4af37;}
+.fs-topbar-wa{display:flex;align-items:center;gap:8px;background:#d4af37;color:#111;font-weight:800;font-size:14px;padding:10px 18px;border-radius:999px;text-decoration:none;font-family:'Outfit',sans-serif;}
+.fs-hero{position:relative;width:100%;background:#000;max-height:60vh;overflow:hidden;}
+.fs-hero video{width:100%;max-height:60vh;object-fit:cover;display:block;}
+.fs-hero-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 50%,rgba(13,13,13,0.9) 100%);pointer-events:none;}
+.fs-hero-badge{position:absolute;bottom:24px;left:24px;background:rgba(212,175,55,0.95);color:#111;font-size:12px;font-weight:800;letter-spacing:0.12em;text-transform:uppercase;padding:6px 14px;border-radius:999px;}
+.fs-content{max-width:1100px;margin:0 auto;padding:0 24px 100px;width:100%;}
+.fs-title-block{padding:36px 0 28px;border-bottom:1px solid rgba(255,255,255,0.08);}
+.fs-kicker{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;font-weight:700;color:#d4af37;margin-bottom:8px;}
+.fs-title{font-size:clamp(28px,5vw,48px);font-weight:900;letter-spacing:-1.5px;line-height:1.05;margin-bottom:12px;color:#fff;}
+.fs-title em{font-style:normal;color:#d4af37;}
+.fs-price{font-size:20px;font-weight:800;color:rgba(255,255,255,0.9);}
+.fs-price span{font-size:14px;font-weight:400;color:rgba(255,255,255,0.4);margin-left:6px;}
+.fs-tabs{display:flex;gap:4px;margin:28px 0 0;border-bottom:1px solid rgba(255,255,255,0.08);}
+.fs-tab{padding:12px 20px;font-size:14px;font-weight:700;color:rgba(255,255,255,0.4);cursor:pointer;border:none;background:none;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .2s;font-family:'Outfit',sans-serif;}
+.fs-tab.active{color:#d4af37;border-bottom-color:#d4af37;}
+.fs-tab:hover{color:rgba(255,255,255,0.8);}
+.fs-panel{display:none;padding-top:28px;}
+.fs-panel.active{display:block;}
+.gallery-grid{display:grid;gap:12px;}
+.gallery-grid.cols-2{grid-template-columns:repeat(2,1fr);}
+.gallery-grid.cols-3{grid-template-columns:repeat(3,1fr);}
+@media(max-width:680px){.gallery-grid.cols-2,.gallery-grid.cols-3{grid-template-columns:1fr;}}
+.gallery-item{position:relative;border-radius:14px;overflow:hidden;cursor:pointer;background:#1a1a1a;}
+.gallery-item img{width:100%;display:block;aspect-ratio:4/3;object-fit:cover;transition:transform .3s ease;}
+.gallery-item.wide img{aspect-ratio:16/9;}
+.gallery-item.featured img{aspect-ratio:16/9;}
+.gallery-item:hover img{transform:scale(1.03);}
+.gallery-item .label{position:absolute;bottom:12px;left:12px;background:rgba(0,0,0,0.72);color:#fff;font-size:12px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;padding:5px 10px;border-radius:6px;backdrop-filter:blur(6px);}
+.sec-heading{font-size:11px;letter-spacing:0.16em;text-transform:uppercase;font-weight:700;color:rgba(255,255,255,0.3);margin:32px 0 14px;}
+.info-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px;}
+@media(max-width:600px){.info-grid{grid-template-columns:1fr;}}
+.info-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.08);border-radius:16px;padding:20px;}
+.info-card h4{font-size:12px;letter-spacing:0.12em;text-transform:uppercase;font-weight:700;color:#d4af37;margin-bottom:12px;}
+.info-card ul{list-style:none;padding:0;display:flex;flex-direction:column;gap:8px;}
+.info-card ul li{font-size:15px;color:rgba(255,255,255,0.8);line-height:1.4;padding-left:18px;position:relative;}
+.info-card ul li::before{content:"→";position:absolute;left:0;color:#d4af37;font-size:12px;}
+.tag-row{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px;}
+.tag{background:rgba(212,175,55,0.12);border:1px solid rgba(212,175,55,0.25);color:#d4af37;font-size:13px;font-weight:700;padding:6px 14px;border-radius:999px;}
+.process-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:24px;}
+@media(max-width:600px){.process-steps{grid-template-columns:1fr;}}
+.step{background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.07);border-radius:14px;padding:18px 16px;text-align:center;}
+.step-num{font-size:28px;font-weight:900;color:#d4af37;letter-spacing:-1px;margin-bottom:6px;}
+.step-label{font-size:13px;font-weight:600;color:rgba(255,255,255,0.7);line-height:1.4;}
+.fs-bottom-cta{position:fixed;bottom:0;left:0;right:0;z-index:10000;background:rgba(13,13,13,0.95);backdrop-filter:blur(16px);border-top:1px solid rgba(255,255,255,0.08);padding:16px 24px;display:none;align-items:center;justify-content:space-between;gap:16px;}
+.fs-bottom-cta.visible{display:flex;}
+.fs-bottom-info .service-name{font-size:15px;font-weight:800;color:#fff;}
+.fs-bottom-info .service-price{font-size:13px;color:rgba(255,255,255,0.5);}
+.fs-bottom-wa{display:flex;align-items:center;gap:8px;background:#d4af37;color:#111;font-weight:800;font-size:15px;padding:14px 24px;border-radius:999px;text-decoration:none;white-space:nowrap;box-shadow:0 4px 20px rgba(212,175,55,0.35);font-family:'Outfit',sans-serif;}
+.lightbox{position:fixed;inset:0;z-index:10001;background:rgba(0,0,0,0.96);display:none;align-items:center;justify-content:center;padding:20px;}
+.lightbox.open{display:flex;}
+.lightbox img{max-width:100%;max-height:90vh;object-fit:contain;border-radius:8px;}
+.lightbox-close{position:absolute;top:20px;right:20px;background:rgba(255,255,255,0.1);border:none;color:#fff;width:44px;height:44px;border-radius:50%;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+.lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.1);border:none;color:#fff;width:48px;height:48px;border-radius:50%;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;}
+.lightbox-prev{left:16px;}
+.lightbox-next{right:16px;}
 
 
   
@@ -1393,6 +1454,70 @@ gtag('config', 'G-47FC0D03XH', { 'debug_mode': true });
   /* Google Ads conversions */
   gtag('config', 'AW-17340076883');
   gtag('config', 'AW-17385730363');
+
+/* ── FULLSCREEN MODAL ── */
+const fsGalleries = {
+  tapiceria: [
+    { src:'images/sofa-grey-limpieza-antes-despues.png', alt:'Sofá gris · Barcelona' },
+    { src:'images/limpieza-sofa-barcelona-antes-despues.png', alt:'Mancha roja eliminada' },
+    { src:'images/limpieza-sofa-granada-antes-despues.png', alt:'Chesterfield · Granada' },
+    { src:'images/antes-despues-rojo-sofa.png', alt:'Sofá vintage' },
+    { src:'images/sillon-antes-despues.png', alt:'Sillón' },
+    { src:'images/limpieza-sofa-antes-despues.png', alt:'Sofá blanco' },
+    { src:'images/sofa_process1.jpg', alt:'Extracción en proceso' },
+    { src:'images/sofa_process2.jpg', alt:'Agua extraída' },
+    { src:'images/sofa_process3.jpg', alt:'Vapor y extracción' },
+    { src:'images/sofa_process4.jpg', alt:'Detalle costuras' },
+  ]
+};
+
+let fsCurrentGallery = 'tapiceria';
+let fsCurrentIndex = 0;
+
+function openFsModal(id) {
+  document.getElementById(id).classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal(id) {
+  document.getElementById(id).classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function switchFsTab(modal, name) {
+  const modalEl = document.getElementById(modal + 'Modal');
+  modalEl.querySelectorAll('.fs-tab').forEach(t => t.classList.remove('active'));
+  modalEl.querySelectorAll('.fs-panel').forEach(p => p.classList.remove('active'));
+  modalEl.querySelector(`[onclick="switchFsTab('${modal}','${name}')"]`).classList.add('active');
+  document.getElementById(`${modal}-tab-${name}`).classList.add('active');
+}
+
+function openLightbox(gallery, index) {
+  fsCurrentGallery = gallery;
+  fsCurrentIndex = index;
+  const img = fsGalleries[gallery][index];
+  document.getElementById('lightbox-img').src = img.src;
+  document.getElementById('lightbox-img').alt = img.alt;
+  document.getElementById('lightbox').classList.add('open');
+}
+
+function closeLightbox() {
+  document.getElementById('lightbox').classList.remove('open');
+}
+
+function navLightbox(dir) {
+  const gallery = fsGalleries[fsCurrentGallery];
+  fsCurrentIndex = (fsCurrentIndex + dir + gallery.length) % gallery.length;
+  document.getElementById('lightbox-img').src = gallery[fsCurrentIndex].src;
+  document.getElementById('lightbox-img').alt = gallery[fsCurrentIndex].alt;
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') { closeLightbox(); }
+  if (e.key === 'ArrowLeft') navLightbox(-1);
+  if (e.key === 'ArrowRight') navLightbox(1);
+});
+  
 </script>
 
 
@@ -1827,7 +1952,7 @@ gtag('config', 'G-47FC0D03XH', { 'debug_mode': true });
    class="btn"
    data-i18n="btn_whatsapp">
 </a>
-      <button class="btn-secondary" data-open="fab" data-i18n="btn_details"></button>
+      <button class="btn-secondary" onclick="openFsModal('tapiceriaModal')" data-i18n="btn_details">Explorar servicio</button>
     </div>
   </div>
 </div>
@@ -2207,7 +2332,7 @@ calc_cta_top: "Calcular precio",
         svc_cm_teaser: "Higienización profunda para un descanso más saludable y tejidos frescos.",
         svc_hm_teaser:  "Pequeñas reparaciones y tareas del hogar.",
         svc_ins_teaser: "Inspecciones presenciales o por vídeo con informe.",
-        btn_details: "Más detalles",
+        btn_details: "Explorar servicio",
         promo_text: "Envíanos hoy tu código postal por WhatsApp para reservar tu LIMPIEZA DE ALFOMBRA GRATIS (esta semana)",
         promo_cta:  "Reservar por WhatsApp",
         promo_prefill: "Hola, mi código postal es ____ y quiero reservar la limpieza de alfombra GRATIS",
@@ -2303,6 +2428,7 @@ calc_cta_top: "Calcular precio",
           "Eliminamos polvo, salitre y suciedad ambiental.<br><br>" +
           "Para un precio exacto, envíanos <strong>fotos</strong> e indica la altura/acceso.",
         svc_win_price: "Desde 75 €",
+        
         svc_fab_title: "Limpieza de Tapicería",
         svc_fab_body:
         "<div class='svc-details'>" +
@@ -2673,7 +2799,7 @@ calc_cta_top: "Calculate price",
         svc_cm_teaser: "Deep hygienic cleaning for healthier sleep and fresh textiles.",
         svc_hm_teaser:  "Small repairs and home tasks.",
         svc_ins_teaser: "On-site or video inspections with a report.",
-        btn_details: "More details",
+        btn_details: "Explore service",
         promo_text: "Send your ZIP code on WhatsApp today to book your FREE rug cleaning (this week).",
         promo_cta:  "Book on WhatsApp",
         promo_prefill: "Hi! My ZIP code is ____ and I’d like to book the FREE rug cleaning.",
@@ -4012,4 +4138,205 @@ document.querySelectorAll('.stat-number').forEach(el => counterObserver.observe(
       </div>
     </div>
   </div>
+
+<!-- ══ TAPICERÍA FULLSCREEN MODAL ══ -->
+<div class="fs-modal" id="tapiceriaModal">
+
+  <div class="fs-topbar">
+    <button class="fs-back" onclick="closeModal('tapiceriaModal')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Volver
+    </button>
+    <span class="fs-brand">FrescaClimaTech</span>
+    <a class="fs-topbar-wa"
+       href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto%20para%20limpieza%20de%20tapicer%C3%ADa.%20Puedo%20enviar%20fotos%20ahora."
+       target="_blank" rel="noopener">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Pedir precio
+    </a>
+  </div>
+
+  <div class="fs-hero">
+    <video autoplay muted loop playsinline poster="images/card_sofa.jpg">
+      <source src="images/Limpieza-profesional-de-tapiceria.mov" type="video/mp4">
+      <source src="images/sofa_cleaning.mp4" type="video/mp4">
+    </video>
+    <div class="fs-hero-overlay"></div>
+    <div class="fs-hero-badge">Limpieza profesional · En proceso</div>
+  </div>
+
+  <div class="fs-content">
+
+    <div class="fs-title-block">
+      <p class="fs-kicker">Tapicería · Sofás · Sillones · Náutica</p>
+      <h2 class="fs-title">Limpieza de<br><em>Tapicería</em></h2>
+      <div class="fs-price">Desde 80 € <span>· precio final tras ver fotos</span></div>
+    </div>
+
+    <div class="fs-tabs">
+      <button class="fs-tab active" onclick="switchFsTab('tapiceria','resultados')">Resultados</button>
+      <button class="fs-tab" onclick="switchFsTab('tapiceria','proceso')">En proceso</button>
+      <button class="fs-tab" onclick="switchFsTab('tapiceria','info')">Información</button>
+    </div>
+
+    <!-- TAB: RESULTADOS -->
+    <div class="fs-panel active" id="tapiceria-tab-resultados">
+      <p class="sec-heading">Antes y después — casos reales</p>
+
+      <div class="gallery-grid cols-2" style="margin-bottom:12px;">
+        <div class="gallery-item featured" onclick="openLightbox('tapiceria',0)">
+          <img src="images/sofa-grey-limpieza-antes-despues.png" alt="Sofá gris antes y después limpieza profesional Barcelona" loading="lazy"/>
+          <div class="label">Sofá · Barcelona</div>
+        </div>
+        <div class="gallery-item featured" onclick="openLightbox('tapiceria',1)">
+          <img src="images/limpieza-sofa-barcelona-antes-despues.png" alt="Mancha roja eliminada sofá" loading="lazy"/>
+          <div class="label">Mancha roja eliminada</div>
+        </div>
+      </div>
+
+      <div class="gallery-grid cols-3" style="margin-bottom:12px;">
+        <div class="gallery-item" onclick="openLightbox('tapiceria',2)">
+          <img src="images/limpieza-sofa-granada-antes-despues.png" alt="Sofá Chesterfield limpieza Granada" loading="lazy"/>
+          <div class="label">Chesterfield · Granada</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('tapiceria',3)">
+          <img src="images/antes-despues-rojo-sofa.png" alt="Sofá rojo antes y después" loading="lazy"/>
+          <div class="label">Sofá vintage</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('tapiceria',4)">
+          <img src="images/sillon-antes-despues.png" alt="Sillón antes y después limpieza" loading="lazy"/>
+          <div class="label">Sillón</div>
+        </div>
+      </div>
+
+      <div class="gallery-grid cols-2">
+        <div class="gallery-item" onclick="openLightbox('tapiceria',5)">
+          <img src="images/limpieza-sofa-antes-despues.png" alt="Sofá blanco antes y después FrescaClimaTech" loading="lazy"/>
+          <div class="label">Sofá blanco</div>
+        </div>
+        <div style="background:rgba(212,175,55,0.08);border:1px solid rgba(212,175,55,0.15);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px;text-align:center;">
+          <div style="font-size:36px;font-weight:900;color:#d4af37;letter-spacing:-2px;margin-bottom:8px;">100+</div>
+          <div style="font-size:14px;color:rgba(255,255,255,0.6);line-height:1.4;">sofás y tapicerías limpiadas</div>
+          <div style="margin-top:16px;font-size:13px;color:#d4af37;font-weight:700;">⭐⭐⭐⭐⭐ Google Reviews</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: PROCESO -->
+    <div class="fs-panel" id="tapiceria-tab-proceso">
+      <p class="sec-heading">Cómo trabajamos</p>
+      <div class="process-steps">
+        <div class="step"><div class="step-num">01</div><div class="step-label">Inspección del tejido y nivel de suciedad</div></div>
+        <div class="step"><div class="step-num">02</div><div class="step-label">Aplicación de producto específico para el tejido</div></div>
+        <div class="step"><div class="step-num">03</div><div class="step-label">Extracción profesional con máquina de inyección</div></div>
+      </div>
+      <p class="sec-heading">Fotos del proceso</p>
+      <div class="gallery-grid cols-2" style="margin-bottom:12px;">
+        <div class="gallery-item wide" onclick="openLightbox('tapiceria',6)">
+          <img src="images/sofa_process1.jpg" alt="Máquina limpieza tapicería en acción" loading="lazy"/>
+          <div class="label">Extracción en proceso</div>
+        </div>
+        <div class="gallery-item wide" onclick="openLightbox('tapiceria',7)">
+          <img src="images/sofa_process2.jpg" alt="Agua sucia extraída del sofá" loading="lazy"/>
+          <div class="label">Agua extraída</div>
+        </div>
+      </div>
+      <div class="gallery-grid cols-2">
+        <div class="gallery-item wide" onclick="openLightbox('tapiceria',8)">
+          <img src="images/sofa_process3.jpg" alt="Vapor limpieza profunda tapicería" loading="lazy"/>
+          <div class="label">Vapor y extracción</div>
+        </div>
+        <div class="gallery-item wide" onclick="openLightbox('tapiceria',9)">
+          <img src="images/sofa_process4.jpg" alt="Limpieza detalle costuras sofá" loading="lazy"/>
+          <div class="label">Detalle costuras</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: INFO -->
+    <div class="fs-panel" id="tapiceria-tab-info">
+      <p class="sec-heading">Qué incluye el servicio</p>
+      <div class="info-grid">
+        <div class="info-card">
+          <h4>Qué limpiamos</h4>
+          <ul>
+            <li>Sofás (2, 3, 4 plazas)</li>
+            <li>Chaise longue y rinconeras</li>
+            <li>Sillones y butacas</li>
+            <li>Sillas de comedor y oficina</li>
+            <li>Cabeceros tapizados</li>
+            <li>Tapicería náutica (barcos)</li>
+            <li>Cortinas (consulta acceso)</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h4>Resultados</h4>
+          <ul>
+            <li>Manchas y cercos reducidos</li>
+            <li>Olores eliminados</li>
+            <li>Tejido fresco y suave</li>
+            <li>Productos seguros para familia</li>
+            <li>Secado mismo día (según zona)</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h4>Antes de pedir</h4>
+          <ul>
+            <li>Envía 2–3 fotos por WhatsApp</li>
+            <li>Indica ciudad y código postal</li>
+            <li>Menciona nº de plazas / tipo</li>
+            <li>Respondemos en menos de 15 min</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h4>Zonas disponibles</h4>
+          <ul>
+            <li>Barcelona y Lloret de Mar</li>
+            <li>Marbella</li>
+            <li>Sevilla</li>
+            <li>Granada y Costa Tropical</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="sec-heading">Precios orientativos</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-bottom:24px;">
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:16px;text-align:center;"><div style="font-size:22px;font-weight:900;color:#d4af37;">80 €</div><div style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:4px;">Sofá 2 plazas</div></div>
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:16px;text-align:center;"><div style="font-size:22px;font-weight:900;color:#d4af37;">90 €</div><div style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:4px;">Sofá 3 plazas</div></div>
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:16px;text-align:center;"><div style="font-size:22px;font-weight:900;color:#d4af37;">95–120 €</div><div style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:4px;">Chaise longue</div></div>
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:16px;text-align:center;"><div style="font-size:22px;font-weight:900;color:#d4af37;">40–55 €</div><div style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:4px;">Sillón</div></div>
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:16px;text-align:center;"><div style="font-size:22px;font-weight:900;color:#d4af37;">35–40 €</div><div style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:4px;">Silla comedor</div></div>
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:16px;text-align:center;"><div style="font-size:22px;font-weight:900;color:#d4af37;">120–130 €</div><div style="font-size:13px;color:rgba(255,255,255,0.5);margin-top:4px;">Rinconera</div></div>
+      </div>
+
+      <div style="background:rgba(212,175,55,0.08);border:1px solid rgba(212,175,55,0.20);border-radius:14px;padding:18px 20px;font-size:14px;color:rgba(255,255,255,0.7);line-height:1.6;">
+        <strong style="color:#d4af37;">Consejo:</strong> Envíanos fotos por WhatsApp — te confirmamos precio exacto en menos de 15 minutos. Sin coste de desplazamiento.
+      </div>
+    </div>
+
+  </div>
+
+  <div class="fs-bottom-cta visible">
+    <div class="fs-bottom-info">
+      <div class="service-name">Limpieza de Tapicería</div>
+      <div class="service-price">Desde 80 € · respuesta en 15 min</div>
+    </div>
+    <a class="fs-bottom-wa"
+       href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto%20para%20limpieza%20de%20tapicer%C3%ADa.%20Puedo%20enviar%20fotos%20ahora."
+       target="_blank" rel="noopener">
+      Envía fotos → precio en 15 min
+    </a>
+  </div>
+
 </div>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox" onclick="closeLightbox()">
+  <button class="lightbox-close" onclick="closeLightbox()">×</button>
+  <button class="lightbox-nav lightbox-prev" onclick="event.stopPropagation();navLightbox(-1)">‹</button>
+  <img id="lightbox-img" src="" alt=""/>
+  <button class="lightbox-nav lightbox-next" onclick="event.stopPropagation();navLightbox(1)">›</button>
+</div>
+  
+</body>
+</html>
