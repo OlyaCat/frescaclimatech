@@ -1237,11 +1237,14 @@ footer p:first-child {
   z-index: 3000;
   display:flex;
   align-items:center;
+  isolation: auto !important;
   justify-content:space-between;
   gap: 16px;
 
   padding: 14px 18px;
   background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
