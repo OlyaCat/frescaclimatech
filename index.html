@@ -437,6 +437,32 @@ footer a:hover {
     font-size: 15px;
   }
 }
+    /* Wave divider */
+.wave-divider {
+  line-height: 0;
+  overflow: hidden;
+  margin-bottom: -2px;
+}
+.wave-divider svg {
+  display: block;
+  width: 100%;
+}
+
+/* Scroll fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animated counter */
+.stat-number {
+  display: inline-block;
+}
 
 
     /* Give the hero a little breathing room when the promo bar is visible */
@@ -1476,10 +1502,15 @@ gtag('config', 'G-47FC0D03XH', { 'debug_mode': true });
 
 </header>
 
-</header>
+
+  <div class="wave-divider">
+  <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+    <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="rgba(255,255,255,0.88)"/>
+  </svg>
+</div>
 
 <!-- ✅ STATS SECTION -->
-<section class="stats-proof">
+<section class="stats-proof fade-in">
   <div class="stats-proof-inner">
     <p class="stats-kicker">Resultados reales</p>
     <h2>Confianza construida con trabajo real</h2>
@@ -1489,17 +1520,17 @@ gtag('config', 'G-47FC0D03XH', { 'debug_mode': true });
 
     <div class="stats-grid">
       <div class="stat-card">
-        <div class="stat-number">80+</div>
+        <div class="stat-number" data-target="80" data-suffix="+">80+</div>
         <div class="stat-label">clientes atendidos</div>
       </div>
 
       <div class="stat-card">
-        <div class="stat-number">100+</div>
+        <div class="stat-number" data-target="100" data-suffix="+">100+</div>
         <div class="stat-label">sofás y tapicería limpiados</div>
       </div>
 
       <div class="stat-card">
-        <div class="stat-number">20+</div>
+        <div class="stat-number" data-target="20" data-suffix="+">20+</div>
         <div class="stat-label">colchones higienizados</div>
       </div>
     </div>
@@ -1535,7 +1566,7 @@ gtag('config', 'G-47FC0D03XH', { 'debug_mode': true });
 <!-- =========================
      LAYER 1.5: CLIMATE / WEATHER TRIGGER
      ========================= -->
-<section class="clima" id="clima">
+<section class="clima fade-in" id="clima">
   <div class="clima-inner">
     <h2 class="clima-title" data-i18n="clima_title">Condiciones de limpieza hoy</h2>
 
@@ -1610,7 +1641,7 @@ gtag('config', 'G-47FC0D03XH', { 'debug_mode': true });
 <!-- =========================
      QUICK PRICE CALCULATOR v2
      ========================= -->
-<section class="calc" id="calc">
+<section class="calc fade-in" id="calc">
   <div class="calc-inner">
     <h2 class="calc-title" data-i18n="calc_title">Calcula tu precio orientativo</h2>
     <p class="calc-sub" data-i18n="calc_sub_multi">
@@ -1695,7 +1726,7 @@ gtag('config', 'G-47FC0D03XH', { 'debug_mode': true });
 <!-- =========================
      LAYER 2: PROOF + BENEFITS
      ========================= -->
-<section class="proof" id="prueba">
+<section class="proof fade-in" id="prueba">
 
   <section class="proof" id="prueba" style="padding:32px 16px;">
   <div style="max-width:980px; margin:0 auto; background:rgba(255,255,255,0.92); border-radius:18px; box-shadow:0 10px 28px rgba(0,0,0,0.08); padding:32px 28px;">
@@ -3919,6 +3950,48 @@ function closeSvcModal() {
       if (e.target.closest('.svc-modal__close')) closeSvcModal();
       if (e.target.id === 'svcModal') closeSvcModal();
     });
+
+/* ——— SCROLL FADE IN ——— */
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(el => {
+    if (el.isIntersecting) {
+      el.target.classList.add('visible');
+      observer.unobserve(el.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+/* ——— ANIMATED COUNTERS ——— */
+function animateCounter(el, target, suffix = '+') {
+  let start = 0;
+  const duration = 1800;
+  const step = (timestamp) => {
+    if (!start) start = timestamp;
+    const progress = Math.min((timestamp - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    el.textContent = Math.floor(eased * target) + suffix;
+    if (progress < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      const el = entry.target;
+      const target = parseInt(el.dataset.target);
+      const suffix = el.dataset.suffix || '+';
+      animateCounter(el, target, suffix);
+      counterObserver.unobserve(el);
+    }
+  });
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.stat-number').forEach(el => counterObserver.observe(el));
+
+    
   </script>
 
   <!-- Modal -->
