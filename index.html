@@ -1567,75 +1567,62 @@ gtag('config', 'G-47FC0D03XH', { 'debug_mode': true });
      LAYER 1.5: CLIMATE / WEATHER TRIGGER
      ========================= -->
 <section class="clima fade-in" id="clima">
-  <div class="clima-inner">
-    <h2 class="clima-title" data-i18n="clima_title">Condiciones de limpieza hoy</h2>
 
-    <p class="clima-text">
-      <span data-i18n="clima_intro">Según la temperatura y humedad de hoy, la limpieza de tapicería y alfombras</span>
-      <strong id="clima-recommendation" data-i18n="clima_rec_good">es ideal</strong>.
-    </p>
+   <div class="clima-inner" style="max-width:980px; margin:0 auto; background:rgba(255,255,255,0.92); border-radius:18px; box-shadow:0 10px 28px rgba(0,0,0,0.08); padding:32px 28px;">
 
-    <!-- City selector -->
-<div class="clima-city" style="margin:12px 0;">
-  <label for="clima-city" style="font-weight:500;margin-right:8px;" data-i18n="clima_city_label">
-  Ciudad:
-</label>
+  <p style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; font-weight:700; color:#b68714; text-align:center; margin:0 0 6px;">Herramienta gratuita</p>
+  <h2 style="font-size:28px; font-weight:800; text-align:center; color:#111; margin:0 0 8px; letter-spacing:-0.5px;" data-i18n="clima_title">Condiciones de limpieza hoy</h2>
+  <p style="text-align:center; color:#666; font-size:15px; margin:0 0 20px;">
+    <span data-i18n="clima_intro">Según la temperatura y humedad de hoy, la limpieza de tapicería y alfombras</span>
+    <strong id="clima-recommendation">es ideal</strong>.
+  </p>
 
-<select id="clima-city"
-  style="padding:8px 14px;border-radius:12px;border:1px solid rgba(0,0,0,.15);">
+  <!-- City selector -->
+  <div style="display:flex; align-items:center; justify-content:center; gap:10px; margin-bottom:8px;">
+    <label for="clima-city" style="font-weight:600; font-size:15px;" data-i18n="clima_city_label">Ciudad:</label>
+    <select id="clima-city" style="padding:10px 16px; border-radius:12px; border:1.5px solid rgba(0,0,0,0.12); font-family:'Outfit',sans-serif; font-size:15px; background:#fff;">
+      <option value="lloret" selected>Lloret de Mar</option>
+      <option value="barcelona">Barcelona</option>
+      <option value="marbella">Marbella</option>
+      <option value="sevilla">Sevilla</option>
+      <option value="granada">Granada</option>
+      <option value="costatropical">Costa Tropical</option>
+    </select>
+  </div>
+  <p style="text-align:center; font-size:13px; color:#999; margin:0 0 20px;" data-i18n="areas_note">Costa Tropical incluye: Almuñécar · Motril · Salobreña</p>
 
-  <option value="lloret" selected>Lloret de Mar</option>
-  <option value="barcelona">Barcelona</option>
-  <option value="marbella">Marbella</option>
-  <option value="sevilla">Sevilla</option>
-  <option value="granada">Granada</option>
-  <option value="costatropical">Costa Tropical</option>
+  <!-- Best day strip -->
+  <div style="background:rgba(212,175,55,0.10); border:1px solid rgba(212,175,55,0.25); border-radius:14px; padding:16px 20px; text-align:center; margin-bottom:20px;">
+    <div id="clima-bestday-title" style="font-weight:800; font-size:18px; color:#111;"></div>
+    <div id="clima-bestday-sub" style="font-size:13px; color:#666; margin-top:4px;"></div>
+  </div>
 
-</select>
+  <!-- 3 metric cards -->
+  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:16px;">
 
-<p class="areas-note" data-i18n="areas_note">
-  Costa Tropical incluye: Almuñécar · Motril · Salobreña
-</p>
+    <div style="background:#fff; border:1px solid rgba(0,0,0,0.07); border-radius:14px; padding:18px 14px; text-align:center;">
+      <div style="font-size:12px; letter-spacing:0.10em; text-transform:uppercase; font-weight:700; color:#999; margin-bottom:8px;" data-i18n="clima_temp_label">Temperatura</div>
+      <div style="font-size:32px; font-weight:900; color:#111; letter-spacing:-1px;"><span id="clima-temp">—</span>°C</div>
+    </div>
 
+    <div style="background:#fff; border:1px solid rgba(0,0,0,0.07); border-radius:14px; padding:18px 14px; text-align:center;">
+      <div style="font-size:12px; letter-spacing:0.10em; text-transform:uppercase; font-weight:700; color:#999; margin-bottom:8px;" data-i18n="clima_hum_label">Humedad</div>
+      <div style="font-size:32px; font-weight:900; color:#111; letter-spacing:-1px;"><span id="clima-humidity">—</span>%</div>
+    </div>
 
+    <div style="background:#fff; border:1px solid rgba(0,0,0,0.07); border-radius:14px; padding:18px 14px; text-align:center;">
+      <div style="font-size:12px; letter-spacing:0.10em; text-transform:uppercase; font-weight:700; color:#999; margin-bottom:8px;" data-i18n="clima_dry_index_label">Índice de secado</div>
+      <div style="font-size:32px; font-weight:900; color:#111; letter-spacing:-1px;"><span id="clima-index">—</span><span style="font-size:16px; font-weight:600;">/100</span></div>
+    </div>
+
+  </div>
+
+  <!-- Status + tip -->
+  <p id="clima-status" style="text-align:center; font-weight:700; font-size:16px; margin:0 0 6px; color:#111;">Comprobando condiciones…</p>
+  <p id="clima-tip" style="text-align:center; font-size:14px; color:#666; margin:0;" data-i18n="clima_tip_default">El buen tiempo ayuda a que los tejidos se sequen antes y evita olores.</p>
 
 </div>
-
-<!-- Best day this week -->
-<div class="clima-bestday" id="clima-bestday" style="margin:12px auto 4px; text-align:center;">
-  <div id="clima-bestday-title" style="font-weight:700; font-size:18px;"></div>
-  <div id="clima-bestday-sub" style="opacity:.9; margin-top:4px;"></div>
-</div>
-
-
-<div class="clima-cards">
-
-  <div class="clima-card">
-    🌡️ <span data-i18n="clima_temp_label">Temperatura</span>:
-    <strong id="clima-temp">—</strong>°C
-  </div>
-
-  <div class="clima-card">
-    💧 <span data-i18n="clima_hum_label">Humedad</span>:
-    <strong id="clima-humidity">—</strong>%
-  </div>
-
-  <div class="clima-card">
-    🌿 <span data-i18n="clima_dry_index_label">Índice de secado</span>:
-    <strong id="clima-index">—</strong>/100
-  </div>
-
-</div>
-
-<p id="clima-status" style="margin:10px 0 0; font-weight:700;">
-  Comprobando condiciones…
-</p>
-
-
-    <p id="clima-tip" class="clima-tip" data-i18n="clima_tip_default">
-      El buen tiempo ayuda a que los tejidos se sequen antes y evita olores.
-    </p>
-  </div>
+  
 </section>
 
 <!-- =========================
