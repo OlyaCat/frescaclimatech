@@ -1242,7 +1242,6 @@ footer p:first-child {
 
   padding: 14px 18px;
   background: rgba(255,255,255,0.75);
-  backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(0,0,0,0.06);
 }
 
@@ -1454,6 +1453,23 @@ footer p:first-child {
   .gallery-grid.cols-3 { grid-template-columns: repeat(3, 1fr); }
 }
 
+    /* ── FORCE MODAL ON TOP ── */
+#tapiceriaModal {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: 999999 !important;
+  background: #f9f6f0 !important;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
+  display: none !important;
+}
+
+#tapiceriaModal.open {
+  display: block !important;
+}
   
   </style>
 
