@@ -1332,7 +1332,20 @@ footer p:first-child {
   .brand-name{ font-size: 18px; }
 }
 
-.fs-modal{position:fixed;inset:0;z-index:9999;background:#f9f6f0;display:none;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;}
+.fs-modal{
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  bottom:0;
+  z-index:99999;
+  background:#f9f6f0;
+  display:none;
+  overflow-y:auto;
+  overflow-x:hidden;
+  -webkit-overflow-scrolling:touch;
+}
+.fs-modal.open{display:block;}
 .fs-modal.open{display:block;}
 .fs-topbar{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 24px;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.08);}
 .fs-back{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.7);font-size:14px;font-weight:600;cursor:pointer;border:none;background:none;font-family:'Outfit',sans-serif;transition:color .2s;}
@@ -1481,12 +1494,17 @@ let fsCurrentGallery = 'tapiceria';
 let fsCurrentIndex = 0;
 
 function openFsModal(id) {
-  document.getElementById(id).classList.add('open');
-  document.getElementById(id).scrollTop = 0;
+  const modal = document.getElementById(id);
+  modal.classList.add('open');
+  modal.scrollTop = 0;
+  document.body.style.position = 'fixed';
+  document.body.style.width = '100%';
 }
 
 function closeModal(id) {
   document.getElementById(id).classList.remove('open');
+  document.body.style.position = '';
+  document.body.style.width = '';
 }
 
 function switchFsTab(modal, name) {
