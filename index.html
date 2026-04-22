@@ -1332,8 +1332,8 @@ footer p:first-child {
   .brand-name{ font-size: 18px; }
 }
 
-.fs-modal{position:fixed;inset:0;z-index:9999;background:#f9f6f0;overflow:hidden;display:none;}
-.fs-modal.open{display:block;overflow-y:auto;}
+.fs-modal{position:fixed;inset:0;z-index:9999;background:#f9f6f0;display:none;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;}
+.fs-modal.open{display:block;}
 .fs-topbar{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:16px 24px;background:rgba(255,255,255,0.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,0.08);}
 .fs-back{display:flex;align-items:center;gap:8px;color:rgba(255,255,255,0.7);font-size:14px;font-weight:600;cursor:pointer;border:none;background:none;font-family:'Outfit',sans-serif;transition:color .2s;}
 .fs-back:hover{color:#fff;}
@@ -1482,13 +1482,11 @@ let fsCurrentIndex = 0;
 
 function openFsModal(id) {
   document.getElementById(id).classList.add('open');
-  document.body.style.overflow = 'hidden';
   document.getElementById(id).scrollTop = 0;
 }
 
 function closeModal(id) {
   document.getElementById(id).classList.remove('open');
-  document.body.style.overflow = '';
 }
 
 function switchFsTab(modal, name) {
