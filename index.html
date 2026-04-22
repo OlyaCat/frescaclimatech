@@ -3709,14 +3709,7 @@ function renderCalcCart() {
 
 document.getElementById('calc-cart').style.display = 'block';
 document.getElementById('calc-result').style.display = 'block';
-    cartItemsEl.innerHTML = `<div class="calc-cart-empty">${t.calc_cart_empty}</div>`;
-    priceEl.textContent = "—";
-    subtotalEl.textContent = "";
-    discountEl.textContent = "";
-    if (progressEl) progressEl.textContent = "";
-    waEl.href = "https://wa.me/34657336353";
-    return;
-  }
+
 
   cartItemsEl.innerHTML = calcCart.map((row, index) => {
     const label = getTypeLabel(row.service, row.type, lang);
