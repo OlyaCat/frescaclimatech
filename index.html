@@ -1368,15 +1368,15 @@ footer p:first-child {
 .fs-hero video {
     width: 100%;
     height: 100%;
-    object-fit: cover;       /* fill the box, crop excess */
+    object-fit: contain;       /* fill the box, crop excess */
     display: block;
 }
 
 /* On mobile, use a taller box so portrait videos look good */
 @media (max-width: 767px) {
     .fs-hero {
-        aspect-ratio: 4 / 5;   /* or 3/4 — taller on mobile */
-        max-height: 70vh;
+        aspect-ratio: 9 / 16;
+        max-height: 85vh;
     }
 }
 
