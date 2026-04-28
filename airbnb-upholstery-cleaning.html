@@ -34,22 +34,21 @@
     }
 
     header {
-  padding: 22px 7%;
+  padding: 18px 7%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255, 250, 243, 0.96);
+  background: rgba(255, 250, 243, 0.95);
   position: sticky;
   top: 0;
   z-index: 10;
   border-bottom: 1px solid #e6dfd2;
 }
 
-    .logo {
+   .logo {
   font-weight: 700;
-  color: #B88A14 !important;
+  color: #B88A14;
   font-size: 26px;
-  letter-spacing: 0.3px;
 }
     
     .logo-main {
@@ -63,17 +62,23 @@
   color: #B88A14;
 }
 
-    nav {
+   nav {
   display: flex;
-  gap: 28px;
-  align-items: center;
+  gap: 22px;
 }
 
-    nav a {
-  margin-left: 0;
-  color: #25332b;
-  font-size: 15px;
+  nav a {
+  color: #B88A14;
+  font-size: 13px;
+  letter-spacing: 1px;
   font-weight: 600;
+}
+
+    .lang {
+  border: 1px solid #ddd;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 12px;
 }
 
     .hero {
@@ -349,14 +354,24 @@
 <body>
 
 <header>
+    <div style="display:flex; align-items:center; gap:12px;">
+    <span style="font-size:12px; color:#B88A14; letter-spacing:2px;">FCT</span>
    <div class="logo">FrescaClimaTech</div>
 
   <nav>
-    <a href="#services">Services</a>
-    <a href="#process">How it works</a>
-    <a href="#locations">Locations</a>
-    <a href="#contact">Contact</a>
+    <a href="#">SERVICIOS</a>
+    <a href="#">ÁREAS</a>
+    <a href="#">OPINIONES</a>
+    <a href="#">FAQ</a>
+    <a href="#">CONTACTO</a>
+    <a href="#">AIRBNB & ALQUILERES</a>
   </nav>
+
+  <div style="display:flex; gap:10px;">
+    <span class="lang">ES</span>
+    <span class="lang">EN</span>
+  </div>
+      
 </header>
 
 <section class="hero">
