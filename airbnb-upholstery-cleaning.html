@@ -34,23 +34,24 @@
     }
 
     header {
-      padding: 18px 7%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: rgba(255, 250, 243, 0.95);
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      border-bottom: 1px solid #e6dfd2;
-    }
+  padding: 22px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 250, 243, 0.96);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  border-bottom: 1px solid #e6dfd2;
+}
 
     .logo {
-  font-weight: 600;
-      color: #B88A14 !important;
-  font-size: 22px;
-  letter-spacing: 0.5px;
+  font-weight: 700;
+  color: #B88A14 !important;
+  font-size: 26px;
+  letter-spacing: 0.3px;
 }
+    
     .logo-main {
   color: #1f2b24;
 }
@@ -62,11 +63,18 @@
   color: #B88A14;
 }
 
+    nav {
+  display: flex;
+  gap: 28px;
+  align-items: center;
+}
+
     nav a {
-      margin-left: 20px;
-      color: var(--dark);
-      font-size: 14px;
-    }
+  margin-left: 0;
+  color: #25332b;
+  font-size: 15px;
+  font-weight: 600;
+}
 
     .hero {
   position: relative;
@@ -341,8 +349,8 @@
 <body>
 
 <header>
-  <div class="logo">
-  <div class="logo">FrescaClimaTech</div>
+   <div class="logo">FrescaClimaTech</div>
+
   <nav>
     <a href="#services">Services</a>
     <a href="#process">How it works</a>
