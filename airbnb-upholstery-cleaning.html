@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Airbnb & Holiday Rental Upholstery Cleaning | FrescaClimaTech</title>
+  <meta name="description" content="Professional upholstery cleaning for Airbnb properties, holiday rentals and small hotels in Barcelona, Lloret de Mar, Marbella, Sevilla, Granada and Costa Tropical." />
+
+  <style>
+    :root {
+      --green: #6f8f72;
+      --dark: #25332b;
+      --light: #f7f4ef;
+      --cream: #fffaf3;
+      --text: #3b3b3b;
+      --accent: #d8c8aa;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--light);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    header {
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(255, 250, 243, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid #e6dfd2;
+    }
+
+    .logo {
+      font-weight: 700;
+      color: var(--dark);
+      font-size: 20px;
+    }
+
+    nav a {
+      margin-left: 20px;
+      color: var(--dark);
+      font-size: 14px;
+    }
+
+    .hero {
+      padding: 90px 7%;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 40px;
+      align-items: center;
+      background: linear-gradient(135deg, #fffaf3, #edf2eb);
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      line-height: 1.1;
+      color: var(--dark);
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 19px;
+      max-width: 620px;
+    }
+
+    .hero img {
+      width: 100%;
+      border-radius: 24px;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+    }
+
+    .buttons {
+      margin-top: 28px;
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 14px 22px;
+      border-radius: 999px;
+      font-weight: 600;
+      display: inline-block;
+    }
+
+    .btn-main {
+      background: var(--green);
+      color: white;
+    }
+
+    .btn-secondary {
+      border: 1px solid var(--green);
+      color: var(--green);
+      background: white;
+    }
+
+    section {
+      padding: 70px 7%;
+    }
+
+    .section-title {
+      font-size: 34px;
+      color: var(--dark);
+      margin-bottom: 16px;
+    }
+
+    .intro {
+      max-width: 760px;
+      font-size: 18px;
+      margin-bottom: 36px;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .card {
+      background: var(--cream);
+      padding: 26px;
+      border-radius: 22px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    }
+
+    .card h3 {
+      margin-top: 0;
+      color: var(--dark);
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 38px;
+      align-items: center;
+    }
+
+    .split img {
+      width: 100%;
+      border-radius: 22px;
+      box-shadow: 0 12px 32px rgba(0,0,0,0.1);
+    }
+
+    .list {
+      padding-left: 0;
+      list-style: none;
+    }
+
+    .list li {
+      margin-bottom: 12px;
+      padding-left: 28px;
+      position: relative;
+    }
+
+    .list li::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--green);
+      font-weight: bold;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .step {
+      background: white;
+      padding: 28px;
+      border-radius: 22px;
+      border: 1px solid #e8dfd0;
+    }
+
+    .step-number {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: var(--green);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      margin-bottom: 16px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+
+    .highlight {
+      background: var(--dark);
+      color: white;
+      border-radius: 28px;
+      padding: 48px;
+      text-align: center;
+    }
+
+    .highlight h2 {
+      color: white;
+      font-size: 34px;
+      margin-top: 0;
+    }
+
+    .locations {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .location {
+      background: white;
+      border: 1px solid #e2d8c8;
+      padding: 10px 16px;
+      border-radius: 999px;
+      color: var(--dark);
+    }
+
+    .testimonial {
+      background: white;
+      padding: 34px;
+      border-radius: 24px;
+      font-size: 19px;
+      box-shadow: 0 8px 28px rgba(0,0,0,0.06);
+    }
+
+    .cta {
+      background: linear-gradient(135deg, #edf2eb, #fffaf3);
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 38px;
+      color: var(--dark);
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 22px;
+      right: 22px;
+      background: #25D366;
+      color: white;
+      padding: 14px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      z-index: 99;
+    }
+
+    footer {
+      padding: 30px 7%;
+      background: var(--dark);
+      color: white;
+      font-size: 14px;
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .hero,
+      .split {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 36px;
+      }
+
+      .cards,
+      .steps,
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">FrescaClimaTech</div>
+  <nav>
+    <a href="#services">Services</a>
+    <a href="#process">How it works</a>
+    <a href="#locations">Locations</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Professional Upholstery Cleaning for Airbnb & Holiday Rentals</h1>
+    <p>
+      Keep your property fresh, guest-ready and 5★ review-worthy with professional sofa,
+      mattress and carpet cleaning.
+    </p>
+    <p>
+      We help Airbnb hosts, holiday rental owners, property managers and small hotels
+      create a cleaner, fresher and more comfortable guest experience.
+    </p>
+
+    <div class="buttons">
+      <a class="btn btn-main" href="https://wa.me/34657336353?text=Hello%20FrescaClimaTech%2C%20I%20would%20like%20a%20quote%20for%20Airbnb%20upholstery%20cleaning.">
+        Get a WhatsApp Quote
+      </a>
+      <a class="btn btn-secondary" href="https://frescaclimatech.es/#calculator">
+        Calculate Price Online
+      </a>
+    </div>
+  </div>
+
+  <img src="images/airbnb-sofa-clean.jpg" alt="Clean sofa in holiday rental apartment">
+</section>
+
+<section id="services">
+  <h2 class="section-title">Designed for guest-ready properties</h2>
+  <p class="intro">
+    Upholstered furniture absorbs dust, odours and everyday use. Regular deep cleaning helps
+    refresh your space, extend furniture life and improve the overall impression for guests.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Airbnb Hosts</h3>
+      <p>Refresh sofas, mattresses and carpets before new arrivals.</p>
+    </div>
+    <div class="card">
+      <h3>Holiday Rentals</h3>
+      <p>Maintain a fresh and comfortable atmosphere during high season.</p>
+    </div>
+    <div class="card">
+      <h3>Property Managers</h3>
+      <p>Reliable cleaning support across multiple apartments and villas.</p>
+    </div>
+    <div class="card">
+      <h3>Small Hotels</h3>
+      <p>Professional fabric care for rooms, lounges and guest areas.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="split">
+    <img src="images/upholstery-cleaning-process.jpg" alt="Professional upholstery extraction cleaning">
+
+    <div>
+      <h2 class="section-title">Why upholstery cleaning matters</h2>
+      <ul class="list">
+        <li>Clean fabrics improve the first impression of your property.</li>
+        <li>Sofas and mattresses can hold dust, odours and allergens.</li>
+        <li>Fresh upholstery helps guests feel more comfortable.</li>
+        <li>Regular cleaning helps extend the life of your furniture.</li>
+        <li>A well-maintained home supports better reviews.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="process">
+  <h2 class="section-title">How we work</h2>
+  <p class="intro">
+    A simple and professional process adapted to homes, rental apartments and guest properties.
+  </p>
+
+  <div class="steps">
+    <div class="step">
+      <div class="step-number">1</div>
+      <h3>Photo review</h3>
+      <p>Send us photos by WhatsApp. We confirm the service, price range and availability.</p>
+    </div>
+
+    <div class="step">
+      <div class="step-number">2</div>
+      <h3>Professional cleaning</h3>
+      <p>We clean fabrics using professional products and injection-extraction equipment.</p>
+    </div>
+
+    <div class="step">
+      <div class="step-number">3</div>
+      <h3>Fresh result</h3>
+      <p>Your sofa, mattress or carpet is refreshed and ready for guests after drying.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="highlight">
+    <h2>Mediterranean freshness for your property</h2>
+    <p>
+      Our goal is not only to clean fabrics, but to bring a lighter, fresher feeling into your space —
+      like a Mediterranean breeze before your next guests arrive.
+    </p>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Real results</h2>
+  <p class="intro">
+    Add real photos from your work here: before/after sofas, mattress cleaning and bright finished interiors.
+  </p>
+
+  <div class="gallery">
+    <img src="images/sofa-before-after.jpg" alt="Sofa cleaning before and after">
+    <img src="images/mattress-cleaning.jpg" alt="Mattress deep cleaning">
+    <img src="images/clean-rental-sofa.jpg" alt="Clean sofa after upholstery cleaning">
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">Transparent pricing</h2>
+  <p class="intro">
+    Every property is different, but we make the process simple. You can calculate an approximate price online
+    or send us photos for an exact quote.
+  </p>
+
+  <div class="cards">
+    <div class="card">
+      <h3>Sofas</h3>
+      <p>From €80 depending on size, fabric and condition.</p>
+    </div>
+    <div class="card">
+      <h3>Mattresses</h3>
+      <p>Professional refresh for guest bedrooms and rental properties.</p>
+    </div>
+    <div class="card">
+      <h3>Carpets</h3>
+      <p>Deep cleaning for rugs and carpets before or during the season.</p>
+    </div>
+    <div class="card">
+      <h3>Multiple items</h3>
+      <p>Discounts available for larger property refreshes.</p>
+    </div>
+  </div>
+
+  <div class="buttons">
+    <a class="btn btn-main" href="https://frescaclimatech.es/#calculator">Calculate Price Online</a>
+    <a class="btn btn-secondary" href="https://wa.me/34657336353">Send Photos on WhatsApp</a>
+  </div>
+</section>
+
+<section>
+  <h2 class="section-title">What clients say</h2>
+
+  <div class="testimonial">
+    “Very professional service. The sofa looks fresh and clean again. We will definitely repeat.”
+    <br><br>
+    ⭐⭐⭐⭐⭐
+  </div>
+</section>
+
+<section id="locations">
+  <h2 class="section-title">Service areas</h2>
+  <p class="intro">
+    We provide upholstery cleaning for private homes, Airbnb properties and small hotels in:
+  </p>
+
+  <div class="locations">
+    <span class="location">Barcelona</span>
+    <span class="location">Lloret de Mar</span>
+    <span class="location">Costa Brava</span>
+    <span class="location">Granada</span>
+    <span class="location">Costa Tropical</span>
+    <span class="location">Sevilla</span>
+    <span class="location">Marbella</span>
+  </div>
+</section>
+
+<section id="contact" class="cta">
+  <h2>Ready to refresh your property?</h2>
+  <p>
+    Send us photos of your sofa, mattress or carpet and we’ll reply with an approximate price and availability.
+  </p>
+
+  <div class="buttons" style="justify-content:center;">
+    <a class="btn btn-main" href="https://wa.me/34657336353?text=Hello%20FrescaClimaTech%2C%20I%20would%20like%20a%20quote%20for%20Airbnb%20or%20holiday%20rental%20upholstery%20cleaning.">
+      Contact via WhatsApp
+    </a>
+    <a class="btn btn-secondary" href="https://frescaclimatech.es/#weather">
+      Check Weather Conditions
+    </a>
+  </div>
+</section>
+
+<a class="whatsapp-float" href="https://wa.me/34657336353">
+  WhatsApp
+</a>
+
+<footer>
+  © 2026 FrescaClimaTech · Professional upholstery cleaning for homes, Airbnb properties and small hotels
+</footer>
+
+</body>
+</html>
