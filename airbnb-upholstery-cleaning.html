@@ -38,11 +38,11 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(255, 250, 243, 0.95);
+  background: rgba(255, 250, 243, 0.96);
+  border-bottom: 1px solid #e6dfd2;
   position: sticky;
   top: 0;
   z-index: 10;
-  border-bottom: 1px solid #e6dfd2;
 }
 
    .logo {
@@ -74,11 +74,51 @@
   font-weight: 600;
 }
 
+.site-brand {
+  display: flex;
+  align-items: center;
+}
+
+.brand-name {
+  font-size: 26px;
+  font-weight: 700;
+  color: #B88A14;
+}
+
+.site-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.site-nav a,
+.nav-sep {
+  color: #B88A14;
+  font-size: 13px;
+  letter-spacing: 1.2px;
+  font-weight: 600;
+}
+
+.lang-pills {
+  display: flex;
+  gap: 10px;
+}
+
+    
     .lang {
   border: 1px solid #ddd;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 12px;
+  padding: 7px 13px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #25332b;
+  background: white;
 }
 
     .hero {
@@ -354,23 +394,31 @@
 <body>
 
 <header>
-    <div style="display:flex; align-items:center; gap:12px;">
-    <span style="font-size:12px; color:#B88A14; letter-spacing:2px;">FCT</span>
-   <div class="logo">FrescaClimaTech</div>
+  <a class="site-brand" href="/">
+    <span class="brand-name">FrescaClimaTech</span>
+  </a>
 
-  <nav>
-    <a href="#">SERVICIOS</a>
-    <a href="#">ÁREAS</a>
-    <a href="#">OPINIONES</a>
-    <a href="#">FAQ</a>
-    <a href="#">CONTACTO</a>
-    <a href="#">AIRBNB & ALQUILERES</a>
-  </nav>
+  <div class="site-right">
+    <nav class="site-nav">
+      <a href="#services">SERVICIOS</a>
+      <span class="nav-sep">|</span>
+      <a href="#locations">ÁREAS</a>
+      <span class="nav-sep">|</span>
+      <a href="#opiniones">OPINIONES</a>
+      <span class="nav-sep">|</span>
+      <a href="#faq">FAQ</a>
+      <span class="nav-sep">|</span>
+      <a href="#contact">CONTACTO</a>
+      <span class="nav-sep">|</span>
+      <a href="/airbnb-upholstery-cleaning.html">AIRBNB & ALQUILERES</a>
+    </nav>
 
-  <div style="display:flex; gap:10px;">
-    <span class="lang">ES</span>
-    <span class="lang">EN</span>
+    <div class="lang-pills">
+      <span class="lang">ES</span>
+      <span class="lang">EN</span>
+    </div>
   </div>
+
       
 </header>
 
