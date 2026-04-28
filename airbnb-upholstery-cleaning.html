@@ -69,23 +69,22 @@
     }
 
     .hero {
-      padding: 90px 7%;
-      display: grid;
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 40px;
-      align-items: center;
-      background: linear-gradient(135deg, #fffaf3, #edf2eb);
-    }
-
-    .hero h1 {
-      background-image: url('images/airbnb_background.jpg');
+  position: relative;
+  background-image: url('images/airbnb_background.jpg');
   background-size: cover;
   background-position: center;
-      font-size: 48px;
-      line-height: 1.1;
-      color: var(--dark);
-      margin-bottom: 20px;
-    }
+  background-repeat: no-repeat;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+}
+
+    .hero h1 {
+  font-size: 48px;
+  line-height: 1.1;
+  color: var(--dark);
+  margin-bottom: 20px;
+}
 
     .hero p {
       font-size: 19px;
