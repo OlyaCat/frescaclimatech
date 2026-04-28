@@ -1637,6 +1637,23 @@ document.addEventListener('keydown', e => {
   if (e.key === 'ArrowLeft') navLightbox(-1);
   if (e.key === 'ArrowRight') navLightbox(1);
 });
+
+
+  document.addEventListener('click', (e) => {
+  const openBtn = e.target.closest('[data-open]');
+
+  if (openBtn) {
+    openSvcModal(openBtn.dataset.open);
+  }
+
+  if (e.target.closest('.svc-modal__close')) {
+    closeSvcModal();
+  }
+
+  if (e.target.id === 'svcModal') {
+    closeSvcModal();
+  }
+});
   
 </script>
 
