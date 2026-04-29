@@ -599,11 +599,21 @@ body::before {
   padding-bottom: 20px !important;
   text-align: center;
 }
+    .hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.55);
+  z-index: 0;
+}
 
 .hero-inner {
   max-width: 780px;
   margin: 0 auto;
   text-align: center;
+  position: relative;
+  z-index: 2;
+  gap: 12px;
 }
 
 .hero-trust {
@@ -985,11 +995,13 @@ body::before {
    .hero-description {
   max-width: 680px;
   margin: 18px auto 12px;
-  font-size: 15px;
+  font-size: 14px;
+     opacity: 0.75;
   line-height: 1.45;
   color: #333;
   font-weight: 400;
   text-align: center;
+     margin-top: 18px;
 }
 
 .hero-divider {
@@ -1002,12 +1014,13 @@ body::before {
 .hero-slogan {
   font-size: 14px;
   font-style: italic;
-  color: #b68714;
+  color: #a48a5a;
   opacity: 0.75;
   margin: 8px 0 16px;
 }
     .hero-subline {
-  font-size: 16px;
+  font-size: 15px;
+      opacity: 0.85;
   line-height: 1.45;
   margin: 14px 0 18px;
   color: #333;
@@ -1771,7 +1784,7 @@ document.addEventListener('keydown', e => {
 <p class="hero-trust">
   <a class="hero-trust-link" href="https://g.page/r/CVK2NpIvzkvdEBM/review" target="_blank" rel="noopener"
      data-i18n="hero_trust">
-    ⭐⭐⭐⭐⭐ Opiniones reales en Google · Clientes satisfechos
+    ⭐⭐⭐⭐⭐ 5.0 en Google · Clientes satisfechos
   </a>
 </p>
 
@@ -1782,7 +1795,7 @@ document.addEventListener('keydown', e => {
    class="btn hero-wa js-wa"
    data-i18n="hero_whatsapp_cta"
    onclick="gtag('event', 'whatsapp_click');">
-   Envía fotos → precio en 15 min
+   Envía fotos por WhatsApp → precio en 15 min
 </a>
 
   <a href="/airbnb-upholstery-cleaning.html" class="btn hero-secondary">
