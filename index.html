@@ -1630,6 +1630,18 @@ const fsGalleries = {
     { src:'images/ventanas_process3.jpg', alt:'Acabado sin marcas' },
     { src:'images/toldo_process1.jpg', alt:'Limpieza de toldo en proceso' },
     { src:'images/toldo_process2.jpg', alt:'Cepillado profesional toldo' },
+  ],
+  aires: [
+    { src:'outdoor.jpg', alt:'Unidad exterior limpia' },
+    { src:'outdoor_action.jpg', alt:'Limpieza unidad exterior' },
+    { src:'cassette.jpg', alt:'Cassette interior limpio' },
+    { src:'filter.png', alt:'Filtros limpios' },
+    { src:'card_air.jpg', alt:'Mantenimiento A/C' },
+    { src:'images/aires_process1.jpg', alt:'Desmontaje de filtros' },
+    { src:'images/aires_process2.jpg', alt:'Limpieza de turbina' },
+    { src:'images/aires_process3.jpg', alt:'Desinfección bandeja' },
+    { src:'images/aires_process4.jpg', alt:'Limpieza serpentín exterior' },
+    { src:'images/aires_process5.jpg', alt:'Equipo terminado' },
   ]
   
 };
@@ -2109,7 +2121,7 @@ document.addEventListener('keydown', e => {
 <div class="svc-card">
   <img src="card_air.jpg" alt="Limpieza de Aire Acondicionado" />
   <div class="svc-body">
-    <h3 class="svc-click" data-open="ac" data-i18n="svc_ac_title"></h3>
+    <h3 data-i18n="svc_ac_title" onclick="openFsModal('airesModal')" style="cursor:pointer; text-decoration:underline; text-decoration-color:rgba(0,0,0,0.2); text-underline-offset:3px;"></h3>
     <p class="clamp-3" data-i18n="svc_ac_teaser"></p>
     <p class="price" data-i18n="svc_ac_price"></p>
 
@@ -2128,7 +2140,7 @@ document.addEventListener('keydown', e => {
    data-i18n="btn_whatsapp"
         onclick="gtag('event', 'whatsapp_click');">
 </a>
-      <button class="btn-secondary" data-open="ac" data-i18n="btn_details"></button>
+      <button class="btn-secondary" onclick="openFsModal('airesModal')" data-i18n="btn_details"></button>
     </div>
   </div>
 </div>
@@ -4686,6 +4698,190 @@ document.querySelectorAll('.stat-number').forEach(el => counterObserver.observe(
   </div>
 </div>
 
+  <!-- ══ AIRE ACONDICIONADO FULLSCREEN MODAL ══ -->
+<div class="fs-modal" id="airesModal">
+  <div class="fs-topbar">
+    <button class="fs-back" onclick="closeModal('airesModal')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Volver
+    </button>
+    <span class="fs-brand">FrescaClimaTech</span>
+    <a class="fs-topbar-wa"
+       href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto%20para%20limpieza%20y%20mantenimiento%20de%20aire%20acondicionado.%20Puedo%20enviar%20fotos%20ahora."
+       target="_blank" rel="noopener"
+       onclick="gtag('event', 'whatsapp_click');">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Pedir precio
+    </a>
+  </div>
+
+  <div class="fs-hero">
+    <video autoplay muted loop playsinline preload="auto" poster="card_air.jpg">
+      <source src="images/air_cleaning.mp4" type="video/mp4">
+    </video>
+    <div class="fs-hero-overlay"></div>
+    <div class="fs-hero-badge">Limpieza profesional · A/C</div>
+  </div>
+
+  <div class="fs-content">
+    <div class="fs-title-block">
+      <p class="fs-kicker">Salud · Ahorro · Aire limpio</p>
+      <h2 class="fs-title">Limpieza de<br><em>Aire Acondicionado</em></h2>
+      <div class="fs-price">Desde 90 € <span>· precio final tras ver fotos</span></div>
+    </div>
+
+    <div class="fs-tabs">
+      <button class="fs-tab active" onclick="switchFsTab('aires','resultados')">Resultados</button>
+      <button class="fs-tab" onclick="switchFsTab('aires','proceso')">En proceso</button>
+      <button class="fs-tab" onclick="switchFsTab('aires','info')">Información</button>
+    </div>
+
+    <!-- TAB: RESULTADOS -->
+    <div class="fs-panel active" id="aires-tab-resultados">
+      <p class="sec-heading">Equipos limpiados — casos reales</p>
+      <div class="gallery-grid cols-2" style="margin-bottom:12px;">
+        <div class="gallery-item featured" onclick="openLightbox('aires',0)">
+          <img src="outdoor.jpg" alt="Unidad exterior aire acondicionado limpia Barcelona" loading="lazy"/>
+          <div class="label">Unidad exterior · Barcelona</div>
+        </div>
+        <div class="gallery-item featured" onclick="openLightbox('aires',1)">
+          <img src="outdoor_action.jpg" alt="Limpieza profesional unidad exterior A/C" loading="lazy"/>
+          <div class="label">Limpieza profesional</div>
+        </div>
+      </div>
+      <div class="gallery-grid cols-3" style="margin-bottom:12px;">
+        <div class="gallery-item" onclick="openLightbox('aires',2)">
+          <img src="cassette.jpg" alt="Cassette interior limpio" loading="lazy"/>
+          <div class="label">Cassette interior</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('aires',3)">
+          <img src="filter.png" alt="Filtros A/C limpios" loading="lazy"/>
+          <div class="label">Filtros restaurados</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('aires',4)">
+          <img src="card_air.jpg" alt="Mantenimiento aire acondicionado" loading="lazy"/>
+          <div class="label">Mantenimiento</div>
+        </div>
+      </div>
+      <div class="gallery-grid cols-2">
+        <div style="background:rgba(212,175,55,0.08);border:1px solid rgba(212,175,55,0.15);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px;text-align:center;">
+          <div style="font-size:36px;font-weight:900;color:#d4af37;letter-spacing:-2px;margin-bottom:8px;">60+</div>
+          <div style="font-size:14px;color:rgba(42,42,42,0.85);line-height:1.4;">equipos limpiados y desinfectados</div>
+          <div style="margin-top:16px;font-size:13px;color:#d4af37;font-weight:700;">⭐⭐⭐⭐⭐ Google Reviews</div>
+        </div>
+        <div style="background:rgba(212,175,55,0.08);border:1px solid rgba(212,175,55,0.15);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px;text-align:center;">
+          <div style="font-size:36px;font-weight:900;color:#d4af37;letter-spacing:-2px;margin-bottom:8px;">−25%</div>
+          <div style="font-size:14px;color:rgba(42,42,42,0.85);line-height:1.4;">menos consumo eléctrico tras la limpieza</div>
+          <div style="margin-top:16px;font-size:13px;color:#d4af37;font-weight:700;">Ahorro real en factura</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: PROCESO -->
+    <div class="fs-panel" id="aires-tab-proceso">
+      <p class="sec-heading">Cómo trabajamos</p>
+      <div class="process-steps">
+        <div class="step"><div class="step-num">01</div><div class="step-label">Inspección y prueba inicial del equipo</div></div>
+        <div class="step"><div class="step-num">02</div><div class="step-label">Limpieza de filtros, turbina, bandeja y carcasa</div></div>
+        <div class="step"><div class="step-num">03</div><div class="step-label">Desinfección y revisión de la unidad exterior</div></div>
+      </div>
+      <p class="sec-heading">Fotos del proceso</p>
+      <div class="gallery-grid cols-2" style="margin-bottom:12px;">
+        <div class="gallery-item wide" onclick="openLightbox('aires',5)">
+          <img src="images/aires_process1.jpg" alt="Desmontaje de filtros aire acondicionado" loading="lazy"/>
+          <div class="label">Desmontaje de filtros</div>
+        </div>
+        <div class="gallery-item wide" onclick="openLightbox('aires',6)">
+          <img src="images/aires_process2.jpg" alt="Limpieza de turbina A/C" loading="lazy"/>
+          <div class="label">Limpieza de turbina</div>
+        </div>
+      </div>
+      <div class="gallery-grid cols-2">
+        <div class="gallery-item wide" onclick="openLightbox('aires',7)">
+          <img src="images/aires_process3.jpg" alt="Desinfección bandeja drenaje" loading="lazy"/>
+          <div class="label">Desinfección bandeja</div>
+        </div>
+        <div class="gallery-item wide" onclick="openLightbox('aires',8)">
+          <img src="images/aires_process4.jpg" alt="Limpieza serpentín unidad exterior" loading="lazy"/>
+          <div class="label">Serpentín exterior</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: INFO -->
+    <div class="fs-panel" id="aires-tab-info">
+      <p class="sec-heading">Qué incluye el servicio</p>
+      <div class="info-grid">
+        <div class="info-card">
+          <h4>Qué limpiamos</h4>
+          <ul>
+            <li>Unidad interior: filtros, turbina y bandeja</li>
+            <li>Carcasa, rejillas y aletas</li>
+            <li>Cassettes interiores (techo)</li>
+            <li>Splits de pared estándar</li>
+            <li>Unidad exterior: serpentín y aletas</li>
+            <li>Eliminación de moho, polvo y bacterias</li>
+            <li>Desinfección de superficies</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h4>Por qué importa</h4>
+          <ul>
+            <li>Mejor calidad del aire interior</li>
+            <li>Menos alergias y malos olores</li>
+            <li>Menor consumo eléctrico</li>
+            <li>Mayor vida útil del equipo</li>
+            <li>Ideal para hogares y Airbnb</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h4>Antes de pedir</h4>
+          <ul>
+            <li>1 foto de la unidad interior</li>
+            <li>1 foto de la unidad exterior</li>
+            <li>Indica modelo o ubicación si está en altura</li>
+            <li>Respondemos en menos de 15 min</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h4>Zonas disponibles</h4>
+          <ul>
+            <li>Barcelona</li>
+            <li>Lloret de Mar</li>
+            <li>Servicio premium con cita previa</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="sec-heading">Precios orientativos</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-bottom:24px;">
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:16px;text-align:center;"><div style="font-size:22px;font-weight:900;color:#d4af37;">90 €</div><div style="font-size:13px;color:rgba(42,42,42,0.85);margin-top:4px;">1 split básico</div></div>
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:16px;text-align:center;"><div style="font-size:22px;font-weight:900;color:#d4af37;">150 €</div><div style="font-size:13px;color:rgba(42,42,42,0.85);margin-top:4px;">2 splits (mismo domicilio)</div></div>
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:16px;text-align:center;"><div style="font-size:22px;font-weight:900;color:#d4af37;">120 €</div><div style="font-size:13px;color:rgba(42,42,42,0.85);margin-top:4px;">Cassette interior</div></div>
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:16px;text-align:center;"><div style="font-size:22px;font-weight:900;color:#d4af37;">+30 €</div><div style="font-size:13px;color:rgba(42,42,42,0.85);margin-top:4px;">Acceso en altura</div></div>
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:16px;text-align:center;"><div style="font-size:22px;font-weight:900;color:#d4af37;">Consultar</div><div style="font-size:13px;color:rgba(42,42,42,0.85);margin-top:4px;">Multi-equipo Airbnb</div></div>
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:16px;text-align:center;"><div style="font-size:22px;font-weight:900;color:#d4af37;">Consultar</div><div style="font-size:13px;color:rgba(42,42,42,0.85);margin-top:4px;">Mantenimiento anual</div></div>
+      </div>
+
+      <div style="background:rgba(212,175,55,0.08);border:1px solid rgba(212,175,55,0.20);border-radius:14px;padding:18px 20px;font-size:14px;color:rgba(42,42,42,0.85);line-height:1.6;">
+        <strong style="color:#d4af37;">Consejo:</strong> Disponible solo en Barcelona y Lloret de Mar. Recomendamos limpieza una vez al año (cada 6 meses con mascotas). Envíanos 2 fotos por WhatsApp y te confirmamos precio exacto en menos de 15 minutos.
+      </div>
+    </div>
+  </div>
+
+  <div class="fs-bottom-cta visible">
+    <div class="fs-bottom-info">
+      <div class="service-name">Limpieza de Aire Acondicionado</div>
+      <div class="service-price">Desde 90 € · respuesta en 15 min</div>
+    </div>
+    <a class="fs-bottom-wa"
+       href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto%20para%20limpieza%20y%20mantenimiento%20de%20aire%20acondicionado.%20Puedo%20enviar%20fotos%20ahora."
+       target="_blank" rel="noopener"
+       onclick="gtag('event', 'whatsapp_click');">
+      Envía fotos → precio en 15 min
+    </a>
+  </div>
+</div>
 
 
   
