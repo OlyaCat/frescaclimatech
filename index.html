@@ -1618,7 +1618,20 @@ const fsGalleries = {
     { src:'images/sofa_process2.jpg', alt:'Agua extraída' },
     { src:'images/sofa_process3.jpg', alt:'Vapor y extracción' },
     { src:'images/sofa_process4.jpg', alt:'Detalle costuras' },
+  ],
+  ventanas: [
+    { src:'images/ventanas-antes-despues-1.jpg', alt:'Ventanas · Antes y después' },
+    { src:'images/ventanas-antes-despues-2.jpg', alt:'Cristales sin marcas' },
+    { src:'images/toldo-antes-despues-1.jpg', alt:'Toldo limpieza profesional' },
+    { src:'images/toldo-antes-despues-2.jpg', alt:'Toldo restaurado' },
+    { src:'images/ventanas-detalle.jpg', alt:'Detalle cristal' },
+    { src:'images/ventanas_process1.jpg', alt:'Limpieza con pértiga' },
+    { src:'images/ventanas_process2.jpg', alt:'Aplicación de producto' },
+    { src:'images/ventanas_process3.jpg', alt:'Acabado sin marcas' },
+    { src:'images/toldo_process1.jpg', alt:'Limpieza de toldo en proceso' },
+    { src:'images/toldo_process2.jpg', alt:'Cepillado profesional toldo' },
   ]
+  
 };
 
 let fsCurrentGallery = 'tapiceria';
@@ -2183,7 +2196,7 @@ document.addEventListener('keydown', e => {
 <div class="svc-card">
   <img src="card_window.png" alt="Limpieza de Ventanas y Toldos" />
   <div class="svc-body">
-    <h3 data-i18n="svc_win_title"></h3>
+    <h3 data-i18n="svc_win_title" onclick="openFsModal('ventanasModal')" style="cursor:pointer; text-decoration:underline; text-decoration-color:rgba(0,0,0,0.2); text-underline-offset:3px;"></h3>
     <p class="clamp-3" data-i18n="svc_win_teaser"></p>
     <p class="price" data-i18n="svc_win_price"></p>
 
@@ -2202,7 +2215,7 @@ document.addEventListener('keydown', e => {
    data-i18n="btn_whatsapp"
         onclick="gtag('event', 'whatsapp_click');">
 </a>
-      <button class="btn-secondary" data-open="win" data-i18n="btn_details"></button>
+      <button class="btn-secondary" onclick="openFsModal('ventanasModal')" data-i18n="btn_details"></button>
     </div>
   </div>
 </div>
@@ -4487,6 +4500,195 @@ document.querySelectorAll('.stat-number').forEach(el => counterObserver.observe(
 
 </div>
 
+<!-- ══ VENTANAS Y TOLDOS FULLSCREEN MODAL ══ -->
+<div class="fs-modal" id="ventanasModal">
+  <div class="fs-topbar">
+    <button class="fs-back" onclick="closeModal('ventanasModal')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+      Volver
+    </button>
+    <span class="fs-brand">FrescaClimaTech</span>
+    <a class="fs-topbar-wa"
+       href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto%20para%20limpieza%20profesional%20de%20ventanas%20y%20toldos.%20Puedo%20enviar%20fotos%20ahora."
+       target="_blank" rel="noopener"
+       onclick="gtag('event', 'whatsapp_click');">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Pedir precio
+    </a>
+  </div>
+
+  <div class="fs-hero">
+    <video autoplay muted loop playsinline preload="auto" poster="card_window.png">
+      <source src="images/Limpieza-profesional-ventanas-toldos.mp4" type="video/mp4">
+    </video>
+    <div class="fs-hero-overlay"></div>
+    <div class="fs-hero-badge">Limpieza profesional · Cristales y toldos</div>
+  </div>
+
+  <div class="fs-content">
+    <div class="fs-title-block">
+      <p class="fs-kicker">Ventanas · Cristales · Toldos · Exterior</p>
+      <h2 class="fs-title">Limpieza de<br><em>Ventanas y Toldos</em></h2>
+      <div class="fs-price">Desde 75 € <span>· precio final tras ver fotos</span></div>
+    </div>
+
+    <div class="fs-tabs">
+      <button class="fs-tab active" onclick="switchFsTab('ventanas','resultados')">Resultados</button>
+      <button class="fs-tab" onclick="switchFsTab('ventanas','proceso')">En proceso</button>
+      <button class="fs-tab" onclick="switchFsTab('ventanas','info')">Información</button>
+    </div>
+
+    <!-- TAB: RESULTADOS -->
+    <div class="fs-panel active" id="ventanas-tab-resultados">
+      <p class="sec-heading">Antes y después — casos reales</p>
+      <div class="gallery-grid cols-2" style="margin-bottom:12px;">
+        <div class="gallery-item featured" onclick="openLightbox('ventanas',0)">
+          <img src="images/ventanas-antes-despues-1.jpg" alt="Cristales antes y después limpieza profesional Barcelona" loading="lazy"/>
+          <div class="label">Cristales · Barcelona</div>
+        </div>
+        <div class="gallery-item featured" onclick="openLightbox('ventanas',1)">
+          <img src="images/ventanas-antes-despues-2.jpg" alt="Cristales sin marcas brisa marina" loading="lazy"/>
+          <div class="label">Acabado sin marcas</div>
+        </div>
+      </div>
+      <div class="gallery-grid cols-3" style="margin-bottom:12px;">
+        <div class="gallery-item" onclick="openLightbox('ventanas',2)">
+          <img src="images/toldo-antes-despues-1.jpg" alt="Toldo antes y después limpieza" loading="lazy"/>
+          <div class="label">Toldo restaurado</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('ventanas',3)">
+          <img src="images/toldo-antes-despues-2.jpg" alt="Toldo exterior limpio" loading="lazy"/>
+          <div class="label">Toldo terraza</div>
+        </div>
+        <div class="gallery-item" onclick="openLightbox('ventanas',4)">
+          <img src="images/ventanas-detalle.jpg" alt="Detalle cristal limpio" loading="lazy"/>
+          <div class="label">Detalle cristal</div>
+        </div>
+      </div>
+      <div class="gallery-grid cols-2">
+        <div style="background:rgba(212,175,55,0.08);border:1px solid rgba(212,175,55,0.15);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px;text-align:center;">
+          <div style="font-size:36px;font-weight:900;color:#d4af37;letter-spacing:-2px;margin-bottom:8px;">50+</div>
+          <div style="font-size:14px;color:rgba(42,42,42,0.85);line-height:1.4;">ventanas y toldos limpiados</div>
+          <div style="margin-top:16px;font-size:13px;color:#d4af37;font-weight:700;">⭐⭐⭐⭐⭐ Google Reviews</div>
+        </div>
+        <div style="background:rgba(212,175,55,0.08);border:1px solid rgba(212,175,55,0.15);border-radius:14px;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px;text-align:center;">
+          <div style="font-size:36px;font-weight:900;color:#d4af37;letter-spacing:-2px;margin-bottom:8px;">100%</div>
+          <div style="font-size:14px;color:rgba(42,42,42,0.85);line-height:1.4;">acabado sin marcas garantizado</div>
+          <div style="margin-top:16px;font-size:13px;color:#d4af37;font-weight:700;">Ideal zonas costeras</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: PROCESO -->
+    <div class="fs-panel" id="ventanas-tab-proceso">
+      <p class="sec-heading">Cómo trabajamos</p>
+      <div class="process-steps">
+        <div class="step"><div class="step-num">01</div><div class="step-label">Inspección de cristales y toldos · evaluación de altura</div></div>
+        <div class="step"><div class="step-num">02</div><div class="step-label">Aplicación de producto profesional sin daño al material</div></div>
+        <div class="step"><div class="step-num">03</div><div class="step-label">Acabado sin marcas con técnica profesional y secado</div></div>
+      </div>
+      <p class="sec-heading">Fotos del proceso</p>
+      <div class="gallery-grid cols-2" style="margin-bottom:12px;">
+        <div class="gallery-item wide" onclick="openLightbox('ventanas',5)">
+          <img src="images/ventanas_process1.jpg" alt="Limpieza con pértiga profesional" loading="lazy"/>
+          <div class="label">Pértiga profesional</div>
+        </div>
+        <div class="gallery-item wide" onclick="openLightbox('ventanas',6)">
+          <img src="images/ventanas_process2.jpg" alt="Aplicación de producto cristales" loading="lazy"/>
+          <div class="label">Aplicación de producto</div>
+        </div>
+      </div>
+      <div class="gallery-grid cols-2">
+        <div class="gallery-item wide" onclick="openLightbox('ventanas',7)">
+          <img src="images/ventanas_process3.jpg" alt="Acabado sin marcas cristal" loading="lazy"/>
+          <div class="label">Acabado sin marcas</div>
+        </div>
+        <div class="gallery-item wide" onclick="openLightbox('ventanas',8)">
+          <img src="images/toldo_process1.jpg" alt="Limpieza de toldo en proceso" loading="lazy"/>
+          <div class="label">Limpieza de toldo</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: INFO -->
+    <div class="fs-panel" id="ventanas-tab-info">
+      <p class="sec-heading">Qué incluye el servicio</p>
+      <div class="info-grid">
+        <div class="info-card">
+          <h4>Qué limpiamos</h4>
+          <ul>
+            <li>Cristales interiores y exteriores</li>
+            <li>Marcos de aluminio y PVC</li>
+            <li>Toldos exteriores de tela y acrílicos</li>
+            <li>Toldos de terraza y balcón</li>
+            <li>Cristales en altura (con pértiga)</li>
+            <li>Mamparas y cerramientos</li>
+            <li>Persianas exteriores</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h4>Resultados</h4>
+          <ul>
+            <li>Acabado sin marcas ni rayas</li>
+            <li>Eliminación de salitre y polvo</li>
+            <li>Toldos restaurados y frescos</li>
+            <li>Productos seguros para tejidos</li>
+            <li>Ideal para zonas con brisa marina</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h4>Antes de pedir</h4>
+          <ul>
+            <li>Envía 2–3 fotos por WhatsApp</li>
+            <li>Indica ciudad y código postal</li>
+            <li>Menciona altura / número de plantas</li>
+            <li>Respondemos en menos de 15 min</li>
+          </ul>
+        </div>
+        <div class="info-card">
+          <h4>Zonas disponibles</h4>
+          <ul>
+            <li>Barcelona y Lloret de Mar</li>
+            <li>Marbella</li>
+            <li>Sevilla</li>
+            <li>Granada y Costa Tropical</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="sec-heading">Precios orientativos</p>
+      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-bottom:24px;">
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:16px;text-align:center;"><div style="font-size:22px;font-weight:900;color:#d4af37;">75 €</div><div style="font-size:13px;color:rgba(42,42,42,0.85);margin-top:4px;">Ventanas pequeño piso</div></div>
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:16px;text-align:center;"><div style="font-size:22px;font-weight:900;color:#d4af37;">95–120 €</div><div style="font-size:13px;color:rgba(42,42,42,0.85);margin-top:4px;">Ventanas piso mediano</div></div>
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:16px;text-align:center;"><div style="font-size:22px;font-weight:900;color:#d4af37;">130–180 €</div><div style="font-size:13px;color:rgba(42,42,42,0.85);margin-top:4px;">Casa / chalet</div></div>
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:16px;text-align:center;"><div style="font-size:22px;font-weight:900;color:#d4af37;">60–90 €</div><div style="font-size:13px;color:rgba(42,42,42,0.85);margin-top:4px;">Toldo terraza</div></div>
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:16px;text-align:center;"><div style="font-size:22px;font-weight:900;color:#d4af37;">100–150 €</div><div style="font-size:13px;color:rgba(42,42,42,0.85);margin-top:4px;">Toldo grande</div></div>
+        <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.08);border-radius:12px;padding:16px;text-align:center;"><div style="font-size:22px;font-weight:900;color:#d4af37;">+15 €</div><div style="font-size:13px;color:rgba(42,42,42,0.85);margin-top:4px;">Por planta en altura</div></div>
+      </div>
+
+      <div style="background:rgba(212,175,55,0.08);border:1px solid rgba(212,175,55,0.20);border-radius:14px;padding:18px 20px;font-size:14px;color:rgba(42,42,42,0.85);line-height:1.6;">
+        <strong style="color:#d4af37;">Consejo:</strong> Indica si el acceso es desde el interior o requiere pértiga/altura. Te confirmamos precio exacto en menos de 15 minutos por WhatsApp.
+      </div>
+    </div>
+  </div>
+
+  <div class="fs-bottom-cta visible">
+    <div class="fs-bottom-info">
+      <div class="service-name">Limpieza de Ventanas y Toldos</div>
+      <div class="service-price">Desde 75 € · respuesta en 15 min</div>
+    </div>
+    <a class="fs-bottom-wa"
+       href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto%20para%20limpieza%20profesional%20de%20ventanas%20y%20toldos.%20Puedo%20enviar%20fotos%20ahora."
+       target="_blank" rel="noopener"
+       onclick="gtag('event', 'whatsapp_click');">
+      Envía fotos → precio en 15 min
+    </a>
+  </div>
+</div>
+
+
+
+  
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
   <button class="lightbox-close" onclick="closeLightbox()">×</button>
