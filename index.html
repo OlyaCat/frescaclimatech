@@ -1642,7 +1642,30 @@ const fsGalleries = {
     { src:'images/aires_process3.jpg', alt:'Desinfección bandeja' },
     { src:'images/aires_process4.jpg', alt:'Limpieza serpentín exterior' },
     { src:'images/aires_process5.jpg', alt:'Equipo terminado' },
-  ]
+  ],
+  mattress: [
+  { src:'mattress_1.jpg', alt:'Limpieza de colchón' },
+  { src:'rug_1.jpg', alt:'Limpieza de alfombra' },
+  { src:'mattress_2.jpg', alt:'Desinfección colchón' },
+  { src:'rug_2.jpg', alt:'Alfombra restaurada' },
+  { src:'mattress_cover.jpg', alt:'Limpieza profunda' },
+  { src:'images/mattress_process1.jpg', alt:'Extracción profunda' },
+  { src:'images/mattress_process2.jpg', alt:'Tratamiento de manchas' },
+],
+  manitas: [
+  { src:'handyman_1.jpg', alt:'Montaje y reparación' },
+  { src:'handyman_2.jpg', alt:'Instalaciones hogar' },
+  { src:'handyman_3.jpg', alt:'Pequeñas reparaciones' },
+  { src:'handyman_4.jpg', alt:'Montaje muebles' },
+  { src:'handyman_cover.jpg', alt:'Servicio manitas' },
+],
+  inspection: [
+  { src:'inspection_1.jpg', alt:'Inspección apartamento' },
+  { src:'inspection_2.jpg', alt:'Revisión propiedad' },
+  { src:'inspection_3.jpg', alt:'Control humedad' },
+  { src:'inspection_4.jpg', alt:'Estado general propiedad' },
+  { src:'inspection_cover.jpg', alt:'Inspección vivienda' },
+]
   
 };
 
@@ -2179,7 +2202,13 @@ document.addEventListener('keydown', e => {
 <div class="svc-card">
   <img src="card_carpet.png" alt="Limpieza de Alfombras y Colchones" />
   <div class="svc-body">
-    <h3 data-i18n="svc_cm_title"></h3>
+    <h3 data-i18n="svc_mattress_title"
+    onclick="openFsModal('mattressModal')"
+    style="cursor:pointer;
+           text-decoration:underline;
+           text-decoration-color:rgba(0,0,0,0.2);
+           text-underline-offset:3px;">
+</h3>
     <p class="clamp-3" data-i18n="svc_cm_teaser"></p>
     <p class="price" data-i18n="svc_cm_price"></p>
 
@@ -2198,7 +2227,10 @@ document.addEventListener('keydown', e => {
    data-i18n="btn_whatsapp"
         onclick="gtag('event', 'whatsapp_click');">
 </a>
-      <button class="btn-secondary" data-open="cm" data-i18n="btn_details"></button>
+      <button class="btn-secondary"
+        onclick="openFsModal('mattressModal')"
+        data-i18n="btn_details">
+</button>
     </div>
   </div>
 </div>
@@ -2236,7 +2268,13 @@ document.addEventListener('keydown', e => {
 <div class="svc-card">
   <img src="card_handyman.png" alt="Servicios de Manitas" />
   <div class="svc-body">
-    <h3 data-i18n="svc_hm_title"></h3>
+    <h3 data-i18n="svc_handyman_title"
+    onclick="openFsModal('manitasModal')"
+    style="cursor:pointer;
+           text-decoration:underline;
+           text-decoration-color:rgba(0,0,0,0.2);
+           text-underline-offset:3px;">
+</h3>
     <p class="clamp-3" data-i18n="svc_hm_teaser"></p>
     <p class="price" data-i18n="svc_hm_price"></p>
 
@@ -2255,7 +2293,10 @@ document.addEventListener('keydown', e => {
    data-i18n="btn_whatsapp"
         onclick="gtag('event', 'whatsapp_click');">
 </a>
-      <button class="btn-secondary" data-open="hm" data-i18n="btn_details"></button>
+      <button class="btn-secondary"
+        onclick="openFsModal('manitasModal')"
+        data-i18n="btn_details">
+</button>
     </div>
   </div>
 </div>
@@ -2264,7 +2305,13 @@ document.addEventListener('keydown', e => {
 <div class="svc-card">
   <img src="card_inspection.jpg" alt="Inspección de Propiedades" />
   <div class="svc-body">
-    <h3 data-i18n="svc_ins_title"></h3>
+    <h3 data-i18n="svc_inspection_title"
+    onclick="openFsModal('inspectionModal')"
+    style="cursor:pointer;
+           text-decoration:underline;
+           text-decoration-color:rgba(0,0,0,0.2);
+           text-underline-offset:3px;">
+</h3>
     <p class="clamp-3" data-i18n="svc_ins_teaser"></p>
     <p class="price" data-i18n="svc_ins_price"></p>
 
@@ -2283,7 +2330,10 @@ document.addEventListener('keydown', e => {
    data-i18n="btn_whatsapp"
         onclick="gtag('event', 'whatsapp_click');">
 </a>
-      <button class="btn-secondary" data-open="ins" data-i18n="btn_details"></button>
+      <button class="btn-secondary"
+        onclick="openFsModal('inspectionModal')"
+        data-i18n="btn_details">
+</button>
     </div>
   </div>
 </div>
@@ -4883,7 +4933,1322 @@ document.querySelectorAll('.stat-number').forEach(el => counterObserver.observe(
   </div>
 </div>
 
+  <!-- ══ COLCHONES Y ALFOMBRAS FULLSCREEN MODAL ══ -->
+<div class="fs-modal" id="mattressModal">
 
+  <div class="fs-topbar">
+    <button class="fs-back" onclick="closeModal('mattressModal')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M19 12H5M12 5l-7 7 7 7"/>
+      </svg>
+      Volver
+    </button>
+
+    <span class="fs-brand">FrescaClimaTech</span>
+
+    <a class="fs-topbar-wa"
+       href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto%20para%20limpieza%20de%20colchones%20y%20alfombras.%20Puedo%20enviar%20fotos%20ahora."
+       target="_blank"
+       rel="noopener"
+       onclick="gtag('event', 'whatsapp_click');">
+
+      Pedir precio
+    </a>
+  </div>
+
+  <div class="fs-hero">
+    <img src="mattress_cover.jpg"
+         alt="Limpieza de colchones y alfombras"
+         style="width:100%;height:100%;object-fit:cover;display:block;">
+
+    <div class="fs-hero-overlay"></div>
+
+    <div class="fs-hero-badge">
+      Colchones · Alfombras · Higiene profunda
+    </div>
+  </div>
+
+  <div class="fs-content">
+
+    <div class="fs-title-block">
+      <p class="fs-kicker">
+        Higiene · Frescura · Descanso
+      </p>
+
+      <h2 class="fs-title">
+        Limpieza de<br>
+        <em>Colchones y Alfombras</em>
+      </h2>
+
+      <div class="fs-price">
+        Desde 45 €
+        <span>· precio final tras ver fotos</span>
+      </div>
+    </div>
+
+    <div class="fs-tabs">
+      <button class="fs-tab active"
+              onclick="switchFsTab('mattress','resultados')">
+        Resultados
+      </button>
+
+      <button class="fs-tab"
+              onclick="switchFsTab('mattress','proceso')">
+        En proceso
+      </button>
+
+      <button class="fs-tab"
+              onclick="switchFsTab('mattress','info')">
+        Información
+      </button>
+    </div>
+
+    <!-- RESULTADOS -->
+    <div class="fs-panel active" id="mattress-tab-resultados">
+
+      <p class="sec-heading">
+        Colchones y alfombras — resultados reales
+      </p>
+
+      <div class="gallery-grid cols-2" style="margin-bottom:12px;">
+
+        <div class="gallery-item featured"
+             onclick="openLightbox('mattress',0)">
+          <img src="mattress_1.jpg"
+               alt="Limpieza de colchón"
+               loading="lazy"/>
+
+          <div class="label">Colchón refrescado</div>
+        </div>
+
+        <div class="gallery-item featured"
+             onclick="openLightbox('mattress',1)">
+          <img src="rug_1.jpg"
+               alt="Limpieza de alfombra"
+               loading="lazy"/>
+
+          <div class="label">Alfombra limpia</div>
+        </div>
+      </div>
+
+      <div class="gallery-grid cols-3" style="margin-bottom:12px;">
+
+        <div class="gallery-item"
+             onclick="openLightbox('mattress',2)">
+          <img src="mattress_2.jpg"
+               alt="Desinfección colchón"
+               loading="lazy"/>
+
+          <div class="label">Desinfección</div>
+        </div>
+
+        <div class="gallery-item"
+             onclick="openLightbox('mattress',3)">
+          <img src="rug_2.jpg"
+               alt="Alfombra restaurada"
+               loading="lazy"/>
+
+          <div class="label">Alfombra restaurada</div>
+        </div>
+
+        <div class="gallery-item"
+             onclick="openLightbox('mattress',4)">
+          <img src="mattress_cover.jpg"
+               alt="Limpieza profunda"
+               loading="lazy"/>
+
+          <div class="label">Higiene profunda</div>
+        </div>
+      </div>
+
+      <div class="gallery-grid cols-2">
+
+        <div style="background:rgba(212,175,55,0.08);
+                    border:1px solid rgba(212,175,55,0.15);
+                    border-radius:14px;
+                    display:flex;
+                    flex-direction:column;
+                    align-items:center;
+                    justify-content:center;
+                    padding:28px;
+                    text-align:center;">
+
+          <div style="font-size:36px;
+                      font-weight:900;
+                      color:#d4af37;
+                      letter-spacing:-2px;
+                      margin-bottom:8px;">
+
+            100+
+          </div>
+
+          <div style="font-size:14px;
+                      color:rgba(42,42,42,0.85);
+                      line-height:1.4;">
+
+            colchones y alfombras limpiados
+          </div>
+
+          <div style="margin-top:16px;
+                      font-size:13px;
+                      color:#d4af37;
+                      font-weight:700;">
+
+            ⭐⭐⭐⭐⭐ Google Reviews
+          </div>
+        </div>
+
+        <div style="background:rgba(212,175,55,0.08);
+                    border:1px solid rgba(212,175,55,0.15);
+                    border-radius:14px;
+                    display:flex;
+                    flex-direction:column;
+                    align-items:center;
+                    justify-content:center;
+                    padding:28px;
+                    text-align:center;">
+
+          <div style="font-size:36px;
+                      font-weight:900;
+                      color:#d4af37;
+                      letter-spacing:-2px;
+                      margin-bottom:8px;">
+
+            Fresco
+          </div>
+
+          <div style="font-size:14px;
+                      color:rgba(42,42,42,0.85);
+                      line-height:1.4;">
+
+            menos olores, polvo y ácaros
+          </div>
+
+          <div style="margin-top:16px;
+                      font-size:13px;
+                      color:#d4af37;
+                      font-weight:700;">
+
+            Descanso más limpio
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROCESO -->
+    <div class="fs-panel" id="mattress-tab-proceso">
+
+      <p class="sec-heading">
+        Cómo trabajamos
+      </p>
+
+      <div class="process-steps">
+
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-label">
+            Aspirado profundo y revisión del tejido
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-label">
+            Tratamiento de manchas y limpieza profunda
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-label">
+            Extracción y secado parcial
+          </div>
+        </div>
+      </div>
+
+      <p class="sec-heading">
+        Fotos del proceso
+      </p>
+
+      <div class="gallery-grid cols-2">
+
+        <div class="gallery-item wide"
+             onclick="openLightbox('mattress',5)">
+          <img src="images/mattress_process1.jpg"
+               alt="Proceso limpieza colchón"
+               loading="lazy"/>
+
+          <div class="label">Extracción profunda</div>
+        </div>
+
+        <div class="gallery-item wide"
+             onclick="openLightbox('mattress',6)">
+          <img src="images/mattress_process2.jpg"
+               alt="Proceso limpieza alfombra"
+               loading="lazy"/>
+
+          <div class="label">Tratamiento de manchas</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- INFO -->
+    <div class="fs-panel" id="mattress-tab-info">
+
+      <p class="sec-heading">
+        Qué incluye el servicio
+      </p>
+
+      <div class="info-grid">
+
+        <div class="info-card">
+          <h4>Qué limpiamos</h4>
+
+          <ul>
+            <li>Colchones individuales y dobles</li>
+            <li>Alfombras decorativas</li>
+            <li>Moquetas pequeñas</li>
+            <li>Cabeceros tapizados</li>
+            <li>Manchas y olores</li>
+            <li>Ácaros y polvo acumulado</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h4>Por qué importa</h4>
+
+          <ul>
+            <li>Mejor higiene del hogar</li>
+            <li>Menos alergias y polvo</li>
+            <li>Mayor frescura en dormitorios</li>
+            <li>Ideal para Airbnb y apartamentos turísticos</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h4>Antes de pedir</h4>
+
+          <ul>
+            <li>1 foto general</li>
+            <li>Detalle de manchas si existen</li>
+            <li>Medidas aproximadas</li>
+            <li>Respondemos rápido por WhatsApp</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h4>Zonas disponibles</h4>
+
+          <ul>
+            <li>Barcelona</li>
+            <li>Lloret de Mar</li>
+            <li>Marbella</li>
+            <li>Estepona</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="sec-heading">
+        Precios orientativos
+      </p>
+
+      <div style="display:grid;
+                  grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
+                  gap:10px;
+                  margin-bottom:24px;">
+
+        <div style="background:rgba(255,255,255,0.04);
+                    border:1px solid rgba(255,255,255,0.08);
+                    border-radius:12px;
+                    padding:16px;
+                    text-align:center;">
+
+          <div style="font-size:22px;
+                      font-weight:900;
+                      color:#d4af37;">
+
+            45 €
+          </div>
+
+          <div style="font-size:13px;
+                      color:rgba(42,42,42,0.85);
+                      margin-top:4px;">
+
+            Colchón individual
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.04);
+                    border:1px solid rgba(255,255,255,0.08);
+                    border-radius:12px;
+                    padding:16px;
+                    text-align:center;">
+
+          <div style="font-size:22px;
+                      font-weight:900;
+                      color:#d4af37;">
+
+            60–90 €
+          </div>
+
+          <div style="font-size:13px;
+                      color:rgba(42,42,42,0.85);
+                      margin-top:4px;">
+
+            Colchón doble
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.04);
+                    border:1px solid rgba(255,255,255,0.08);
+                    border-radius:12px;
+                    padding:16px;
+                    text-align:center;">
+
+          <div style="font-size:22px;
+                      font-weight:900;
+                      color:#d4af37;">
+
+            Desde 35 €
+          </div>
+
+          <div style="font-size:13px;
+                      color:rgba(42,42,42,0.85);
+                      margin-top:4px;">
+
+            Alfombras pequeñas
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.04);
+                    border:1px solid rgba(255,255,255,0.08);
+                    border-radius:12px;
+                    padding:16px;
+                    text-align:center;">
+
+          <div style="font-size:22px;
+                      font-weight:900;
+                      color:#d4af37;">
+
+            Consultar
+          </div>
+
+          <div style="font-size:13px;
+                      color:rgba(42,42,42,0.85);
+                      margin-top:4px;">
+
+            Alfombras grandes
+          </div>
+        </div>
+      </div>
+
+      <div style="background:rgba(212,175,55,0.08);
+                  border:1px solid rgba(212,175,55,0.20);
+                  border-radius:14px;
+                  padding:18px 20px;
+                  font-size:14px;
+                  color:rgba(42,42,42,0.85);
+                  line-height:1.6;">
+
+        <strong style="color:#d4af37;">
+          Consejo:
+        </strong>
+
+        Recomendamos limpieza profunda de colchones una vez al año y cada 6 meses para hogares con mascotas, niños o Airbnb.
+      </div>
+    </div>
+  </div>
+
+  <div class="fs-bottom-cta visible">
+
+    <div class="fs-bottom-info">
+      <div class="service-name">
+        Limpieza de Colchones y Alfombras
+      </div>
+
+      <div class="service-price">
+        Desde 45 € · respuesta rápida
+      </div>
+    </div>
+
+    <a class="fs-bottom-wa"
+       href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto%20para%20limpieza%20de%20colchones%20y%20alfombras.%20Puedo%20enviar%20fotos%20ahora."
+       target="_blank"
+       rel="noopener"
+       onclick="gtag('event', 'whatsapp_click');">
+
+      Envía fotos → precio en 15 min
+    </a>
+  </div>
+</div>
+
+  <!-- ══ SERVICIOS DE MANITAS FULLSCREEN MODAL ══ -->
+<div class="fs-modal" id="manitasModal">
+
+  <div class="fs-topbar">
+    <button class="fs-back" onclick="closeModal('manitasModal')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M19 12H5M12 5l-7 7 7 7"/>
+      </svg>
+      Volver
+    </button>
+
+    <span class="fs-brand">FrescaClimaTech</span>
+
+    <a class="fs-topbar-wa"
+       href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20información%20sobre%20servicios%20de%20manitas.%20Puedo%20enviar%20fotos%20ahora."
+       target="_blank"
+       rel="noopener"
+       onclick="gtag('event', 'whatsapp_click');">
+
+      Pedir presupuesto
+    </a>
+  </div>
+
+  <div class="fs-hero">
+    <img src="handyman_cover.jpg"
+         alt="Servicios de Manitas"
+         style="width:100%;height:100%;object-fit:cover;display:block;">
+
+    <div class="fs-hero-overlay"></div>
+
+    <div class="fs-hero-badge">
+      Reparaciones · Instalaciones · Hogar
+    </div>
+  </div>
+
+  <div class="fs-content">
+
+    <div class="fs-title-block">
+      <p class="fs-kicker">
+        Rápido · Profesional · Flexible
+      </p>
+
+      <h2 class="fs-title">
+        Servicios de<br>
+        <em>Manitas</em>
+      </h2>
+
+      <div class="fs-price">
+        Desde 45 €
+        <span>· según tipo de trabajo</span>
+      </div>
+    </div>
+
+    <div class="fs-tabs">
+      <button class="fs-tab active"
+              onclick="switchFsTab('manitas','resultados')">
+        Resultados
+      </button>
+
+      <button class="fs-tab"
+              onclick="switchFsTab('manitas','proceso')">
+        En proceso
+      </button>
+
+      <button class="fs-tab"
+              onclick="switchFsTab('manitas','info')">
+        Información
+      </button>
+    </div>
+
+    <!-- RESULTADOS -->
+    <div class="fs-panel active" id="manitas-tab-resultados">
+
+      <p class="sec-heading">
+        Reparaciones y montajes — trabajos reales
+      </p>
+
+      <div class="gallery-grid cols-2" style="margin-bottom:12px;">
+
+        <div class="gallery-item featured"
+             onclick="openLightbox('manitas',0)">
+          <img src="handyman_1.jpg"
+               alt="Montaje y reparación"
+               loading="lazy"/>
+
+          <div class="label">Montaje y reparación</div>
+        </div>
+
+        <div class="gallery-item featured"
+             onclick="openLightbox('manitas',1)">
+          <img src="handyman_2.jpg"
+               alt="Instalaciones hogar"
+               loading="lazy"/>
+
+          <div class="label">Instalaciones hogar</div>
+        </div>
+      </div>
+
+      <div class="gallery-grid cols-3" style="margin-bottom:12px;">
+
+        <div class="gallery-item"
+             onclick="openLightbox('manitas',2)">
+          <img src="handyman_3.jpg"
+               alt="Pequeñas reparaciones"
+               loading="lazy"/>
+
+          <div class="label">Reparaciones</div>
+        </div>
+
+        <div class="gallery-item"
+             onclick="openLightbox('manitas',3)">
+          <img src="handyman_4.jpg"
+               alt="Montaje muebles"
+               loading="lazy"/>
+
+          <div class="label">Montaje muebles</div>
+        </div>
+
+        <div class="gallery-item"
+             onclick="openLightbox('manitas',4)">
+          <img src="handyman_cover.jpg"
+               alt="Servicio manitas"
+               loading="lazy"/>
+
+          <div class="label">Servicio rápido</div>
+        </div>
+      </div>
+
+      <div class="gallery-grid cols-2">
+
+        <div style="background:rgba(212,175,55,0.08);
+                    border:1px solid rgba(212,175,55,0.15);
+                    border-radius:14px;
+                    display:flex;
+                    flex-direction:column;
+                    align-items:center;
+                    justify-content:center;
+                    padding:28px;
+                    text-align:center;">
+
+          <div style="font-size:36px;
+                      font-weight:900;
+                      color:#d4af37;
+                      letter-spacing:-2px;
+                      margin-bottom:8px;">
+
+            45 €
+          </div>
+
+          <div style="font-size:14px;
+                      color:rgba(42,42,42,0.85);
+                      line-height:1.4;">
+
+            precio orientativo desde
+          </div>
+
+          <div style="margin-top:16px;
+                      font-size:13px;
+                      color:#d4af37;
+                      font-weight:700;">
+
+            Presupuesto rápido
+          </div>
+        </div>
+
+        <div style="background:rgba(212,175,55,0.08);
+                    border:1px solid rgba(212,175,55,0.15);
+                    border-radius:14px;
+                    display:flex;
+                    flex-direction:column;
+                    align-items:center;
+                    justify-content:center;
+                    padding:28px;
+                    text-align:center;">
+
+          <div style="font-size:36px;
+                      font-weight:900;
+                      color:#d4af37;
+                      letter-spacing:-2px;
+                      margin-bottom:8px;">
+
+            Hogar
+          </div>
+
+          <div style="font-size:14px;
+                      color:rgba(42,42,42,0.85);
+                      line-height:1.4;">
+
+            soluciones prácticas para casa y Airbnb
+          </div>
+
+          <div style="margin-top:16px;
+                      font-size:13px;
+                      color:#d4af37;
+                      font-weight:700;">
+
+            Servicio flexible
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROCESO -->
+    <div class="fs-panel" id="manitas-tab-proceso">
+
+      <p class="sec-heading">
+        Cómo trabajamos
+      </p>
+
+      <div class="process-steps">
+
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-label">
+            Envíanos fotos y descripción
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-label">
+            Revisamos el trabajo y acceso
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-label">
+            Confirmamos precio y cita
+          </div>
+        </div>
+      </div>
+
+      <p class="sec-heading">
+        Qué hacemos
+      </p>
+
+      <div class="info-grid">
+
+        <div class="info-card">
+          <h4>Servicios frecuentes</h4>
+
+          <ul>
+            <li>Montaje de muebles</li>
+            <li>Instalación de lámparas</li>
+            <li>Colocación de cortinas</li>
+            <li>Pequeñas reparaciones</li>
+            <li>Silicona y ajustes</li>
+            <li>Ayuda para Airbnb</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h4>Importante</h4>
+
+          <ul>
+            <li>Envíanos fotos claras</li>
+            <li>Indica ciudad y acceso</li>
+            <li>Trabajos grandes bajo consulta</li>
+            <li>Precio según complejidad</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- INFO -->
+    <div class="fs-panel" id="manitas-tab-info">
+
+      <p class="sec-heading">
+        Información del servicio
+      </p>
+
+      <div class="info-grid">
+
+        <div class="info-card">
+          <h4>Qué incluye</h4>
+
+          <ul>
+            <li>Visita y evaluación</li>
+            <li>Herramientas básicas</li>
+            <li>Montaje e instalación</li>
+            <li>Pequeñas reparaciones</li>
+            <li>Ayuda rápida para el hogar</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h4>Ideal para</h4>
+
+          <ul>
+            <li>Apartamentos turísticos</li>
+            <li>Airbnb</li>
+            <li>Propietarios ocupados</li>
+            <li>Pequeños arreglos rápidos</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h4>Antes de pedir</h4>
+
+          <ul>
+            <li>Fotos del trabajo</li>
+            <li>Ubicación</li>
+            <li>Descripción breve</li>
+            <li>Medidas aproximadas si aplica</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h4>Zonas disponibles</h4>
+
+          <ul>
+            <li>Barcelona</li>
+            <li>Lloret de Mar</li>
+            <li>Marbella</li>
+            <li>Costa del Sol</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="sec-heading">
+        Precios orientativos
+      </p>
+
+      <div style="display:grid;
+                  grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
+                  gap:10px;
+                  margin-bottom:24px;">
+
+        <div style="background:rgba(255,255,255,0.04);
+                    border:1px solid rgba(255,255,255,0.08);
+                    border-radius:12px;
+                    padding:16px;
+                    text-align:center;">
+
+          <div style="font-size:22px;
+                      font-weight:900;
+                      color:#d4af37;">
+
+            45 €
+          </div>
+
+          <div style="font-size:13px;
+                      color:rgba(42,42,42,0.85);
+                      margin-top:4px;">
+
+            Trabajo pequeño
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.04);
+                    border:1px solid rgba(255,255,255,0.08);
+                    border-radius:12px;
+                    padding:16px;
+                    text-align:center;">
+
+          <div style="font-size:22px;
+                      font-weight:900;
+                      color:#d4af37;">
+
+            60–120 €
+          </div>
+
+          <div style="font-size:13px;
+                      color:rgba(42,42,42,0.85);
+                      margin-top:4px;">
+
+            Montajes y reparaciones
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.04);
+                    border:1px solid rgba(255,255,255,0.08);
+                    border-radius:12px;
+                    padding:16px;
+                    text-align:center;">
+
+          <div style="font-size:22px;
+                      font-weight:900;
+                      color:#d4af37;">
+
+            Consultar
+          </div>
+
+          <div style="font-size:13px;
+                      color:rgba(42,42,42,0.85);
+                      margin-top:4px;">
+
+            Trabajos más complejos
+          </div>
+        </div>
+      </div>
+
+      <div style="background:rgba(212,175,55,0.08);
+                  border:1px solid rgba(212,175,55,0.20);
+                  border-radius:14px;
+                  padding:18px 20px;
+                  font-size:14px;
+                  color:rgba(42,42,42,0.85);
+                  line-height:1.6;">
+
+        <strong style="color:#d4af37;">
+          Consejo:
+        </strong>
+
+        Envíanos fotos por WhatsApp y te confirmamos rápidamente si podemos ayudarte y el precio aproximado.
+      </div>
+    </div>
+  </div>
+
+  <div class="fs-bottom-cta visible">
+
+    <div class="fs-bottom-info">
+      <div class="service-name">
+        Servicios de Manitas
+      </div>
+
+      <div class="service-price">
+        Desde 45 € · respuesta rápida
+      </div>
+    </div>
+
+    <a class="fs-bottom-wa"
+       href="https://wa.me/34657336353?text=Hola%2C%20quiero%20información%20sobre%20servicios%20de%20manitas.%20Puedo%20enviar%20fotos%20ahora."
+       target="_blank"
+       rel="noopener"
+       onclick="gtag('event', 'whatsapp_click');">
+
+      Envía fotos → presupuesto rápido
+    </a>
+  </div>
+</div>
+
+  <!-- ══ INSPECCIÓN DE PROPIEDADES FULLSCREEN MODAL ══ -->
+<div class="fs-modal" id="inspectionModal">
+
+  <div class="fs-topbar">
+    <button class="fs-back" onclick="closeModal('inspectionModal')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+        <path d="M19 12H5M12 5l-7 7 7 7"/>
+      </svg>
+      Volver
+    </button>
+
+    <span class="fs-brand">FrescaClimaTech</span>
+
+    <a class="fs-topbar-wa"
+       href="https://wa.me/34657336353?text=Hola%2C%20quiero%20información%20sobre%20inspección%20de%20propiedades.%20Puedo%20enviar%20detalles%20ahora."
+       target="_blank"
+       rel="noopener"
+       onclick="gtag('event', 'whatsapp_click');">
+
+      Solicitar información
+    </a>
+  </div>
+
+  <div class="fs-hero">
+    <img src="inspection_cover.jpg"
+         alt="Inspección de Propiedades"
+         style="width:100%;height:100%;object-fit:cover;display:block;">
+
+    <div class="fs-hero-overlay"></div>
+
+    <div class="fs-hero-badge">
+      Apartamentos · Villas · Airbnb
+    </div>
+  </div>
+
+  <div class="fs-content">
+
+    <div class="fs-title-block">
+      <p class="fs-kicker">
+        Seguridad · Confianza · Evaluación
+      </p>
+
+      <h2 class="fs-title">
+        Inspección de<br>
+        <em>Propiedades</em>
+      </h2>
+
+      <div class="fs-price">
+        Desde 90 €
+        <span>· según tamaño y ubicación</span>
+      </div>
+    </div>
+
+    <div class="fs-tabs">
+
+      <button class="fs-tab active"
+              onclick="switchFsTab('inspection','resultados')">
+        Resultados
+      </button>
+
+      <button class="fs-tab"
+              onclick="switchFsTab('inspection','proceso')">
+        En proceso
+      </button>
+
+      <button class="fs-tab"
+              onclick="switchFsTab('inspection','info')">
+        Información
+      </button>
+    </div>
+
+    <!-- RESULTADOS -->
+    <div class="fs-panel active" id="inspection-tab-resultados">
+
+      <p class="sec-heading">
+        Inspecciones — ejemplos reales
+      </p>
+
+      <div class="gallery-grid cols-2" style="margin-bottom:12px;">
+
+        <div class="gallery-item featured"
+             onclick="openLightbox('inspection',0)">
+          <img src="inspection_1.jpg"
+               alt="Inspección apartamento"
+               loading="lazy"/>
+
+          <div class="label">Apartamento</div>
+        </div>
+
+        <div class="gallery-item featured"
+             onclick="openLightbox('inspection',1)">
+          <img src="inspection_2.jpg"
+               alt="Revisión propiedad"
+               loading="lazy"/>
+
+          <div class="label">Revisión técnica</div>
+        </div>
+      </div>
+
+      <div class="gallery-grid cols-3" style="margin-bottom:12px;">
+
+        <div class="gallery-item"
+             onclick="openLightbox('inspection',2)">
+          <img src="inspection_3.jpg"
+               alt="Control humedad"
+               loading="lazy"/>
+
+          <div class="label">Humedad</div>
+        </div>
+
+        <div class="gallery-item"
+             onclick="openLightbox('inspection',3)">
+          <img src="inspection_4.jpg"
+               alt="Estado general propiedad"
+               loading="lazy"/>
+
+          <div class="label">Estado general</div>
+        </div>
+
+        <div class="gallery-item"
+             onclick="openLightbox('inspection',4)">
+          <img src="inspection_cover.jpg"
+               alt="Inspección vivienda"
+               loading="lazy"/>
+
+          <div class="label">Evaluación visual</div>
+        </div>
+      </div>
+
+      <div class="gallery-grid cols-2">
+
+        <div style="background:rgba(212,175,55,0.08);
+                    border:1px solid rgba(212,175,55,0.15);
+                    border-radius:14px;
+                    display:flex;
+                    flex-direction:column;
+                    align-items:center;
+                    justify-content:center;
+                    padding:28px;
+                    text-align:center;">
+
+          <div style="font-size:36px;
+                      font-weight:900;
+                      color:#d4af37;
+                      letter-spacing:-2px;
+                      margin-bottom:8px;">
+
+            Compra
+          </div>
+
+          <div style="font-size:14px;
+                      color:rgba(42,42,42,0.85);
+                      line-height:1.4;">
+
+            apoyo visual antes de alquilar o comprar
+          </div>
+
+          <div style="margin-top:16px;
+                      font-size:13px;
+                      color:#d4af37;
+                      font-weight:700;">
+
+            Más tranquilidad
+          </div>
+        </div>
+
+        <div style="background:rgba(212,175,55,0.08);
+                    border:1px solid rgba(212,175,55,0.15);
+                    border-radius:14px;
+                    display:flex;
+                    flex-direction:column;
+                    align-items:center;
+                    justify-content:center;
+                    padding:28px;
+                    text-align:center;">
+
+          <div style="font-size:36px;
+                      font-weight:900;
+                      color:#d4af37;
+                      letter-spacing:-2px;
+                      margin-bottom:8px;">
+
+            Airbnb
+          </div>
+
+          <div style="font-size:14px;
+                      color:rgba(42,42,42,0.85);
+                      line-height:1.4;">
+
+            ideal para propietarios y extranjeros
+          </div>
+
+          <div style="margin-top:16px;
+                      font-size:13px;
+                      color:#d4af37;
+                      font-weight:700;">
+
+            Servicio flexible
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROCESO -->
+    <div class="fs-panel" id="inspection-tab-proceso">
+
+      <p class="sec-heading">
+        Cómo trabajamos
+      </p>
+
+      <div class="process-steps">
+
+        <div class="step">
+          <div class="step-num">01</div>
+          <div class="step-label">
+            Revisamos dirección y necesidades
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">02</div>
+          <div class="step-label">
+            Visitamos la propiedad y hacemos fotos
+          </div>
+        </div>
+
+        <div class="step">
+          <div class="step-num">03</div>
+          <div class="step-label">
+            Compartimos observaciones y estado visual
+          </div>
+        </div>
+      </div>
+
+      <p class="sec-heading">
+        Qué revisamos
+      </p>
+
+      <div class="info-grid">
+
+        <div class="info-card">
+          <h4>Evaluación visual</h4>
+
+          <ul>
+            <li>Estado general del inmueble</li>
+            <li>Humedad visible</li>
+            <li>Estado de paredes y techos</li>
+            <li>Ventanas y cerramientos</li>
+            <li>Terrazas y toldos</li>
+            <li>Limpieza y mantenimiento</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h4>Ideal para</h4>
+
+          <ul>
+            <li>Compradores extranjeros</li>
+            <li>Propietarios Airbnb</li>
+            <li>Inversores</li>
+            <li>Segunda residencia</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- INFO -->
+    <div class="fs-panel" id="inspection-tab-info">
+
+      <p class="sec-heading">
+        Información del servicio
+      </p>
+
+      <div class="info-grid">
+
+        <div class="info-card">
+          <h4>Qué incluye</h4>
+
+          <ul>
+            <li>Visita visual a la propiedad</li>
+            <li>Fotos y vídeos básicos</li>
+            <li>Comentarios generales</li>
+            <li>Detección visual de problemas visibles</li>
+            <li>Apoyo para compradores internacionales</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h4>Importante</h4>
+
+          <ul>
+            <li>No sustituye una inspección técnica oficial</li>
+            <li>No incluye certificados</li>
+            <li>Evaluación visual general</li>
+            <li>Precio según distancia y tamaño</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h4>Antes de pedir</h4>
+
+          <ul>
+            <li>Dirección aproximada</li>
+            <li>Tamaño de la propiedad</li>
+            <li>Objetivo de la visita</li>
+            <li>Fecha deseada</li>
+          </ul>
+        </div>
+
+        <div class="info-card">
+          <h4>Zonas disponibles</h4>
+
+          <ul>
+            <li>Barcelona</li>
+            <li>Costa Brava</li>
+            <li>Marbella</li>
+            <li>Costa del Sol</li>
+          </ul>
+        </div>
+      </div>
+
+      <p class="sec-heading">
+        Precios orientativos
+      </p>
+
+      <div style="display:grid;
+                  grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
+                  gap:10px;
+                  margin-bottom:24px;">
+
+        <div style="background:rgba(255,255,255,0.04);
+                    border:1px solid rgba(255,255,255,0.08);
+                    border-radius:12px;
+                    padding:16px;
+                    text-align:center;">
+
+          <div style="font-size:22px;
+                      font-weight:900;
+                      color:#d4af37;">
+
+            90 €
+          </div>
+
+          <div style="font-size:13px;
+                      color:rgba(42,42,42,0.85);
+                      margin-top:4px;">
+
+            Apartamento pequeño
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.04);
+                    border:1px solid rgba(255,255,255,0.08);
+                    border-radius:12px;
+                    padding:16px;
+                    text-align:center;">
+
+          <div style="font-size:22px;
+                      font-weight:900;
+                      color:#d4af37;">
+
+            120–200 €
+          </div>
+
+          <div style="font-size:13px;
+                      color:rgba(42,42,42,0.85);
+                      margin-top:4px;">
+
+            Viviendas más grandes
+          </div>
+        </div>
+
+        <div style="background:rgba(255,255,255,0.04);
+                    border:1px solid rgba(255,255,255,0.08);
+                    border-radius:12px;
+                    padding:16px;
+                    text-align:center;">
+
+          <div style="font-size:22px;
+                      font-weight:900;
+                      color:#d4af37;">
+
+            Consultar
+          </div>
+
+          <div style="font-size:13px;
+                      color:rgba(42,42,42,0.85);
+                      margin-top:4px;">
+
+            Villas y propiedades premium
+          </div>
+        </div>
+      </div>
+
+      <div style="background:rgba(212,175,55,0.08);
+                  border:1px solid rgba(212,175,55,0.20);
+                  border-radius:14px;
+                  padding:18px 20px;
+                  font-size:14px;
+                  color:rgba(42,42,42,0.85);
+                  line-height:1.6;">
+
+        <strong style="color:#d4af37;">
+          Consejo:
+        </strong>
+
+        Este servicio es ideal para personas que viven fuera de España y quieren una revisión visual rápida antes de alquilar, comprar o preparar una vivienda.
+      </div>
+    </div>
+  </div>
+
+  <div class="fs-bottom-cta visible">
+
+    <div class="fs-bottom-info">
+      <div class="service-name">
+        Inspección de Propiedades
+      </div>
+
+      <div class="service-price">
+        Desde 90 € · consulta rápida
+      </div>
+    </div>
+
+    <a class="fs-bottom-wa"
+       href="https://wa.me/34657336353?text=Hola%2C%20quiero%20información%20sobre%20inspección%20de%20propiedades.%20Puedo%20enviar%20detalles%20ahora."
+       target="_blank"
+       rel="noopener"
+       onclick="gtag('event', 'whatsapp_click');">
+
+      Enviar detalles → respuesta rápida
+    </a>
+  </div>
+</div>
+  
   
 <!-- LIGHTBOX -->
 <div class="lightbox" id="lightbox" onclick="closeLightbox()">
