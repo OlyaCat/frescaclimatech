@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Limpieza de Toldos en Marbella y Estepona | FrescaClimaTech</title>
+  <meta name="description" content="Limpieza profesional de toldos, terrazas y tejidos exteriores en Marbella, Estepona y alrededores. Servicio premium para viviendas, negocios y zonas costeras. Presupuesto por WhatsApp." />
+
+  <link href="favicon.png" rel="icon" type="image/png" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: 'Outfit', sans-serif;
+      color: #111;
+      background-image: url('images/mediterranean_hero.jpg');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background: rgba(255,255,255,0.55);
+      z-index: -1;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 14px 22px;
+      background: rgba(255,255,255,0.88);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+      color: #b68714;
+      font-weight: 900;
+      font-size: 26px;
+    }
+
+    .brand img {
+      height: 42px;
+      width: auto;
+    }
+
+    .top-wa {
+      background: #d4af37;
+      color: #111;
+      padding: 12px 22px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .hero {
+      max-width: 1100px;
+      margin: 40px auto 24px;
+      padding: 0 18px;
+    }
+
+    .hero-card {
+      background: rgba(255,255,255,0.92);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 18px 45px rgba(0,0,0,0.12);
+    }
+
+    .hero-media {
+      height: 440px;
+      background: #000;
+      overflow: hidden;
+    }
+
+    .hero-media video,
+    .hero-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 35%;
+      display: block;
+    }
+
+    .hero-content {
+      padding: 38px 34px 42px;
+      text-align: center;
+    }
+
+    .kicker {
+      color: #b68714;
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 12px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      font-size: clamp(34px, 6vw, 64px);
+      line-height: 1.02;
+      margin: 0 0 18px;
+      font-weight: 900;
+      letter-spacing: -1.2px;
+    }
+
+    h1 em {
+      color: #b68714;
+      font-style: normal;
+    }
+
+    .hero-text {
+      max-width: 720px;
+      margin: 0 auto 24px;
+      font-size: 20px;
+      line-height: 1.45;
+      color: #333;
+    }
+
+    .cta-row {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 15px 28px;
+      border-radius: 999px;
+      font-weight: 900;
+      text-decoration: none;
+    }
+
+    .btn-gold {
+      background: #d4af37;
+      color: #111;
+    }
+
+    .btn-outline {
+      border: 2px solid #111;
+      color: #111;
+      background: transparent;
+    }
+
+    section {
+      max-width: 1100px;
+      margin: 28px auto;
+      padding: 0 18px;
+    }
+
+    .section-card {
+      background: rgba(255,255,255,0.92);
+      border-radius: 24px;
+      padding: 34px;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      font-size: clamp(28px, 4vw, 42px);
+      margin: 0 0 16px;
+      font-weight: 900;
+      letter-spacing: -0.6px;
+      text-align: center;
+    }
+
+    .sub {
+      max-width: 720px;
+      margin: 0 auto 26px;
+      text-align: center;
+      color: #444;
+      font-size: 17px;
+      line-height: 1.5;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .gallery img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 18px;
+      display: block;
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .info-box {
+      background: rgba(212,175,55,0.08);
+      border: 1px solid rgba(212,175,55,0.20);
+      border-radius: 18px;
+      padding: 24px;
+    }
+
+    .info-box h3 {
+      color: #b68714;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      font-size: 14px;
+      margin: 0 0 14px;
+    }
+
+    .info-box ul {
+      margin: 0;
+      padding-left: 18px;
+      line-height: 1.7;
+      color: #333;
+      font-size: 16px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 24px;
+    }
+
+    .step {
+      background: rgba(255,255,255,0.9);
+      border: 1px solid rgba(0,0,0,0.06);
+      border-radius: 18px;
+      padding: 24px;
+      text-align: center;
+    }
+
+    .step-num {
+      font-size: 36px;
+      font-weight: 900;
+      color: #d4af37;
+      margin-bottom: 8px;
+    }
+
+    .price-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .price-card {
+      text-align: center;
+      background: rgba(212,175,55,0.08);
+      border: 1px solid rgba(212,175,55,0.22);
+      border-radius: 18px;
+      padding: 24px;
+    }
+
+    .price {
+      font-size: 30px;
+      font-weight: 900;
+      color: #d4af37;
+      margin-bottom: 8px;
+    }
+
+    .faq details {
+      background: rgba(255,255,255,0.85);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin: 10px 0;
+      border: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .faq summary {
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .faq p {
+      color: #444;
+      line-height: 1.5;
+    }
+
+    .final-cta {
+      text-align: center;
+      padding-bottom: 60px;
+    }
+
+    .floating-wa {
+      position: fixed;
+      right: 22px;
+      bottom: 22px;
+      z-index: 1000;
+      width: 58px;
+      height: 58px;
+      border-radius: 50%;
+      background: #25D366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+    }
+
+    .floating-wa svg {
+      width: 30px;
+      height: 30px;
+      fill: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 34px 18px;
+      background: rgba(0,0,0,0.78);
+      color: #f3e2a1;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #d4af37;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    @media (max-width: 780px) {
+      .brand { font-size: 20px; }
+      .top-wa { padding: 10px 14px; font-size: 14px; }
+      .hero-media { height: 320px; }
+      .hero-content { padding: 28px 22px 34px; }
+      .gallery,
+      .grid-2,
+      .steps,
+      .price-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="topbar">
+    <a class="brand" href="/">
+      <img src="fct_logo_transparent.svg" alt="FrescaClimaTech logo">
+      FrescaClimaTech
+    </a>
+
+    <a class="top-wa"
+       href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto%20para%20limpieza%20profesional%20de%20toldos.%20Puedo%20enviar%20fotos%20ahora."
+       target="_blank"
+       rel="noopener">
+      WhatsApp
+    </a>
+  </div>
+
+  <main>
+
+    <section class="hero">
+      <div class="hero-card">
+
+        <div class="hero-media">
+          <video autoplay muted loop playsinline preload="metadata" poster="images/toldos-hero.jpg">
+            <source src="images/Limpieza-profesional-toldos.mp4" type="video/mp4">
+          </video>
+        </div>
+
+        <div class="hero-content">
+          <div class="kicker">Marbella · Estepona · Costa del Sol</div>
+
+          <h1>Limpieza profesional de <em>Toldos</em></h1>
+
+          <p class="hero-text">
+            Cuidamos toldos, terrazas y tejidos exteriores afectados por polvo, humedad, salitre y suciedad ambiental.
+            Servicio ideal para viviendas, negocios, terrazas y propiedades cerca del mar.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn btn-gold"
+               href="https://wa.me/34657336353?text=Hola%2C%20quiero%20presupuesto%20para%20limpieza%20de%20toldos.%20Puedo%20enviar%20fotos%20ahora."
+               target="_blank"
+               rel="noopener">
+              Enviar fotos por WhatsApp
+            </a>
+
+            <a class="btn btn-outline" href="#precios">
+              Ver precios orientativos
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section>
+      <div class="section-card">
+        <div class="kicker" style="text-align:center;">Antes y después</div>
+        <h2>Resultados reales</h2>
+
+        <p class="sub">
+          Cada toldo se evalúa según el tejido, el nivel de suciedad, la altura y el acceso.
+        </p>
+
+        <div class="gallery">
+          <img src="images/toldos-antes-despues-1.jpg" alt="Toldos antes y después limpieza profesional">
+          <img src="images/toldos-antes-despues-2.jpg" alt="Resultado final limpieza de toldos">
+          <img src="images/toldo_process1.jpg" alt="Limpieza profesional de toldo exterior">
+          <img src="images/toldo-exterior-1.jpg" alt="Toldo exterior limpio">
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-card">
+        <div class="kicker" style="text-align:center;">Servicio especializado</div>
+        <h2>Qué incluye la limpieza de toldos</h2>
+
+        <div class="grid-2">
+          <div class="info-box">
+            <h3>Qué limpiamos</h3>
+            <ul>
+              <li>Toldos exteriores de tela y acrílicos</li>
+              <li>Toldos de terraza y balcón</li>
+              <li>Sombrillas grandes para terrazas y negocios</li>
+              <li>Tejidos exteriores con polvo, humedad y suciedad ambiental</li>
+              <li>Manchas visibles y suciedad acumulada</li>
+            </ul>
+          </div>
+
+          <div class="info-box">
+            <h3>Resultados</h3>
+            <ul>
+              <li>Toldo más limpio, fresco y cuidado</li>
+              <li>Eliminación de suciedad ambiental y salitre</li>
+              <li>Ayuda a prevenir moho y malos olores</li>
+              <li>Productos adaptados al tipo de tejido</li>
+              <li>Ideal para zonas con brisa marina</li>
+            </ul>
+          </div>
+
+          <div class="info-box">
+            <h3>Antes de pedir</h3>
+            <ul>
+              <li>Envía 2–3 fotos por WhatsApp</li>
+              <li>Indica ciudad y código postal</li>
+              <li>Menciona altura / número de plantas</li>
+              <li>Indica si el acceso es fácil o en altura</li>
+            </ul>
+          </div>
+
+          <div class="info-box">
+            <h3>Zonas disponibles</h3>
+            <ul>
+              <li>Marbella</li>
+              <li>Estepona</li>
+              <li>San Pedro de Alcántara</li>
+              <li>Benahavís y alrededores bajo consulta</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-card">
+        <div class="kicker" style="text-align:center;">Proceso</div>
+        <h2>Cómo trabajamos</h2>
+
+        <div class="steps">
+          <div class="step">
+            <div class="step-num">01</div>
+            <strong>Revisión</strong>
+            <p>Evaluamos tejido, suciedad, humedad, altura y acceso.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-num">02</div>
+            <strong>Tratamiento</strong>
+            <p>Aplicamos productos profesionales adaptados al material.</p>
+          </div>
+
+          <div class="step">
+            <div class="step-num">03</div>
+            <strong>Limpieza</strong>
+            <p>Limpiamos cuidadosamente el tejido y retiramos suciedad acumulada.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="precios">
+      <div class="section-card">
+        <div class="kicker" style="text-align:center;">Precios</div>
+        <h2>Precios orientativos</h2>
+
+        <p class="sub">
+          El precio final depende del tamaño, estado del toldo, altura y acceso.
+        </p>
+
+        <div class="price-grid">
+          <div class="price-card">
+            <div class="price">Desde 130 €</div>
+            <p>Toldo pequeño o estándar</p>
+          </div>
+
+          <div class="price-card">
+            <div class="price">150–250 €</div>
+            <p>Toldo grande o terraza amplia</p>
+          </div>
+
+          <div class="price-card">
+            <div class="price">Consultar</div>
+            <p>Varios toldos, negocios o acceso en altura</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="faq">
+      <div class="section-card">
+        <div class="kicker" style="text-align:center;">FAQ</div>
+        <h2>Preguntas frecuentes</h2>
+
+        <details>
+          <summary>¿Se puede limpiar cualquier toldo?</summary>
+          <p>Depende del estado del tejido. Si el toldo es muy antiguo o está dañado, revisamos fotos antes para evitar riesgos.</p>
+        </details>
+
+        <details>
+          <summary>¿Necesitan acceso al agua?</summary>
+          <p>Sí, normalmente necesitamos un punto de agua o confirmar previamente las condiciones de acceso.</p>
+        </details>
+
+        <details>
+          <summary>¿Trabajan en altura?</summary>
+          <p>Depende de la altura y seguridad del acceso. Por eso pedimos fotos antes de confirmar el presupuesto.</p>
+        </details>
+
+        <details>
+          <summary>¿El toldo queda como nuevo?</summary>
+          <p>La limpieza mejora mucho el aspecto, pero el resultado depende de la edad del tejido, manchas antiguas, sol, moho y desgaste.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="final-cta">
+      <div class="section-card">
+        <h2>¿Quieres renovar el aspecto de tu toldo?</h2>
+        <p class="sub">
+          Envíanos fotos por WhatsApp y te confirmamos precio aproximado y disponibilidad.
+        </p>
+
+        <a class="btn btn-gold"
+           href="https://wa.me/34657336353?text=Hola%2C%20quiero%20presupuesto%20para%20limpieza%20de%20toldos.%20Puedo%20enviar%20fotos%20ahora."
+           target="_blank"
+           rel="noopener">
+          Enviar fotos por WhatsApp
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <a class="floating-wa"
+     href="https://wa.me/34657336353?text=Hola%2C%20quiero%20presupuesto%20para%20limpieza%20de%20toldos.%20Puedo%20enviar%20fotos%20ahora."
+     target="_blank"
+     rel="noopener"
+     aria-label="WhatsApp">
+    <svg viewBox="0 0 32 32">
+      <path d="M16 .5C7.5.5.5 7.4.5 16c0 2.7.7 5.3 2 7.6L.5 31.5l8.1-2.1c2.2 1.2 4.7 1.9 7.4 1.9 8.5 0 15.5-6.9 15.5-15.5S24.5.5 16 .5zm0 28.3c-2.4 0-4.6-.6-6.6-1.8l-.5-.3-4.8 1.2 1.3-4.7-.3-.5c-1.3-1.9-2-4.2-2-6.6 0-7.1 5.8-12.9 12.9-12.9S28.9 8.9 28.9 16 23.1 28.8 16 28.8zm7.3-9.7c-.4-.2-2.2-1.1-2.5-1.2-.3-.1-.6-.2-.8.2s-.9 1.2-1.1 1.4c-.2.2-.4.2-.8.1-2.3-1.1-3.9-2-5.4-4.5-.4-.6.4-.6 1.1-2 .1-.2.1-.5 0-.7-.1-.2-.8-1.9-1.1-2.6-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.5s-1.2 1.1-1.2 2.8 1.2 3.4 1.4 3.6c.2.2 2.5 3.8 6.2 5.3.9.4 1.6.6 2.1.8.9.3 1.6.2 2.2.1.7-.1 2.2-.9 2.5-1.7.3-.8.3-1.5.2-1.7-.1-.2-.3-.3-.7-.5z"/>
+    </svg>
+  </a>
+
+  <footer>
+    <p>© 2026 FrescaClimaTech</p>
+    <p>
+      Limpieza de toldos en Marbella, Estepona y Costa del Sol ·
+      <a href="/">Volver a la página principal</a>
+    </p>
+  </footer>
+
+</body>
+</html>
