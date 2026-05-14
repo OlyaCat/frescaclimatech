@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Servicios de Manitas | FrescaClimaTech</title>
+
+<meta name="description"
+content="Servicios de manitas para hogares, apartamentos turísticos y Airbnb. Montaje de muebles, pequeñas reparaciones, instalación de lámparas, cortinas y trabajos rápidos. Presupuesto por WhatsApp."/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+
+body{
+  font-family:'Outfit',sans-serif;
+  background:#f6f2ea;
+  color:#2a2a2a;
+  line-height:1.5;
+}
+
+a{text-decoration:none;}
+
+.page{
+  width:100%;
+  overflow:hidden;
+}
+
+/* TOPBAR */
+.topbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:18px 22px;
+  background:rgba(255,255,255,0.88);
+  backdrop-filter:blur(12px);
+  border-bottom:1px solid rgba(0,0,0,0.05);
+}
+
+.brand{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-size:24px;
+  font-weight:600;
+  letter-spacing:-0.8px;
+  color:#b68714;
+}
+
+.brand img{
+  height:36px;
+  width:auto;
+}
+
+.top-wa{
+  background:#d4af37;
+  color:#fff;
+  padding:10px 16px;
+  border-radius:999px;
+  font-size:14px;
+  font-weight:600;
+}
+
+/* HERO */
+.hero{
+  position:relative;
+  width:100%;
+  height:88vh;
+  min-height:680px;
+  overflow:hidden;
+}
+
+.hero-media{
+  position:absolute;
+  inset:0;
+}
+
+.hero-media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center 45%;
+  display:block;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(to bottom,rgba(0,0,0,0.10),rgba(0,0,0,0.36));
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+  max-width:1200px;
+  margin:auto;
+  height:100%;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  padding:120px 32px 80px;
+}
+
+.kicker{
+  color:#f3d36c;
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:.08em;
+  margin-bottom:18px;
+  text-transform:uppercase;
+}
+
+.hero h1{
+  color:#fff;
+  font-size:72px;
+  line-height:0.95;
+  font-weight:600;
+  letter-spacing:-3px;
+  max-width:820px;
+}
+
+.hero h1 em{
+  font-style:normal;
+  color:#f3d36c;
+}
+
+.hero-text{
+  margin-top:28px;
+  max-width:650px;
+  color:rgba(255,255,255,0.9);
+  font-size:18px;
+  line-height:1.7;
+}
+
+.hero-actions{
+  display:flex;
+  gap:14px;
+  margin-top:34px;
+  flex-wrap:wrap;
+}
+
+.btn-primary{
+  background:#d4af37;
+  color:#fff;
+  padding:16px 26px;
+  border-radius:999px;
+  font-weight:600;
+  font-size:15px;
+}
+
+.btn-secondary{
+  border:1px solid rgba(255,255,255,0.25);
+  background:rgba(255,255,255,0.08);
+  color:#fff;
+  padding:16px 26px;
+  border-radius:999px;
+  font-weight:500;
+  font-size:15px;
+  backdrop-filter:blur(10px);
+}
+
+/* CONTENT */
+.section{
+  max-width:1200px;
+  margin:auto;
+  padding:90px 24px;
+}
+
+.section-title{
+  font-size:42px;
+  line-height:1.1;
+  margin-bottom:18px;
+  letter-spacing:-1.8px;
+}
+
+.section-text{
+  max-width:760px;
+  color:#555;
+  font-size:17px;
+  line-height:1.8;
+}
+
+/* GALLERY */
+.gallery{
+  margin-top:42px;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.gallery img{
+  width:100%;
+  height:420px;
+  object-fit:cover;
+  border-radius:22px;
+}
+
+/* GRID */
+.info-grid{
+  margin-top:48px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:18px;
+}
+
+.info-card{
+  background:#fff;
+  border-radius:22px;
+  padding:28px;
+  border:1px solid rgba(0,0,0,0.05);
+}
+
+.info-card h3{
+  margin-bottom:16px;
+  font-size:22px;
+  letter-spacing:-0.5px;
+}
+
+.info-card ul{
+  list-style:none;
+}
+
+.info-card li{
+  margin-bottom:10px;
+  color:#555;
+}
+
+/* STEPS */
+.steps{
+  margin-top:42px;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.step-card{
+  background:#fff;
+  border-radius:22px;
+  padding:30px;
+  text-align:center;
+  border:1px solid rgba(0,0,0,0.05);
+}
+
+.step-num{
+  font-size:42px;
+  font-weight:700;
+  color:#d4af37;
+  margin-bottom:12px;
+}
+
+.step-card h3{
+  margin-bottom:10px;
+}
+
+/* PRICES */
+.price-grid{
+  margin-top:42px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:18px;
+}
+
+.price-card{
+  background:#fff;
+  border-radius:22px;
+  padding:26px;
+  text-align:center;
+  border:1px solid rgba(0,0,0,0.05);
+}
+
+.price{
+  font-size:34px;
+  font-weight:700;
+  color:#b68714;
+  letter-spacing:-1px;
+}
+
+.price-card p{
+  margin-top:10px;
+  color:#666;
+}
+
+/* FAQ */
+.faq details{
+  background:#fff;
+  border-radius:18px;
+  padding:20px 24px;
+  margin:12px 0;
+  border:1px solid rgba(0,0,0,0.05);
+}
+
+.faq summary{
+  cursor:pointer;
+  font-weight:600;
+  font-size:18px;
+}
+
+.faq p{
+  margin-top:12px;
+  color:#555;
+}
+
+/* CTA */
+.bottom-cta{
+  margin-top:70px;
+  background:#fff;
+  border-radius:28px;
+  padding:38px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  flex-wrap:wrap;
+}
+
+.bottom-cta h2{
+  font-size:34px;
+  line-height:1.1;
+  letter-spacing:-1.4px;
+}
+
+.bottom-cta p{
+  color:#666;
+  margin-top:10px;
+}
+
+/* FLOATING WA */
+.floating-wa{
+  position:fixed;
+  right:22px;
+  bottom:22px;
+  z-index:1000;
+  width:58px;
+  height:58px;
+  border-radius:50%;
+  background:#25D366;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  box-shadow:0 8px 22px rgba(0,0,0,0.25);
+}
+
+.floating-wa svg{
+  width:30px;
+  height:30px;
+  fill:white;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:34px 18px;
+  background:rgba(0,0,0,0.78);
+  color:#f3e2a1;
+  font-size:14px;
+}
+
+footer a{
+  color:#d4af37;
+  font-weight:700;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .brand{font-size:20px;}
+  .brand img{height:32px;}
+
+  .hero{
+    min-height:760px;
+  }
+
+  .hero h1{
+    font-size:48px;
+    letter-spacing:-2px;
+  }
+
+  .hero-text{
+    font-size:16px;
+  }
+
+  .gallery{
+    grid-template-columns:1fr;
+  }
+
+  .gallery img{
+    height:320px;
+  }
+
+  .steps{
+    grid-template-columns:1fr;
+  }
+
+  .section-title{
+    font-size:34px;
+  }
+
+  .bottom-cta{
+    padding:28px;
+  }
+
+  .bottom-cta h2{
+    font-size:28px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+  <div class="topbar">
+    <a href="/" class="brand">
+      <img src="fct_logo_transparent.svg" alt="FrescaClimaTech logo">
+      FrescaClimaTech
+    </a>
+
+    <a class="top-wa"
+       href="https://wa.me/34657336353?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20servicios%20de%20manitas.%20Puedo%20enviar%20fotos%20ahora."
+       target="_blank"
+       rel="noopener">
+      WhatsApp
+    </a>
+  </div>
+
+  <section class="hero">
+    <div class="hero-media">
+      <img src="handyman_cover.jpg" alt="Servicios de manitas para el hogar">
+    </div>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <div class="kicker">
+        Reparaciones · Instalaciones · Hogar
+      </div>
+
+      <h1>
+        Servicios profesionales de
+        <em>Manitas</em>
+      </h1>
+
+      <p class="hero-text">
+        Soluciones prácticas para el hogar, apartamentos turísticos y Airbnb: montaje de muebles, instalación de lámparas, colocación de cortinas, pequeños arreglos y trabajos rápidos.
+      </p>
+
+      <div class="hero-actions">
+        <a class="btn-primary"
+           href="https://wa.me/34657336353?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20servicios%20de%20manitas.%20Puedo%20enviar%20fotos%20ahora."
+           target="_blank"
+           rel="noopener">
+          Solicitar presupuesto
+        </a>
+
+        <a class="btn-secondary" href="#galeria">
+          Ver servicios
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="galeria">
+    <h2 class="section-title">Trabajos para el hogar y Airbnb</h2>
+
+    <p class="section-text">
+      Servicio flexible para pequeñas reparaciones, montajes e instalaciones. El precio depende del tipo de trabajo, acceso, complejidad y tiempo necesario.
+    </p>
+
+    <div class="gallery">
+      <img src="handyman_1.jpg" alt="Montaje y reparación en el hogar">
+      <img src="handyman_2.jpg" alt="Instalaciones para el hogar">
+      <img src="handyman_3.jpg" alt="Pequeñas reparaciones">
+      <img src="handyman_4.jpg" alt="Montaje de muebles">
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Qué incluye el servicio</h2>
+
+    <div class="info-grid">
+      <div class="info-card">
+        <h3>Servicios frecuentes</h3>
+        <ul>
+          <li>Montaje de muebles</li>
+          <li>Instalación de lámparas</li>
+          <li>Colocación de cortinas</li>
+          <li>Pequeñas reparaciones</li>
+          <li>Silicona y ajustes</li>
+          <li>Ayuda para Airbnb</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>Ideal para</h3>
+        <ul>
+          <li>Apartamentos turísticos</li>
+          <li>Airbnb y alquileres vacacionales</li>
+          <li>Propietarios ocupados</li>
+          <li>Pequeños arreglos rápidos</li>
+          <li>Preparación de vivienda para huéspedes</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>Antes de pedir</h3>
+        <ul>
+          <li>Envía fotos claras del trabajo</li>
+          <li>Indica ciudad y acceso</li>
+          <li>Describe brevemente lo que necesitas</li>
+          <li>Incluye medidas aproximadas si aplica</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <h3>Zonas disponibles</h3>
+        <ul>
+          <li>Barcelona</li>
+          <li>Lloret de Mar</li>
+          <li>Marbella</li>
+          <li>Costa del Sol bajo consulta</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2 class="section-title">Cómo trabajamos</h2>
+
+    <div class="steps">
+      <div class="step-card">
+        <div class="step-num">01</div>
+        <h3>Fotos</h3>
+        <p>Envíanos fotos claras y una breve descripción por WhatsApp.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">02</div>
+        <h3>Revisión</h3>
+        <p>Revisamos tipo de trabajo, acceso, herramientas y posible tiempo necesario.</p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num">03</div>
+        <h3>Cita</h3>
+        <p>Confirmamos precio aproximado, disponibilidad y horario de visita.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="precios">
+    <h2 class="section-title">Precios orientativos</h2>
+
+    <p class="section-text">
+      Los precios dependen de la complejidad, duración, materiales necesarios y desplazamiento.
+    </p>
+
+    <div class="price-grid">
+      <div class="price-card">
+        <div class="price">Desde 45 €</div>
+        <p>Trabajo pequeño</p>
+      </div>
+
+      <div class="price-card">
+        <div class="price">60–120 €</div>
+        <p>Montajes y reparaciones</p>
+      </div>
+
+      <div class="price-card">
+        <div class="price">Consultar</div>
+        <p>Trabajos complejos o varios servicios</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section faq">
+    <h2 class="section-title">Preguntas frecuentes</h2>
+
+    <details>
+      <summary>¿Los materiales están incluidos?</summary>
+      <p>Normalmente los materiales no están incluidos. Podemos orientarte sobre lo necesario o revisar el caso por WhatsApp.</p>
+    </details>
+
+    <details>
+      <summary>¿Pueden hacer trabajos grandes?</summary>
+      <p>Los trabajos grandes se revisan caso por caso. Envíanos fotos y descripción para confirmar si podemos ayudarte.</p>
+    </details>
+
+    <details>
+      <summary>¿Trabajan para Airbnb?</summary>
+      <p>Sí, podemos ayudar con pequeños arreglos, montajes y preparación práctica de apartamentos turísticos.</p>
+    </details>
+
+    <details>
+      <summary>¿Cómo se confirma el precio?</summary>
+      <p>El precio se confirma después de revisar fotos, descripción, ubicación y posible duración del trabajo.</p>
+    </details>
+  </section>
+
+  <section class="section">
+    <div class="bottom-cta">
+      <div>
+        <h2>¿Necesitas ayuda rápida en casa?</h2>
+        <p>Envíanos fotos por WhatsApp y te confirmamos si podemos ayudarte y el precio aproximado.</p>
+      </div>
+
+      <a class="btn-primary"
+         href="https://wa.me/34657336353?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20servicios%20de%20manitas.%20Puedo%20enviar%20fotos%20ahora."
+         target="_blank"
+         rel="noopener">
+        Enviar fotos por WhatsApp
+      </a>
+    </div>
+  </section>
+
+</div>
+
+<a class="floating-wa"
+   href="https://wa.me/34657336353?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20servicios%20de%20manitas.%20Puedo%20enviar%20fotos%20ahora."
+   target="_blank"
+   rel="noopener"
+   aria-label="WhatsApp">
+  <svg viewBox="0 0 32 32">
+    <path d="M16 .5C7.5.5.5 7.4.5 16c0 2.7.7 5.3 2 7.6L.5 31.5l8.1-2.1c2.2 1.2 4.7 1.9 7.4 1.9 8.5 0 15.5-6.9 15.5-15.5S24.5.5 16 .5zm0 28.3c-2.4 0-4.6-.6-6.6-1.8l-.5-.3-4.8 1.2 1.3-4.7-.3-.5c-1.3-1.9-2-4.2-2-6.6 0-7.1 5.8-12.9 12.9-12.9S28.9 8.9 28.9 16 23.1 28.8 16 28.8zm7.3-9.7c-.4-.2-2.2-1.1-2.5-1.2-.3-.1-.6-.2-.8.2s-.9 1.2-1.1 1.4c-.2.2-.4.2-.8.1-2.3-1.1-3.9-2-5.4-4.5-.4-.6.4-.6 1.1-2 .1-.2.1-.5 0-.7-.1-.2-.8-1.9-1.1-2.6-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.5s-1.2 1.1-1.2 2.8 1.2 3.4 1.4 3.6c.2.2 2.5 3.8 6.2 5.3.9.4 1.6.6 2.1.8.9.3 1.6.2 2.2.1.7-.1 2.2-.9 2.5-1.7.3-.8.3-1.5.2-1.7-.1-.2-.3-.3-.7-.5z"/>
+  </svg>
+</a>
+
+<footer>
+  <p>© 2026 FrescaClimaTech</p>
+  <p>
+    Servicios de manitas · Hogar · Airbnb · Pequeñas reparaciones ·
+    <a href="/">Volver a la página principal</a>
+  </p>
+</footer>
+
+</body>
+</html>
