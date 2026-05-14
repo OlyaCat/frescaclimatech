@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Inspección de Propiedades | Barcelona, Marbella y Costa del Sol | FrescaClimaTech</title>
+
+<meta name="description"
+content="Inspección visual de propiedades, apartamentos, villas y Airbnb en Barcelona, Costa Brava, Marbella y Costa del Sol. Ideal para compradores extranjeros e inversores."/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Outfit',sans-serif;
+  background:#f6f2ea;
+  color:#2a2a2a;
+  line-height:1.5;
+}
+
+a{
+  text-decoration:none;
+}
+
+.page{
+  width:100%;
+  overflow:hidden;
+}
+
+/* TOPBAR */
+
+.topbar{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  padding:18px 22px;
+
+  background:rgba(255,255,255,0.88);
+  backdrop-filter:blur(12px);
+
+  border-bottom:1px solid rgba(0,0,0,0.05);
+}
+
+.brand{
+  font-size:24px;
+  font-weight:600;
+  letter-spacing:-0.8px;
+  color:#b68714;
+}
+
+.top-wa{
+  background:#d4af37;
+  color:#fff;
+
+  padding:10px 16px;
+  border-radius:999px;
+
+  font-size:14px;
+  font-weight:600;
+
+  transition:.25s;
+}
+
+.top-wa:hover{
+  transform:translateY(-1px);
+}
+
+/* HERO */
+
+.hero{
+  position:relative;
+  width:100%;
+  height:88vh;
+  min-height:680px;
+  overflow:hidden;
+}
+
+.hero-media{
+  position:absolute;
+  inset:0;
+}
+
+.hero-media img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+}
+
+.hero-overlay{
+  position:absolute;
+  inset:0;
+
+  background:
+  linear-gradient(to bottom,
+  rgba(0,0,0,0.10),
+  rgba(0,0,0,0.45));
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
+
+  max-width:1200px;
+  margin:auto;
+
+  height:100%;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+
+  padding:120px 32px 80px;
+}
+
+.kicker{
+  color:#f3d36c;
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:.08em;
+  margin-bottom:18px;
+  text-transform:uppercase;
+}
+
+.hero h1{
+  color:#fff;
+  font-size:72px;
+  line-height:0.95;
+  font-weight:600;
+  letter-spacing:-3px;
+  max-width:760px;
+}
+
+.hero h1 em{
+  font-style:normal;
+  color:#f3d36c;
+}
+
+.hero-text{
+  margin-top:28px;
+  max-width:700px;
+
+  color:rgba(255,255,255,0.88);
+
+  font-size:18px;
+  line-height:1.7;
+}
+
+.hero-actions{
+  display:flex;
+  gap:14px;
+  margin-top:34px;
+  flex-wrap:wrap;
+}
+
+.btn-primary{
+  background:#d4af37;
+  color:#fff;
+
+  padding:16px 26px;
+  border-radius:999px;
+
+  font-weight:600;
+  font-size:15px;
+
+  transition:.25s;
+}
+
+.btn-primary:hover{
+  transform:translateY(-2px);
+}
+
+.btn-secondary{
+  border:1px solid rgba(255,255,255,0.25);
+  background:rgba(255,255,255,0.08);
+  color:#fff;
+
+  padding:16px 26px;
+  border-radius:999px;
+
+  font-weight:500;
+  font-size:15px;
+
+  backdrop-filter:blur(10px);
+}
+
+/* CONTENT */
+
+.section{
+  max-width:1200px;
+  margin:auto;
+  padding:90px 24px;
+}
+
+.section-title{
+  font-size:42px;
+  line-height:1.1;
+  margin-bottom:18px;
+  letter-spacing:-1.8px;
+}
+
+.section-text{
+  max-width:760px;
+  color:#555;
+  font-size:17px;
+  line-height:1.8;
+}
+
+/* GALLERY */
+
+.gallery{
+  margin-top:42px;
+
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.gallery img{
+  width:100%;
+  height:420px;
+  object-fit:cover;
+  border-radius:22px;
+
+  transition:.35s;
+}
+
+.gallery img:hover{
+  transform:scale(1.01);
+}
+
+/* GRID */
+
+.info-grid{
+  margin-top:48px;
+
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:18px;
+}
+
+.info-card{
+  background:#fff;
+  border-radius:22px;
+  padding:28px;
+
+  border:1px solid rgba(0,0,0,0.05);
+}
+
+.info-card h3{
+  margin-bottom:16px;
+  font-size:22px;
+  letter-spacing:-0.5px;
+}
+
+.info-card ul{
+  list-style:none;
+}
+
+.info-card li{
+  margin-bottom:10px;
+  color:#555;
+}
+
+/* PRICES */
+
+.price-grid{
+  margin-top:42px;
+
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:18px;
+}
+
+.price-card{
+  background:#fff;
+  border-radius:22px;
+  padding:26px;
+  text-align:center;
+
+  border:1px solid rgba(0,0,0,0.05);
+}
+
+.price{
+  font-size:34px;
+  font-weight:700;
+  color:#b68714;
+  letter-spacing:-1px;
+}
+
+.price-card p{
+  margin-top:10px;
+  color:#666;
+}
+
+/* CTA */
+
+.bottom-cta{
+  margin-top:70px;
+
+  background:#fff;
+  border-radius:28px;
+
+  padding:38px;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:24px;
+  flex-wrap:wrap;
+}
+
+.bottom-cta h2{
+  font-size:34px;
+  line-height:1.1;
+  letter-spacing:-1.4px;
+}
+
+.bottom-cta p{
+  color:#666;
+  margin-top:10px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+.hero{
+  min-height:760px;
+}
+
+.hero h1{
+  font-size:48px;
+  letter-spacing:-2px;
+}
+
+.hero-text{
+  font-size:16px;
+}
+
+.gallery{
+  grid-template-columns:1fr;
+}
+
+.gallery img{
+  height:320px;
+}
+
+.section-title{
+  font-size:34px;
+}
+
+.bottom-cta{
+  padding:28px;
+}
+
+.bottom-cta h2{
+  font-size:28px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="page">
+
+<!-- TOPBAR -->
+
+<div class="topbar">
+
+  <a href="/" class="brand">
+    FrescaClimaTech
+  </a>
+
+  <a class="top-wa"
+     href="https://wa.me/34657336353?text=Hola%2C%20quiero%20información%20sobre%20inspección%20de%20propiedades.%20Puedo%20enviar%20detalles%20ahora."
+     target="_blank">
+    WhatsApp
+  </a>
+
+</div>
+
+<!-- HERO -->
+
+<section class="hero">
+
+  <div class="hero-media">
+    <img src="inspection_cover.jpg"
+         alt="Inspección de propiedades">
+  </div>
+
+  <div class="hero-overlay"></div>
+
+  <div class="hero-content">
+
+    <div class="kicker">
+      Barcelona · Costa Brava · Marbella · Costa del Sol
+    </div>
+
+    <h1>
+      Inspección visual de
+      <em>Propiedades</em>
+    </h1>
+
+    <p class="hero-text">
+      Servicio de apoyo visual para compradores extranjeros, propietarios Airbnb e inversores. Revisamos el estado general de apartamentos, villas y propiedades antes de alquilar o comprar.
+    </p>
+
+    <div class="hero-actions">
+
+      <a class="btn-primary"
+         href="https://wa.me/34657336353?text=Hola%2C%20quiero%20información%20sobre%20inspección%20de%20propiedades.%20Puedo%20enviar%20detalles%20ahora."
+         target="_blank">
+
+        Solicitar información
+      </a>
+
+      <a class="btn-secondary" href="#galeria">
+        Ver ejemplos
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- GALLERY -->
+
+<section class="section" id="galeria">
+
+  <h2 class="section-title">
+    Ejemplos reales
+  </h2>
+
+  <p class="section-text">
+    Revisamos propiedades, apartamentos turísticos, villas y segundas residencias para ayudar a detectar posibles problemas visibles antes de tomar decisiones.
+  </p>
+
+  <div class="gallery">
+
+    <img src="inspection_1.jpg"
+         alt="Inspección apartamento">
+
+    <img src="inspection_2.jpg"
+         alt="Revisión técnica visual">
+
+    <img src="inspection_3.jpg"
+         alt="Control humedad vivienda">
+
+    <img src="inspection_4.jpg"
+         alt="Estado general propiedad">
+
+  </div>
+
+</section>
+
+<!-- INFO -->
+
+<section class="section">
+
+  <h2 class="section-title">
+    Qué incluye el servicio
+  </h2>
+
+  <div class="info-grid">
+
+    <div class="info-card">
+
+      <h3>Qué revisamos</h3>
+
+      <ul>
+        <li>Estado general del inmueble</li>
+        <li>Humedad y señales visibles de moho</li>
+        <li>Paredes, techos y pintura</li>
+        <li>Terrazas y zonas exteriores</li>
+        <li>Estado visual de mantenimiento</li>
+        <li>Condición general de materiales</li>
+      </ul>
+
+    </div>
+
+    <div class="info-card">
+
+      <h3>Ideal para</h3>
+
+      <ul>
+        <li>Compradores extranjeros</li>
+        <li>Propietarios Airbnb</li>
+        <li>Inversores</li>
+        <li>Segunda residencia</li>
+      </ul>
+
+    </div>
+
+    <div class="info-card">
+
+      <h3>Antes de pedir</h3>
+
+      <ul>
+        <li>Dirección aproximada</li>
+        <li>Tamaño de la propiedad</li>
+        <li>Objetivo de la visita</li>
+        <li>Fecha deseada</li>
+      </ul>
+
+    </div>
+
+    <div class="info-card">
+
+      <h3>Zonas disponibles</h3>
+
+      <ul>
+        <li>Barcelona</li>
+        <li>Costa Brava</li>
+        <li>Marbella</li>
+        <li>Costa del Sol</li>
+      </ul>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- PRICES -->
+
+<section class="section">
+
+  <h2 class="section-title">
+    Precios orientativos
+  </h2>
+
+  <div class="price-grid">
+
+    <div class="price-card">
+      <div class="price">90 €</div>
+      <p>Apartamento pequeño</p>
+    </div>
+
+    <div class="price-card">
+      <div class="price">120–200 €</div>
+      <p>Viviendas más grandes</p>
+    </div>
+
+    <div class="price-card">
+      <div class="price">Consultar</div>
+      <p>Villas y propiedades premium</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="section">
+
+  <div class="bottom-cta">
+
+    <div>
+
+      <h2>
+        ¿Necesitas revisar una propiedad?
+      </h2>
+
+      <p>
+        Envíanos ubicación y detalles por WhatsApp y te responderemos rápidamente.
+      </p>
+
+    </div>
+
+    <a class="btn-primary"
+       href="https://wa.me/34657336353?text=Hola%2C%20quiero%20información%20sobre%20inspección%20de%20propiedades.%20Puedo%20enviar%20detalles%20ahora."
+       target="_blank">
+
+      Enviar detalles por WhatsApp
+    </a>
+
+  </div>
+
+</section>
+
+</div>
+
+</body>
+</html>
