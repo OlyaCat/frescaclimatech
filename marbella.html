@@ -303,6 +303,69 @@
     }
     details p{ color: var(--muted); margin: 10px 0 0; }
 
+    .service-cards{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+  margin-top:22px;
+}
+
+.service-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+  transition:.25s;
+}
+
+.service-card:hover{
+  transform:translateY(-3px);
+}
+
+.service-card img{
+  width:100%;
+  height:260px;
+  object-fit:cover;
+  display:block;
+}
+
+.service-body{
+  padding:22px;
+}
+
+.service-body h3{
+  margin:0 0 10px;
+  font-size:24px;
+  letter-spacing:-0.5px;
+}
+
+.service-body p{
+  color:var(--muted);
+  margin:0 0 16px;
+  font-size:16px;
+  line-height:1.5;
+}
+
+.service-body span{
+  display:inline-block;
+  color:#111;
+  background:var(--gold);
+  padding:10px 16px;
+  border-radius:999px;
+  font-weight:800;
+}
+
+@media(max-width:860px){
+  .service-cards{
+    grid-template-columns:1fr;
+  }
+
+  .service-card img{
+    height:220px;
+  }
+}
+
     /* Final CTA */
     .final-cta{
       background: radial-gradient(900px 340px at 20% 0%, rgba(201,162,74,.18), transparent 55%),
@@ -389,9 +452,9 @@
       <div class="hero-grid">
         <div class="hero-card">
           <div class="kicker" data-i18n="kicker">Servicio premium en Marbella</div>
-          <h1 data-i18n="h1">Limpieza profesional de sofás en Marbella</h1>
+          <h1 data-i18n="h1">Servicios premium de limpieza en Marbella</h1>
           <p class="subtitle" data-i18n="subtitle">
-            Para villas, apartamentos y propiedades de alto nivel. Equipos profesionales · Productos ecológicos · Atención rápida por WhatsApp.
+            Sofás, tapicería y toldos exteriores para villas, terrazas, restaurantes, Airbnb y propiedades cerca del mar.
           </p>
 
           <div class="cta-row">
@@ -423,68 +486,32 @@
   <!-- SERVICES -->
 <section class="block">
   <div class="container">
-    <h2 class="section-title" data-i18n="servicesTitle">Servicios disponibles en Marbella</h2>
-    <p class="section-sub" data-i18n="servicesSub">
-      Limpieza profunda, resultados visibles y atención cuidada para propiedades exigentes.
-    </p>
-
-    <div class="pill-list">
-      <div class="pill">Sofás</div>
-      <div class="pill">Colchones</div>
-      <div class="pill">Alfombras</div>
-      <div class="pill">Tapicería / sillas</div>
-      <div class="pill">Toldos exteriores</div>
-      <div class="pill">Aire acondicionado</div>
-      <div class="pill">Manitas</div>
-      <div class="pill">Inspección de propiedades</div>
-    </div>
-  </div>
-</section>
-
-  <section class="block">
-  <div class="container">
-
-    <h2 class="section-title">
-      Limpieza de Toldos en Marbella
-    </h2>
-
+    <h2 class="section-title">Servicios principales en Marbella</h2>
     <p class="section-sub">
-      También ofrecemos limpieza profesional de toldos exteriores para viviendas,
-      restaurantes, cafeterías, terrazas y propiedades cerca del mar.
+      Limpieza profesional para propiedades, terrazas, villas, restaurantes y alojamientos turísticos.
     </p>
 
-    <div class="grid-3">
+    <div class="service-cards">
 
-      <div class="card">
-        <h3>Recupera el aspecto del tejido</h3>
-        <p>
-          Eliminación de suciedad ambiental acumulada y manchas visibles.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Ideal para Costa del Sol</h3>
-        <p>
-          Tratamiento adaptado a toldos expuestos al sol, humedad y salitre.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>Presupuesto rápido</h3>
-        <p>
-          Envíanos fotos por WhatsApp y te confirmamos precio y disponibilidad.
-        </p>
-      </div>
-
-    </div>
-
-    <div style="margin-top:20px;">
-      <a href="/limpieza-toldos-marbella.html"
-         class="btn btn-wa">
-         Ver servicio de toldos
+      <a class="service-card" href="/limpieza-sofas-tapiceria.html">
+        <img src="images/card_sofa.jpg" alt="Limpieza de sofás en Marbella">
+        <div class="service-body">
+          <h3>Limpieza de Sofás y Tapicería</h3>
+          <p>Sofás, sillones, sillas, cabeceros y tapicería para viviendas, villas y Airbnb.</p>
+          <span>Desde 80 €</span>
+        </div>
       </a>
-    </div>
 
+      <a class="service-card" href="/limpieza-toldos-marbella-estepona.html">
+        <img src="images/toldos-hero.jpg" alt="Limpieza de toldos en Marbella">
+        <div class="service-body">
+          <h3>Limpieza de Toldos</h3>
+          <p>Toldos exteriores para terrazas, restaurantes, cafeterías y propiedades cerca del mar.</p>
+          <span>Desde 130 €</span>
+        </div>
+      </a>
+
+    </div>
   </div>
 </section>
 
