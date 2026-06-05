@@ -50,62 +50,74 @@
 
     /* Top bar */
     .topbar{
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      backdrop-filter: blur(10px);
-      background: rgba(251,250,247,.82);
-      border-bottom: 1px solid var(--border);
-    }
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  z-index:1000;
+  background:rgba(255,255,255,.86);
+  backdrop-filter:blur(16px);
+  -webkit-backdrop-filter:blur(16px);
+  border-bottom:1px solid rgba(0,0,0,.06);
+}
     .topbar-inner{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      padding: 12px 0;
-      gap: 12px;
-    }
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:16px 0;
+}
     .brand{
-      display:flex;
-      align-items:center;
-      gap:10px;
-      font-weight: 700;
-      letter-spacing:.2px;
-    }
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+}
 
     .brand-logo{
-      height: 34px;
-      width: auto;
-      display:block;
-    }
+  height:34px;
+  width:auto;
+}
 
     .brand-name{
-      color: var(--gold);
-      font-weight: 700;
-      font-size: 22px;
-      letter-spacing: .2px;
-    }
+  font-size:24px;
+  font-weight:700;
+  color:#b68714;
+  letter-spacing:-.8px;
+}
 
     .lang{
-      display:flex; gap:8px; align-items:center;
-      font-size:14px; color: var(--muted);
-    }
+  display:flex;
+  align-items:center;
+  gap:8px;
+  font-size:15px;
+  color:#555;
+}
     .lang button{
-      border:1px solid var(--border);
-      background: var(--card);
-      padding:7px 10px;
-      border-radius: 999px;
-      cursor:pointer;
-      font-weight:600;
-    }
+  border:1px solid rgba(0,0,0,.10);
+  background:#fff;
+  padding:8px 12px;
+  border-radius:999px;
+  font-weight:700;
+  cursor:pointer;
+}
     .lang button.active{
-      border-color: rgba(201,162,74,.55);
-      box-shadow: 0 0 0 4px rgba(201,162,74,.12);
-    }
+  border-color:rgba(182,135,20,.45);
+  box-shadow:0 0 0 4px rgba(182,135,20,.12);
+}
 
     /* Hero */
        
-   .hero{
-  padding:110px 0 60px;
+.hero{
+  padding:120px 0 70px;
+}
+       .hero-editorial{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:34px;
+  align-items:center;
+}
+       .hero-copy{
+  padding:40px 0;
 }
     .hero-grid{
   display:grid;
@@ -134,31 +146,47 @@
     }
     .hero-card > *{ position: relative; }
 
-    .kicker{
+  .kicker{
   display:inline-flex;
-  padding:9px 16px;
+  padding:8px 14px;
   border-radius:999px;
   background:rgba(182,135,20,.10);
   border:1px solid rgba(182,135,20,.22);
   color:#111;
   font-size:13px;
   font-weight:700;
-  letter-spacing:.08em;
+  letter-spacing:.10em;
   text-transform:uppercase;
+  margin-bottom:22px;
 }
-h1{
-  margin:20px 0 18px;
-  font-size:clamp(38px,4.6vw,64px);
-  line-height:.98;
-  letter-spacing:-2.2px;
+
+    .hero h1{
+  font-size:clamp(42px,5vw,76px);
+  line-height:.95;
+  letter-spacing:-2.6px;
   font-weight:700;
   color:#111;
+  max-width:760px;
+  margin:0 0 24px;
 }
     .subtitle{
   font-size:18px;
-  line-height:1.65;
-  color:rgba(17,17,17,.68);
-  max-width:680px;
+  line-height:1.7;
+  color:rgba(17,17,17,.62);
+  max-width:620px;
+  margin-bottom:34px;
+}
+       .hero-image{
+  border-radius:32px;
+  overflow:hidden;
+  min-height:620px;
+  box-shadow:0 24px 70px rgba(0,0,0,.10);
+}
+       .hero-image img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
 }
 
     .cta-row{
@@ -195,6 +223,22 @@ h1{
   border:1px solid rgba(0,0,0,.10);
   color:#111;
 }
+
+       
+@media(max-width:900px){
+  .hero-editorial{
+    grid-template-columns:1fr;
+  }
+
+  .hero{
+    padding:100px 0 50px;
+  }
+
+  .hero-image{
+    min-height:380px;
+  }
+}
+       
 @media(max-width:860px){
   .hero{
     padding:90px 0 40px;
@@ -402,62 +446,59 @@ h1{
 
 <body>
   <!-- Topbar -->
-  <div class="topbar">
-    <div class="container">
-      <div class="topbar-inner">
-        <div class="brand">
-          <img class="brand-logo" src="fct_logo_transparent.svg" alt="FCT logo">
-          <span class="brand-name">FrescaClimaTech</span>
-        </div>
+ <div class="topbar">
+  <div class="container">
+    <div class="topbar-inner">
 
-        <div class="lang">
-          <span id="langLabel">Idioma:</span>
-          <button id="btnES" class="active" type="button">ES</button>
-          <button id="btnEN" type="button">EN</button>
-        </div>
+      <a href="/" class="brand">
+        <img class="brand-logo" src="fct_logo_transparent.svg" alt="FrescaClimaTech logo">
+        <span class="brand-name">FrescaClimaTech</span>
+      </a>
+
+      <div class="lang">
+        <span id="langLabel">Idioma:</span>
+        <button id="btnES" class="active" type="button">ES</button>
+        <button id="btnEN" type="button">EN</button>
       </div>
+
     </div>
   </div>
+</div>
 
   <!-- HERO -->
-  <header class="hero">
-    <div class="container">
-      <div class="hero-grid">
-        <div class="hero-card">
-          <div class="kicker" data-i18n="kicker">Costa Brava · Barcelona</div>
+ <header class="hero">
+  <div class="container">
+    <div class="hero-editorial">
 
-<h1 data-i18n="h1">
-  Limpieza profesional de sofás, tapicería y aire acondicionado en Costa Brava
-</h1>
+      <div class="hero-copy">
+        <div class="kicker" data-i18n="kicker">Costa Brava · Barcelona</div>
 
-<p class="subtitle" data-i18n="subtitle">
-  Para hogares, Airbnb, apartamentos turísticos y propiedades mediterráneas. Servicio disponible en Lloret de Mar, Blanes, Tossa de Mar, Girona y Barcelona.
-</p>
+        <h1 data-i18n="h1">
+          Cuidado profesional para propiedades mediterráneas
+        </h1>
 
-          <div class="cta-row">
-            <a id="waCtaTop" class="btn btn-wa" target="_blank" rel="noopener">
-              💬 <span data-i18n="cta1">Solicitar presupuesto por WhatsApp</span>
-            </a>
-            <a href="https://g.page/r/CVK2NpIvzkvdEBM/review" class="btn btn-ghost" target="_blank" rel="noopener">
-              ⭐ <span data-i18n="cta2">Ver opiniones en Google</span>
-            </a>
-          </div>
+        <p class="subtitle" data-i18n="subtitle">
+          Sofás · Tapicería · Aire acondicionado · Airbnb · Costa Brava · Barcelona
+        </p>
 
-          <div class="trust">
-            ⭐⭐⭐⭐⭐ <span data-i18n="trust_line1"></span>
-            <br>
-            <span data-i18n="trust_locations"></span>
-          </div>
+        <div class="cta-row">
+          <a id="waCtaTop" class="btn btn-wa" target="_blank" rel="noopener">
+            Solicitar presupuesto
+          </a>
 
-        </div>
-
-        <div class="image-card" aria-label="Lloret premium interior image">
-          <div class="overlay"></div>
-          <div class="label" data-i18n="imgLabel">Hoteles · Airbnb · Hogares</div>
+          <a href="https://g.page/r/CVK2NpIvzkvdEBM/review" class="btn btn-ghost" target="_blank" rel="noopener">
+            Ver opiniones
+          </a>
         </div>
       </div>
+
+      <div class="hero-image">
+        <img src="Lloret_sofa.png" alt="Limpieza profesional en Costa Brava">
+      </div>
+
     </div>
-  </header>
+  </div>
+</header>
 
   <!-- SERVICES -->
   <section class="block">
