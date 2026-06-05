@@ -1247,13 +1247,13 @@ body::before {
   padding: 12px 24px;
   border-radius:999px;
   background: rgba(255,255,255,0.60);
-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   border:1px solid rgba(182,135,20,0.18);
   color:#111;
   font-weight:700;
   font-size: 18px;
   box-shadow:0 8px 22px rgba(0,0,0,0.08);
-  text-decoration:none;
+  text-decoration:none !important;
 }
 
 .area-pill:hover{
@@ -2618,12 +2618,11 @@ document.addEventListener('keydown', e => {
     Servicios disponibles en zonas seleccionadas de España:
   </p>
 
-  <div class="areas-links">
-    <a class='area-pill' href='/lloret'>Costa Brava</a>
-    <a class='area-pill' href='/marbella'>Costa del Sol</a>
-    <a class='area-pill' href='/sevilla'>Andalusia</a>
-  
-  </div>
+ <div class="areas-links">
+  <a class="area-pill" href="/lloret">Costa Brava</a>
+  <a class="area-pill" href="/marbella">Costa del Sol</a>
+  <a class="area-pill" href="/sevilla">Andalucía</a>
+</div>
 </section>
 
 
