@@ -150,35 +150,51 @@
 }
 
 
-footer {
-  background:#efede3;
-  padding:80px 20px;
-  color: #f3e2a1;
-  text-align: center;
-  font-family: 'Outfit', sans-serif;
-  margin-top: 40px;
-}
-
-footer p {
-  margin:14px 0;
-  line-height: 1.6;
-  font-size: 16px;
-}
-
-footer strong {
-  color: #d4af37;
-  font-size: 18px;
-  letter-spacing: 0.3px;
-}
-
-footer a {
+footer{
+  background:rgba(239,237,227,0.94);
+  backdrop-filter:blur(10px);
+  -webkit-backdrop-filter:blur(10px);
+  padding:90px 20px 80px;
+  text-align:center;
   color:#222;
-  font-weight: 600;
-  text-decoration: none;
+  margin-top:0;
+  max-width:none;
+  width:100%;
+  box-shadow:none;
+}
+
+footer p{
+  margin:16px 0;
+  color:#222;
+  font-size:15px;
+  line-height:1.6;
+}
+
+footer strong{
+  color:#b68714;
+  font-size:20px;
+  font-weight:600;
+}
+
+footer a{
+  color:#222;
+  text-decoration:none;
+  font-weight:500;
 }
 
 footer a:hover{
   color:#b68714;
+}
+
+footer p:first-child{
+  color:rgba(34,34,34,0.45);
+  font-size:13px;
+}
+
+@media(max-width:768px){
+  footer{
+    padding:70px 20px;
+  }
 }
 
     
@@ -2625,15 +2641,11 @@ document.addEventListener('keydown', e => {
     <a href="https://www.instagram.com/frescaclimatech/" target="_blank">
       Instagram
     </a>
-
     ·
-
     <a href="https://g.page/r/CVK2NpIvzkvdEBM/review" target="_blank">
       Google Reviews
     </a>
-
     ·
-
     <a href="/privacy" target="_blank">
       Política de Privacidad
     </a>
