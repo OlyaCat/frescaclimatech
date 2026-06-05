@@ -988,13 +988,13 @@ body::before {
    .hero-description {
   max-width: 680px;
   margin: 18px auto 12px;
-  font-size: 14px;
+  font-size:15px;
      opacity: 0.75;
   line-height: 1.45;
-  color: #333;
+  color:rgba(17,17,17,0.65);
   font-weight: 400;
   text-align: center;
-     margin-top: 18px;
+     margin-top:14px;
 }
 
 .hero-divider {
@@ -1004,20 +1004,17 @@ body::before {
   margin: 10px auto;
 }
 
-.hero-slogan {
-  font-size: 14px;
-  font-style: italic;
-  color: #a48a5a;
-  opacity: 0.75;
-  margin: 8px 0 16px;
+.hero-subline{
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:0.12em;
+  color:rgba(17,17,17,0.50);
 }
-    .hero-subline {
-  font-size: 15px;
-      opacity: 0.85;
-  line-height: 1.45;
-  margin: 14px 0 18px;
-  color: #333;
-  font-weight: 500;
+    .hero-subline{
+  font-size:16px;
+  color:rgba(17,17,17,0.75);
+  letter-spacing:0.04em;
+  margin-top:8px;
 }
 
 
@@ -1951,28 +1948,31 @@ document.addEventListener('keydown', e => {
 
     
 
-   <h1 style="font-size:clamp(28px,5vw,52px); font-weight:900; line-height:1.15; letter-spacing:-0.5px; margin:12px 0 12px; color:#111;">
+  <h1 style="font-size:clamp(28px,5vw,52px); font-weight:900; line-height:1.15; letter-spacing:-0.5px; margin:12px 0 12px; color:#111;">
   <span data-i18n="hero_h1_line1">Limpieza profesional de</span><br>
-  <span style="color:#b68714;" data-i18n="hero_h1_line2">Sofás, Tapicería, Toldos</span><br>
-  <span style="font-weight:700;" data-i18n="hero_h1_line3">y Aire Acondicionado</span><br>
-  <span data-i18n="hero_h1_line4">en Barcelona, Costa Brava y Andalucía</span>
+
+  <span style="color:#b68714;" data-i18n="hero_h1_line2">
+    Sofás, Tapicería, Toldos
+  </span><br>
+
+  <span style="font-weight:700;" data-i18n="hero_h1_line3">
+    y Aire Acondicionado
+  </span>
 </h1>
 
-   <p class="hero-subline">
+<p class="hero-subline">
   <span data-i18n="hero_locations">
-    Barcelona · Costa Brava · Marbella · Sevilla · Granada
-  </span><br>
-  <span data-i18n="hero_services">
-    Sofás · Tapicería · Toldos · Aire acondicionado
+    Costa Brava · Costa del Sol · Andalucía
   </span>
 </p>
 
-   <p class="hero-description" data-i18n="hero_description">
-  Limpieza profesional para hogares, alojamientos Airbnb y empresas.
+<p class="hero-description" data-i18n="hero_description">
+  Hogares · Airbnb · Empresas
 </p>
 
 <div class="hero-divider"></div>
-<p class="hero-slogan">
+
+<p class="hero-slogan" data-i18n="hero_slogan">
   Aire fresco, tejidos limpios, decisiones claras
 </p>
 
@@ -2638,9 +2638,10 @@ Servicio en Cataluña y Andalucía
         hero_h1_line1: "Limpieza profesional de",
         hero_h1_line2: "Sofás, Tapicería, Toldos",
         hero_h1_line3: "y Aire Acondicionado",
-        hero_h1_line4: "en Barcelona, Costa Brava y Andalucía",
-        hero_subline: "Barcelona · Costa Brava · Marbella · Sevilla · Granada<br>Sofás · Tapicería · Toldos · Aire acondicionado",
-        hero_description: "Limpieza profesional para hogares, alojamientos Airbnb y empresas.",
+        hero_locations: "Costa Brava · Costa del Sol · Andalucía",
+        hero_description: "Hogares · Airbnb · Empresas",
+        hero_slogan: "Aire fresco, tejidos limpios, decisiones claras",
+        
         nav_servicios: "Servicios",
         nav_areas: "Áreas",
         nav_opiniones: "Opiniones",
@@ -3124,13 +3125,13 @@ calc_cta_top: "Calcular precio",
         ]
       },
       en: {
-        slogan: "Fresh Air, Clean Fabrics, Clear Decisions",
         hero_h1_line1: "Professional cleaning of",
         hero_h1_line2: "Sofas, Upholstery, Awnings",
         hero_h1_line3: "and Air Conditioning",
-        hero_h1_line4: "in Barcelona, Costa Brava and Andalusia",
-        hero_subline: "Barcelona · Costa Brava · Marbella · Seville · Granada<br>Sofa cleaning · Upholstery · Awnings · Air conditioning",
-        hero_description: "Professional cleaning for homes, Airbnb properties and businesses.",
+        hero_locations: "Costa Brava · Costa del Sol · Andalusia",
+        hero_description: "Homes · Airbnb Properties · Businesses",
+        hero_slogan: "Fresh air, clean fabrics, clear decisions",
+        
         nav_servicios: "Services",
         nav_areas: "Areas",
         nav_opiniones: "Reviews",
