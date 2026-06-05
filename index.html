@@ -1726,6 +1726,11 @@ footer p:first-child {
   }
 }
 
+    @media(max-width:860px){
+  #prueba div[style*="grid-template-columns:repeat(3,1fr)"]{
+    grid-template-columns:1fr !important;
+  }
+}
   
   </style>
 
@@ -2254,64 +2259,110 @@ document.addEventListener('keydown', e => {
 
 
 <!-- =========================
-     LAYER 2: PROOF + BENEFITS
+     LAYER 2: MEDITERRANEAN SERVICE MOMENTS
      ========================= -->
-<section class="proof fade-in" id="prueba" style="padding:32px 16px;">
+<section class="proof fade-in" id="prueba" style="padding:56px 16px;">
 
-  
-  <div style="max-width:980px; margin:0 auto; background:rgba(255,255,255,0.92); border-radius:18px; box-shadow:0 10px 28px rgba(0,0,0,0.08); padding:32px 28px;">
+  <div style="max-width:1120px; margin:0 auto;">
 
-    <p style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; font-weight:700; color:#b68714; text-align:center; margin:0 0 6px;">Antes y después</p>
-    <h2 style="font-size:28px; font-weight:800; text-align:center; color:#111; margin:0 0 8px; letter-spacing:-0.5px;" data-i18n="proof_title">Resultados reales. Limpieza profesional.</h2>
-    <p style="text-align:center; color:#666; font-size:15px; margin:0 0 28px;" data-i18n="proof_sub">Envíanos fotos por WhatsApp y te respondemos con precio + disponibilidad.</p>
+    <p style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; font-weight:700; color:#b68714; text-align:center; margin:0 0 10px;"
+       data-i18n="proof_label">
+      Cuidado mediterráneo
+    </p>
 
-    <!-- Photos -->
-    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:20px;">
+    <h2 style="font-size:clamp(28px,3.2vw,42px); font-weight:600; text-align:center; color:#111; margin:0 0 12px; letter-spacing:-1px; line-height:1.12;"
+        data-i18n="proof_title">
+      Espacios preparados para disfrutar
+    </h2>
 
-      <figure style="margin:0; border-radius:12px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,0.08);">
-        <a href="images/ba_sofa_01.png" target="_blank">
-          <img src="images/ba_sofa_01.png" alt="Limpieza de sofá profesional Barcelona" loading="lazy"
-               style="width:100%; display:block; aspect-ratio:3/4; object-fit:cover;" />
-        </a>
-      </figure>
+    <p style="max-width:680px; text-align:center; color:#666; font-size:16px; line-height:1.7; margin:0 auto 34px;"
+       data-i18n="proof_sub">
+      Sofás, toldos y aire acondicionado para hogares, terrazas y propiedades mediterráneas.
+    </p>
 
-      <figure style="margin:0; border-radius:12px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,0.08);">
-        <a href="images/ba_carpet_01.png" target="_blank">
-          <img src="images/ba_carpet_01.png" alt="Limpieza de alfombra profesional" loading="lazy"
-               style="width:100%; display:block; aspect-ratio:3/4; object-fit:cover;" />
-        </a>
-      </figure>
+    <!-- Service lifestyle cards -->
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-bottom:26px;">
 
-      <figure style="margin:0; border-radius:12px; overflow:hidden; box-shadow:0 2px 10px rgba(0,0,0,0.08);">
-        <a href="images/ba_mattress_01.png" target="_blank">
-          <img src="images/ba_mattress_01.png" alt="Limpieza de colchón profesional" loading="lazy"
-               style="width:100%; display:block; aspect-ratio:3/4; object-fit:cover;" />
-        </a>
-      </figure>
+      <!-- Sofa -->
+      <a href="/limpieza-sofas-tapiceria.html"
+         style="text-decoration:none; color:inherit; display:block; background:rgba(255,255,255,0.92); border:1px solid rgba(0,0,0,0.06); border-radius:22px; overflow:hidden; box-shadow:0 12px 30px rgba(0,0,0,0.08);">
+
+        <img src="images/ba_sofa_01.png"
+             alt="Limpieza de sofás y tapicería"
+             loading="lazy"
+             style="width:100%; display:block; aspect-ratio:4/5; object-fit:cover;" />
+
+        <div style="padding:20px 20px 22px;">
+          <h3 style="font-size:22px; font-weight:600; letter-spacing:-0.5px; margin:0 0 8px;"
+              data-i18n="proof_card1_title">
+            Sofás & Tapicería
+          </h3>
+
+          <p style="font-size:15px; line-height:1.55; color:#666; margin:0;"
+             data-i18n="proof_card1_text">
+            Tejidos frescos y cuidados para hogares más acogedores.
+          </p>
+        </div>
+      </a>
+
+      <!-- Awnings -->
+      <a href="/limpieza-toldos-marbella-estepona.html"
+         style="text-decoration:none; color:inherit; display:block; background:rgba(255,255,255,0.92); border:1px solid rgba(0,0,0,0.06); border-radius:22px; overflow:hidden; box-shadow:0 12px 30px rgba(0,0,0,0.08);">
+
+        <img src="images/toldos-antes-despues-1.jpg"
+             alt="Limpieza de toldos y terrazas"
+             loading="lazy"
+             style="width:100%; display:block; aspect-ratio:4/5; object-fit:cover;" />
+
+        <div style="padding:20px 20px 22px;">
+          <h3 style="font-size:22px; font-weight:600; letter-spacing:-0.5px; margin:0 0 8px;"
+              data-i18n="proof_card2_title">
+            Toldos & Terrazas
+          </h3>
+
+          <p style="font-size:15px; line-height:1.55; color:#666; margin:0;"
+             data-i18n="proof_card2_text">
+            Espacios exteriores preparados para sombra, calma y vida al aire libre.
+          </p>
+        </div>
+      </a>
+
+      <!-- Air Conditioning -->
+      <a href="/limpieza-aire-acondicionado.html"
+         style="text-decoration:none; color:inherit; display:block; background:rgba(255,255,255,0.92); border:1px solid rgba(0,0,0,0.06); border-radius:22px; overflow:hidden; box-shadow:0 12px 30px rgba(0,0,0,0.08);">
+
+        <img src="filter.png"
+             alt="Limpieza de aire acondicionado"
+             loading="lazy"
+             style="width:100%; display:block; aspect-ratio:4/5; object-fit:cover;" />
+
+        <div style="padding:20px 20px 22px;">
+          <h3 style="font-size:22px; font-weight:600; letter-spacing:-0.5px; margin:0 0 8px;"
+              data-i18n="proof_card3_title">
+            Aire Acondicionado
+          </h3>
+
+          <p style="font-size:15px; line-height:1.55; color:#666; margin:0;"
+             data-i18n="proof_card3_text">
+            Aire más limpio y fresco para disfrutar mejor de cada espacio.
+          </p>
+        </div>
+      </a>
 
     </div>
 
-    <!-- Simple trust line -->
-    <p style="text-align:center; font-size:14px; color:#555; margin:0 0 24px; font-weight:500;">
-      <span data-i18n="pb_1">✔ Productos profesionales y seguros</span>
-      &nbsp;·&nbsp;
-      <span data-i18n="pb_2">✔ Eliminación de manchas y olores</span>
-      &nbsp;·&nbsp;
-      <span data-i18n="pb_3">✔ Servicio a domicilio · Bizum / efectivo</span>
-    </p>
-
     <!-- CTA -->
     <div style="text-align:center;">
-      <a href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto%20para%20limpieza%20de%20tapicer%C3%ADa.%20Puedo%20enviar%20fotos%20ahora."
+      <a href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto.%20Puedo%20enviar%20fotos%20ahora."
          target="_blank" rel="noopener" class="js-wa"
-         style="display:inline-block; background:#d4af37; color:#111; font-weight:800; font-size:16px; padding:15px 36px; border-radius:999px; text-decoration:none; box-shadow:0 4px 18px rgba(212,175,55,0.35);"
+         style="display:inline-block; background:#d4af37; color:#111; font-weight:700; font-size:15px; padding:14px 30px; border-radius:999px; text-decoration:none; box-shadow:0 4px 18px rgba(212,175,55,0.26);"
          data-i18n="proof_cta"
          onclick="gtag('event', 'whatsapp_click');">
-        Envía fotos
+        Enviar fotos por WhatsApp
       </a>
-      
+
       <p style="font-size:13px; color:#888; margin-top:10px;" data-i18n="proof_note">
-        Tip: indica tu código postal para confirmar disponibilidad.
+        Indica tu ciudad y envíanos fotos para confirmar disponibilidad.
       </p>
     </div>
 
@@ -2607,6 +2658,18 @@ Servicio en Cataluña y Andalucía
         stat_clients: "clientes atendidos",
         stat_services: "Servicios completados",
         stat_awnings: "Toldos limpiados",
+
+        proof_label: "Cuidado mediterráneo",
+        proof_title: "Espacios preparados para disfrutar",
+        proof_sub: "Sofás, toldos y aire acondicionado para hogares, terrazas y propiedades mediterráneas.",
+        proof_card1_title: "Sofás & Tapicería",
+        proof_card1_text: "Tejidos frescos y cuidados para hogares más acogedores.",
+        proof_card2_title: "Toldos & Terrazas",
+        proof_card2_text: "Espacios exteriores preparados para sombra, calma y vida al aire libre.",
+        proof_card3_title: "Aire Acondicionado",
+        proof_card3_text: "Aire más limpio y fresco para disfrutar mejor de cada espacio.",
+        proof_cta: "Enviar fotos por WhatsApp",
+        proof_note: "Indica tu ciudad y envíanos fotos para confirmar disponibilidad.",
         
         footerPrivacy: "Política de privacidad",
         requestQuote: "Solicita Presupuesto",
@@ -3085,6 +3148,18 @@ calc_cta_top: "Calcular precio",
         stat_clients: "Clients Served",
         stat_services: "Services Completed",
         stat_awnings: "Awnings Cleaned",
+
+        proof_label: "Mediterranean Care",
+        proof_title: "Spaces Prepared to Enjoy",
+        proof_sub: "Sofas, awnings and air conditioning for homes, terraces and Mediterranean properties.",
+        proof_card1_title: "Sofas & Upholstery",
+        proof_card1_text: "Fresh, cared-for fabrics for warmer and more welcoming homes.",
+        proof_card2_title: "Awnings & Terraces",
+        proof_card2_text: "Outdoor spaces prepared for shade, calm and open-air living.",
+        proof_card3_title: "Air Conditioning",
+        proof_card3_text: "Cleaner, fresher air to enjoy every space more comfortably.",
+        proof_cta: "Send Photos via WhatsApp",
+        proof_note: "Tell us your city and send photos to confirm availability.",
         
         requestQuote: "Request a Quote",
         hero_tagline: "Mediterranean Freshness for Your Home",
