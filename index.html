@@ -1385,10 +1385,24 @@ footer p:first-child {
 
 @media(max-width:820px){
 
+  .brand-name{ font-size:18px; }
+  
   .site-topbar{
     position:relative;
     z-index:9999;
     background:#fff;
+  }
+
+  .site-nav{
+    display:none !important;
+  }
+
+  .mobile-menu-btn{
+    display:block !important;
+    font-size:34px !important;
+    line-height:1 !important;
+    padding:4px 0 !important;
+    margin-left:4px !important;
   }
 
   .mobile-menu{
@@ -1430,12 +1444,6 @@ footer p:first-child {
 }
 
     
-
-/* Mobile: hide menu text, keep language pills */
-@media (max-width: 820px){
-  .site-nav{ display:none; }
-  .brand-name{ font-size: 18px; }
-}
 
 .fs-modal{
   position:fixed;
@@ -1824,7 +1832,69 @@ footer p:first-child {
   fill:#fff;
 }
 
+    @media(max-width:820px){
 
+  .hero{
+    min-height:auto !important;
+    padding:80px 18px 45px !important;
+    display:flex !important;
+    align-items:center !important;
+  }
+
+  .hero-inner{
+    padding-top:0 !important;
+    margin-top:0 !important;
+  }
+
+  .hero h1{
+    font-size:38px !important;
+    line-height:1.08 !important;
+    margin-top:0 !important;
+  }
+
+  .hero-subline,
+  .hero-description,
+  .hero-slogan{
+    font-size:18px !important;
+  }
+}
+
+
+@media(max-width:820px){
+
+  .site-right{
+    display:flex !important;
+    align-items:center !important;
+    gap:10px !important;
+  }
+
+  .site-nav{
+    display:none !important;
+  }
+
+  .mobile-menu-btn{
+    display:block !important;
+    font-size:34px !important;
+    background:transparent !important;
+    border:0 !important;
+    color:#111 !important;
+    padding:4px 0 !important;
+    margin-left:4px !important;
+    cursor:pointer !important;
+  }
+
+  .lang-pills{
+    display:flex !important;
+    gap:8px !important;
+  }
+
+  .lang-pill{
+    width:52px !important;
+    height:52px !important;
+    padding:0 !important;
+  }
+}
+    
     
   </style>
 
