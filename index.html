@@ -1369,6 +1369,53 @@ footer p:first-child {
   box-shadow: 0 0 0 4px rgba(212,175,55,0.18);
 }
 
+/* HAMBURGER MENU */
+.mobile-menu-btn{
+  display:none;
+  border:0;
+  background:transparent;
+  font-size:32px;
+  cursor:pointer;
+  color:#111;
+}
+
+.mobile-menu{
+  display:none;
+}
+
+@media(max-width:820px){
+
+  .site-nav{
+    display:none;
+  }
+
+  .mobile-menu-btn{
+    display:block;
+  }
+
+  .mobile-menu{
+    display:none;
+    flex-direction:column;
+    gap:18px;
+    padding:20px;
+    background:#fff;
+    border-top:1px solid rgba(0,0,0,.08);
+  }
+
+  .mobile-menu.open{
+    display:flex;
+  }
+
+  .mobile-menu a{
+    color:#111;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:600;
+  }
+}
+
+    
+
 /* Mobile: hide menu text, keep language pills */
 @media (max-width: 820px){
   .site-nav{ display:none; }
@@ -1965,6 +2012,20 @@ document.addEventListener('keydown', e => {
       <button type="button" class="lang-pill" data-lang="es" onclick="switchLang('es')">ES</button>
       <button type="button" class="lang-pill" data-lang="en" onclick="switchLang('en')">EN</button>
     </div>
+
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+  ☰
+</button>
+
+<div id="mobileMenu" class="mobile-menu">
+  <a href="#servicios">Servicios</a>
+  <a href="#areas">Áreas</a>
+  <a href="#opiniones">Opiniones</a>
+  <a href="#faq">FAQ</a>
+  <a href="#contacto">Contacto</a>
+  <a href="/airbnb-upholstery-cleaning.html">Airbnb</a>
+</div>
+    
   </div>
 </div>
 
@@ -4684,5 +4745,14 @@ document.querySelectorAll('.stat-number').forEach(el => counterObserver.observe(
   </svg>
 
 </a>
+
+  <script>
+function toggleMobileMenu() {
+  document
+    .getElementById('mobileMenu')
+    .classList.toggle('open');
+}
+</script>
+  
 </body>
 </html>
