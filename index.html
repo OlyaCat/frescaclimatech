@@ -1385,32 +1385,47 @@ footer p:first-child {
 
 @media(max-width:820px){
 
-  .site-nav{
-    display:none;
-  }
-
-  .mobile-menu-btn{
-    display:block;
+  .site-topbar{
+    position:relative;
+    z-index:9999;
+    background:#fff;
   }
 
   .mobile-menu{
     display:none;
-    flex-direction:column;
-    gap:18px;
-    padding:20px;
+    width:100%;
     background:#fff;
-    border-top:1px solid rgba(0,0,0,.08);
+    padding:28px 30px 32px;
+    border-top:1px solid rgba(0,0,0,.06);
+    box-shadow:0 14px 30px rgba(0,0,0,.06);
   }
 
   .mobile-menu.open{
     display:flex;
+    flex-direction:column;
+    gap:28px;
   }
 
   .mobile-menu a{
+    font-size:28px;
+    line-height:1.2;
+    font-weight:600;
     color:#111;
     text-decoration:none;
-    font-size:18px;
-    font-weight:600;
+  }
+
+  .mobile-menu a.special{
+    color:#b68714;
+  }
+
+  .mobile-menu .wa-mobile{
+    background:#25D366;
+    color:#fff;
+    text-align:center;
+    padding:16px 20px;
+    border-radius:10px;
+    font-weight:700;
+    margin-top:8px;
   }
 }
 
@@ -2013,20 +2028,22 @@ document.addEventListener('keydown', e => {
       <button type="button" class="lang-pill" data-lang="en" onclick="switchLang('en')">EN</button>
     </div>
 
-    <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+   <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
   ☰
 </button>
 
-<div id="mobileMenu" class="mobile-menu">
+  </div>
+
+  <div id="mobileMenu" class="mobile-menu">
   <a href="#servicios">Servicios</a>
   <a href="#areas">Áreas</a>
   <a href="#opiniones">Opiniones</a>
   <a href="#faq">FAQ</a>
   <a href="#contacto">Contacto</a>
-  <a href="/airbnb-upholstery-cleaning.html">Airbnb</a>
+  <a class="special" href="/airbnb-upholstery-cleaning.html">Airbnb & Alquileres</a>
+  <a class="wa-mobile" href="https://wa.me/34657336353?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20un%20presupuesto.">💬 Solicitar presupuesto</a>
 </div>
-    
-  </div>
+  
 </div>
 
 
