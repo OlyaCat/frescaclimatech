@@ -2115,9 +2115,9 @@ document.addEventListener('keydown', e => {
       <button type="button" class="lang-pill" data-lang="en" onclick="switchLang('en')">EN</button>
     </div>
 
-    <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open menu">
-      ☰
-    </button>
+   <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
+  ☰
+</button>
 
   </div>
 
@@ -4850,10 +4850,17 @@ document.querySelectorAll('.stat-number').forEach(el => counterObserver.observe(
 
 </a>
 
-  <script>
-function toggleMobileMenu() {
-  document.getElementById('mobileMenu').classList.toggle('open');
-}
+ <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.getElementById("mobileMenuBtn");
+  const menu = document.getElementById("mobileMenu");
+
+  if (btn && menu) {
+    btn.addEventListener("click", function () {
+      menu.classList.toggle("open");
+    });
+  }
+});
 </script>
   
 </body>
