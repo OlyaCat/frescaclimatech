@@ -1387,30 +1387,39 @@ footer p:first-child {
     display:flex !important;
     align-items:center !important;
     justify-content:space-between !important;
-    padding:18px 22px !important;
+    padding:16px 14px !important;
     width:100% !important;
+    box-sizing:border-box !important;
+    overflow:visible !important;
   }
 
   .site-brand{
     display:flex !important;
     align-items:center !important;
-    gap:8px !important;
-    flex-shrink:0 !important;
+    gap:6px !important;
+    flex:1 1 auto !important;
+    min-width:0 !important;
+    max-width:170px !important;
   }
 
   .brand-logo{
-    height:22px !important;
+    height:20px !important;
+    width:auto !important;
+    flex-shrink:0 !important;
   }
 
   .brand-name{
     font-size:18px !important;
     white-space:nowrap !important;
+    overflow:hidden !important;
+    text-overflow:ellipsis !important;
   }
 
   .site-right{
     display:flex !important;
     align-items:center !important;
-    gap:8px !important;
+    gap:6px !important;
+    flex-shrink:0 !important;
   }
 
   .site-nav{
@@ -1419,67 +1428,32 @@ footer p:first-child {
 
   .lang-pills{
     display:flex !important;
-    gap:8px !important;
+    gap:6px !important;
+    flex-shrink:0 !important;
   }
 
   .lang-pill{
-    width:48px !important;
-    height:48px !important;
+    width:46px !important;
+    height:46px !important;
     padding:0 !important;
     border-radius:50% !important;
     font-size:14px !important;
   }
 
   .mobile-menu-btn{
-    display:block !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:center !important;
+    width:36px !important;
+    min-width:36px !important;
+    height:46px !important;
     border:0 !important;
     background:transparent !important;
     font-size:34px !important;
     line-height:1 !important;
     color:#111 !important;
-    padding:0 0 2px 4px !important;
+    padding:0 !important;
     cursor:pointer !important;
-  }
-
-  .mobile-menu.open{
-    display:flex !important;
-    flex-direction:column !important;
-    gap:24px !important;
-    width:100% !important;
-    background:#fff !important;
-    padding:28px 30px 34px !important;
-    border-top:1px solid rgba(0,0,0,.06) !important;
-    box-shadow:0 14px 30px rgba(0,0,0,.06) !important;
-    position:relative !important;
-    z-index:9998 !important;
-  }
-
-  .mobile-menu a{
-    font-size:24px !important;
-    line-height:1.2 !important;
-    font-weight:600 !important;
-    color:#111 !important;
-    text-decoration:none !important;
-  }
-
-  .mobile-menu a.special{
-    color:#b68714 !important;
-  }
-
-  .mobile-menu .wa-mobile{
-    background:#25D366 !important;
-    color:#fff !important;
-    text-align:center !important;
-    padding:16px 18px !important;
-    border-radius:10px !important;
-    font-size:21px !important;
-    font-weight:700 !important;
-    margin-top:4px !important;
-  }
-
-  .hero{
-    min-height:auto !important;
-    padding-top:40px !important;
   }
 }
     
