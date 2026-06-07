@@ -1369,14 +1369,9 @@ footer p:first-child {
   box-shadow: 0 0 0 4px rgba(212,175,55,0.18);
 }
 
-/* HAMBURGER MENU */
+/* MOBILE HEADER + MENU */
 .mobile-menu-btn{
   display:none;
-  border:0;
-  background:transparent;
-  font-size:32px;
-  cursor:pointer;
-  color:#111;
 }
 
 .mobile-menu{
@@ -1386,29 +1381,30 @@ footer p:first-child {
 @media(max-width:820px){
 
   .site-topbar{
-    position:relative;
-    z-index:9999;
-    background:#fff;
+    position:relative !important;
+    z-index:9999 !important;
+    background:#fff !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    padding:18px 22px !important;
+    width:100% !important;
   }
 
-  .site-nav{
-    display:none !important;
-  }
-
-  .mobile-menu-btn{
-    display:block !important;
-    font-size:32px !important;
-    line-height:1 !important;
-    padding:4px 0 !important;
-    margin-left:2px !important;
-  }
-
-  .brand-name{
-    font-size:18px !important;
+  .site-brand{
+    display:flex !important;
+    align-items:center !important;
+    gap:8px !important;
+    flex-shrink:0 !important;
   }
 
   .brand-logo{
     height:22px !important;
+  }
+
+  .brand-name{
+    font-size:18px !important;
+    white-space:nowrap !important;
   }
 
   .site-right{
@@ -1417,54 +1413,73 @@ footer p:first-child {
     gap:8px !important;
   }
 
+  .site-nav{
+    display:none !important;
+  }
+
   .lang-pills{
+    display:flex !important;
     gap:8px !important;
   }
 
   .lang-pill{
-    width:50px !important;
-    height:50px !important;
+    width:48px !important;
+    height:48px !important;
     padding:0 !important;
+    border-radius:50% !important;
     font-size:14px !important;
   }
 
+  .mobile-menu-btn{
+    display:block !important;
+    border:0 !important;
+    background:transparent !important;
+    font-size:34px !important;
+    line-height:1 !important;
+    color:#111 !important;
+    padding:0 0 2px 4px !important;
+    cursor:pointer !important;
+  }
+
   .mobile-menu.open{
-    display:flex;
-    flex-direction:column;
-    gap:22px;
-
-    width:100%;
-    background:#fff;
-    padding:26px 30px 34px;
-
-    border-top:1px solid rgba(0,0,0,.06);
-    box-shadow:0 14px 30px rgba(0,0,0,.06);
-
-    position:relative;
-    z-index:9998;
+    display:flex !important;
+    flex-direction:column !important;
+    gap:24px !important;
+    width:100% !important;
+    background:#fff !important;
+    padding:28px 30px 34px !important;
+    border-top:1px solid rgba(0,0,0,.06) !important;
+    box-shadow:0 14px 30px rgba(0,0,0,.06) !important;
+    position:relative !important;
+    z-index:9998 !important;
   }
 
   .mobile-menu a{
     font-size:24px !important;
-    line-height:1.2;
-    font-weight:600;
-    color:#111;
-    text-decoration:none;
+    line-height:1.2 !important;
+    font-weight:600 !important;
+    color:#111 !important;
+    text-decoration:none !important;
   }
 
   .mobile-menu a.special{
-    color:#b68714;
+    color:#b68714 !important;
   }
 
   .mobile-menu .wa-mobile{
-    background:#25D366;
-    color:#fff;
-    text-align:center;
-    padding:16px 18px;
-    border-radius:10px;
-    font-size:22px !important;
-    font-weight:700;
-    margin-top:4px;
+    background:#25D366 !important;
+    color:#fff !important;
+    text-align:center !important;
+    padding:16px 18px !important;
+    border-radius:10px !important;
+    font-size:21px !important;
+    font-weight:700 !important;
+    margin-top:4px !important;
+  }
+
+  .hero{
+    min-height:auto !important;
+    padding-top:40px !important;
   }
 }
     
@@ -2094,15 +2109,16 @@ document.addEventListener('keydown', e => {
 
    
 
-<!-- TOP BAR (new clean header like your screenshot) -->
+<!-- TOP BAR -->
 <div class="site-topbar">
- <a aria-label='FrescaClimaTech — Home' class='site-brand' href='/'>
-  <img class="brand-logo" src="fct_logo_transparent.svg" alt="FrescaClimaTech logo">
-  <span class="brand-name">FrescaClimaTech</span>
-</a>
 
+  <a aria-label="FrescaClimaTech - Home" class="site-brand" href="/">
+    <img class="brand-logo" src="fct_logo_transparent.svg" alt="FrescaClimaTech logo">
+    <span class="brand-name">FrescaClimaTech</span>
+  </a>
 
   <div class="site-right">
+
     <nav class="site-nav" aria-label="Primary">
       <a href="#servicios" data-i18n="nav_servicios">Servicios</a>
       <span class="nav-sep">|</span>
@@ -2114,7 +2130,7 @@ document.addEventListener('keydown', e => {
       <span class="nav-sep">|</span>
       <a href="#contacto" data-i18n="nav_contacto">Contacto</a>
       <span class="nav-sep">|</span>
-<a href="/airbnb-upholstery-cleaning.html" data-i18n="nav_airbnb">Airbnb</a>
+      <a href="/airbnb-upholstery-cleaning.html" data-i18n="nav_airbnb">Airbnb</a>
     </nav>
 
     <div class="lang-pills" role="group" aria-label="Idioma">
@@ -2122,13 +2138,15 @@ document.addEventListener('keydown', e => {
       <button type="button" class="lang-pill" data-lang="en" onclick="switchLang('en')">EN</button>
     </div>
 
-   <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-  ☰
-</button>
+    <button class="mobile-menu-btn" onclick="toggleMobileMenu()" aria-label="Open menu">
+      ☰
+    </button>
 
   </div>
 
-  <div id="mobileMenu" class="mobile-menu">
+</div>
+
+<div id="mobileMenu" class="mobile-menu">
   <a href="#servicios">Servicios</a>
   <a href="#areas">Áreas</a>
   <a href="#opiniones">Opiniones</a>
@@ -2136,8 +2154,6 @@ document.addEventListener('keydown', e => {
   <a href="#contacto">Contacto</a>
   <a class="special" href="/airbnb-upholstery-cleaning.html">Airbnb & Alquileres</a>
   <a class="wa-mobile" href="https://wa.me/34657336353?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20un%20presupuesto.">💬 Solicitar presupuesto</a>
-</div>
-  
 </div>
 
 
@@ -4859,9 +4875,7 @@ document.querySelectorAll('.stat-number').forEach(el => counterObserver.observe(
 
   <script>
 function toggleMobileMenu() {
-  document
-    .getElementById('mobileMenu')
-    .classList.toggle('open');
+  document.getElementById('mobileMenu').classList.toggle('open');
 }
 </script>
   
