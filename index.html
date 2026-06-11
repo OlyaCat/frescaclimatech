@@ -1194,42 +1194,42 @@ body::before {
   text-align: center;
 }
 
-.clima-title {
+.-title {
   margin: 0 0 8px;
   font-size: 22px;
   font-weight: 800;
 }
 
-.clima-text {
+.-text {
   margin: 0 0 14px;
   font-size: 15px;
   color: #333;
 }
 
-.clima-cards {
+.-cards {
   display: grid;
   gap: 10px;
   margin: 14px 0;
 }
 
 @media (min-width: 720px) {
-  .clima-cards {
+  .-cards {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-.clima-card {
+.-card {
   padding: 12px;
   border-radius: 12px;
   background: rgba(212,175,55,0.14);
   font-weight: 700;
 }
 
-.clima-status {
+.-status {
   background: rgba(0,0,0,0.05);
 }
 
-.clima-tip {
+.-tip {
   margin-top: 12px;
   font-size: 14px;
   color: #444;
@@ -2089,9 +2089,9 @@ document.addEventListener('keydown', e => {
 <!-- TOP BAR -->
 <div class="site-topbar">
 
-  <a aria-label="FrescaClimaTech - Home" class="site-brand" href="/">
-    <img class="brand-logo" src="fct_logo_transparent.svg" alt="FrescaClimaTech logo">
-    <span class="brand-name">FrescaClimaTech</span>
+  <a aria-label="FrescaTech - Home" class="site-brand" href="/">
+    <img class="brand-logo" src="fct_logo_transparent.svg" alt="FrescaTech logo">
+    <span class="brand-name">FrescaTech</span>
   </a>
 
   <div class="site-right">
@@ -4082,11 +4082,7 @@ async function fetchClima(cityKey, lang = "es") {
   const city = CLIMA_CITIES[cityKey] || CLIMA_CITIES.lloret;
   const { lat, lon } = city;
 
-  const url =
-    `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}` +
-    `&hourly=temperature_2m,relative_humidity_2m,precipitation` +
-    `&daily=temperature_2m_max,precipitation_sum` +
-    `&timezone=auto`;
+  const url = `/.netlify/functions/weather?lat=${lat}&lon=${lon}`;
 
   const res = await fetch(url);
 
