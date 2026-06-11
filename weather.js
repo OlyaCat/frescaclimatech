@@ -1,3 +1,5 @@
+const fetch = (...args) => import('node-fetch').then(({default: fetch}) => fetch(...args));
+
 exports.handler = async function (event) {
   try {
     const lat = event.queryStringParameters.lat;
