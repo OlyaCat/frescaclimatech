@@ -4261,7 +4261,14 @@ if (indexEl) indexEl.textContent = idx;
     }
 
     // 2) Best day this week ✅
-    const best = pickBestCleaningDay(data.daily, lang);   // pass full data (hourly + daily)
+    let best = null;
+
+try {
+  best = pickBestCleaningDay(data, lang);
+} catch (err) {
+  console.warn("Best day failed:", err);
+}
+
 renderBestDay(best, lang);
 
     // Store last clima values globally (for WhatsApp automation)
