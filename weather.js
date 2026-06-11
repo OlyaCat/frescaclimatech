@@ -20,20 +20,25 @@ exports.handler = async function (event) {
       `&longitude=${encodeURIComponent(lon)}` +
       `&current=temperature_2m,relative_humidity_2m` +
       `&hourly=temperature_2m,relative_humidity_2m,precipitation` +
-      `&daily=temperature_2m_max,precipitation_sum,relative_humidity_2m_min,relative_humidity_2m_max` +
+      `&daily=temperature_2m_max,precipitation_sum` +
       `&forecast_days=7` +
       `&timezone=auto`;
 
     const response = await fetch(url);
 
     if (!response.ok) {
+      const errorText = await response.text();
+
       return {
         statusCode: response.status,
         headers: {
           "Content-Type": "application/json",
           "Access-Control-Allow-Origin": "*"
         },
-        body: JSON.stringify({ error: `Weather upstream error: ${response.status}` })
+        body: JSON.stringify({
+          error: `Weather upstream error: ${response.status}`,
+          details: errorText
+        })
       };
     }
 
@@ -48,6 +53,7 @@ exports.handler = async function (event) {
       },
       body: JSON.stringify(data)
     };
+
   } catch (err) {
     return {
       statusCode: 500,
