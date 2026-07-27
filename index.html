@@ -4007,40 +4007,39 @@ function formatWeekday(dateStr, lang = "es") {
   );
 }
 
-function pickBestCleaningDay(daily, lang = "es") {
-  const tMax   = daily?.temperature_2m_max || [];
-  const humMin = daily?.relative_humidity_2m_min || []; // ✅ use MIN humidity
-  const rain   = daily?.precipitation_sum || [];
-  const time   = daily?.time || [];
+function pickBestCleaningDay(data, lang = "es") {
+  const dates = data?.daily?.time || [];
+  const rain = data?.daily?.precipitation_sum || [];
 
-  if (!time.length) return null;
+  if (!dates.length || !data?.hourly) return null;
 
-  let bestIdx = -1;
-  let bestScore = -1;
+  let bestDay = null;
 
-  for (let i = 0; i < time.length; i++) {
-    const temp = Number(tMax[i] ?? 0);
-    const hum  = Number(humMin[i] ?? 70);
-    const r    = Number(rain[i] ?? 0);
+  for (let i = 0; i < dates.length; i++) {
+    const date = dates[i];
 
-    const score = dryingIndexDaily(temp, hum, r);
+    const stats = getWindowAverages(data.hourly, date, 12, 16);
+    if (!stats) continue;
 
-    if (score > bestScore) {
-      bestScore = score;
-      bestIdx = i;
+    const temp = Math.round(stats.tempAvg);
+    const humidity = Math.round(stats.humAvg);
+    const rainAmount = Number(rain[i] ?? 0);
+
+    const score = dryingIndexDaily(temp, humidity, rainAmount);
+
+    if (!bestDay || score > bestDay.index) {
+      bestDay = {
+        date,
+        weekday: formatWeekday(date, lang),
+        tempMax: temp,
+        humidityMin: humidity,
+        rain: rainAmount,
+        index: score
+      };
     }
   }
 
-  if (bestIdx === -1) return null;
-
-  return {
-    date: time[bestIdx],
-    weekday: formatWeekday(time[bestIdx], lang),
-    tempMax: Number(tMax[bestIdx] ?? 0),
-    humidityMin: Number(humMin[bestIdx] ?? 0),
-    rain: Number(rain[bestIdx] ?? 0),
-    index: bestScore
-  };
+  return bestDay;
 }
 
 function renderBestDay(best, lang = "es") {
