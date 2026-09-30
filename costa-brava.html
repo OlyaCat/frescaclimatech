@@ -468,6 +468,17 @@ footer a:hover{
 </style><style id="fct-cb-context-v1">
 .fct-cb-context{background:#171714;color:#f4efe6;padding:82px max(28px,6vw)}.fct-cb-context-inner{max-width:1380px;margin:auto}.fct-cb-context-kicker{margin:0 0 38px;color:#b7842b;font:700 10px/1 Outfit,sans-serif;letter-spacing:.15em}.fct-cb-context-copy{display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:end}.fct-cb-context-copy h2{margin:0;font:400 clamp(45px,4.8vw,68px)/.94 Outfit,sans-serif;letter-spacing:-.052em}.fct-cb-context-copy h2 .es-copy,.fct-cb-context-copy h2 .en-copy{font-size:inherit!important;color:inherit!important}.fct-cb-context-copy>p{margin:0 0 5px;color:#aaa49b;font-size:15px;line-height:1.6;max-width:610px}.fct-cb-context-copy>p .es-copy,.fct-cb-context-copy>p .en-copy{font-size:15px!important;color:#aaa49b!important}.fct-cb-context-notes{display:grid;grid-template-columns:repeat(3,1fr);margin-top:50px;border-top:1px solid #3b3935;border-bottom:1px solid #3b3935}.fct-cb-context-notes>div{padding:21px 20px 22px 0;border-right:1px solid #3b3935}.fct-cb-context-notes>div:not(:first-child){padding-left:20px}.fct-cb-context-notes>div:last-child{border-right:0}.fct-cb-context-notes span:first-child{display:block;color:#b7842b;font-size:10px;margin-bottom:21px}.fct-cb-context-notes strong{display:block;font-size:20px;font-weight:400;margin-bottom:6px}.fct-cb-context-notes strong .es-copy,.fct-cb-context-notes strong .en-copy{font-size:20px!important;color:#f4efe6!important}.fct-cb-context-notes small{color:#88837c;font-size:12px}.fct-cb-context-notes small .es-copy,.fct-cb-context-notes small .en-copy{font-size:12px!important;color:#88837c!important}
 @media(max-width:800px){.fct-cb-context{padding:60px 22px}.fct-cb-context-copy{grid-template-columns:1fr;gap:24px}.fct-cb-context-notes{grid-template-columns:1fr}.fct-cb-context-notes>div{border-right:0;border-bottom:1px solid #3b3935;padding:18px 0!important}.fct-cb-context-notes>div:last-child{border-bottom:0}}
+</style><style id="fct-cb-context-fix-v2">
+/* Prevent legacy language script from showing both ES and EN inside the new bilingual blocks */
+html[lang="es"] .fct-cb-context .en-copy{display:none!important}
+html[lang="en"] .fct-cb-context .es-copy{display:none!important}
+.fct-cb-context-notes strong>.es-copy,.fct-cb-context-notes strong>.en-copy{display:inline!important}
+html[lang="es"] .fct-cb-context-notes strong>.en-copy{display:none!important}
+html[lang="en"] .fct-cb-context-notes strong>.es-copy{display:none!important}
+.fct-cb-context-notes small>.es-copy,.fct-cb-context-notes small>.en-copy{display:inline!important}
+html[lang="es"] .fct-cb-context-notes small>.en-copy{display:none!important}
+html[lang="en"] .fct-cb-context-notes small>.es-copy{display:none!important}
+.fct-cb-context-notes>div{min-height:150px!important}
 </style></head>
 
 <body>
