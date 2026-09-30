@@ -2085,7 +2085,10 @@ footer p:first-child {
 #opiniones .fct17-review-meta,#opiniones .fct17-widget,#opiniones .fct17-review-foot{border-top:0!important;border-bottom:0!important}
 </style>
 
-</head>
+<style id="fct21-22-style">
+.fct21-faq{background:#f7f4ed;color:#171714;padding:76px max(28px,6vw) 68px;font-family:Outfit,Arial,sans-serif}.fct21-head{max-width:1380px;margin:0 auto 34px;display:grid;grid-template-columns:.5fr 1fr .68fr;gap:52px;align-items:end}.fct21-head h2{font:400 clamp(38px,4vw,58px)/.98 Outfit,Arial,sans-serif;letter-spacing:-.045em;margin:0}.fct21-head>p:last-child{color:#69635a;font:400 15px/1.55 Outfit,Arial,sans-serif;margin:0 0 5px}.fct21-list{max-width:1380px;margin:0 auto;border-top:1px solid #c8c0b3}.fct21-list .acc-item{border:0!important;border-bottom:1px solid #c8c0b3!important;background:transparent!important;border-radius:0!important;box-shadow:none!important;margin:0!important}.fct21-list summary{list-style:none;cursor:pointer;padding:19px 44px 19px 0!important;color:#171714!important;background:transparent!important;font:500 16px/1.35 Outfit,Arial,sans-serif!important;position:relative}.fct21-list summary::-webkit-details-marker{display:none}.fct21-list summary:after{content:"+";position:absolute;right:2px;top:17px;color:#9d7428;font:400 21px/1 Outfit,Arial,sans-serif}.fct21-list details[open] summary:after{content:"−"}.fct21-list .acc-content{padding:0 44px 18px 0!important;background:transparent!important;color:#716b62!important}.fct21-list .acc-content p{margin:0;max-width:820px;font:400 13px/1.55 Outfit,Arial,sans-serif!important}.fct22-areas{background:#171714;color:#f5f0e7;padding:70px max(28px,6vw) 62px;font-family:Outfit,Arial,sans-serif}.fct22-inner{max-width:1380px;margin:0 auto;display:grid;grid-template-columns:.5fr 1fr .68fr;gap:52px;align-items:start}.fct22-inner .fct2-kicker{color:#b7842b}.fct22-inner h2{font:400 clamp(38px,4vw,58px)/.98 Outfit,Arial,sans-serif;letter-spacing:-.045em;margin:0}.fct22-links{border-top:1px solid #46443f}.fct22-links a{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid #46443f;color:#dcd7ce;text-decoration:none;font:500 13px/1.2 Outfit,Arial,sans-serif}.fct22-links a span{color:#b7842b}.fct22-links a:hover{color:#fff}
+@media(max-width:900px){.fct21-faq,.fct22-areas{padding:60px 22px 52px}.fct21-head,.fct22-inner{grid-template-columns:1fr;gap:17px}.fct21-head{margin-bottom:28px}.fct22-links{margin-top:12px}}
+</style></head>
 
 
 
@@ -2283,31 +2286,29 @@ footer p:first-child {
   <p class="fct19-scope"><span class="es-copy">Toldos: el tamaño, acceso y construcción pueden requerir valoración por fotos. Aire acondicionado: esta herramienta cubre cuidado higiénico; los trabajos técnicos se coordinan con partners habilitados RITE.</span><span class="en-copy">Awnings: size, access and construction may require photo assessment. Air conditioning: this tool covers hygienic care; technical work is coordinated with RITE-authorised partners.</span></p>
 </section>
 
-  <!-- FAQ -->
-  <section class="faq" id="faq">
-
+  <!-- FCT FAQ -->
+<section class="fct21-faq fade-in" id="faq">
+  <div class="fct21-head">
+    <p class="fct2-kicker"><span class="es-copy">ANTES DE RESERVAR</span><span class="en-copy">BEFORE YOU BOOK</span></p>
     <h2 id="faqTitle"></h2>
-    <div id="faqList" class="accordion"></div>
-  </section>
-
- 
-
-<section id="areas" style="text-align:center; padding:40px 20px;">
-  <h2 style="font-family:'Outfit',sans-serif; font-weight:700; color:#333;" data-i18n="areas_title">
-    Áreas de Servicio
-  </h2>
-
-  <p style="font-size:18px; margin-top:10px; color:#444;" data-i18n="areas_sub">
-    Servicios disponibles en zonas seleccionadas de España:
-  </p>
-
- <div class="areas-links">
-  <a class="area-pill" href="/costa-brava">Costa Brava</a>
-  <a class="area-pill" href="/costa-del-sol">Costa del Sol</a>
-  <a class="area-pill" href="/andalucia">Andalucía</a>
-</div>
+    <p><span class="es-copy">Lo esencial, sin letra pequeña.</span><span class="en-copy">The essentials, without the small print.</span></p>
+  </div>
+  <div id="faqList" class="accordion fct21-list"></div>
 </section>
 
+<!-- FCT AREAS -->
+<section class="fct22-areas fade-in" id="areas">
+  <div class="fct22-inner">
+    <p class="fct2-kicker"><span class="es-copy">DÓNDE TRABAJAMOS</span><span class="en-copy">WHERE WE WORK</span></p>
+    <h2><span class="es-copy">Cuidado local.<br>Alcance mediterráneo.</span><span class="en-copy">Local care.<br>Mediterranean reach.</span></h2>
+    <div class="fct22-links">
+      <a href="/costa-brava">Costa Brava <span>↗</span></a>
+      <a href="/barcelona">Barcelona <span>↗</span></a>
+      <a href="/costa-del-sol">Costa del Sol <span>↗</span></a>
+      <a href="/andalucia">Andalucía <span>↗</span></a>
+    </div>
+  </div>
+</section>
 
 <footer>
 
@@ -2826,18 +2827,14 @@ calc_cta_top: "Calcular precio",
         svc_ins_price: "Desde 50 €",
         
 
-        faqTitle: "Preguntas Frecuentes",
+        faqTitle: "Lo que conviene saber",
         faqs: [
-          ["¿Cuánto dura una limpieza?", "Normalmente de 1 a 3 horas, dependiendo del artículo y su estado."],
-          ["¿Ofrecen servicio de secado?", "Sí, ofrecemos secado exprés para tapicería en Marbella y Sevilla. Los muebles suelen estar secos y listos para usar en unas 4–6 horas después de la limpieza."],
-          ["¿Pueden limpiar muebles de exterior o cojines de barcos?", "Sí, estamos especializados en la limpieza de tapicería náutica, muebles de terraza y tejidos exteriores."],
-          ["¿Usan productos ecológicos?", "Sí, priorizamos el uso de soluciones de limpieza seguras, no tóxicas y respetuosas con el medio ambiente."],
-          ["¿Es seguro para niños y mascotas?", "Por supuesto. Usamos productos profesionales que son seguros una vez que las superficies están secas."],
-          ["¿Puedo pedir cita los fines de semana?", "Sí, ofrecemos citas flexibles, incluidos sábados y domingos."],
-          ["¿Cómo puedo pedir un presupuesto?", "Puedes escribirnos por WhatsApp. Solo envíanos fotos y describe lo que necesitas limpiar."],
-          ["¿Ofrecen limpieza antes de la venta de una propiedad?", "¡Sí! Ofrecemos limpieza de tapicería y de aire acondicionado para propiedades en venta — con un descuento especial por servicios combinados."],
-          ["¿Ofrecen inspecciones de propiedades a distancia?", "¡Sí! Ofrecemos inspecciones de propiedades por vídeo en inglés. También realizamos inspecciones presenciales en Barcelona y alrededores."],
-          ["¿Qué métodos de pago aceptan?", "Efectivo o Bizum. Próximamente transferencias."]
+          ["¿Cómo obtengo un presupuesto?", "Cuéntanos qué necesitas y envíanos fotos por WhatsApp. Para servicios estándar podemos dar una orientación rápida; toldos, accesos complejos y trabajos especiales se confirman tras valorar las imágenes."],
+          ["¿Cuánto tarda el servicio?", "Depende del elemento, tamaño, estado y acceso. Antes de reservar te indicamos el tiempo aproximado junto con la propuesta."],
+          ["¿Cuánto tarda en secar la tapicería?", "El secado depende del tejido, la ventilación, la temperatura y la humedad. Nuestro Climate Intelligence te ayuda a ver las condiciones de secado de tu zona."],
+          ["¿Trabajáis con toldos y tejidos exteriores?", "Sí. Valoramos tamaño, construcción, suciedad y acceso antes de confirmar el método y el precio."],
+          ["¿Qué incluye el cuidado del aire acondicionado?", "FCT ofrece cuidado higiénico dentro de su alcance. Cuando se requiere mantenimiento o intervención técnica, coordinamos el trabajo con partners habilitados RITE."],
+          ["¿Trabajáis con viviendas vacacionales y segundas residencias?", "Sí. Property Care está pensado para hogares, segundas residencias y alojamientos turísticos, con coordinación según las necesidades de cada propiedad."]
         ]
       },
       en: {
@@ -3315,18 +3312,14 @@ calc_cta_top: "Calculate price",
           "Provide the address and inspection goal so we can arrange the date and access.",
         svc_ins_price: "From €50",
 
-        faqTitle: "Frequently Asked Questions",
+        faqTitle: "Good to know",
         faqs: [
-          ["How long does a cleaning take?", "Usually 1 to 3 hours, depending on the item and condition."],
-          ["Do you offer drying service?", "Yes, we offer express drying for upholstery in Marbella and Sevilla. Your furniture is usually dry and ready to use within 4–6 hours after cleaning."],
-          ["Can you clean outdoor furniture or boat cushions?", "Yes, we specialize in cleaning boat upholstery, terrace furniture, and outdoor fabrics."],
-          ["Do you use eco-friendly products?", "Yes, we prioritize safe, non-toxic, and eco-friendly cleaning solutions."],
-          ["Is it safe for children and pets?", "Absolutely. We use professional products that are safe once the cleaned surfaces are dry."],
-          ["Can I schedule a service on weekends?", "Yes, we offer flexible appointments, including Saturdays and Sundays."],
-          ["How do I request a quote?", "You can contact us via WhatsApp. Just send photos and describe your cleaning needs."],
-          ["Do you offer pre-sale cleaning?", "Yes! We offer upholstery and air conditioner cleaning for properties before sale — with a special discount for combined services."],
-          ["Do you offer remote property inspections?", "Yes! We offer video property inspections in English. We also provide on-site property inspections in Barcelona and surrounding areas."],
-          ["What payment methods do you accept?", "Cash or Bizum. Bank transfers coming soon."]
+          ["How do I get a quote?", "Tell us what you need and send photos via WhatsApp. For standard services we can usually give a quick indication; awnings, complex access and special jobs are confirmed after photo assessment."],
+          ["How long does the service take?", "It depends on the item, size, condition and access. Before booking, we give you an approximate duration together with the proposal."],
+          ["How long does upholstery take to dry?", "Drying depends on the fabric, ventilation, temperature and humidity. Our Climate Intelligence helps you check drying conditions in your area."],
+          ["Do you work with awnings and outdoor fabrics?", "Yes. We assess size, construction, condition and access before confirming the method and price."],
+          ["What does air-conditioning care include?", "FCT provides hygienic care within its scope. When maintenance or technical intervention is required, we coordinate the work with RITE-authorised partners."],
+          ["Do you work with holiday rentals and second homes?", "Yes. Property Care is designed for homes, second homes and holiday rentals, with coordination adapted to each property."]
         ]
       }
     };
