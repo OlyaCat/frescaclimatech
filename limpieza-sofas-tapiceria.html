@@ -435,9 +435,9 @@ footer a{
 </style><style id="fct-upholstery-results-v2">
 .fct-uph-results{max-width:none;background:#171714;color:#f5f0e7;padding:74px max(28px,6vw)}.fct-uph-results-head{max-width:1380px;margin:0 auto 40px;display:grid;grid-template-columns:.5fr 1fr .68fr;gap:52px;align-items:end}.fct-uph-results-kicker{color:#b7842b;font:700 10px/1 'Outfit',sans-serif;letter-spacing:.15em}.fct-uph-results h2{margin:0;font:400 clamp(42px,4.5vw,64px)/.94 'Outfit',sans-serif;letter-spacing:-.05em}.fct-uph-results-head p{margin:0;color:#9c978f;font:400 13px/1.55 'Outfit',sans-serif;max-width:390px}.fct-uph-results-grid{max-width:1380px;margin:auto;display:grid;grid-template-columns:1.15fr .85fr .85fr;gap:14px;align-items:start}.fct-uph-result{margin:0}.fct-uph-result img{width:100%;height:300px;display:block;object-fit:cover;filter:saturate(.88)}.fct-uph-result-main img{height:410px}.fct-uph-result figcaption{display:flex;justify-content:space-between;gap:20px;padding:11px 0 0;color:#817d75;font:600 8px/1.2 'Outfit',sans-serif;letter-spacing:.08em;border-top:1px solid #35332f;margin-top:9px}.fct-uph-results-foot{max-width:1380px;margin:38px auto 0;padding-top:14px;border-top:1px solid #35332f;display:flex;justify-content:space-between;gap:24px;color:#77736c;font:600 8px/1.2 'Outfit',sans-serif;letter-spacing:.08em}.fct-uph-results-foot a{color:#c5c0b7;text-decoration:none}
 @media(max-width:768px){.fct-uph-results{padding:58px 22px}.fct-uph-results-head{grid-template-columns:1fr;gap:15px;margin-bottom:30px}.fct-uph-results-grid{grid-template-columns:1fr}.fct-uph-result img,.fct-uph-result-main img{height:300px}.fct-uph-results-foot{flex-direction:column}}
-</style></head>
+</style><style id="fct-uph-lang-v2">.en-copy{display:none}.fct-lang-switch{position:fixed;top:18px;right:150px;z-index:1200;background:rgba(238,233,223,.88);border:1px solid rgba(23,23,20,.18);padding:7px 10px;font:600 9px/1 Outfit,Arial,sans-serif;letter-spacing:.08em;cursor:pointer;color:#171714}@media(max-width:768px){.fct-lang-switch{right:92px;top:17px}}</style></head>
 
-<body>
+<body><button class="fct-lang-switch" id="fctLangSwitch" type="button">ES / EN</button>
 
 <div class="page">
 
@@ -493,28 +493,30 @@ footer a{
   </section>
 
   <section class="section fct-uph-results" id="galeria">
-    <div class="fct-uph-results-head">
-      <div class="fct-uph-results-kicker">REAL WORK · FCT</div>
-      <h2>Care you<br>can see.</h2>
-      <p>Real upholstery care by FCT. Different fabrics, different situations — assessed before we clean.</p>
-    </div>
-
-    <div class="fct-uph-results-grid">
-      <figure class="fct-uph-result fct-uph-result-main">
-        <img src="sofa_result.jpg" alt="Real upholstery cleaning result by FrescaClimaTech">
-        <figcaption><span>01</span><span>SOFA · REAL FCT WORK</span></figcaption>
-      </figure>
-      <figure class="fct-uph-result">
-        <img src="BCN_sofa1.png" alt="Sofa cared for by FrescaClimaTech">
-        <figcaption><span>02</span><span>UPHOLSTERY · FCT</span></figcaption>
-      </figure>
-      <figure class="fct-uph-result">
-        <img src="Lloret_sofa.png" alt="Upholstery care by FrescaClimaTech">
-        <figcaption><span>03</span><span>TEXTILE CARE · FCT</span></figcaption>
-      </figure>
-    </div>
-    <div class="fct-uph-results-foot"><span>REAL WORK. NO STOCK IMAGERY.</span><a href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto%20para%20limpieza%20de%20sof%C3%A1s%20y%20tapicer%C3%ADa.%20Puedo%20enviar%20fotos%20ahora." target="_blank" rel="noopener">SEND PHOTOS FOR ASSESSMENT ↗</a></div>
-  </section>
+  <div class="fct-uph-results-head">
+    <div class="fct-uph-results-kicker"><span class="es-copy">TRABAJOS REALES · FCT</span><span class="en-copy">REAL WORK · FCT</span></div>
+    <h2><span class="es-copy">El cuidado<br>se ve.</span><span class="en-copy">Care you<br>can see.</span></h2>
+    <p><span class="es-copy">Sofás, colchones, alfombras y otros textiles. Cada material y cada estado requieren una valoración diferente.</span><span class="en-copy">Sofas, mattresses, rugs and other textiles. Every material and condition calls for a different assessment.</span></p>
+  </div>
+  <div class="fct-uph-results-grid">
+    <figure class="fct-uph-result fct-uph-result-main">
+      <img src="card_sofa.jpg" alt="Trabajo real de cuidado de sofá por FrescaClimaTech">
+      <figcaption><span>01</span><span><span class="es-copy">SOFÁS · FCT</span><span class="en-copy">SOFAS · FCT</span></span></figcaption>
+    </figure>
+    <figure class="fct-uph-result">
+      <img src="images/mattress-cleaning.jpg" alt="Limpieza profesional de colchón por FrescaClimaTech">
+      <figcaption><span>02</span><span><span class="es-copy">COLCHONES · FCT</span><span class="en-copy">MATTRESSES · FCT</span></span></figcaption>
+    </figure>
+    <figure class="fct-uph-result">
+      <img src="fabric_cleaning.png" alt="Cuidado profesional de textiles por FrescaClimaTech">
+      <figcaption><span>03</span><span><span class="es-copy">ALFOMBRAS & TEXTILES · FCT</span><span class="en-copy">RUGS & TEXTILES · FCT</span></span></figcaption>
+    </figure>
+  </div>
+  <div class="fct-uph-results-foot">
+    <span><span class="es-copy">TRABAJO REAL. SIN IMÁGENES DE STOCK.</span><span class="en-copy">REAL WORK. NO STOCK IMAGERY.</span></span>
+    <a href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto%20para%20limpieza%20de%20textiles.%20Puedo%20enviar%20fotos%20ahora." target="_blank" rel="noopener"><span class="es-copy">ENVIAR FOTOS PARA VALORACIÓN ↗</span><span class="en-copy">SEND PHOTOS FOR ASSESSMENT ↗</span></a>
+  </div>
+</section>
 
   <section class="section">
     <h2 class="section-title">Qué incluye el servicio</h2>
@@ -690,5 +692,7 @@ footer a{
   </p>
 </footer>
 
-</body>
+<script id="fct-uph-lang-v2">
+(function(){var b=document.getElementById('fctLangSwitch'),l=localStorage.getItem('fctLang')||'es';function setLang(x){l=x;document.documentElement.lang=x;document.querySelectorAll('.es-copy').forEach(function(e){e.style.display=x==='es'?'':'none'});document.querySelectorAll('.en-copy').forEach(function(e){e.style.display=x==='en'?'':'none'});localStorage.setItem('fctLang',x)}b.addEventListener('click',function(){setLang(l==='es'?'en':'es')});setLang(l)})();
+</script></body>
 </html>
