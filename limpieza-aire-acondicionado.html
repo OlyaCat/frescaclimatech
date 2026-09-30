@@ -444,7 +444,7 @@ footer a{
 
   <section class="hero fct-air-hero">
     <div class="hero-media">
-      <video autoplay muted loop playsinline preload="auto" poster="card_air.jpg">
+      <video id="fct-air-hero-video" autoplay muted loop playsinline preload="auto" poster="card_air.jpg">
         <source src="images/air_cleaning.mp4" type="video/mp4">
       </video>
     </div>
@@ -647,5 +647,5 @@ footer a{
   </p>
 </footer>
 
-<script id="fct-air-lang-v1">(function(){function sh(e,on){if(!on){e.style.display='none';return}e.style.display=(/^(P|DIV|H1|H2|H3)$/.test(e.tagName))?'block':'inline'}function setLang(l){l=l==='en'?'en':'es';document.documentElement.lang=l;try{localStorage.setItem('fctLang',l);localStorage.setItem('lang',l)}catch(e){}document.querySelectorAll('.es-copy').forEach(x=>sh(x,l==='es'));document.querySelectorAll('.en-copy').forEach(x=>sh(x,l==='en'));document.querySelectorAll('[data-fct-lang]').forEach(b=>b.setAttribute('aria-current',b.dataset.fctLang===l?'true':'false'))}document.addEventListener('DOMContentLoaded',()=>{let l='es';try{l=localStorage.getItem('fctLang')||localStorage.getItem('lang')||'es'}catch(e){}setLang(l);document.querySelectorAll('[data-fct-lang]').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.fctLang)))})})();</script></body>
+<script id="fct-air-lang-v1">(function(){function sh(e,on){if(!on){e.style.display='none';return}e.style.display=(/^(P|DIV|H1|H2|H3)$/.test(e.tagName))?'block':'inline'}function setLang(l){l=l==='en'?'en':'es';document.documentElement.lang=l;try{localStorage.setItem('fctLang',l);localStorage.setItem('lang',l)}catch(e){}document.querySelectorAll('.es-copy').forEach(x=>sh(x,l==='es'));document.querySelectorAll('.en-copy').forEach(x=>sh(x,l==='en'));document.querySelectorAll('[data-fct-lang]').forEach(b=>b.setAttribute('aria-current',b.dataset.fctLang===l?'true':'false'))}document.addEventListener('DOMContentLoaded',()=>{let l='es';try{l=localStorage.getItem('fctLang')||localStorage.getItem('lang')||'es'}catch(e){}setLang(l);document.querySelectorAll('[data-fct-lang]').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.fctLang)))})})();</script><script id="fct-air-video-loop-v3">(function(){document.addEventListener('DOMContentLoaded',function(){var v=document.getElementById('fct-air-hero-video');if(!v)return;v.loop=false;v.addEventListener('timeupdate',function(){if(v.duration&&v.currentTime>=Math.max(0,v.duration-2.4)){v.currentTime=0;v.play().catch(function(){})}});v.addEventListener('ended',function(){v.currentTime=0;v.play().catch(function(){})});});})();</script></body>
 </html>
