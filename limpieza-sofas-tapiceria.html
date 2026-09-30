@@ -432,6 +432,9 @@ footer a{
 .topbar{position:absolute;top:0;left:0;width:100%;z-index:1000;padding:24px max(28px,6vw);background:transparent;backdrop-filter:none;border:0}.brand{gap:0;font-size:0;color:#171714}.brand img{height:auto;width:96px;filter:none}.top-wa{background:transparent;color:#171714;padding:8px 0;border-radius:0;border-bottom:1px solid #171714;font:600 10px/1 'Outfit',sans-serif;letter-spacing:.08em;text-transform:uppercase}
 .hero{height:auto;min-height:0;background:#eee9df;padding:112px max(28px,6vw) 66px;overflow:hidden}.hero-media{position:relative;inset:auto;max-width:1380px;margin:0 auto;display:grid;grid-template-columns:.92fr 1.08fr;min-height:590px}.hero-media video{display:none}.hero-media:after{content:"";grid-column:2;background:url('sofa_result.jpg') center/cover no-repeat;min-height:590px}.hero-overlay{display:none}.hero-content{position:absolute;z-index:2;left:max(28px,6vw);top:112px;width:calc(46% - max(28px,6vw));max-width:610px;height:590px;margin:0;padding:44px 42px 44px 0;justify-content:center;color:#171714}.kicker{color:#a87822;font-size:10px;letter-spacing:.15em;margin-bottom:20px}.hero h1{color:#171714;font:400 clamp(50px,5.2vw,78px)/.92 'Outfit',sans-serif;letter-spacing:-.055em;max-width:620px}.hero h1 em{color:#171714;font-style:normal}.hero-text{margin-top:24px;max-width:520px;color:#666057;font-size:14px;line-height:1.55}.hero-actions{gap:24px;margin-top:28px;align-items:center}.btn-primary,.btn-secondary{border-radius:0;background:transparent;backdrop-filter:none;padding:9px 0;font-size:10px;letter-spacing:.08em;text-transform:uppercase}.btn-primary{color:#171714;border-bottom:1px solid #171714}.btn-primary:hover{transform:none;color:#a87822;border-color:#a87822}.btn-secondary{color:#716b62;border:0;border-bottom:1px solid #aaa39a}
 @media(max-width:768px){.topbar{padding:20px 22px}.brand img{width:84px}.hero{padding:92px 22px 44px}.hero-media{display:block;min-height:0}.hero-media:after{display:block;min-height:360px;margin-top:390px;background-position:center}.hero-content{left:22px;right:22px;top:92px;width:auto;height:370px;padding:20px 0;justify-content:center}.hero h1{font-size:48px}.hero-text{font-size:13px}}
+</style><style id="fct-upholstery-results-v2">
+.fct-uph-results{max-width:none;background:#171714;color:#f5f0e7;padding:74px max(28px,6vw)}.fct-uph-results-head{max-width:1380px;margin:0 auto 40px;display:grid;grid-template-columns:.5fr 1fr .68fr;gap:52px;align-items:end}.fct-uph-results-kicker{color:#b7842b;font:700 10px/1 'Outfit',sans-serif;letter-spacing:.15em}.fct-uph-results h2{margin:0;font:400 clamp(42px,4.5vw,64px)/.94 'Outfit',sans-serif;letter-spacing:-.05em}.fct-uph-results-head p{margin:0;color:#9c978f;font:400 13px/1.55 'Outfit',sans-serif;max-width:390px}.fct-uph-results-grid{max-width:1380px;margin:auto;display:grid;grid-template-columns:1.15fr .85fr .85fr;gap:14px;align-items:start}.fct-uph-result{margin:0}.fct-uph-result img{width:100%;height:300px;display:block;object-fit:cover;filter:saturate(.88)}.fct-uph-result-main img{height:410px}.fct-uph-result figcaption{display:flex;justify-content:space-between;gap:20px;padding:11px 0 0;color:#817d75;font:600 8px/1.2 'Outfit',sans-serif;letter-spacing:.08em;border-top:1px solid #35332f;margin-top:9px}.fct-uph-results-foot{max-width:1380px;margin:38px auto 0;padding-top:14px;border-top:1px solid #35332f;display:flex;justify-content:space-between;gap:24px;color:#77736c;font:600 8px/1.2 'Outfit',sans-serif;letter-spacing:.08em}.fct-uph-results-foot a{color:#c5c0b7;text-decoration:none}
+@media(max-width:768px){.fct-uph-results{padding:58px 22px}.fct-uph-results-head{grid-template-columns:1fr;gap:15px;margin-bottom:30px}.fct-uph-results-grid{grid-template-columns:1fr}.fct-uph-result img,.fct-uph-result-main img{height:300px}.fct-uph-results-foot{flex-direction:column}}
 </style></head>
 
 <body>
@@ -489,19 +492,28 @@ footer a{
     </div>
   </section>
 
-  <section class="section" id="galeria">
-    <h2 class="section-title">Resultados reales</h2>
-
-    <p class="section-text">
-      Casos reales de limpieza de sofás, sillones y tapicería. El resultado depende del tejido, la antigüedad de las manchas y el nivel de suciedad.
-    </p>
-
-    <div class="gallery">
-      <img src="images/sofa-grey-limpieza-antes-despues.png" alt="Sofá gris antes y después limpieza profesional Barcelona">
-      <img src="images/limpieza-sofa-barcelona-antes-despues.png" alt="Mancha roja eliminada en sofá">
-      <img src="images/limpieza-sofa-granada-antes-despues.png" alt="Sofá Chesterfield limpieza Granada">
-      <img src="images/sillon-antes-despues.png" alt="Sillón antes y después limpieza profesional">
+  <section class="section fct-uph-results" id="galeria">
+    <div class="fct-uph-results-head">
+      <div class="fct-uph-results-kicker">REAL WORK · FCT</div>
+      <h2>Care you<br>can see.</h2>
+      <p>Real upholstery care by FCT. Different fabrics, different situations — assessed before we clean.</p>
     </div>
+
+    <div class="fct-uph-results-grid">
+      <figure class="fct-uph-result fct-uph-result-main">
+        <img src="sofa_result.jpg" alt="Real upholstery cleaning result by FrescaClimaTech">
+        <figcaption><span>01</span><span>SOFA · REAL FCT WORK</span></figcaption>
+      </figure>
+      <figure class="fct-uph-result">
+        <img src="BCN_sofa1.png" alt="Sofa cared for by FrescaClimaTech">
+        <figcaption><span>02</span><span>UPHOLSTERY · FCT</span></figcaption>
+      </figure>
+      <figure class="fct-uph-result">
+        <img src="Lloret_sofa.png" alt="Upholstery care by FrescaClimaTech">
+        <figcaption><span>03</span><span>TEXTILE CARE · FCT</span></figcaption>
+      </figure>
+    </div>
+    <div class="fct-uph-results-foot"><span>REAL WORK. NO STOCK IMAGERY.</span><a href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto%20para%20limpieza%20de%20sof%C3%A1s%20y%20tapicer%C3%ADa.%20Puedo%20enviar%20fotos%20ahora." target="_blank" rel="noopener">SEND PHOTOS FOR ASSESSMENT ↗</a></div>
   </section>
 
   <section class="section">
