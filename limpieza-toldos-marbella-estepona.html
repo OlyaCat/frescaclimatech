@@ -415,27 +415,25 @@ footer a{
 }
 </style>
 <script src="cookie-consent.js"></script>
-</head>
+<style id="fct-awning-hero-v1">
+.topbar{position:relative!important;height:72px!important;padding:0 28px!important;background:#fbf8f1!important;border-bottom:1px solid rgba(23,23,20,.09)!important;backdrop-filter:none!important}.brand{font-size:0!important}.brand img{width:92px!important;height:auto!important;max-height:42px!important}.fct-awning-nav{display:flex;align-items:center;gap:7px}.fct-awning-nav button{border:0!important;background:none!important;padding:4px!important;font:600 11px Outfit,sans-serif;color:#171714;cursor:pointer}.fct-awning-nav button[aria-current="true"]{color:#a87822}.fct-awning-nav>span{font-size:11px}.top-wa{margin-left:10px!important;border:1px solid #171714!important;background:transparent!important;color:#171714!important;border-radius:0!important;padding:9px 13px!important;font-size:13px!important;font-weight:400!important}
+.hero.fct-awning-hero{height:auto!important;min-height:0!important;background:#eee9df!important;display:grid!important;grid-template-columns:46% 54%!important;align-items:stretch!important;overflow:hidden!important}.fct-awning-hero .hero-media{position:relative!important;inset:auto!important;grid-column:2;grid-row:1;min-height:690px}.fct-awning-hero .hero-media video{width:100%;height:100%;object-fit:cover;object-position:center;display:block}.fct-awning-hero .hero-overlay{display:none!important}.fct-awning-hero .hero-content{grid-column:1;grid-row:1;max-width:none!important;margin:0!important;height:auto!important;padding:92px max(42px,6vw)!important;justify-content:center!important}.fct-awning-hero .kicker{color:#a87822!important;font-size:10px!important;letter-spacing:.14em!important;margin-bottom:30px!important}.fct-awning-hero h1{color:#171714!important;font-size:clamp(52px,5vw,78px)!important;line-height:.94!important;font-weight:400!important;letter-spacing:-.055em!important;max-width:620px!important}.fct-awning-hero h1 em{color:#171714!important;font-style:normal!important}.fct-awning-hero .hero-text{margin-top:28px!important;color:#655f57!important;font-size:15px!important;line-height:1.55!important;max-width:520px!important}.fct-awning-hero .hero-actions{margin-top:34px!important;gap:28px!important}.fct-awning-hero .btn-primary,.fct-awning-hero .btn-secondary{padding:0 0 6px!important;border-radius:0!important;background:none!important;backdrop-filter:none!important;font-size:11px!important;font-weight:600!important;letter-spacing:.06em!important;text-transform:uppercase!important}.fct-awning-hero .btn-primary{color:#171714!important;border-bottom:1px solid #171714!important}.fct-awning-hero .btn-secondary{color:#777168!important;border:0!important;border-bottom:1px solid #b9b2a8!important}.en-copy{display:none}
+@media(max-width:800px){.topbar{height:64px!important;padding:0 20px!important}.brand img{width:78px!important}.top-wa{display:none!important}.hero.fct-awning-hero{grid-template-columns:1fr!important}.fct-awning-hero .hero-content{grid-column:1;grid-row:1;padding:62px 22px!important}.fct-awning-hero .hero-media{grid-column:1;grid-row:2;min-height:420px}.fct-awning-hero h1{font-size:50px!important}}
+</style></head>
 
 <body>
 
 <div class="page">
 
   <div class="topbar">
-    <a href="/" class="brand">
-      <img src="fct_logo_transparent.svg" alt="FrescaClimaTech logo">
-      FrescaClimaTech
-    </a>
-
-    <a class="top-wa"
-       href="https://wa.me/34657336353?text=Hola%2C%20quiero%20presupuesto%20para%20limpieza%20de%20toldos.%20Puedo%20enviar%20fotos%20ahora."
-       target="_blank"
-       rel="noopener">
-      WhatsApp
-    </a>
+    <a href="/" class="brand"><img src="FCT_logo_vector.svg" alt="FCT"></a>
+    <div class="fct-awning-nav">
+      <button type="button" data-fct-lang="es" aria-current="true">ES</button><span>/</span><button type="button" data-fct-lang="en">EN</button>
+      <a class="top-wa" href="https://wa.me/34657336353?text=Hola%2C%20quiero%20una%20valoraci%C3%B3n%20para%20limpieza%20de%20toldos.%20Puedo%20enviar%20fotos%20ahora." target="_blank" rel="noopener">WhatsApp</a>
+    </div>
   </div>
 
-  <section class="hero">
+  <section class="hero fct-awning-hero">
     <div class="hero-media">
       <video autoplay muted loop playsinline preload="auto" poster="images/toldos-hero.jpg">
         <source src="images/Limpieza-profesional-toldos.mp4" type="video/mp4">
@@ -445,29 +443,22 @@ footer a{
     <div class="hero-overlay"></div>
 
     <div class="hero-content">
-      <div class="kicker">
-        Marbella · Estepona · Costa del Sol
-      </div>
+      <div class="kicker">OUTDOOR & AWNING CARE · FCT</div>
 
-      <h1>
-        Limpieza profesional de
-        <em>Toldos</em>
-      </h1>
+      <h1><span class="es-copy">Tu exterior,<br><em>mejor cuidado.</em></span><span class="en-copy">Your outdoor space,<br><em>better cared for.</em></span></h1>
 
-      <p class="hero-text">
-        Cuidamos toldos, terrazas y tejidos exteriores afectados por polvo, humedad, salitre y suciedad ambiental. Servicio ideal para viviendas, negocios, terrazas y propiedades cerca del mar.
-      </p>
+      <p class="hero-text"><span class="es-copy">Cuidado profesional de toldos y tejidos exteriores expuestos al sol, polvo, humedad y ambiente costero.</span><span class="en-copy">Professional care for awnings and outdoor fabrics exposed to sun, dust, humidity and coastal conditions.</span></p>
 
       <div class="hero-actions">
         <a class="btn-primary"
            href="https://wa.me/34657336353?text=Hola%2C%20quiero%20presupuesto%20para%20limpieza%20de%20toldos.%20Puedo%20enviar%20fotos%20ahora."
            target="_blank"
            rel="noopener">
-          Solicitar presupuesto
+          <span class="es-copy">Solicitar valoración</span><span class="en-copy">Request an assessment</span>
         </a>
 
         <a class="btn-secondary" href="#galeria">
-          Ver resultados
+          <span class="es-copy">Ver trabajos</span><span class="en-copy">View our work</span>
         </a>
       </div>
     </div>
@@ -645,5 +636,5 @@ footer a{
   </p>
 </footer>
 
-</body>
+<script id="fct-awning-lang-v1">(function(){function sh(e,on){if(!on){e.style.display='none';return}e.style.display=(/^(P|DIV|H1|H2|H3)$/.test(e.tagName))?'block':'inline'}function setLang(l){l=l==='en'?'en':'es';document.documentElement.lang=l;try{localStorage.setItem('fctLang',l);localStorage.setItem('lang',l)}catch(e){}document.querySelectorAll('.es-copy').forEach(x=>sh(x,l==='es'));document.querySelectorAll('.en-copy').forEach(x=>sh(x,l==='en'));document.querySelectorAll('[data-fct-lang]').forEach(b=>b.setAttribute('aria-current',b.dataset.fctLang===l?'true':'false'))}document.addEventListener('DOMContentLoaded',()=>{let l='es';try{l=localStorage.getItem('fctLang')||localStorage.getItem('lang')||'es'}catch(e){}setLang(l);document.querySelectorAll('[data-fct-lang]').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.fctLang)))})})();</script></body>
 </html>
