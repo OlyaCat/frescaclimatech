@@ -488,6 +488,9 @@ html[lang="en"] .fct-cb-care .es-copy{display:none!important}
 </style><style id="fct-cb-final-v1">
 .fct-cb-final{background:#fbf8f1;color:#171714;padding:74px max(28px,6vw)}.fct-cb-final>p,.fct-cb-final>h2,.fct-cb-final-row{max-width:1380px;margin-left:auto;margin-right:auto}.fct-cb-final>p{margin-bottom:26px;color:#a87822;font:700 10px/1 Outfit,sans-serif;letter-spacing:.15em}.fct-cb-final h2{margin-top:0;margin-bottom:30px;font:400 clamp(48px,5vw,72px)/.94 Outfit,sans-serif;letter-spacing:-.055em}.fct-cb-final h2 .es-copy,.fct-cb-final h2 .en-copy{font-size:inherit!important;color:inherit!important}.fct-cb-final-row{display:flex;justify-content:space-between;align-items:end;gap:30px;border-top:1px solid #cec7bc;padding-top:22px}.fct-cb-final-row>p{margin:0;max-width:680px;color:#6e685f;font-size:15px;line-height:1.55}.fct-cb-final-row>a{color:#171714;border-bottom:1px solid #171714;padding-bottom:6px;font-size:11px;font-weight:700;letter-spacing:.07em}.fct-cb-footer-mini{background:#171714!important;color:#77736d!important;padding:20px max(28px,6vw)!important;display:grid!important;grid-template-columns:1fr auto 1fr!important;align-items:center!important;gap:24px!important;border-top:1px solid #34322f!important;font:400 10px/1.3 Outfit,sans-serif!important;letter-spacing:.05em!important;text-align:left!important}.fct-cb-footer-mini>span:nth-child(2){text-align:center}.fct-cb-footer-mini>a{justify-self:end;color:#969189!important}html[lang="es"] .fct-cb-final .en-copy,html[lang="es"] .fct-cb-footer-mini .en-copy{display:none!important}html[lang="en"] .fct-cb-final .es-copy,html[lang="en"] .fct-cb-footer-mini .es-copy{display:none!important}
 @media(max-width:800px){.fct-cb-final{padding:58px 22px}.fct-cb-final-row{align-items:flex-start;flex-direction:column}.fct-cb-footer-mini{grid-template-columns:1fr!important;gap:7px!important;padding:18px 22px!important}.fct-cb-footer-mini>span:nth-child(2){text-align:left}.fct-cb-footer-mini>a{justify-self:start}}
+</style><style id="fct-cb-legal-v2">
+.fct-cb-footer-mini{display:none!important}.fct-cb-legal{background:#fbf8f1;color:#9a948b;padding:0 max(28px,6vw) 22px;display:flex;align-items:center;gap:7px;font:400 9px/1.2 Outfit,sans-serif;letter-spacing:.04em}.fct-cb-legal a,.fct-cb-legal button{color:#9a948b;font:inherit;background:none;border:0;padding:0;cursor:pointer}.fct-cb-legal a:hover,.fct-cb-legal button:hover{color:#171714}html[lang="es"] .fct-cb-legal .en-copy{display:none!important}html[lang="en"] .fct-cb-legal .es-copy{display:none!important}
+@media(max-width:800px){.fct-cb-legal{padding:0 22px 18px}}
 </style></head>
 
 <body>
@@ -604,11 +607,13 @@ html[lang="en"] .fct-cb-care .es-copy{display:none!important}
     <a href="https://wa.me/34657336353?text=Hola%2C%20quiero%20consultar%20un%20servicio%20en%20Costa%20Brava." target="_blank" rel="noopener"><span class="es-copy">CUÉNTANOS QUÉ NECESITAS ↗</span><span class="en-copy">TELL US WHAT YOU NEED ↗</span></a>
   </div>
 </section>
-<footer class="fct-cb-footer-mini">
+<div class="fct-cb-legal">
   <span>© 2026 FCT</span>
-  <span>Costa Brava · Costa del Sol · Sevilla</span>
+  <span>·</span>
   <a href="/privacy.html"><span class="es-copy">Privacidad</span><span class="en-copy">Privacy</span></a>
-</footer>
+  <span>·</span>
+  <button type="button" onclick="if(window.openCookieSettings){window.openCookieSettings()}"><span class="es-copy">Cookies</span><span class="en-copy">Cookies</span></button>
+</div>
 
 <a class="floating-wa"
    id="floatingWa"
