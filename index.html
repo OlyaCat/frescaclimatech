@@ -1917,166 +1917,181 @@ footer p:first-child {
  
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-47FC0D03XH"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  /* GA4 */
-gtag('config', 'G-47FC0D03XH', { 'debug_mode': true });
-
-
-  /* Google Ads conversions */
-  gtag('config', 'AW-17340076883');
-  gtag('config', 'AW-17385730363');
 
 
 
 
-/* ── FULLSCREEN MODAL ── */
-const fsGalleries = {
-  tapiceria: [
-    { src:'images/sofa-grey-limpieza-antes-despues.png', alt:'Sofá gris · Barcelona' },
-    { src:'images/limpieza-sofa-barcelona-antes-despues.png', alt:'Mancha roja eliminada' },
-    { src:'images/limpieza-sofa-granada-antes-despues.png', alt:'Chesterfield · Granada' },
-    { src:'images/antes-despues-rojo-sofa.png', alt:'Sofá vintage' },
-    { src:'images/sillon-antes-despues.png', alt:'Sillón' },
-    { src:'images/limpieza-sofa-antes-despues.png', alt:'Sofá blanco' },
-    { src:'images/sofa_process1.jpg', alt:'Extracción en proceso' },
-    { src:'images/sofa_process2.jpg', alt:'Agua extraída' },
-    { src:'images/sofa_process3.jpg', alt:'Vapor y extracción' },
-    { src:'images/sofa_process4.jpg', alt:'Detalle costuras' },
-  ],
-  toldos: [
-  { src:'images/toldos-antes-despues-1.jpg', alt:'Toldos · Antes y después' },
-  { src:'images/toldos-antes-despues-2.jpg', alt:'Limpieza profesional de toldos' },
 
-  { src:'images/toldo-antes-despues-1.jpg', alt:'Toldo · Antes y después' },
-  { src:'images/toldo-antes-despues-2.jpg', alt:'Toldo restaurado' },
+<script src="cookie-consent.js"></script>
+<style id="fct2-home">
+:root{--fct-ink:#171714;--fct-ivory:#fbf8f1;--fct-gold:#a77b35;--fct-line:#ddd6c8}
+.fct2-hero{background:var(--fct-ivory);padding:86px 24px 76px;color:var(--fct-ink)}
+.fct2-hero-inner{max-width:1180px;margin:auto;display:grid;grid-template-columns:1.25fr .75fr;gap:70px;align-items:end}
+.fct2-kicker{font:600 12px/1.2 Outfit,Arial,sans-serif;letter-spacing:.17em;text-transform:uppercase;color:var(--fct-gold);margin:0 0 20px}
+.fct2-hero h1{font:400 clamp(52px,7vw,92px)/.94 Outfit,Arial,sans-serif;letter-spacing:-.055em;margin:0;max-width:900px}
+.fct2-lead{font:400 19px/1.55 Outfit,Arial,sans-serif;color:#59554d;max-width:620px;margin:28px 0 0}
+.fct2-side{border-top:1px solid var(--fct-line);padding-top:22px;font:400 15px/1.55 Outfit,Arial,sans-serif;color:#5c574f}
+.fct2-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.fct2-btn{display:inline-block;text-decoration:none;padding:13px 19px;border:1px solid var(--fct-ink);font:600 14px Outfit,Arial,sans-serif;color:var(--fct-ink)}.fct2-btn.dark{background:var(--fct-ink);color:var(--fct-ivory)}
+.fct2-finder{background:#171714;color:#fbf8f1;padding:56px 24px}.fct2-finder-inner{max-width:1180px;margin:auto;display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}.fct2-finder h2{font:400 clamp(32px,4vw,52px)/1 Outfit,Arial,sans-serif;letter-spacing:-.035em;margin:8px 0 14px}.fct2-finder p{color:#c8c2b7;font:400 16px/1.6 Outfit,Arial,sans-serif}.fct2-search{background:#252521;border:1px solid #45443f;padding:12px;display:flex;gap:10px}.fct2-search input{flex:1;min-width:0;border:0;background:transparent;color:#fff;font:400 16px Outfit,Arial,sans-serif;padding:10px;outline:none}.fct2-search button{border:0;background:#fbf8f1;color:#171714;padding:12px 18px;font:600 14px Outfit,Arial,sans-serif;cursor:pointer}.fct2-note{font-size:12px!important;color:#89867f!important;margin:10px 0 0!important}
+@media(max-width:760px){.fct2-hero{padding:60px 20px}.fct2-hero-inner,.fct2-finder-inner{grid-template-columns:1fr;gap:34px}.fct2-hero h1{font-size:52px}.fct2-search{display:block}.fct2-search button{width:100%;margin-top:8px}}
+</style>
+<style id="fct3-home">
+.fct2-nav{height:82px;padding:0 30px;display:flex;align-items:center;justify-content:space-between;background:#fbf8f1;color:#171714;position:relative;z-index:20;border-bottom:1px solid rgba(23,23,20,.09);font-family:Outfit,Arial,sans-serif}
+.fct2-brand img{width:172px;display:block}.fct2-links{display:flex;gap:30px;align-items:center}.fct2-links a,.fct2-nav-actions a{text-decoration:none;color:#171714;font-size:14px}.fct2-links .club-link{color:#9b702b}.fct2-nav-actions{display:flex;gap:8px;align-items:center}.fct2-nav-actions button{border:0;background:none;padding:4px;font:600 12px Outfit,Arial;cursor:pointer}.fct2-nav-wa{border:1px solid #171714;padding:10px 14px;margin-left:10px}
+.fct3-hero{min-height:720px;background:#fbf8f1;display:grid;grid-template-columns:56% 44%;color:#171714;font-family:Outfit,Arial,sans-serif}
+.fct3-copy{padding:95px max(36px,6vw) 55px;display:flex;flex-direction:column;justify-content:center}.fct3-copy h1{font:400 clamp(55px,6.4vw,96px)/.91 Outfit,Arial,sans-serif;letter-spacing:-.058em;margin:0;max-width:820px}.fct3-copy h1 em{font-style:normal;color:#9b702b}.fct3-lead{font:400 18px/1.6 Outfit,Arial,sans-serif;color:#59554d;max-width:610px;margin:30px 0 0}.fct3-locations{margin-top:48px;padding-top:18px;border-top:1px solid #d9d1c3;font-size:13px;letter-spacing:.03em;color:#615c53}
+.fct3-image{position:relative;background:url('images/mediterranean_hero.jpg') center/cover no-repeat;min-height:720px}.fct3-image:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.2))}.fct3-image-note{position:absolute;z-index:2;left:34px;bottom:34px;color:#fff;font:500 17px/1.4 Outfit,Arial,sans-serif;letter-spacing:-.01em}
+.en-copy{display:none}
+.fct3-care{background:#fbf8f1;color:#171714;padding:100px max(24px,6vw);font-family:Outfit,Arial,sans-serif}.fct3-care-head{display:grid;grid-template-columns:1fr 2fr;gap:40px;align-items:start;margin-bottom:60px}.fct3-care-head h2{font:400 clamp(38px,5vw,68px)/.98 Outfit,Arial,sans-serif;letter-spacing:-.045em;margin:0;max-width:780px}.fct3-care-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #cfc7b9}.fct3-care-grid a{color:inherit;text-decoration:none;padding:28px 24px 34px 0;border-right:1px solid #cfc7b9;margin-right:24px;min-height:210px}.fct3-care-grid a:last-child{border-right:0;margin-right:0}.fct3-care-grid span{font-size:12px;color:#a77b35}.fct3-care-grid h3{font:500 23px/1.05 Outfit,Arial,sans-serif;letter-spacing:-.025em;margin:42px 0 12px}.fct3-care-grid p{font:400 14px/1.55 Outfit,Arial,sans-serif;color:#666056;margin:0}
+@media(max-width:900px){.fct2-links{display:none}.fct3-hero{grid-template-columns:1fr}.fct3-copy{padding:70px 22px}.fct3-image{min-height:430px}.fct3-care-head{grid-template-columns:1fr}.fct3-care-grid{grid-template-columns:1fr 1fr}.fct3-care-grid a{border-bottom:1px solid #cfc7b9}.fct2-brand img{width:145px}}
+@media(max-width:560px){.fct2-nav{padding:0 16px}.fct2-nav-wa{display:none}.fct3-copy h1{font-size:53px}.fct3-care-grid{grid-template-columns:1fr}.fct3-care-grid a{border-right:0;margin-right:0}.fct3-image{min-height:360px}}
+</style>
+<style id="fct4-home">
+.fct2-nav{height:78px;background:#fbf8f1!important;padding:0 34px!important}.fct2-brand img{width:154px!important;max-height:54px;object-fit:contain}.fct2-links{gap:34px!important}.fct2-links a{font-weight:500!important}.fct4-hero{position:relative;min-height:760px;background:url('images/mediterranean_hero.jpg') center 54%/cover no-repeat;color:#171714;font-family:Outfit,Arial,sans-serif;overflow:hidden}.fct4-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(251,248,241,.97) 0%,rgba(251,248,241,.93) 37%,rgba(251,248,241,.46) 58%,rgba(251,248,241,.04) 82%)}.fct4-panel{position:relative;z-index:2;min-height:760px;width:min(760px,58vw);padding:94px 0 62px max(38px,6vw);display:flex;flex-direction:column;justify-content:center}.fct4-panel h1{font:400 clamp(58px,6.4vw,96px)/.91 Outfit,Arial,sans-serif;letter-spacing:-.058em;margin:0}.fct4-panel h1 em{font-style:normal;color:#9b702b}.fct4-panel .fct3-lead{max-width:650px}.fct4-signature{position:absolute;z-index:2;right:38px;bottom:36px;color:#fff;text-align:right;font:500 17px/1.4 Outfit,Arial,sans-serif;text-shadow:0 1px 18px rgba(0,0,0,.28)}.fct4-panel .fct3-locations{max-width:650px;margin-top:38px}.fct2-actions .fct2-btn{border-radius:0!important}.fct2-nav-wa{border-radius:0!important}
+@media(max-width:900px){.fct4-hero{min-height:780px;background-position:62% center}.fct4-overlay{background:linear-gradient(180deg,rgba(251,248,241,.97) 0%,rgba(251,248,241,.9) 55%,rgba(251,248,241,.12) 82%)}.fct4-panel{width:auto;min-height:700px;padding:68px 22px 80px;justify-content:flex-start}.fct4-panel h1{font-size:56px}.fct4-signature{right:20px;bottom:20px;font-size:14px}.fct2-nav{padding:0 18px!important}.fct2-brand img{width:138px!important}}
+</style>
+<style id="fct5-home">
+.fct4-hero{min-height:730px!important;background-position:center 56%!important}
+.fct4-overlay{background:linear-gradient(90deg,rgba(251,248,241,.88) 0%,rgba(251,248,241,.76) 25%,rgba(251,248,241,.34) 47%,rgba(251,248,241,.02) 72%)!important}
+.fct4-panel{width:min(690px,49vw)!important;min-height:730px!important;padding-left:max(42px,6vw)!important;padding-top:72px!important;padding-bottom:50px!important}
+.fct4-panel h1{font-size:clamp(58px,5.8vw,88px)!important;line-height:.92!important;text-shadow:0 1px 22px rgba(251,248,241,.42)}
+.fct4-panel .fct3-lead{max-width:570px!important;font-size:17px!important;color:#3f3b35!important}
+.fct4-panel .fct3-locations{max-width:560px!important}
+.fct4-signature{font-size:16px!important}
+.fct2-nav{position:relative!important;z-index:50!important}
+.fct2-nav-actions .fct-lang{font:600 12px Outfit,Arial,sans-serif!important}
+@media(max-width:900px){.fct4-overlay{background:linear-gradient(180deg,rgba(251,248,241,.92) 0%,rgba(251,248,241,.74) 48%,rgba(251,248,241,.08) 78%)!important}.fct4-panel{width:auto!important;min-height:690px!important;padding:60px 22px 100px!important}.fct4-panel h1{font-size:54px!important}}
+</style>
+<style id="fct6-home">
+.fct4-hero{min-height:700px!important}
+.fct4-panel{min-height:700px!important;padding-top:56px!important}
+.fct4-overlay{background:linear-gradient(90deg,rgba(251,248,241,.79) 0%,rgba(251,248,241,.62) 23%,rgba(251,248,241,.25) 44%,rgba(251,248,241,0) 68%)!important}
+.fct4-panel h1{font-size:clamp(56px,5.45vw,82px)!important}
+.fct4-panel .fct3-lead{background:rgba(251,248,241,.18);width:fit-content}
+.fct-lang[aria-current="true"]{color:#9b702b}
+</style>
+<style id="fct7-home">
+.fct7-smart{background:#171714;color:#fbf8f1;padding:92px max(28px,6vw) 58px;font-family:Outfit,Arial,sans-serif}.fct7-smart .fct2-kicker{color:#c49a53}.fct7-smart-top{max-width:1380px;margin:0 auto 54px;display:grid;grid-template-columns:1.5fr .7fr;gap:80px;align-items:end}.fct7-smart h2{font:400 clamp(42px,5.3vw,76px)/.96 Outfit,Arial,sans-serif;letter-spacing:-.045em;margin:0;max-width:950px}.fct7-smart-intro{font:400 16px/1.6 Outfit,Arial,sans-serif;color:#aaa69e;margin:0 0 5px;max-width:430px}.fct7-command{max-width:1380px;margin:0 auto;border-top:1px solid #494843;border-bottom:1px solid #494843;padding:20px 0 24px}.fct7-command-label{font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:#aaa69e;margin-bottom:13px;display:flex;align-items:center;gap:9px}.fct7-pulse{width:7px;height:7px;border-radius:50%;background:#c49a53;box-shadow:0 0 0 5px rgba(196,154,83,.12)}.fct7-command-row{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:end}.fct7-command textarea{width:100%;box-sizing:border-box;resize:none;border:0;outline:0;background:transparent;color:#fbf8f1;font:400 clamp(20px,2vw,28px)/1.35 Outfit,Arial,sans-serif;padding:10px 0}.fct7-command textarea::placeholder{color:#706e68}.fct7-command button{border:1px solid #fbf8f1;background:#fbf8f1;color:#171714;padding:15px 21px;font:600 14px Outfit,Arial,sans-serif;cursor:pointer}.fct7-flow{max-width:1380px;margin:28px auto 0;display:flex;align-items:center;gap:18px;flex-wrap:wrap;color:#8e8b84;font-size:12px;letter-spacing:.06em;text-transform:uppercase}.fct7-flow b{font-weight:500;color:#d2cec5}.fct7-flow i{font-style:normal;color:#5b5954}.fct7-beta{max-width:1380px;margin:18px auto 0;color:#6e6b65;font-size:11px}
+.fct3-care{padding-top:110px!important;padding-bottom:115px!important}.fct3-care-head{max-width:1380px;margin-left:auto!important;margin-right:auto!important}.fct3-care-grid{max-width:1380px;margin:0 auto}.fct3-care-grid a{position:relative;transition:transform .25s ease}.fct3-care-grid a:hover{transform:translateY(-4px)}.fct7-arrow{position:absolute;right:24px;top:28px;font-size:18px;color:#a77b35}.fct3-care-grid h3{padding-right:28px}
+@media(max-width:800px){.fct7-smart-top{grid-template-columns:1fr;gap:25px}.fct7-command-row{grid-template-columns:1fr}.fct7-command button{width:100%}.fct7-flow{gap:10px}.fct7-flow i{display:none}}
+</style>
+<style id="fct8-smart-compact">
+.fct7-smart{padding:66px max(28px,6vw) 42px!important}
+.fct7-smart-top{margin-bottom:34px!important;grid-template-columns:1.35fr .65fr!important;gap:60px!important}
+.fct7-smart h2{font-size:clamp(36px,4.15vw,60px)!important;line-height:.98!important;max-width:820px!important}
+.fct7-smart-intro{font-size:15px!important;max-width:390px!important}
+.fct7-command{padding:16px 0 18px!important}
+.fct7-command textarea{font-size:clamp(18px,1.55vw,23px)!important;min-height:58px!important}
+.fct7-command button{padding:13px 18px!important}
+.fct7-flow{margin-top:21px!important}
+.fct7-beta{margin-top:12px!important}
+@media(max-width:800px){.fct7-smart{padding:56px 22px 38px!important}.fct7-smart h2{font-size:39px!important}.fct7-smart-top{gap:18px!important}}
+</style>
+<style id="fct9-smart-small">
+.fct7-smart{padding:48px max(28px,6vw) 34px!important}
+.fct7-smart-top{margin-bottom:25px!important;grid-template-columns:1.3fr .55fr!important;gap:48px!important}
+.fct7-smart h2{font-size:clamp(32px,3.35vw,50px)!important;line-height:1!important;max-width:760px!important}
+.fct7-smart-intro{font-size:14px!important;line-height:1.55!important;max-width:340px!important}
+.fct7-command{padding:13px 0 15px!important}
+.fct7-command-label{margin-bottom:7px!important}
+.fct7-command textarea{font-size:clamp(16px,1.25vw,20px)!important;min-height:44px!important;padding:5px 0!important}
+.fct7-command button{padding:11px 16px!important;font-size:13px!important}
+.fct7-flow{margin-top:16px!important;font-size:11px!important}
+.fct7-beta{margin-top:8px!important;font-size:10px!important}
+@media(max-width:800px){.fct7-smart{padding:44px 22px 32px!important}.fct7-smart h2{font-size:35px!important}}
+</style>
+<style id="fct10-smart-strip">
+.fct7-smart{padding:36px max(28px,6vw) 27px!important}
+.fct7-smart-top{margin-bottom:18px!important;grid-template-columns:1.25fr .48fr!important;gap:42px!important}
+.fct7-smart .fct2-kicker{margin-bottom:14px!important}
+.fct7-smart h2{font-size:clamp(29px,2.8vw,43px)!important;line-height:1!important;max-width:690px!important}
+.fct7-smart-intro{font-size:13px!important;line-height:1.5!important;max-width:320px!important}
+.fct7-command{padding:10px 0 11px!important}
+.fct7-command-label{font-size:10px!important;margin-bottom:3px!important}
+.fct7-command textarea{font-size:clamp(15px,1.05vw,18px)!important;min-height:34px!important;padding:2px 0!important}
+.fct7-command-row{gap:14px!important}
+.fct7-command button{padding:10px 15px!important;font-size:12px!important}
+.fct7-flow{margin-top:12px!important;font-size:10px!important;gap:13px!important}
+.fct7-beta{margin-top:5px!important;font-size:9px!important}
+@media(max-width:800px){.fct7-smart{padding:38px 22px 28px!important}.fct7-smart h2{font-size:32px!important}.fct7-smart-top{gap:14px!important}}
+</style>
+<style id="fct11-care-style">
+.fct11-care{background:#fbf8f1;color:#171714;padding:92px max(28px,6vw) 100px;font-family:Outfit,Arial,sans-serif}.fct11-care-head{max-width:1380px;margin:0 auto 64px;display:grid;grid-template-columns:.62fr 1.38fr;gap:60px;align-items:start}.fct11-care-head h2{font:400 clamp(43px,5vw,70px)/.96 Outfit,Arial,sans-serif;letter-spacing:-.048em;margin:0;max-width:780px}.fct11-intro{font:400 16px/1.55 Outfit,Arial,sans-serif;color:#69635a;max-width:610px;margin:25px 0 0}.fct11-list{max-width:1380px;margin:0 auto;border-top:1px solid #cfc7b9}.fct11-list a{display:grid;grid-template-columns:65px 1.05fr 1.25fr 36px;gap:22px;align-items:center;min-height:112px;border-bottom:1px solid #cfc7b9;color:inherit;text-decoration:none;transition:padding .22s ease,background .22s ease}.fct11-list a:hover{padding-left:10px;background:rgba(167,123,53,.035)}.fct11-no{font-size:11px;color:#a77b35}.fct11-list h3{font:500 clamp(22px,2vw,29px)/1 Outfit,Arial,sans-serif;letter-spacing:-.025em;margin:0}.fct11-list p{font:400 14px/1.5 Outfit,Arial,sans-serif;color:#686259;margin:0}.fct11-go{font-size:20px;text-align:right;color:#a77b35}
+@media(max-width:800px){.fct11-care{padding:68px 22px 72px}.fct11-care-head{grid-template-columns:1fr;gap:18px;margin-bottom:44px}.fct11-list a{grid-template-columns:38px 1fr 28px;gap:12px;padding:20px 0}.fct11-list p{grid-column:2/4}.fct11-list h3{font-size:23px}}
+</style>
+<style id="fct12-proof-style">
+.fct12-proof{background:#eee9df;color:#171714;padding:90px max(28px,6vw) 80px;font-family:Outfit,Arial,sans-serif}.fct12-proof-head{max-width:1380px;margin:0 auto 48px;display:grid;grid-template-columns:.6fr 1.25fr .7fr;gap:46px;align-items:end}.fct12-proof-head h2{font:400 clamp(40px,4.4vw,64px)/.97 Outfit,Arial,sans-serif;letter-spacing:-.045em;margin:0}.fct12-proof-head>p:last-child{font:400 15px/1.6 Outfit,Arial,sans-serif;color:#69635a;margin:0 0 5px}.fct12-media{position:relative;max-width:1380px;margin:0 auto;overflow:hidden;background:#d8d1c5}.fct12-media video{width:100%;height:min(58vw,620px);object-fit:cover;display:block}.fct12-caption{position:absolute;left:22px;bottom:20px;background:#fbf8f1;color:#171714;padding:9px 12px;font-size:12px}.fct12-stats{max-width:1380px;margin:0 auto;border-bottom:1px solid #c8c0b3;display:grid;grid-template-columns:repeat(3,1fr)}.fct12-stats>div{padding:24px 24px 25px 0;border-right:1px solid #c8c0b3;margin-right:24px}.fct12-stats>div:last-child{border-right:0;margin-right:0}.fct12-stats strong{display:block;font:400 32px/1 Outfit,Arial,sans-serif;letter-spacing:-.04em}.fct12-stats span{display:block;margin-top:7px;color:#686259;font-size:12px}
+@media(max-width:800px){.fct12-proof{padding:66px 22px 58px}.fct12-proof-head{grid-template-columns:1fr;gap:16px;margin-bottom:32px}.fct12-media video{height:62vh;max-height:500px}.fct12-stats{grid-template-columns:1fr}.fct12-stats>div{border-right:0;border-bottom:1px solid #c8c0b3;margin-right:0}}
+</style>
+<style id="fct13-proof-editorial">
+.fct12-media{width:64%;margin-left:max(0px,calc((100% - 1380px)/2))!important;margin-right:auto!important}
+.fct12-media video{height:auto!important;aspect-ratio:16/9;object-fit:cover!important}
+.fct12-stats{margin-top:-86px!important;margin-left:auto!important;width:32%!important;display:grid!important;grid-template-columns:1fr!important;border-top:1px solid #c8c0b3!important;border-bottom:0!important}
+.fct12-stats>div{padding:18px 0 18px!important;border-right:0!important;border-bottom:1px solid #c8c0b3!important;margin:0!important}
+.fct12-stats strong{font-size:29px!important}
+.fct12-caption{left:16px!important;bottom:15px!important}
+@media(min-width:1500px){.fct12-media{margin-left:calc((100% - 1380px)/2)!important}}
+@media(max-width:900px){.fct12-media{width:100%!important;margin:0!important}.fct12-stats{width:100%!important;margin:0!important;grid-template-columns:repeat(3,1fr)!important}.fct12-stats>div{padding:18px 12px 18px 0!important}.fct12-media video{aspect-ratio:4/3}}
+</style>
+<style id="fct14-proof-smallfilm">
+.fct12-media{width:48%!important;max-width:760px!important;margin-left:max(28px,6vw)!important}
+.fct12-media video{width:100%!important;aspect-ratio:16/9!important;height:auto!important;object-fit:cover!important}
+.fct12-stats{width:38%!important;margin-top:-92px!important;margin-right:max(28px,6vw)!important}
+@media(min-width:1500px){.fct12-media{margin-left:calc((100% - 1380px)/2)!important}.fct12-stats{margin-right:calc((100% - 1380px)/2)!important}}
+@media(max-width:900px){.fct12-media{width:100%!important;max-width:none!important;margin:0!important}.fct12-stats{width:100%!important;margin:0!important}}
+</style>
+<style id="fct15-proof-stats">
+.fct12-proof{position:relative}
+.fct12-stats{width:38%!important;margin:-300px max(28px,6vw) 0 auto!important;border-top:1px solid #c8c0b3!important;border-bottom:1px solid #c8c0b3!important;grid-template-columns:1fr!important}
+.fct12-stats>div{display:grid!important;grid-template-columns:105px 1fr!important;align-items:baseline!important;gap:18px!important;padding:20px 0!important;border-bottom:1px solid #c8c0b3!important}
+.fct12-stats>div:last-child{border-bottom:0!important}
+.fct12-stats strong{font-size:clamp(29px,2.4vw,38px)!important}
+.fct12-stats span{margin:0!important;font-size:12px!important;text-transform:uppercase;letter-spacing:.08em}
+@media(min-width:1500px){.fct12-stats{margin-right:calc((100% - 1380px)/2)!important}}
+@media(max-width:1100px){.fct12-stats{margin-top:-230px!important}}
+@media(max-width:900px){.fct12-stats{width:100%!important;margin:0!important}.fct12-stats>div{grid-template-columns:90px 1fr!important}}
+</style>
+<style id="fct16-proof-grid">
+.fct12-proof-head{grid-template-columns:.55fr 1.05fr .72fr!important;column-gap:52px!important;margin-bottom:54px!important}
+.fct12-media{width:50%!important;max-width:720px!important;margin-left:max(28px,6vw)!important}
+.fct12-stats{width:36%!important;margin:-405px max(28px,6vw) 0 auto!important}
+.fct12-stats>div{grid-template-columns:125px 1fr!important;padding:24px 0!important}
+.fct12-stats strong{font-size:36px!important}
+.fct12-stats span{font-size:11px!important;letter-spacing:.11em!important}
+@media(min-width:1500px){.fct12-media{margin-left:calc((100% - 1380px)/2)!important}.fct12-stats{margin-right:calc((100% - 1380px)/2)!important}}
+@media(max-width:1200px){.fct12-stats{margin-top:-330px!important}}
+@media(max-width:900px){.fct12-proof-head{grid-template-columns:1fr!important}.fct12-media{width:100%!important;max-width:none!important;margin:0!important}.fct12-stats{width:100%!important;margin:0!important}.fct12-stats>div{grid-template-columns:100px 1fr!important}}
+</style>
+<style id="fct16b-proof-layout-fix">
+.fct12-body{max-width:1380px;margin:0 auto;display:grid;grid-template-columns:minmax(0,720px) minmax(360px,1fr);gap:clamp(42px,6vw,110px);align-items:start}
+.fct12-body .fct12-media{width:100%!important;max-width:720px!important;margin:0!important}
+.fct12-body .fct12-stats{width:100%!important;margin:0!important;align-self:start}
+@media(max-width:900px){.fct12-body{grid-template-columns:1fr;gap:0}.fct12-body .fct12-media,.fct12-body .fct12-stats{width:100%!important;margin:0!important}}
+</style>
+<style id="fct17-reviews-style">
+.fct17-reviews{background:#151512;color:#f5f0e7;padding:72px max(28px,6vw) 58px;font-family:Outfit,Arial,sans-serif}.fct17-review-head{max-width:1380px;margin:0 auto 38px;display:grid;grid-template-columns:.5fr 1fr .68fr;gap:52px;align-items:end}.fct17-review-head .fct2-kicker{color:#b7842b}.fct17-review-head h2{font:400 clamp(38px,4vw,58px)/.98 Outfit,Arial,sans-serif;letter-spacing:-.045em;margin:0}.fct17-review-meta{border-top:0!important;padding-top:0;display:grid;grid-template-columns:auto 1fr;gap:4px 12px;align-items:center}.fct17-review-meta strong{font:400 30px/1 Outfit,Arial,sans-serif}.fct17-review-meta>span{color:#b7842b;letter-spacing:.1em;font-size:12px}.fct17-review-meta p{grid-column:1/3;color:#969188;font:400 11px/1.45 Outfit,Arial,sans-serif;margin:5px 0 0}.fct17-widget{max-width:1120px;margin:0 auto;padding:10px 0 8px;border:0!important}.fct17-review-foot{max-width:1380px;margin:4px auto 0;padding-top:10px;border:0!important;display:flex;justify-content:space-between;gap:24px;color:#8f8a82;font:500 10px/1.2 Outfit,Arial,sans-serif;text-transform:uppercase;letter-spacing:.09em}.fct17-review-foot a{color:#d9d4ca;text-decoration:none}.fct17-review-foot a:hover{color:#b7842b}
+@media(max-width:800px){.fct17-reviews{padding:60px 22px 48px}.fct17-review-head{grid-template-columns:1fr;gap:17px;margin-bottom:28px}.fct17-review-meta{margin-top:7px}.fct17-widget{padding:14px 0}.fct17-review-foot{flex-direction:column;gap:10px}}
+</style>
+<style id="fct18-climate-style">
+.fct18-climate{background:#eee9df;color:#171714;padding:76px max(28px,6vw) 68px;font-family:Outfit,Arial,sans-serif}.fct18-climate-head{max-width:1380px;margin:0 auto 44px;display:grid;grid-template-columns:.5fr 1fr .68fr;gap:52px;align-items:end}.fct18-climate-head h2{font:400 clamp(38px,4vw,58px)/.98 Outfit,Arial,sans-serif;letter-spacing:-.045em;margin:0}.fct18-climate-head>p:last-child{color:#69635a;font-size:15px;line-height:1.55;margin:0 0 5px}.fct18-panel{max-width:1380px;margin:0 auto;border-top:1px solid #bdb5a8;border-bottom:1px solid #bdb5a8}.fct18-summary{display:grid;grid-template-columns:1fr 1fr;align-items:end;padding:20px 0 21px}.fct18-area{padding-right:34px}.fct18-condition{padding-left:28px;border-left:1px solid #c8c0b3}.fct18-label{display:block;color:#9d7428;font-size:10px;font-weight:700;letter-spacing:.15em;margin-bottom:11px}.fct18-area select{appearance:none;border:0;border-bottom:1px solid #8e887f;background:transparent;border-radius:0;padding:0 28px 6px 0;font:400 21px/1.2 Outfit,Arial,sans-serif;color:#171714;min-width:250px}.fct18-costa-note{display:none;color:#8a847a;font-size:11px;margin-top:8px}.fct18-area:has(option[value="costatropical"]:checked) .fct18-costa-note{display:block}.fct18-condition strong{display:block;font:500 18px/1.3 Outfit,Arial,sans-serif;max-width:520px}.fct18-metrics{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid #c8c0b3;border-bottom:1px solid #c8c0b3}.fct18-metrics>div{padding:24px 26px 22px 0;border-right:1px solid #c8c0b3}.fct18-metrics>div+div{padding-left:34px}.fct18-metrics>div:last-child{border-right:0}.fct18-metrics strong{display:block;font:400 clamp(42px,3.7vw,54px)/1 Outfit,Arial,sans-serif;letter-spacing:-.045em;margin-bottom:9px}.fct18-metrics em{font-style:normal;font-size:16px;color:#777168;margin-left:3px}.fct18-metrics div>span{display:block;text-transform:uppercase;letter-spacing:.11em;color:#706a61;font-size:10px}.fct18-best{display:grid;grid-template-columns:.52fr .72fr 1.76fr;gap:26px;padding:20px 0 18px;align-items:baseline}.fct18-best .fct18-label{margin:0}.fct18-best strong{font-size:16px;font-weight:500}.fct18-best>span:last-child{color:#777168;font-size:12px}.fct18-advice{border-top:1px solid #c8c0b3;padding:13px 0}.fct18-advice #clima-status{display:none}.fct18-advice #clima-tip{margin:0;color:#777168;font-size:12px;text-align:right}.fct18-advice:has(#clima-tip:empty){display:none}
+@media(max-width:900px){.fct18-climate{padding:68px 22px 60px}.fct18-climate-head{grid-template-columns:1fr;gap:17px;margin-bottom:38px}.fct18-summary{grid-template-columns:1fr;gap:22px}.fct18-area{padding-right:0}.fct18-condition{padding-left:0;border-left:0}.fct18-metrics{grid-template-columns:1fr}.fct18-metrics>div,.fct18-metrics>div+div{padding:22px 0;border-right:0;border-bottom:1px solid #c8c0b3}.fct18-metrics>div:last-child{border-bottom:0}.fct18-best{grid-template-columns:1fr;gap:7px}.fct18-best strong{margin-top:2px}.fct18-advice #clima-tip{text-align:left}}
+</style>
+<style id="fct19-estimate-style">
+.fct19-estimate{background:#171714;color:#f5f0e7;padding:78px max(28px,6vw) 72px;font-family:Outfit,Arial,sans-serif}.fct19-head{max-width:1380px;margin:0 auto 44px;display:grid;grid-template-columns:.5fr 1fr .68fr;gap:52px;align-items:end}.fct19-head .fct2-kicker{color:#b7842b}.fct19-head h2{font:400 clamp(38px,4vw,58px)/.98 Outfit,Arial,sans-serif;letter-spacing:-.045em;margin:0;color:#f5f0e7}.fct19-head>p:last-child{color:#aaa398;font:400 15px/1.55 Outfit,Arial,sans-serif;margin:0 0 5px}.fct19-builder{max-width:1380px;margin:0 auto;border-top:1px solid #494740;border-bottom:1px solid #494740}.fct19-builder .calc-grid{display:grid;grid-template-columns:1.15fr 1.15fr .65fr 112px;align-items:stretch}.fct19-builder .calc-field{position:relative;padding:22px 26px 23px 0;border-right:1px solid #494740}.fct19-builder .calc-field+.calc-field{padding-left:26px}.fct19-step{display:block;color:#b7842b;font:600 10px/1 Outfit,Arial,sans-serif;margin-bottom:12px}.fct19-builder label{display:block;color:#8f8a82;font:600 9px/1.2 Outfit,Arial,sans-serif;letter-spacing:.14em;margin-bottom:10px}.fct19-builder select{width:100%;border:0;background:#171714;color:#f5f0e7;border-radius:0;padding:0 24px 4px 0;font:400 18px/1.3 Outfit,Arial,sans-serif}.fct19-builder .calc-btn{border:0;background:#b7842b;color:#171714;padding:0 18px;font:700 9px/1 Outfit,Arial,sans-serif;letter-spacing:.12em;cursor:pointer}.fct19-builder .calc-btn:hover{background:#d0a04a}.fct19-builder>.calc-tip{margin:0;padding:10px 0;border-top:1px solid #494740;color:#77736c;font:400 10px/1.4 Outfit,Arial,sans-serif}.fct19-builder .calc-cart{padding:20px 0 0;border-top:1px solid #494740;background:transparent!important;border-radius:0!important;box-shadow:none!important}.fct19-result-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.fct19-result-head .fct18-label{margin:0;color:#b7842b}.calc-btn-light{border:0!important;background:none!important;color:#8f8a82!important;font:500 10px/1 Outfit,Arial,sans-serif!important;text-decoration:none!important;padding:0!important;cursor:pointer}.calc-btn-light:after{content:" ↗"}.calc-cart-items{border:0!important;background:transparent!important}.calc-cart-row{display:grid!important;grid-template-columns:1fr auto 34px!important;gap:22px;align-items:center;padding:14px 0!important;border:0!important;border-top:1px solid #34332f!important;background:transparent!important;border-radius:0!important;box-shadow:none!important}.calc-cart-main{display:flex;gap:14px;align-items:baseline}.calc-cart-name{color:#f5f0e7!important;font:400 16px/1.3 Outfit,Arial,sans-serif!important}.calc-cart-meta,.calc-cart-price{color:#98938a!important;font:400 11px/1.3 Outfit,Arial,sans-serif!important}.calc-remove{border:1px solid #494740!important;background:transparent!important;color:#98938a!important;width:30px;height:30px;border-radius:50%;font:400 17px/1 Outfit,Arial,sans-serif;cursor:pointer}.fct19-builder .calc-result{padding:24px 0 24px!important;border:0!important;border-top:1px solid #494740!important;background:transparent!important;border-radius:0!important;box-shadow:none!important}.fct19-total{display:grid;grid-template-columns:1.4fr .6fr;gap:40px;align-items:end}.fct19-total h3{color:#f5f0e7!important;font:400 clamp(28px,2.6vw,40px)/1 Outfit,Arial,sans-serif!important;letter-spacing:-.04em;margin:0!important}.fct19-total p{margin:3px 0!important;color:#8f8a82!important;font:400 10px/1.4 Outfit,Arial,sans-serif!important;text-align:right}.fct19-builder #calc-result-note{color:#8f8a82!important;font:400 11px/1.5 Outfit,Arial,sans-serif!important;margin:14px 0!important;max-width:620px}.fct19-builder .calc-wa{display:inline-block!important;background:transparent!important;color:#f5f0e7!important;border:0!important;border-bottom:1px solid #b7842b!important;border-radius:0!important;box-shadow:none!important;text-decoration:none!important;padding:0 0 5px!important;font:600 12px/1.2 Outfit,Arial,sans-serif!important}.fct19-scope{max-width:1380px;margin:13px auto 0;color:#77736c;font:400 10px/1.55 Outfit,Arial,sans-serif}
+@media(max-width:900px){.fct19-estimate{padding:68px 22px 60px}.fct19-head{grid-template-columns:1fr;gap:17px;margin-bottom:38px}.fct19-builder .calc-grid{grid-template-columns:1fr}.fct19-builder .calc-field,.fct19-builder .calc-field+.calc-field{padding:20px 0;border-right:0;border-bottom:1px solid #494740}.fct19-builder .calc-btn{padding:20px}.fct19-total{grid-template-columns:1fr}.fct19-total p{text-align:left}}
+</style>
 
-  { src:'images/toldo_process1.jpg', alt:'Limpieza de toldo en proceso' },
-  { src:'images/toldo_process2.jpg', alt:'Cepillado profesional del tejido' },
+<style id="fct17-divider-fix">
+#opiniones .fct17-review-meta,#opiniones .fct17-widget,#opiniones .fct17-review-foot{border-top:0!important;border-bottom:0!important}
+</style>
 
-  { src:'images/toldo-detalle.jpg', alt:'Detalle del tejido exterior' },
-  { src:'images/toldo-exterior-1.jpg', alt:'Toldo exterior limpio' },
-  { src:'images/toldo-exterior-2.jpg', alt:'Cuidado profesional de toldos' }
-],
-  aires: [
-    { src:'outdoor.jpg', alt:'Unidad exterior limpia' },
-    { src:'outdoor_action.jpg', alt:'Limpieza unidad exterior' },
-    { src:'cassette.jpg', alt:'Cassette interior limpio' },
-    { src:'filter.png', alt:'Filtros limpios' },
-    { src:'card_air.jpg', alt:'Mantenimiento A/C' },
-    { src:'images/aires_process1.jpg', alt:'Desmontaje de filtros' },
-    { src:'images/aires_process2.jpg', alt:'Limpieza de turbina' },
-    { src:'images/aires_process3.jpg', alt:'Desinfección bandeja' },
-    { src:'images/aires_process4.jpg', alt:'Limpieza serpentín exterior' },
-    { src:'images/aires_process5.jpg', alt:'Equipo terminado' },
-  ],
-  mattress: [
-  { src:'mattress_1.jpg', alt:'Limpieza de colchón' },
-  { src:'rug_1.jpg', alt:'Limpieza de alfombra' },
-  { src:'mattress_2.jpg', alt:'Desinfección colchón' },
-  { src:'rug_2.jpg', alt:'Alfombra restaurada' },
-  { src:'mattress_cover.jpg', alt:'Limpieza profunda' },
-  { src:'images/mattress_process1.jpg', alt:'Extracción profunda' },
-  { src:'images/mattress_process2.jpg', alt:'Tratamiento de manchas' },
-],
-  manitas: [
-  { src:'handyman_1.jpg', alt:'Montaje y reparación' },
-  { src:'handyman_2.jpg', alt:'Instalaciones hogar' },
-  { src:'handyman_3.jpg', alt:'Pequeñas reparaciones' },
-  { src:'handyman_4.jpg', alt:'Montaje muebles' },
-  { src:'handyman_cover.jpg', alt:'Servicio manitas' },
-],
-  inspection: [
-  { src:'inspection_1.jpg', alt:'Inspección apartamento' },
-  { src:'inspection_2.jpg', alt:'Revisión propiedad' },
-  { src:'inspection_3.jpg', alt:'Control humedad' },
-  { src:'inspection_4.jpg', alt:'Estado general propiedad' },
-  { src:'inspection_cover.jpg', alt:'Inspección vivienda' },
-]
-  
-};
-
-let fsCurrentGallery = 'tapiceria';
-let fsCurrentIndex = 0;
-
-function openFsModal(id) {
-    const modal = document.getElementById(id);
-    if (!modal) return;
-    modal.classList.add('open');
-    modal.scrollTop = 0;
-    document.body.style.overflow = 'hidden';  // just prevent background scroll
-}
-
-function closeModal(id) {
-    const modal = document.getElementById(id);
-    if (!modal) return;
-    modal.classList.remove('open');
-    document.body.style.overflow = '';
-    // also pause the hero video so it doesn't keep running in background
-    const vid = modal.querySelector('video');
-    if (vid) { vid.pause(); }
-}
-
-function switchFsTab(modal, name) {
-  const modalEl = document.getElementById(modal + 'Modal');
-  modalEl.querySelectorAll('.fs-tab').forEach(t => t.classList.remove('active'));
-  modalEl.querySelectorAll('.fs-panel').forEach(p => p.classList.remove('active'));
-  modalEl.querySelector(`[onclick="switchFsTab('${modal}','${name}')"]`).classList.add('active');
-  document.getElementById(`${modal}-tab-${name}`).classList.add('active');
-}
-
-function openLightbox(gallery, index) {
-  fsCurrentGallery = gallery;
-  fsCurrentIndex = index;
-  const img = fsGalleries[gallery][index];
-  document.getElementById('lightbox-img').src = img.src;
-  document.getElementById('lightbox-img').alt = img.alt;
-  document.getElementById('lightbox').classList.add('open');
-}
-
-function closeLightbox() {
-  document.getElementById('lightbox').classList.remove('open');
-}
-
-function navLightbox(dir) {
-  const gallery = fsGalleries[fsCurrentGallery];
-  fsCurrentIndex = (fsCurrentIndex + dir + gallery.length) % gallery.length;
-  document.getElementById('lightbox-img').src = gallery[fsCurrentIndex].src;
-  document.getElementById('lightbox-img').alt = gallery[fsCurrentIndex].alt;
-}
-
-document.addEventListener('keydown', e => {
-  if (e.key === 'Escape') { closeLightbox(); }
-  if (e.key === 'ArrowLeft') navLightbox(-1);
-  if (e.key === 'ArrowRight') navLightbox(1);
-});
-
-
-  document.addEventListener('click', (e) => {
-  const openBtn = e.target.closest('[data-open]');
-
-  if (openBtn) {
-    openSvcModal(openBtn.dataset.open);
-  }
-
-  if (e.target.closest('.svc-modal__close')) {
-    closeSvcModal();
-  }
-
-  if (e.target.id === 'svcModal') {
-    closeSvcModal();
-  }
-});
-  
-</script>
-
-
-
-</head>
+<style id="fct21-22-style">
+.fct21-faq{background:#f7f4ed;color:#171714;padding:76px max(28px,6vw) 68px;font-family:Outfit,Arial,sans-serif}.fct21-head{max-width:1380px;margin:0 auto 34px;display:grid;grid-template-columns:.5fr 1fr .68fr;gap:52px;align-items:end}.fct21-head h2{font:400 clamp(38px,4vw,58px)/.98 Outfit,Arial,sans-serif;letter-spacing:-.045em;margin:0}.fct21-head>p:last-child{color:#69635a;font:400 15px/1.55 Outfit,Arial,sans-serif;margin:0 0 5px}.fct21-list{max-width:1380px;margin:0 auto;border-top:1px solid #c8c0b3}.fct21-list .acc-item{border:0!important;border-bottom:1px solid #c8c0b3!important;background:transparent!important;border-radius:0!important;box-shadow:none!important;margin:0!important}.fct21-list summary{list-style:none;cursor:pointer;padding:19px 44px 19px 0!important;color:#171714!important;background:transparent!important;font:500 16px/1.35 Outfit,Arial,sans-serif!important;position:relative}.fct21-list summary::-webkit-details-marker{display:none}.fct21-list summary:after{content:"+";position:absolute;right:2px;top:17px;color:#9d7428;font:400 21px/1 Outfit,Arial,sans-serif}.fct21-list details[open] summary:after{content:"−"}.fct21-list .acc-content{padding:0 44px 18px 0!important;background:transparent!important;color:#716b62!important}.fct21-list .acc-content p{margin:0;max-width:820px;font:400 13px/1.55 Outfit,Arial,sans-serif!important}.fct22-areas{background:#171714;color:#f5f0e7;padding:70px max(28px,6vw) 62px;font-family:Outfit,Arial,sans-serif}.fct22-inner{max-width:1380px;margin:0 auto;display:grid;grid-template-columns:.5fr 1fr .68fr;gap:52px;align-items:start}.fct22-inner .fct2-kicker{color:#b7842b}.fct22-inner h2{font:400 clamp(38px,4vw,58px)/.98 Outfit,Arial,sans-serif;letter-spacing:-.045em;margin:0}.fct22-links{border-top:1px solid #46443f}.fct22-links a{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid #46443f;color:#dcd7ce;text-decoration:none;font:500 13px/1.2 Outfit,Arial,sans-serif}.fct22-links a span{color:#b7842b}.fct22-links a:hover{color:#fff}
+@media(max-width:900px){.fct21-faq,.fct22-areas{padding:60px 22px 52px}.fct21-head,.fct22-inner{grid-template-columns:1fr;gap:17px}.fct21-head{margin-bottom:28px}.fct22-links{margin-top:12px}}
+</style><style id="fct23-footer-style">
+.fct23-footer{background:#0e0e0c;color:#f5f0e7;padding:48px max(28px,6vw) 22px;font-family:Outfit,Arial,sans-serif}.fct23-top{max-width:1380px;margin:0 auto 38px;display:grid;grid-template-columns:1.55fr .82fr .82fr .82fr;gap:48px;align-items:start}.fct23-brand img{width:84px;max-height:42px;object-fit:contain;object-position:left center;filter:brightness(0) invert(1);opacity:.9}.fct23-brand p{max-width:285px;margin:17px 0 0;color:#827e76;font:400 12px/1.45 Outfit,Arial,sans-serif}.fct23-label{display:block;color:#b7842b;font:700 9px/1 Outfit,Arial,sans-serif;letter-spacing:.14em;margin-bottom:15px}.fct23-col a{display:block;color:#aaa59c;text-decoration:none;font:400 11px/1.3 Outfit,Arial,sans-serif;margin:0 0 9px}.fct23-col a:hover{color:#f5f0e7}.fct23-bottom{max-width:1380px;margin:0 auto;padding-top:13px;border-top:1px solid #292824;display:grid;grid-template-columns:1fr auto 1fr;gap:24px;color:#65625c;font:500 8px/1.3 Outfit,Arial,sans-serif;letter-spacing:.05em;text-transform:uppercase}.fct23-bottom>span:nth-child(2){text-align:center}.fct23-bottom>div{text-align:right}.fct23-bottom a,.fct23-bottom button{color:#77736c;text-decoration:none;background:none;border:0;padding:0;margin-left:16px;font:inherit;letter-spacing:inherit;text-transform:inherit;cursor:pointer}.fct23-bottom a:hover,.fct23-bottom button:hover{color:#f5f0e7}
+@media(max-width:900px){.fct23-footer{padding:44px 22px 20px}.fct23-top{grid-template-columns:1fr 1fr;gap:30px 24px;margin-bottom:34px}.fct23-brand{grid-column:1/3}.fct23-bottom{grid-template-columns:1fr;gap:8px}.fct23-bottom>span:nth-child(2),.fct23-bottom>div{text-align:left}.fct23-bottom a,.fct23-bottom button{margin:0 16px 0 0}}
+</style></head>
 
 
 
@@ -2087,740 +2102,245 @@ document.addEventListener('keydown', e => {
    
 
 <!-- TOP BAR -->
-<div class="site-topbar">
-
-  <a aria-label="FrescaClimaTech - Home" class="site-brand" href="/">
-    <img class="brand-logo" src="fct_logo_transparent.svg" alt="FrescaClimaTech logo">
-    <span class="brand-name">FrescaClimaTech</span>
-  </a>
-
-  <div class="site-right">
-
-    <nav class="site-nav" aria-label="Primary">
-      <a href="#servicios" data-i18n="nav_servicios">Servicios</a>
-      <span class="nav-sep">|</span>
-      <a href="#areas" data-i18n="nav_areas">Áreas</a>
-      <span class="nav-sep">|</span>
-      <a href="#opiniones" data-i18n="nav_opiniones">Opiniones</a>
-      <span class="nav-sep">|</span>
-      <a href="#faq" data-i18n="nav_faq">FAQ</a>
-      <span class="nav-sep">|</span>
-      <a href="#contacto" data-i18n="nav_contacto">Contacto</a>
-      <span class="nav-sep">|</span>
-      <a href="/airbnb-upholstery-cleaning.html" data-i18n="nav_airbnb">Airbnb</a>
-    </nav>
-
-    <div class="lang-pills" role="group" aria-label="Idioma">
-      <button type="button" class="lang-pill" data-lang="es" onclick="switchLang('es')">ES</button>
-      <button type="button" class="lang-pill" data-lang="en" onclick="switchLang('en')">EN</button>
-    </div>
-
-   <button type="button" class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Open menu">
-  ☰
-</button>
-
+<div class="fct2-nav">
+  <a class="fct2-brand" href="/" aria-label="FrescaClimaTech home"><img src="FCT_logo_vector.svg" alt="FrescaClimaTech"></a>
+  <nav class="fct2-links" aria-label="Primary">
+    <a href="#fct-care"><span class="es-copy">Cuidado</span><span class="en-copy">Care</span></a>
+    <a href="/airbnb-upholstery-cleaning.html">Property Care</a>
+    <a href="#areas"><span class="es-copy">Zonas</span><span class="en-copy">Areas</span></a>
+    <a href="/mediterranean-club.html" class="club-link">Mediterranean Club</a>
+  </nav>
+  <div class="fct2-nav-actions">
+    <button type="button" class="fct-lang" data-fct-lang="es">ES</button><span>/</span><button type="button" class="fct-lang" data-fct-lang="en">EN</button>
+    <a class="fct2-nav-wa" href="https://wa.me/34657336353?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20FrescaClimaTech." target="_blank" rel="noopener">WhatsApp</a>
   </div>
-
 </div>
-
-<div id="mobileMenu" class="mobile-menu">
-  <a href="#servicios">Servicios</a>
-  <a href="#areas">Áreas</a>
-  <a href="#opiniones">Opiniones</a>
-  <a href="#faq">FAQ</a>
-  <a href="#contacto">Contacto</a>
-  <a class="special" href="/airbnb-upholstery-cleaning.html">Airbnb & Alquileres</a>
-  <a class="wa-mobile" href="https://wa.me/34657336353?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20un%20presupuesto.">💬 Solicitar presupuesto</a>
-</div>
-
-
-
-  <!-- Limited-time promo -->
-  <div id="promoBar" class="promo-bar hidden" role="status" aria-live="polite">
-    <span id="promoText" data-i18n="promo_text"></span>
-    <a id="promoCTA" class="btn-small" target="_blank" rel="noopener" data-i18n="promo_cta"></a>
-    <button id="promoClose" class="promo-close" aria-label="Close">×</button>
+<header class="fct4-hero" id="contacto">
+  <div class="fct4-overlay"></div>
+  <div class="fct4-panel">
+    <p class="fct2-kicker">FrescaClimaTech · Mediterranean Care</p>
+    <h1><span class="es-copy">Tu espacio,<br><em>mejor cuidado.</em></span><span class="en-copy">Your space,<br><em>better cared for.</em></span></h1>
+    <p class="fct3-lead es-copy">Cuidado profesional y más inteligente para hogares, segundas residencias, alojamientos turísticos y espacios profesionales junto al Mediterráneo.</p>
+    <p class="fct3-lead en-copy">Smarter professional care for homes, second homes, holiday rentals and professional spaces by the Mediterranean.</p>
+    <div class="fct2-actions"><a class="fct2-btn dark" href="#smart-care"><span class="es-copy">Cuéntanos qué necesitas</span><span class="en-copy">Tell us what you need</span></a><a class="fct2-btn" href="/mediterranean-club.html">Mediterranean Club</a></div>
+    <div class="fct3-locations">Costa Brava · Costa del Sol · Sevilla</div>
   </div>
-
- <header class="hero" id="contacto">
-
-  <div class="hero-inner">
-
-    
-
-  <h1 style="font-size:clamp(28px,5vw,52px); font-weight:900; line-height:1.15; letter-spacing:-0.5px; margin:12px 0 12px; color:#111;">
-  <span data-i18n="hero_h1_line1">Limpieza profesional de</span><br>
-
-  <span style="color:#b68714;" data-i18n="hero_h1_line2">
-    Sofás, Tapicería, Toldos
-  </span><br>
-
-  <span style="font-weight:700;" data-i18n="hero_h1_line3">
-    y Aire Acondicionado
-  </span>
-</h1>
-
-<p class="hero-subline">
-  <span data-i18n="hero_locations">
-    Costa Brava · Costa del Sol · Andalucía
-  </span>
-</p>
-
-<p class="hero-description" data-i18n="hero_description">
-  Hogares · Airbnb · Empresas
-</p>
-
-<div class="hero-divider"></div>
-
-<p class="hero-slogan" data-i18n="hero_slogan">
-  Aire fresco, tejidos limpios, decisiones claras
-</p>
-
-
-<!-- ✅ Trust line (Google reviews) -->
-<p class="hero-trust">
-  <a class="hero-trust-link" href="https://g.page/r/CVK2NpIvzkvdEBM/review" target="_blank" rel="noopener"
-     data-i18n="hero_trust">
-    ⭐⭐⭐⭐⭐ 5.0 en Google · Clientes satisfechos
-  </a>
-</p>
-
-<div class="hero-ctas">
-
-<a href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto%20para%20limpieza%20de%20tapicer%C3%ADa.%20Puedo%20enviar%20fotos"
-   target="_blank"
-   class="btn hero-wa js-wa"
-   data-i18n="hero_whatsapp_cta"
-   onclick="gtag('event', 'whatsapp_click');">
-   Envía fotos por WhatsApp
-</a>
-
-  <a href="/airbnb-upholstery-cleaning.html" class="btn hero-secondary">
-  Servicios Airbnb
-</a>
-
-    </div>
-
-
-
-  </div>
-
+  <div class="fct4-signature"><span class="es-copy">Aire fresco.<br>Tejidos limpios.<br>Decisiones claras.</span><span class="en-copy">Fresh air.<br>Clean fabrics.<br>Clear decisions.</span></div>
 </header>
+<section class="fct7-smart" id="smart-care" aria-labelledby="smart-finder-title">
+  <div class="fct7-smart-top">
+    <div><p class="fct2-kicker"><span class="es-copy">SMART CARE · FCT INTELLIGENCE</span><span class="en-copy">SMART CARE · FCT INTELLIGENCE</span></p>
+    <h2 id="smart-finder-title"><span class="es-copy">Cuéntanos qué ocurre.<br>No qué servicio buscas.</span><span class="en-copy">Tell us what’s happening.<br>Not which service you need.</span></h2></div>
+    <p class="fct7-smart-intro"><span class="es-copy">Describe tu espacio con tus propias palabras. Empezamos por entender la situación y te guiamos hacia el cuidado adecuado.</span><span class="en-copy">Describe your space in your own words. We start by understanding the situation, then guide you to the right care.</span></p>
+  </div>
+  <form class="fct7-command" id="smartCarePreview">
+    <div class="fct7-command-label"><span class="fct7-pulse"></span><span class="es-copy">Describe tu espacio</span><span class="en-copy">Describe your space</span></div>
+    <div class="fct7-command-row"><textarea id="smartCareInput" rows="2" aria-label="Smart Care" placeholder="Ej.: Tengo un apartamento turístico en Lloret, un sofá con olor y dos aires acondicionados…" data-placeholder-es="Ej.: Tengo un apartamento turístico en Lloret, un sofá con olor y dos aires acondicionados…" data-placeholder-en="E.g. I have a holiday rental in Lloret, a sofa with an odour and two air-conditioning units…"></textarea><button type="submit"><span class="es-copy">Orientarme →</span><span class="en-copy">Guide me →</span></button></div>
+  </form>
+  <div class="fct7-flow"><span>01 · <b class="es-copy">Entender</b><b class="en-copy">Understand</b></span><i>→</i><span>02 · <b class="es-copy">Recomendar</b><b class="en-copy">Recommend</b></span><i>→</i><span>03 · <b class="es-copy">Planificar</b><b class="en-copy">Plan</b></span><i>→</i><span>04 · <b class="es-copy">Reservar</b><b class="en-copy">Book</b></span></div>
+  <p class="fct7-beta"><span class="es-copy">Primera versión · por ahora tu consulta continúa en WhatsApp mientras desarrollamos Smart Care.</span><span class="en-copy">First version · for now your request continues in WhatsApp while we build Smart Care.</span></p>
+</section>
 
+<section class="fct11-care" id="fct-care">
+  <div class="fct11-care-head">
+    <p class="fct2-kicker">THE FCT WAY OF CARE</p>
+    <div>
+      <h2><span class="es-copy">Un espacio.<br>Cuatro formas de cuidarlo.</span><span class="en-copy">One space.<br>Four ways to care for it.</span></h2>
+      <p class="fct11-intro"><span class="es-copy">No pensamos en servicios aislados. Pensamos en cómo se vive, se usa y cambia tu espacio junto al Mediterráneo.</span><span class="en-copy">We don’t think in isolated services. We think about how your space is lived in, used and changed by the Mediterranean.</span></p>
+    </div>
+  </div>
+  <div class="fct11-list">
+    <a href="/limpieza-sofas-tapiceria.html"><span class="fct11-no">01</span><h3>Textile &amp; Upholstery</h3><p><span class="es-copy">Sofás · sillas · colchones · alfombras · tejidos interiores</span><span class="en-copy">Sofas · chairs · mattresses · rugs · interior fabrics</span></p><span class="fct11-go">↗</span></a>
+    <a href="/limpieza-toldos-marbella-estepona.html"><span class="fct11-no">02</span><h3>Outdoor &amp; Awning</h3><p><span class="es-copy">Toldos · textiles exteriores · cuidado estacional</span><span class="en-copy">Awnings · outdoor textiles · seasonal care</span></p><span class="fct11-go">↗</span></a>
+    <a href="/limpieza-aire-acondicionado.html"><span class="fct11-no">03</span><h3>Air Conditioning</h3><p><span class="es-copy">Cuidado higiénico · coordinación técnica con partners habilitados RITE</span><span class="en-copy">Hygienic care · technical coordination with RITE-authorised partners</span></p><span class="fct11-go">↗</span></a>
+    <a href="/airbnb-upholstery-cleaning.html"><span class="fct11-no">04</span><h3>Property Care</h3><p><span class="es-copy">Segundas residencias · alojamientos turísticos · cuidado continuado</span><span class="en-copy">Second homes · holiday rentals · ongoing property care</span></p><span class="fct11-go">↗</span></a>
+  </div>
+</section>
 
- <div class="wave-divider" style="line-height:0; overflow:hidden; margin-top:-2px; margin-bottom:-2px; position:relative; z-index:2;">
-  <svg viewBox="0 0 1440 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block; width:100%; height:40px;">
-    <path d="M0,20 C360,40 1080,0 1440,20 L1440,40 L0,40 Z" fill="rgba(255,255,255,0.92)"/>
-  </svg>
-</div>
-
-<!-- CINEMATIC LIFESTYLE VIDEO -->
-
-<section class="mediterranean-story fade-in">
-  <div class="mediterranean-inner">
-
-    <p class="story-kicker" data-i18n="story_kicker">
-      ESTILO MEDITERRÁNEO
-    </p>
-
-    <h2 data-i18n="story_title">
-      El estilo de vida mediterráneo
-    </h2>
-
-    <p class="story-sub" data-i18n="story_subtitle">
-      Terrazas, tejidos y espacios preparados para disfrutar.
-    </p>
-
-    <div class="story-video-card">
+<!-- FCT MEDITERRANEAN STORY -->
+<section class="fct12-proof">
+  <div class="fct12-proof-head">
+    <p class="fct2-kicker"><span class="es-copy">CUIDADO · VIDA MEDITERRÁNEA</span><span class="en-copy">CARE · MEDITERRANEAN LIFE</span></p>
+    <h2><span class="es-copy">Cuidado que se ve.<br>Espacios que se disfrutan.</span><span class="en-copy">Care you can see.<br>Spaces to enjoy.</span></h2>
+    <p><span class="es-copy">Cada espacio, material y estación pide una forma distinta de cuidado.</span><span class="en-copy">Every space, material and season calls for a different kind of care.</span></p>
+  </div>
+  <div class="fct12-body">
+    <div class="fct12-media">
       <video autoplay muted loop playsinline preload="metadata">
         <source src="images/fct-mediterranean-club.mp4" type="video/mp4">
       </video>
+      <div class="fct12-caption"><span class="es-copy">Mediterráneo, vivido y cuidado.</span><span class="en-copy">The Mediterranean, lived in and cared for.</span></div>
     </div>
-
-  </div>
-</section>
-  
-<!-- ✅ STATS SECTION -->
-<section class="stats-proof fade-in">
-  <div class="stats-proof-inner">
-
-    <p class="stats-kicker" data-i18n="results_label">
-      Resultados reales
-    </p>
-
-    <h2 data-i18n="results_title">
-      Confianza construida con trabajo real
-    </h2>
-
-    <p class="stats-sub" data-i18n="results_subtitle">
-      Ayudamos a hogares, Airbnb y negocios en distintas zonas de España.
-    </p>
-
-    <div class="stats-grid">
-
-      <div class="stat-card">
-        <div class="stat-number" data-target="110" data-suffix="+">110+</div>
-        <div class="stat-label" data-i18n="stat_clients">
-          Clientes atendidos
-        </div>
-      </div>
-
-      <div class="stat-card">
-        <div class="stat-number" data-target="170" data-suffix="+">170+</div>
-        <div class="stat-label" data-i18n="stat_services">
-          Servicios completados
-        </div>
-      </div>
-
-      <div class="stat-card">
-        <div class="stat-number" data-target="30" data-suffix="+">30+</div>
-        <div class="stat-label" data-i18n="stat_awnings">
-          Toldos limpiados
-        </div>
-      </div>
-
+    <div class="fct12-stats">
+      <div><strong>110+</strong><span class="es-copy">clientes atendidos</span><span class="en-copy">clients served</span></div>
+      <div><strong>170+</strong><span class="es-copy">servicios realizados</span><span class="en-copy">services completed</span></div>
+      <div><strong>30+</strong><span class="es-copy">toldos cuidados</span><span class="en-copy">awnings cared for</span></div>
     </div>
-
   </div>
 </section>
 
-<!-- ✅ REVIEWS SECTION -->
-<section id="opiniones" style="padding:30px 16px;">
-  <div style="max-width:980px; margin:0 auto; background:rgba(255,255,255,0.90); border-radius:18px; box-shadow:0 10px 24px rgba(0,0,0,0.08); padding:28px 24px;">
-    
-    <p style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; font-weight:700; color:#b68714; text-align:center; margin-bottom:6px;" data-i18n="reviews_kicker">Opiniones verificadas</p>
-    
-    <h2 style="font-size:26px; font-weight:800; text-align:center; margin:0 0 20px; color:#111;" data-i18n="reviews_title">Lo que dicen nuestros clientes</h2>
-
-    <!-- Elfsight Google Reviews -->
+<!-- FCT REVIEWS / REAL VOICES -->
+<section class="fct17-reviews" id="opiniones">
+  <div class="fct17-review-head">
+    <p class="fct2-kicker"><span class="es-copy">VOCES REALES · GOOGLE</span><span class="en-copy">REAL VOICES · GOOGLE</span></p>
+    <h2><span class="es-copy">La confianza se construye<br>espacio a espacio.</span><span class="en-copy">Trust is built<br>space by space.</span></h2>
+    <div class="fct17-review-meta">
+      <strong>5.0</strong>
+      <span>★★★★★</span>
+      <p><span class="es-copy">Opiniones de clientes que ya han confiado sus espacios a FCT.</span><span class="en-copy">Reviews from clients who have already trusted FCT with their spaces.</span></p>
+    </div>
+  </div>
+  <div class="fct17-widget">
     <div class="elfsight-app-a3c18380-683d-4200-8227-e0fca73b9b85" data-elfsight-app-lazy></div>
-
-    <div style="text-align:center; margin-top:20px;">
-      <a href="https://g.page/r/CVK2NpIvzkvdEBM/review" target="_blank" rel="noopener"
-         style="border:2px solid #111; border-radius:999px; padding:11px 24px; font-weight:700; font-size:14px; color:#111; text-decoration:none;" data-i18n="reviews_cta">
-        ⭐ Ver todas las opiniones en Google
-      </a>
-    </div>
-
+  </div>
+  <div class="fct17-review-foot">
+    <span class="es-copy">Experiencias reales. Trabajo real.</span><span class="en-copy">Real experiences. Real work.</span>
+    <a href="https://g.page/r/CVK2NpIvzkvdEBM/review" target="_blank" rel="noopener"><span class="es-copy">Ver opiniones en Google ↗</span><span class="en-copy">View reviews on Google ↗</span></a>
   </div>
 </section>
-  
 
-
-
-<!-- =========================
-     LAYER 1.5: CLIMATE / WEATHER TRIGGER
-     ========================= -->
-<section class="clima fade-in" id="clima">
-
-   <div class="clima-inner" style="max-width:980px; margin:0 auto; background:rgba(255,255,255,0.92); border-radius:18px; box-shadow:0 10px 28px rgba(0,0,0,0.08); padding:32px 28px;">
-
-  <p style="font-size:11px; letter-spacing:0.16em; text-transform:uppercase; font-weight:700; color:#b68714; text-align:center; margin:0 0 6px;">Herramienta gratuita</p>
-  <h2 style="font-size:28px; font-weight:800; text-align:center; color:#111; margin:0 0 8px; letter-spacing:-0.5px;" data-i18n="clima_title">Condiciones de limpieza hoy</h2>
-  <p style="text-align:center; color:#666; font-size:15px; margin:0 0 20px;">
-    <span data-i18n="clima_intro">Según la temperatura y humedad de hoy, la limpieza de tapicería y alfombras</span>
-    <strong id="clima-recommendation">es ideal</strong>.
-  </p>
-
-  <!-- City selector -->
-  <div style="display:flex; align-items:center; justify-content:center; gap:10px; margin-bottom:8px;">
-    <label for="clima-city" style="font-weight:600; font-size:15px;" data-i18n="clima_city_label">Ciudad:</label>
-    <select id="clima-city" style="padding:10px 16px; border-radius:12px; border:1.5px solid rgba(0,0,0,0.12); font-family:'Outfit',sans-serif; font-size:15px; background:#fff;">
-      <option value="lloret" selected>Lloret de Mar</option>
-      <option value="barcelona">Barcelona</option>
-      <option value="marbella">Marbella</option>
-      <option value="sevilla">Sevilla</option>
-      <option value="granada">Granada</option>
-      <option value="costatropical">Costa Tropical</option>
-    </select>
-  </div>
-  <p style="text-align:center; font-size:13px; color:#999; margin:0 0 20px;" data-i18n="areas_note">Costa Tropical incluye: Almuñécar · Motril · Salobreña</p>
-
-  <!-- Best day strip -->
-  <div style="background:rgba(212,175,55,0.10); border:1px solid rgba(212,175,55,0.25); border-radius:14px; padding:16px 20px; text-align:center; margin-bottom:20px;">
-    <div id="clima-bestday-title" style="font-weight:800; font-size:18px; color:#111;"></div>
-    <div id="clima-bestday-sub" style="font-size:13px; color:#666; margin-top:4px;"></div>
+<!-- FCT CLIMATE INTELLIGENCE -->
+<section class="fct18-climate fade-in" id="clima">
+  <div class="fct18-climate-head">
+    <p class="fct2-kicker"><span class="es-copy">SMART CARE · CLIMA</span><span class="en-copy">SMART CARE · CLIMATE</span></p>
+    <h2><span class="es-copy">El clima también forma<br>parte del cuidado.</span><span class="en-copy">Climate is part<br>of good care.</span></h2>
+    <p><span class="es-copy">Temperatura y humedad influyen en el secado. FCT convierte las condiciones de hoy en una recomendación sencilla.</span><span class="en-copy">Temperature and humidity affect drying. FCT turns today’s conditions into one simple recommendation.</span></p>
   </div>
 
-  <!-- 3 metric cards -->
-  <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:12px; margin-bottom:16px;">
-
-    <div style="background:#fff; border:1px solid rgba(0,0,0,0.07); border-radius:14px; padding:18px 14px; text-align:center;">
-      <div style="font-size:12px; letter-spacing:0.10em; text-transform:uppercase; font-weight:700; color:#999; margin-bottom:8px;" data-i18n="clima_temp_label">Temperatura</div>
-      <div style="font-size:32px; font-weight:900; color:#111; letter-spacing:-1px;"><span id="clima-temp">—</span>°C</div>
+  <div class="fct18-panel">
+    <div class="fct18-summary">
+      <div class="fct18-area">
+        <span class="fct18-label"><span class="es-copy">TU ZONA</span><span class="en-copy">YOUR AREA</span></span>
+        <select id="clima-city" aria-label="City">
+          <option value="lloret" selected>Costa Brava · Lloret de Mar</option>
+          <option value="marbella">Costa del Sol · Marbella</option>
+          <option value="sevilla">Sevilla</option>
+        </select>
+      </div>
+      <div class="fct18-condition">
+        <span class="fct18-label"><span class="es-copy">HOY</span><span class="en-copy">TODAY</span></span>
+        <strong id="clima-recommendation">—</strong>
+      </div>
     </div>
 
-    <div style="background:#fff; border:1px solid rgba(0,0,0,0.07); border-radius:14px; padding:18px 14px; text-align:center;">
-      <div style="font-size:12px; letter-spacing:0.10em; text-transform:uppercase; font-weight:700; color:#999; margin-bottom:8px;" data-i18n="clima_hum_label">Humedad</div>
-      <div style="font-size:32px; font-weight:900; color:#111; letter-spacing:-1px;"><span id="clima-humidity">—</span>%</div>
+    <div class="fct18-metrics">
+      <div><strong><span id="clima-temp">—</span>°C</strong><span data-i18n="clima_temp_label">Temperatura</span></div>
+      <div><strong><span id="clima-humidity">—</span>%</strong><span data-i18n="clima_hum_label">Humedad</span></div>
+      <div><strong><span id="clima-index">—</span><em>/100</em></strong><span data-i18n="clima_dry_index_label">Índice de secado</span></div>
     </div>
 
-    <div style="background:#fff; border:1px solid rgba(0,0,0,0.07); border-radius:14px; padding:18px 14px; text-align:center;">
-      <div style="font-size:12px; letter-spacing:0.10em; text-transform:uppercase; font-weight:700; color:#999; margin-bottom:8px;" data-i18n="clima_dry_index_label">Índice de secado</div>
-      <div style="font-size:32px; font-weight:900; color:#111; letter-spacing:-1px;"><span id="clima-index">—</span><span style="font-size:16px; font-weight:600;">/100</span></div>
+    <div class="fct18-best">
+      <span class="fct18-label"><span class="es-copy">MEJOR DÍA ESTA SEMANA</span><span class="en-copy">BEST DAY THIS WEEK</span></span>
+      <strong id="clima-bestday-title"></strong>
+      <span id="clima-bestday-sub"></span>
     </div>
 
+    <div class="fct18-advice">
+      <p id="clima-status" aria-hidden="true"></p>
+      <p id="clima-tip" data-i18n="clima_tip_default">El buen tiempo ayuda a que los tejidos se sequen antes y evita olores.</p>
+    </div>
   </div>
-
-  <!-- Status + tip -->
-  <p id="clima-status" style="text-align:center; font-weight:700; font-size:16px; margin:0 0 6px; color:#111;">Comprobando condiciones…</p>
-  <p id="clima-tip" style="text-align:center; font-size:14px; color:#666; margin:0;" data-i18n="clima_tip_default">El buen tiempo ayuda a que los tejidos se sequen antes y evita olores.</p>
-
-</div>
-  
 </section>
 
-<!-- =========================
-     QUICK PRICE CALCULATOR v2
-     ========================= -->
-<section class="calc fade-in" id="calc">
-  <div class="calc-inner">
-    <h2 class="calc-title" data-i18n="calc_title">Calcula tu precio orientativo</h2>
-    <p class="calc-sub" data-i18n="calc_sub_multi">
-      Añade varios artículos para recibir una estimación total antes de enviarnos fotos por WhatsApp.
-    </p>
+<!-- FCT SMART ESTIMATE -->
+<section class="fct19-estimate fade-in" id="calc">
+  <div class="fct19-head">
+    <p class="fct2-kicker">SMART CARE · ESTIMATE</p>
+    <h2><span class="es-copy">Conoce el rango<br>antes de preguntar.</span><span class="en-copy">Know the range<br>before you ask.</span></h2>
+    <p><span class="es-copy">Estimación inmediata cuando es posible. Evaluación por fotos cuando es lo correcto.</span><span class="en-copy">Instant estimate where we can. Photo assessment where we should.</span></p>
+  </div>
 
-    <p class="calc-tip" data-i18n="calc_discount_tip"></p>
-
+  <div class="fct19-builder">
     <div class="calc-grid">
-      <div class="calc-field">
-        <label for="calc-service" data-i18n="calc_service_label">Servicio</label>
+      <div class="calc-field"><span class="fct19-step">01</span><label for="calc-service"><span class="es-copy">QUÉ NECESITA CUIDADO</span><span class="en-copy">WHAT NEEDS CARE</span></label>
         <select id="calc-service">
           <option value="sofa" data-i18n="calc_service_sofa">Sofá / tapicería</option>
           <option value="mattress" data-i18n="calc_service_mattress">Colchón</option>
           <option value="carpet" data-i18n="calc_service_carpet">Alfombra</option>
           <option value="chairs" data-i18n="calc_service_chairs">Sillas</option>
+          <option value="awning" data-i18n="calc_service_awning">Toldo / exterior</option>
+          <option value="ac" data-i18n="calc_service_ac">Aire acondicionado</option>
         </select>
       </div>
-
-      <div class="calc-field">
-        <label for="calc-type" data-i18n="calc_type_label">Tamaño / tipo</label>
-        <select id="calc-type"></select>
+      <div class="calc-field"><span class="fct19-step">02</span><label for="calc-type"><span class="es-copy">TAMAÑO / TIPO</span><span class="en-copy">SIZE / TYPE</span></label><select id="calc-type"></select></div>
+      <div class="calc-field"><span class="fct19-step">03</span><label for="calc-qty"><span class="es-copy">CANTIDAD</span><span class="en-copy">QUANTITY</span></label>
+        <select id="calc-qty"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10+</option></select>
       </div>
-
-      <div class="calc-field">
-        <label for="calc-qty" data-i18n="calc_qty_label">Cantidad</label>
-        <select id="calc-qty">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-          <option value="6">6</option>
-          <option value="7">7</option>
-          <option value="8">8</option>
-          <option value="9">9</option>
-          <option value="10">10+</option>
-        </select>
-      </div>
+      <button type="button" class="calc-btn" id="calc-add"><span class="es-copy">AÑADIR +</span><span class="en-copy">ADD +</span></button>
     </div>
 
-    <div class="calc-actions">
-      <button type="button" class="calc-btn" id="calc-add" data-i18n="calc_add_btn">
-        Añadir artículo
-      </button>
-    </div>
+    <p class="calc-tip" data-i18n="calc_discount_tip"></p>
 
     <div class="calc-cart" id="calc-cart">
-      <h3 class="calc-cart-title" data-i18n="calc_cart_title">Tu pedido</h3>
+      <div class="fct19-result-head"><span class="fct18-label"><span class="es-copy">TU ESTIMACIÓN</span><span class="en-copy">YOUR ESTIMATE</span></span><button type="button" class="calc-btn-light" id="calc-clear"><span class="es-copy">Empezar de nuevo</span><span class="en-copy">Start over</span></button></div>
       <div id="calc-cart-items" class="calc-cart-items"></div>
     </div>
 
     <div class="calc-result" id="calc-result" aria-live="polite">
-      <h3 id="calc-result-price">—</h3>
-      <p id="calc-result-subtotal"></p>
-      <p id="calc-result-discount"></p>
-      <p id="calc-result-note" data-i18n="calc_note">
-        El precio final se confirma tras ver fotos y el nivel real de suciedad.
-      </p>
-
-      <div class="calc-actions calc-actions-secondary">
-        <button type="button" class="calc-btn calc-btn-light" id="calc-clear" data-i18n="calc_clear_btn">
-          Vaciar pedido
-        </button>
-      </div>
-
-      <a
-  id="calc-wa"
-  class="calc-wa"
-  href="https://wa.me/34657336353"
-  target="_blank"
-  rel="noopener"
-  data-i18n="calc_wa"
-  onclick="gtag('event', 'whatsapp_click');">
-  Enviar fotos por WhatsApp
-</a>
-      
+      <div class="fct19-total"><h3 id="calc-result-price">—</h3><div><p id="calc-result-subtotal"></p><p id="calc-result-discount"></p></div></div>
+      <p id="calc-result-note"><span class="es-copy">El precio final se confirma tras ver fotos, acceso y estado real.</span><span class="en-copy">Final price is confirmed after reviewing photos, access and actual condition.</span></p>
+      <a id="calc-wa" class="calc-wa" href="https://wa.me/34657336353" target="_blank" rel="noopener" onclick="gtag('event', 'whatsapp_click');"><span class="es-copy">Enviar fotos para confirmar →</span><span class="en-copy">Send photos to confirm →</span></a>
     </div>
   </div>
+  <p class="fct19-scope"><span class="es-copy">Toldos: el tamaño, acceso y construcción pueden requerir valoración por fotos. Aire acondicionado: esta herramienta cubre cuidado higiénico; los trabajos técnicos se coordinan con partners habilitados RITE.</span><span class="en-copy">Awnings: size, access and construction may require photo assessment. Air conditioning: this tool covers hygienic care; technical work is coordinated with RITE-authorised partners.</span></p>
 </section>
 
-
-<!-- =========================
-     LAYER 2: MEDITERRANEAN SERVICE MOMENTS
-     ========================= -->
-<section class="proof fade-in" id="prueba" style="padding:56px 16px;">
-
-  <div style="max-width:1120px; margin:0 auto;">
-
-    <p style="font-size:11px; letter-spacing:0.18em; text-transform:uppercase; font-weight:700; color:#b68714; text-align:center; margin:0 0 10px;"
-       data-i18n="proof_label">
-      Cuidado mediterráneo
-    </p>
-
-    <h2 style="font-size:clamp(28px,3.2vw,42px); font-weight:600; text-align:center; color:#111; margin:0 0 12px; letter-spacing:-1px; line-height:1.12;"
-        data-i18n="proof_title">
-      Espacios preparados para disfrutar
-    </h2>
-
-    <p style="max-width:680px; text-align:center; color:#666; font-size:16px; line-height:1.7; margin:0 auto 34px;"
-       data-i18n="proof_sub">
-      Sofás, toldos y aire acondicionado para hogares, terrazas y propiedades mediterráneas.
-    </p>
-
-    <!-- Service lifestyle cards -->
-    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-bottom:26px;">
-
-      <!-- Sofa -->
-      <a href="/limpieza-sofas-tapiceria.html"
-         style="text-decoration:none; color:inherit; display:block; background:rgba(255,255,255,0.92); border:1px solid rgba(0,0,0,0.06); border-radius:22px; overflow:hidden; box-shadow:0 12px 30px rgba(0,0,0,0.08);">
-
-        <img src="images/ba_sofa_01.png"
-             alt="Limpieza de sofás y tapicería"
-             loading="lazy"
-             style="width:100%; display:block; aspect-ratio:4/5; object-fit:cover;" />
-
-        <div style="padding:20px 20px 22px;">
-          <h3 style="font-size:22px; font-weight:600; letter-spacing:-0.5px; margin:0 0 8px;"
-              data-i18n="proof_card1_title">
-            Sofás & Tapicería
-          </h3>
-
-          <p style="font-size:15px; line-height:1.55; color:#666; margin:0;"
-             data-i18n="proof_card1_text">
-            Tejidos frescos y cuidados para hogares más acogedores.
-          </p>
-        </div>
-      </a>
-
-      <!-- Awnings -->
-      <a href="/limpieza-toldos-marbella-estepona.html"
-         style="text-decoration:none; color:inherit; display:block; background:rgba(255,255,255,0.92); border:1px solid rgba(0,0,0,0.06); border-radius:22px; overflow:hidden; box-shadow:0 12px 30px rgba(0,0,0,0.08);">
-
-        <img src="images/toldos-antes-despues-1.jpg"
-             alt="Limpieza de toldos y terrazas"
-             loading="lazy"
-             style="width:100%; display:block; aspect-ratio:4/5; object-fit:cover;" />
-
-        <div style="padding:20px 20px 22px;">
-          <h3 style="font-size:22px; font-weight:600; letter-spacing:-0.5px; margin:0 0 8px;"
-              data-i18n="proof_card2_title">
-            Toldos & Terrazas
-          </h3>
-
-          <p style="font-size:15px; line-height:1.55; color:#666; margin:0;"
-             data-i18n="proof_card2_text">
-            Espacios exteriores preparados para sombra, calma y vida al aire libre.
-          </p>
-        </div>
-      </a>
-
-      <!-- Air Conditioning -->
-      <a href="/limpieza-aire-acondicionado.html"
-         style="text-decoration:none; color:inherit; display:block; background:rgba(255,255,255,0.92); border:1px solid rgba(0,0,0,0.06); border-radius:22px; overflow:hidden; box-shadow:0 12px 30px rgba(0,0,0,0.08);">
-
-        <img src="filter.png"
-             alt="Limpieza de aire acondicionado"
-             loading="lazy"
-             style="width:100%; display:block; aspect-ratio:4/5; object-fit:cover;" />
-
-        <div style="padding:20px 20px 22px;">
-          <h3 style="font-size:22px; font-weight:600; letter-spacing:-0.5px; margin:0 0 8px;"
-              data-i18n="proof_card3_title">
-            Aire Acondicionado
-          </h3>
-
-          <p style="font-size:15px; line-height:1.55; color:#666; margin:0;"
-             data-i18n="proof_card3_text">
-            Aire más limpio y fresco para disfrutar mejor de cada espacio.
-          </p>
-        </div>
-      </a>
-
-    </div>
-
-    <!-- CTA -->
-    <div style="text-align:center;">
-      <a href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto.%20Puedo%20enviar%20fotos%20ahora."
-         target="_blank" rel="noopener" class="js-wa"
-         style="display:inline-block; background:#d4af37; color:#111; font-weight:700; font-size:15px; padding:14px 30px; border-radius:999px; text-decoration:none; box-shadow:0 4px 18px rgba(212,175,55,0.26);"
-         data-i18n="proof_cta"
-         onclick="gtag('event', 'whatsapp_click');">
-        Enviar fotos por WhatsApp
-      </a>
-
-      <p style="font-size:13px; color:#888; margin-top:10px;" data-i18n="proof_note">
-        Indica tu ciudad y envíanos fotos para confirmar disponibilidad.
-      </p>
-    </div>
-
-  </div>
-</section>
-
-
-  <section class="services" id="servicios">
-
-<!-- A/C Cleaning -->
-<div class="svc-card">
-  <img src="card_air.jpg" alt="Limpieza de Aire Acondicionado" />
-  <div class="svc-body">
-    <h3 data-i18n="svc_ac_title"
-    onclick="window.location.href='/limpieza-aire-acondicionado.html'"
-    style="cursor:pointer; text-decoration:underline; text-decoration-color:rgba(0,0,0,0.2); text-underline-offset:3px;">
-</h3>
-    <p class="clamp-3" data-i18n="svc_ac_teaser"></p>
-    <p class="price" data-i18n="svc_ac_price"></p>
-
-    <!-- micro list -->
-    <ul class="micro-list">
-      <li data-i18n="micro_ac_1"></li>
-      <li data-i18n="micro_ac_2"></li>
-      <li data-i18n="micro_ac_3"></li>
-    </ul>
-
-    <div class="svc-actions">
-      <a href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto%20para%20limpieza%20y%20mantenimiento%20de%20aire%20acondicionado.%20Puedo%20enviar%20fotos%20ahora."
-   target="_blank"
-   rel="noopener"
-   class="btn"
-   data-i18n="btn_whatsapp"
-        onclick="gtag('event', 'whatsapp_click');">
-</a>
-      
-    </div>
-  </div>
-</div>
-
-
-
-<!-- Fabric / Upholstery -->
-<div class="svc-card">
-  <img src="card_sofa.jpg" alt="Limpieza de Tapicería" />
-  <div class="svc-body">
-    <h3 data-i18n="svc_fab_title"
-    onclick="window.location.href='/limpieza-sofas-tapiceria.html'"
-    style="cursor:pointer; text-decoration:underline; text-decoration-color:rgba(0,0,0,0.2); text-underline-offset:3px;">
-</h3>
-    <p class="clamp-3" data-i18n="svc_fab_teaser"></p>
-    <p class="price" data-i18n="svc_fab_price"></p>
-
-    <!-- micro list -->
-    <ul class="micro-list">
-      <li data-i18n="micro_fab_1"></li>
-      <li data-i18n="micro_fab_2"></li>
-      <li data-i18n="micro_fab_3"></li>
-    </ul>
-
-    <div class="svc-actions">
-      <a href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto%20para%20limpieza%20de%20tapicer%C3%ADa.%20Puedo%20enviar%20fotos%20ahora."
-   target="_blank"
-   rel="noopener"
-   class="btn"
-   data-i18n="btn_whatsapp"
-        onclick="gtag('event', 'whatsapp_click');">
-</a>
-      
-    </div>
-  </div>
-</div>
-
-<!-- Carpets & Mattresses -->
-<div class="svc-card">
-  <img src="card_carpet.png" alt="Limpieza de Alfombras y Colchones" />
-  <div class="svc-body">
-    <h3 data-i18n="svc_cm_title"
-    onclick="window.location.href='/limpieza-colchones-alfombras.html'"
-    style="cursor:pointer; text-decoration:underline; text-decoration-color:rgba(0,0,0,0.2); text-underline-offset:3px;">
-</h3>
-    <p class="clamp-3" data-i18n="svc_cm_teaser"></p>
-    <p class="price" data-i18n="svc_cm_price"></p>
-
-    <!-- micro list -->
-    <ul class="micro-list">
-      <li data-i18n="micro_cm_1"></li>
-      <li data-i18n="micro_cm_2"></li>
-      <li data-i18n="micro_cm_3"></li>
-    </ul>
-
-    <div class="svc-actions">
-      <a href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto%20para%20limpieza%20de%20alfombras%20y%20colchones.%20Puedo%20enviar%20fotos%20ahora."
-   target="_blank"
-   rel="noopener"
-   class="btn"
-   data-i18n="btn_whatsapp"
-        onclick="gtag('event', 'whatsapp_click');">
-</a>
-      
-    </div>
-  </div>
-</div>
-
-
-<!-- Toldos -->
-<div class="svc-card">
-  <img src="card_window.png" alt="Limpieza de Toldos" />
-  <div class="svc-body">
-    <h3 data-i18n="svc_win_title"
-    onclick="window.location.href='/limpieza-toldos-marbella-estepona.html'"
-    style="cursor:pointer; text-decoration:underline; text-decoration-color:rgba(0,0,0,0.2); text-underline-offset:3px;">
-</h3>
-    <p class="clamp-3" data-i18n="svc_win_teaser"></p>
-    <p class="price" data-i18n="svc_win_price"></p>
-
-    <!-- micro list -->
-    <ul class="micro-list">
-      <li data-i18n="micro_win_1"></li>
-      <li data-i18n="micro_win_2"></li>
-      <li data-i18n="micro_win_3"></li>
-    </ul>
-
-    <div class="svc-actions">
-  <a
-    href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto%20para%20limpieza%20profesional%20de%20toldos.%20Puedo%20enviar%20fotos%20ahora."
-    target="_blank"
-    rel="noopener"
-    class="btn"
-    data-i18n="btn_whatsapp"
-    onclick="gtag('event', 'whatsapp_click');"
-  >
-    Pedir por WhatsApp
-  </a>
-</div>
-  </div>
-</div>
-
-<!-- Handyman -->
-<div class="svc-card">
-  <img src="card_handyman.png" alt="Servicios de Manitas" />
-  <div class="svc-body">
-    <h3 data-i18n="svc_hm_title"
-    onclick="window.location.href='/servicios-manitas.html'"
-    style="cursor:pointer; text-decoration:underline; text-decoration-color:rgba(0,0,0,0.2); text-underline-offset:3px;">
-</h3>
-    <p class="clamp-3" data-i18n="svc_hm_teaser"></p>
-    <p class="price" data-i18n="svc_hm_price"></p>
-
-    <!-- micro list -->
-    <ul class="micro-list">
-      <li data-i18n="micro_hm_1"></li>
-      <li data-i18n="micro_hm_2"></li>
-      <li data-i18n="micro_hm_3"></li>
-    </ul>
-
-    <div class="svc-actions">
-      <a href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20presupuesto%20para%20servicios%20de%20mantenimiento%20y%20reparaciones%20(manitas).%20Puedo%20enviar%20fotos%20ahora."
-   target="_blank"
-   rel="noopener"
-   class="btn"
-   data-i18n="btn_whatsapp"
-        onclick="gtag('event', 'whatsapp_click');">
-</a>
-      
-    </div>
-  </div>
-</div>
-
-<!-- Property Inspection -->
-<div class="svc-card">
-  <img src="card_inspection.jpg" alt="Inspección de Propiedades" />
-  <div class="svc-body">
-    <h3 data-i18n="svc_ins_title"
-    onclick="window.location.href='/inspeccion-propiedades.html'"
-    style="cursor:pointer; text-decoration:underline; text-decoration-color:rgba(0,0,0,0.2); text-underline-offset:3px;">
-</h3>
-    <p class="clamp-3" data-i18n="svc_ins_teaser"></p>
-    <p class="price" data-i18n="svc_ins_price"></p>
-
-    <!-- micro list -->
-    <ul class="micro-list">
-      <li data-i18n="micro_ins_1"></li>
-      <li data-i18n="micro_ins_2"></li>
-      <li data-i18n="micro_ins_3"></li>
-    </ul>
-
-    <div class="svc-actions">
-      <a href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20presupuesto%20para%20inspecci%C3%B3n%20t%C3%A9cnica%20de%20propiedad%20antes%20de%20compra%20o%20alquiler.%20Puedo%20enviar%20ubicaci%C3%B3n%20y%20detalles%20ahora."
-   target="_blank"
-   rel="noopener"
-   class="btn"
-   data-i18n="btn_whatsapp"
-        onclick="gtag('event', 'whatsapp_click');">
-</a>
-      
-    </div>
-  </div>
-</div>
-</section><!-- 👈 closes <section class="services" id="servicios"> -->
-
-
-  <!-- FAQ -->
-  <section class="faq" id="faq">
-
+  <!-- FCT FAQ -->
+<section class="fct21-faq fade-in" id="faq">
+  <div class="fct21-head">
+    <p class="fct2-kicker"><span class="es-copy">ANTES DE RESERVAR</span><span class="en-copy">BEFORE YOU BOOK</span></p>
     <h2 id="faqTitle"></h2>
-    <div id="faqList" class="accordion"></div>
-  </section>
-
- 
-
-<section id="areas" style="text-align:center; padding:40px 20px;">
-  <h2 style="font-family:'Outfit',sans-serif; font-weight:700; color:#333;" data-i18n="areas_title">
-    Áreas de Servicio
-  </h2>
-
-  <p style="font-size:18px; margin-top:10px; color:#444;" data-i18n="areas_sub">
-    Servicios disponibles en zonas seleccionadas de España:
-  </p>
-
- <div class="areas-links">
-  <a class="area-pill" href="/costa-brava">Costa Brava</a>
-  <a class="area-pill" href="/costa-del-sol">Costa del Sol</a>
-  <a class="area-pill" href="/andalucia">Andalucía</a>
-</div>
+    <p><span class="es-copy">Lo esencial, sin letra pequeña.</span><span class="en-copy">The essentials, without the small print.</span></p>
+  </div>
+  <div id="faqList" class="accordion fct21-list"></div>
 </section>
 
+<!-- FCT AREAS -->
+<section class="fct22-areas fade-in" id="areas">
+  <div class="fct22-inner">
+    <p class="fct2-kicker"><span class="es-copy">DÓNDE TRABAJAMOS</span><span class="en-copy">WHERE WE WORK</span></p>
+    <h2><span class="es-copy">Cuidado local.<br>Alcance mediterráneo.</span><span class="en-copy">Local care.<br>Mediterranean reach.</span></h2>
+    <div class="fct22-links">
+      <a href="/costa-brava.html">Costa Brava <span>↗</span></a>
+      <a href="/costa-del-sol.html">Costa del Sol <span>↗</span></a>
+      <a href="/limpieza-sofas-tapiceria.html#sevilla">Sevilla <span>↗</span></a>
+    </div>
+  </div>
+</section>
 
-<footer>
-
-  <p>© 2026 FrescaClimaTech</p>
-
-  <p>
-    <strong>Fresh Air · Clean Fabrics · Clear Decisions</strong>
-  </p>
-
-  <p>
-    Costa Brava · Costa del Sol · Andalucía
-  </p>
-
-  <p>
-    <a href="mailto:info@frescaclimatech.es">
-      info@frescaclimatech.es
-    </a>
-  </p>
-
-  <p>
-    <a href="https://www.instagram.com/frescaclimatech/" target="_blank">
-      Instagram
-    </a>
-    ·
-    <a href="https://g.page/r/CVK2NpIvzkvdEBM/review" target="_blank">
-      Google Reviews
-    </a>
-    ·
-    <a href="/privacy" target="_blank">
-      Política de Privacidad
-    </a>
-  </p>
-
+<footer class="fct23-footer">
+  <div class="fct23-top">
+    <div class="fct23-brand">
+      <img src="FCT_logo_vector.svg" alt="FrescaClimaTech" loading="lazy">
+      <p><span class="es-copy">Cuidado más inteligente para espacios mediterráneos.</span><span class="en-copy">Smarter care for Mediterranean spaces.</span></p>
+    </div>
+    <div class="fct23-col">
+      <span class="fct23-label">CARE</span>
+      <a href="/limpieza-sofas-tapiceria.html"><span class="es-copy">Textil & Tapicería</span><span class="en-copy">Textile & Upholstery</span></a>
+      <a href="/limpieza-toldos-marbella-estepona.html"><span class="es-copy">Exterior & Toldos</span><span class="en-copy">Outdoor & Awnings</span></a>
+      <a href="/limpieza-aire-acondicionado.html"><span class="es-copy">Aire acondicionado</span><span class="en-copy">Air Conditioning</span></a>
+      <a href="/airbnb-upholstery-cleaning.html">Property Care</a>
+    </div>
+    <div class="fct23-col">
+      <span class="fct23-label">FCT</span>
+      <a href="/mediterranean-club.html">Mediterranean Club</a>
+      <a href="#clima">Climate Intelligence</a>
+      <a href="#calc">Smart Estimate</a>
+      <a href="#opiniones"><span class="es-copy">Opiniones</span><span class="en-copy">Reviews</span></a>
+    </div>
+    <div class="fct23-col">
+      <span class="fct23-label"><span class="es-copy">CONTACTO</span><span class="en-copy">CONTACT</span></span>
+      <a href="https://wa.me/34657336353" target="_blank" rel="noopener">WhatsApp ↗</a>
+      <a href="mailto:info@frescaclimatech.es">Email ↗</a>
+      <a href="https://www.instagram.com/frescaclimatech/" target="_blank" rel="noopener">Instagram ↗</a>
+      <a href="https://g.page/r/CVK2NpIvzkvdEBM/review" target="_blank" rel="noopener">Google Reviews ↗</a>
+    </div>
+  </div>
+  <div class="fct23-bottom">
+    <span>© 2026 FrescaClimaTech</span>
+    <span>Costa Brava · Costa del Sol · Sevilla</span>
+    <div><a href="/privacy.html"><span class="es-copy">Privacidad</span><span class="en-copy">Privacy</span></a><button type="button" onclick="if(window.openCookieSettings)window.openCookieSettings();"><span class="es-copy">Cookies</span><span class="en-copy">Cookies</span></button></div>
+  </div>
 </footer>
 
  
@@ -2876,7 +2396,7 @@ document.addEventListener('keydown', e => {
         hero_trust: "⭐⭐⭐⭐⭐ 5.0 en Google",
         hero_micro: "Sofás · Tapicería · Alfombras · Aire acondicionado",
         service_available_label: "📍 Servicio disponible en:",
-        service_available_cities: "Barcelona · Lloret de Mar · Marbella · Sevilla · Granada · Almuñécar · Motril · Salobreña",
+        service_available_cities: "Costa Brava · Costa del Sol · Sevilla",
         reviews_kicker: "Opiniones verificadas",
         reviews_title: "Lo que dicen nuestros clientes",
         reviews_cta: "⭐ Ver todas las opiniones en Google",
@@ -2923,6 +2443,8 @@ calc_service_sofa: "Sofá / tapicería",
 calc_service_mattress: "Colchón",
 calc_service_carpet: "Alfombra",
 calc_service_chairs: "Sillas",
+calc_service_awning: "Toldo / exterior",
+calc_service_ac: "Aire acondicionado",
 
 calc_type_2seater: "Sofá 2 plazas",
 calc_type_3seater: "Sofá 3 plazas",
@@ -3099,7 +2621,7 @@ calc_cta_top: "Calcular precio",
 
     // Availability note (keep your original)
     "<div class='svc-block'>" +
-      "<p class='svc-note'><strong>Disponible solo en Barcelona y Lloret de Mar.</strong></p>" +
+      "<p class='svc-note'><strong>Disponible en Costa Brava, Costa del Sol y Sevilla.</strong></p>" +
     "</div>" +
 
     // Quote hint
@@ -3274,13 +2796,13 @@ calc_cta_top: "Calcular precio",
       "<h4>Servicio adicional: blanqueado de colchón</h4>" +
       "<ul class='svc-list'>" +
         "<li>Recomendado para manchas amarillas / marcas antiguas</li>" +
-        "<li>Disponible <strong>solo en Barcelona</strong></li>" +
+        "<li>Disponibilidad según zona y valoración previa</li>" +
         "<li>Requiere evaluación por foto (no siempre es necesario)</li>" +
       "</ul>" +
     "</div>" +
 
     "<div class='svc-block'>" +
-      "<p class='svc-note'><strong>Zonas:</strong> Barcelona, Marbella, Granada, Costa Tropical y Sevilla.</p>" +
+      "<p class='svc-note'><strong>Zonas:</strong> Costa Brava, Costa del Sol y Sevilla.</p>" +
     "</div>" +
 
     "<div class='svc-block svc-cta-hint'>" +
@@ -3304,18 +2826,14 @@ calc_cta_top: "Calcular precio",
         svc_ins_price: "Desde 50 €",
         
 
-        faqTitle: "Preguntas Frecuentes",
+        faqTitle: "Lo que conviene saber",
         faqs: [
-          ["¿Cuánto dura una limpieza?", "Normalmente de 1 a 3 horas, dependiendo del artículo y su estado."],
-          ["¿Ofrecen servicio de secado?", "Sí, ofrecemos secado exprés para tapicería en Marbella y Sevilla. Los muebles suelen estar secos y listos para usar en unas 4–6 horas después de la limpieza."],
-          ["¿Pueden limpiar muebles de exterior o cojines de barcos?", "Sí, estamos especializados en la limpieza de tapicería náutica, muebles de terraza y tejidos exteriores."],
-          ["¿Usan productos ecológicos?", "Sí, priorizamos el uso de soluciones de limpieza seguras, no tóxicas y respetuosas con el medio ambiente."],
-          ["¿Es seguro para niños y mascotas?", "Por supuesto. Usamos productos profesionales que son seguros una vez que las superficies están secas."],
-          ["¿Puedo pedir cita los fines de semana?", "Sí, ofrecemos citas flexibles, incluidos sábados y domingos."],
-          ["¿Cómo puedo pedir un presupuesto?", "Puedes escribirnos por WhatsApp. Solo envíanos fotos y describe lo que necesitas limpiar."],
-          ["¿Ofrecen limpieza antes de la venta de una propiedad?", "¡Sí! Ofrecemos limpieza de tapicería y de aire acondicionado para propiedades en venta — con un descuento especial por servicios combinados."],
-          ["¿Ofrecen inspecciones de propiedades a distancia?", "¡Sí! Ofrecemos inspecciones de propiedades por vídeo en inglés. También realizamos inspecciones presenciales en Barcelona y alrededores."],
-          ["¿Qué métodos de pago aceptan?", "Efectivo o Bizum. Próximamente transferencias."]
+          ["¿Cómo obtengo un presupuesto?", "Cuéntanos qué necesitas y envíanos fotos por WhatsApp. Para servicios estándar podemos dar una orientación rápida; toldos, accesos complejos y trabajos especiales se confirman tras valorar las imágenes."],
+          ["¿Cuánto tarda el servicio?", "Depende del elemento, tamaño, estado y acceso. Antes de reservar te indicamos el tiempo aproximado junto con la propuesta."],
+          ["¿Cuánto tarda en secar la tapicería?", "El secado depende del tejido, la ventilación, la temperatura y la humedad. Nuestro Climate Intelligence te ayuda a ver las condiciones de secado de tu zona."],
+          ["¿Trabajáis con toldos y tejidos exteriores?", "Sí. Valoramos tamaño, construcción, suciedad y acceso antes de confirmar el método y el precio."],
+          ["¿Qué incluye el cuidado del aire acondicionado?", "FCT ofrece cuidado higiénico dentro de su alcance. Cuando se requiere mantenimiento o intervención técnica, coordinamos el trabajo con partners habilitados RITE."],
+          ["¿Trabajáis con viviendas vacacionales y segundas residencias?", "Sí. Property Care está pensado para hogares, segundas residencias y alojamientos turísticos, con coordinación según las necesidades de cada propiedad."]
         ]
       },
       en: {
@@ -3365,7 +2883,7 @@ calc_cta_top: "Calcular precio",
         hero_trust: "⭐⭐⭐⭐⭐ 5.0 on Google",
         hero_micro: "Sofas · Upholstery · Carpets · Air conditioning",
         service_available_label: "📍 Service available in:",
-        service_available_cities: "Barcelona · Lloret de Mar · Marbella · Seville · Granada · Almuñécar · Motril · Salobreña",
+        service_available_cities: "Costa Brava · Costa del Sol · Seville",
         reviews_kicker: "Verified reviews",
         reviews_title: "What our clients say",
         reviews_cta: "⭐ See all Google reviews",
@@ -3412,6 +2930,8 @@ calc_service_sofa: "Sofa / upholstery",
 calc_service_mattress: "Mattress",
 calc_service_carpet: "Carpet",
 calc_service_chairs: "Chairs",
+calc_service_awning: "Awning / outdoor",
+calc_service_ac: "Air conditioning",
 
 calc_type_2seater: "2-seater sofa",
 calc_type_3seater: "3-seater sofa",
@@ -3587,7 +3107,7 @@ calc_cta_top: "Calculate price",
 
     // Availability
     "<div class='svc-block'>" +
-      "<p class='svc-note'><strong>Available only in Barcelona and Lloret de Mar.</strong></p>" +
+      "<p class='svc-note'><strong>Available in Costa Brava, Costa del Sol and Seville.</strong></p>" +
     "</div>" +
 
 
@@ -3761,13 +3281,13 @@ calc_cta_top: "Calculate price",
       "<h4>Add-on: mattress bleaching</h4>" +
       "<ul class='svc-list'>" +
         "<li>Recommended for yellowing / older stains</li>" +
-        "<li>Available <strong>only in Barcelona</strong></li>" +
+        "<li>Availability depends on area and prior assessment</li>" +
         "<li>Requires photo assessment (not always needed)</li>" +
       "</ul>" +
     "</div>" +
 
     "<div class='svc-block'>" +
-      "<p class='svc-note'><strong>Areas:</strong> Barcelona, Marbella, Granada, Costa Tropical, and Sevilla.</p>" +
+      "<p class='svc-note'><strong>Areas:</strong> Costa Brava, Costa del Sol and Seville.</p>" +
     "</div>" +
 
     "<div class='svc-block svc-cta-hint'>" +
@@ -3791,18 +3311,14 @@ calc_cta_top: "Calculate price",
           "Provide the address and inspection goal so we can arrange the date and access.",
         svc_ins_price: "From €50",
 
-        faqTitle: "Frequently Asked Questions",
+        faqTitle: "Good to know",
         faqs: [
-          ["How long does a cleaning take?", "Usually 1 to 3 hours, depending on the item and condition."],
-          ["Do you offer drying service?", "Yes, we offer express drying for upholstery in Marbella and Sevilla. Your furniture is usually dry and ready to use within 4–6 hours after cleaning."],
-          ["Can you clean outdoor furniture or boat cushions?", "Yes, we specialize in cleaning boat upholstery, terrace furniture, and outdoor fabrics."],
-          ["Do you use eco-friendly products?", "Yes, we prioritize safe, non-toxic, and eco-friendly cleaning solutions."],
-          ["Is it safe for children and pets?", "Absolutely. We use professional products that are safe once the cleaned surfaces are dry."],
-          ["Can I schedule a service on weekends?", "Yes, we offer flexible appointments, including Saturdays and Sundays."],
-          ["How do I request a quote?", "You can contact us via WhatsApp. Just send photos and describe your cleaning needs."],
-          ["Do you offer pre-sale cleaning?", "Yes! We offer upholstery and air conditioner cleaning for properties before sale — with a special discount for combined services."],
-          ["Do you offer remote property inspections?", "Yes! We offer video property inspections in English. We also provide on-site property inspections in Barcelona and surrounding areas."],
-          ["What payment methods do you accept?", "Cash or Bizum. Bank transfers coming soon."]
+          ["How do I get a quote?", "Tell us what you need and send photos via WhatsApp. For standard services we can usually give a quick indication; awnings, complex access and special jobs are confirmed after photo assessment."],
+          ["How long does the service take?", "It depends on the item, size, condition and access. Before booking, we give you an approximate duration together with the proposal."],
+          ["How long does upholstery take to dry?", "Drying depends on the fabric, ventilation, temperature and humidity. Our Climate Intelligence helps you check drying conditions in your area."],
+          ["Do you work with awnings and outdoor fabrics?", "Yes. We assess size, construction, condition and access before confirming the method and price."],
+          ["What does air-conditioning care include?", "FCT provides hygienic care within its scope. When maintenance or technical intervention is required, we coordinate the work with RITE-authorised partners."],
+          ["Do you work with holiday rentals and second homes?", "Yes. Property Care is designed for homes, second homes and holiday rentals, with coordination adapted to each property."]
         ]
       }
     };
@@ -4417,6 +3933,21 @@ const CALC_DATA = {
       "dining": { esKey: "calc_type_dining_chair", enKey: "calc_type_dining_chair", min: 15, max: 20 },
       "office": { esKey: "calc_type_office_chair", enKey: "calc_type_office_chair", min: 20, max: 30 }
     }
+  },
+  awning: {
+    types: {
+      "small": { es: "Pequeño · hasta 3 m", en: "Small · up to 3 m", quoteRequired: true },
+      "medium": { es: "Mediano · 3–5 m", en: "Medium · 3–5 m", quoteRequired: true },
+      "large": { es: "Grande · más de 5 m", en: "Large · over 5 m", quoteRequired: true },
+      "commercial": { es: "Varios / comercial", en: "Several / commercial", quoteRequired: true }
+    }
+  },
+  ac: {
+    types: {
+      "indoor": { es: "Unidad interior · cuidado higiénico", en: "Indoor unit · hygienic care", quoteRequired: true },
+      "indooroutdoor": { es: "Interior + exterior", en: "Indoor + outdoor", quoteRequired: true },
+      "multi": { es: "Varias unidades / multisplit", en: "Several units / multisplit", quoteRequired: true }
+    }
   }
 };
 
@@ -4457,7 +3988,7 @@ function fillCalcTypes() {
 
   typeEl.innerHTML = Object.entries(config.types).map(([value, item]) => {
     const key = lang === "en" ? item.enKey : item.esKey;
-    const label = translations[lang]?.[key] || translations.es?.[key] || value;
+    const label = item.es || item.en ? (lang === "en" ? (item.en || item.es) : (item.es || item.en)) : (translations[lang]?.[key] || translations.es?.[key] || value);
     return `<option value="${value}">${label}</option>`;
   }).join("");
 }
@@ -4465,6 +3996,7 @@ function fillCalcTypes() {
 function getTypeLabel(service, type, lang) {
   const item = CALC_DATA[service]?.types?.[type];
   if (!item) return type;
+  if (item.es || item.en) return lang === "en" ? (item.en || item.es) : (item.es || item.en);
   const key = lang === "en" ? item.enKey : item.esKey;
   return translations[lang]?.[key] || translations.es?.[key] || type;
 }
@@ -4487,8 +4019,9 @@ function addCalcItem() {
     service,
     type,
     qty,
-    min: item.min,
-    max: item.max
+    min: item.min ?? 0,
+    max: item.max ?? 0,
+    quoteRequired: !!item.quoteRequired
   });
 
   renderCalcCart();
@@ -4519,77 +4052,49 @@ function getCalcProgressText(totalQty, lang) {
 function renderCalcCart() {
   const lang = window.__currentLang || "es";
   const t = translations[lang] || translations.es;
-
   const cartItemsEl = document.getElementById("calc-cart-items");
   const priceEl = document.getElementById("calc-result-price");
   const subtotalEl = document.getElementById("calc-result-subtotal");
   const discountEl = document.getElementById("calc-result-discount");
   const waEl = document.getElementById("calc-wa");
-  const progressEl = document.getElementById("calc-progress");
-
   if (!cartItemsEl || !priceEl || !subtotalEl || !discountEl || !waEl) return;
 
+  const cartBox = document.getElementById("calc-cart");
+  const resultBox = document.getElementById("calc-result");
   if (!calcCart.length) {
-  document.getElementById('calc-cart').style.display = 'none';
-  document.getElementById('calc-result').style.display = 'none';
-  cartItemsEl.innerHTML = `<div class="calc-cart-empty">${t.calc_cart_empty}</div>`;
-  priceEl.textContent = "—";
-  subtotalEl.textContent = "";
-  discountEl.textContent = "";
-  if (progressEl) progressEl.textContent = "";
-  waEl.href = "https://wa.me/34657336353";
-  return;
-}
+    cartBox.style.display = "none"; resultBox.style.display = "none";
+    cartItemsEl.innerHTML = ""; waEl.href = "https://wa.me/34657336353"; return;
+  }
+  cartBox.style.display = "block"; resultBox.style.display = "block";
 
-document.getElementById('calc-cart').style.display = 'block';
-document.getElementById('calc-result').style.display = 'block';
-
-
-  cartItemsEl.innerHTML = calcCart.map((row, index) => {
-    const label = getTypeLabel(row.service, row.type, lang);
-    const lineMin = row.min * row.qty;
-    const lineMax = row.max * row.qty;
-
-    return `
-      <div class="calc-cart-row">
-        <div class="calc-cart-main">
-          <div class="calc-cart-name">${label}</div>
-          <div class="calc-cart-meta">× ${row.qty}</div>
-        </div>
-        <div class="calc-cart-price">${formatPriceRange(lineMin, lineMax)}</div>
-        <button type="button" class="calc-remove" onclick="removeCalcItem(${index})" aria-label="${t.calc_remove}">×</button>
-      </div>
-    `;
+  cartItemsEl.innerHTML = calcCart.map((row,index)=>{
+    const label=getTypeLabel(row.service,row.type,lang);
+    const price=row.quoteRequired ? (lang==="en"?"Photo assessment":"Valoración por fotos") : formatPriceRange(row.min*row.qty,row.max*row.qty);
+    return `<div class="calc-cart-row"><div class="calc-cart-main"><div class="calc-cart-name">${label}</div><div class="calc-cart-meta">× ${row.qty}</div></div><div class="calc-cart-price">${price}</div><button type="button" class="calc-remove" onclick="removeCalcItem(${index})" aria-label="Remove">×</button></div>`;
   }).join("");
 
-  const totalQty = calcCart.reduce((sum, row) => sum + row.qty, 0);
-  const subtotalMin = calcCart.reduce((sum, row) => sum + (row.min * row.qty), 0);
-  const subtotalMax = calcCart.reduce((sum, row) => sum + (row.max * row.qty), 0);
+  const priced=calcCart.filter(r=>!r.quoteRequired);
+  const quoted=calcCart.filter(r=>r.quoteRequired);
+  const totalQty=priced.reduce((s,r)=>s+r.qty,0);
+  const subMin=priced.reduce((s,r)=>s+r.min*r.qty,0), subMax=priced.reduce((s,r)=>s+r.max*r.qty,0);
+  const discount=getCalcDiscount(totalQty);
+  const totalMin=subMin*(1-discount), totalMax=subMax*(1-discount);
 
-  const discount = getCalcDiscount(totalQty);
-  const totalMin = subtotalMin * (1 - discount);
-  const totalMax = subtotalMax * (1 - discount);
+  if (priced.length) {
+    priceEl.textContent=(lang==="en"?"Estimated total · ":"Total orientativo · ")+formatPriceRange(totalMin,totalMax)+(quoted.length?" + photo assessment":"");
+    subtotalEl.textContent=(lang==="en"?"Priced items: ":"Artículos con precio: ")+formatPriceRange(subMin,subMax);
+    discountEl.textContent=discount ? ((lang==="en"?"Discount: ":"Descuento: ")+getCalcDiscountLabel(totalQty,lang)) : "";
+  } else {
+    priceEl.textContent=lang==="en"?"Photo assessment required":"Valoración por fotos";
+    subtotalEl.textContent=lang==="en"?"No artificial fixed price":"Sin precio fijo artificial";
+    discountEl.textContent="";
+  }
 
-  priceEl.textContent = `${t.calc_total_estimated}: ${formatPriceRange(totalMin, totalMax)}`;
-  subtotalEl.textContent = `${t.calc_subtotal}: ${formatPriceRange(subtotalMin, subtotalMax)}`;
-  discountEl.textContent = `${t.calc_discount_applied}: ${getCalcDiscountLabel(totalQty, lang)}`;
-
-  if (progressEl) {
-  progressEl.textContent = getCalcProgressText(totalQty, lang);
-}
-
-  const lines = calcCart.map(row => {
-    const label = getTypeLabel(row.service, row.type, lang);
-    return `- ${label} × ${row.qty}`;
-  }).join("%0A");
-
-  const totalText = formatPriceRange(totalMin, totalMax);
-
-  const msg = lang === "en"
-    ? `Hi, I used the calculator on your website.%0A%0AOrder:%0A${lines}%0A%0AEstimated total: ${totalText}%0ADiscount applied: ${getCalcDiscountLabel(totalQty, lang)}%0A%0AI am sending photos to confirm the final price.`
-    : `Hola, he usado la calculadora de su web.%0A%0APedido:%0A${lines}%0A%0APrecio orientativo total: ${totalText}%0ADescuento aplicado: ${getCalcDiscountLabel(totalQty, lang)}%0A%0ALes envío fotos para confirmar el precio final.`;
-
-  waEl.href = `https://wa.me/34657336353?text=${msg}`;
+  const lines=calcCart.map(r=>`- ${getTypeLabel(r.service,r.type,lang)} × ${r.qty}`).join("%0A");
+  const msg=lang==="en"
+    ? `Hi, I used Smart Estimate on your website.%0A%0A${lines}%0A%0AI am sending photos so you can confirm the final price.`
+    : `Hola, he usado Smart Estimate en vuestra web.%0A%0A${lines}%0A%0AOs envío fotos para que podáis confirmar el precio final.`;
+  waEl.href=`https://wa.me/34657336353?text=${msg}`;
 }
 
 function initCalculator() {
@@ -4869,5 +4374,33 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
   
+<script>
+(function(){var f=document.getElementById('smartCarePreview');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();var v=document.getElementById('smartCareInput').value.trim();if(!v)return;var u='https://wa.me/34657336353?text='+encodeURIComponent('Hola, necesito orientación para mi espacio: '+v);window.open(u,'_blank','noopener');});})();
+</script>
+<script id="fct2-lang">
+(function(){
+ function show(el,on){
+   if(!on){el.style.display='none';return;}
+   var tag=el.tagName.toLowerCase();
+   el.style.display=(tag==='p'||tag==='div'||tag==='h1'||tag==='h2'||tag==='h3')?'block':'inline';
+ }
+ function setFCTLang(l){
+   l=l==='en'?'en':'es';
+   document.documentElement.lang=l;
+   try{localStorage.setItem('fctLang',l);localStorage.setItem('lang',l);}catch(e){}
+   document.querySelectorAll('.es-copy').forEach(function(x){show(x,l==='es');});
+   document.querySelectorAll('.en-copy').forEach(function(x){show(x,l==='en');});
+   var inp=document.getElementById('smartCareInput');
+   if(inp) inp.placeholder=l==='en'?inp.getAttribute('data-placeholder-en'):inp.getAttribute('data-placeholder-es');
+   if(typeof window.switchLang==='function' && window.__currentLang!==l){try{window.switchLang(l);}catch(e){}}
+ }
+ window.setFCTLang=setFCTLang;
+ document.addEventListener('DOMContentLoaded',function(){
+   var saved='es';try{saved=localStorage.getItem('fctLang')||localStorage.getItem('lang')||'es';}catch(e){}
+   setFCTLang(saved);
+   document.querySelectorAll('[data-fct-lang]').forEach(function(b){b.addEventListener('click',function(){setFCTLang(this.getAttribute('data-fct-lang'));});});
+ });
+})();
+</script>
 </body>
 </html>
