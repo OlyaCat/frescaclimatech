@@ -1923,6 +1923,18 @@ footer p:first-child {
 
 
 <script src="cookie-consent.js"></script>
+<style id="fct2-home">
+:root{--fct-ink:#171714;--fct-ivory:#fbf8f1;--fct-gold:#a77b35;--fct-line:#ddd6c8}
+.fct2-hero{background:var(--fct-ivory);padding:86px 24px 76px;color:var(--fct-ink)}
+.fct2-hero-inner{max-width:1180px;margin:auto;display:grid;grid-template-columns:1.25fr .75fr;gap:70px;align-items:end}
+.fct2-kicker{font:600 12px/1.2 Outfit,Arial,sans-serif;letter-spacing:.17em;text-transform:uppercase;color:var(--fct-gold);margin:0 0 20px}
+.fct2-hero h1{font:400 clamp(52px,7vw,92px)/.94 Outfit,Arial,sans-serif;letter-spacing:-.055em;margin:0;max-width:900px}
+.fct2-lead{font:400 19px/1.55 Outfit,Arial,sans-serif;color:#59554d;max-width:620px;margin:28px 0 0}
+.fct2-side{border-top:1px solid var(--fct-line);padding-top:22px;font:400 15px/1.55 Outfit,Arial,sans-serif;color:#5c574f}
+.fct2-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}.fct2-btn{display:inline-block;text-decoration:none;padding:13px 19px;border:1px solid var(--fct-ink);font:600 14px Outfit,Arial,sans-serif;color:var(--fct-ink)}.fct2-btn.dark{background:var(--fct-ink);color:var(--fct-ivory)}
+.fct2-finder{background:#171714;color:#fbf8f1;padding:56px 24px}.fct2-finder-inner{max-width:1180px;margin:auto;display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;align-items:center}.fct2-finder h2{font:400 clamp(32px,4vw,52px)/1 Outfit,Arial,sans-serif;letter-spacing:-.035em;margin:8px 0 14px}.fct2-finder p{color:#c8c2b7;font:400 16px/1.6 Outfit,Arial,sans-serif}.fct2-search{background:#252521;border:1px solid #45443f;padding:12px;display:flex;gap:10px}.fct2-search input{flex:1;min-width:0;border:0;background:transparent;color:#fff;font:400 16px Outfit,Arial,sans-serif;padding:10px;outline:none}.fct2-search button{border:0;background:#fbf8f1;color:#171714;padding:12px 18px;font:600 14px Outfit,Arial,sans-serif;cursor:pointer}.fct2-note{font-size:12px!important;color:#89867f!important;margin:10px 0 0!important}
+@media(max-width:760px){.fct2-hero{padding:60px 20px}.fct2-hero-inner,.fct2-finder-inner{grid-template-columns:1fr;gap:34px}.fct2-hero h1{font-size:52px}.fct2-search{display:block}.fct2-search button{width:100%;margin-top:8px}}
+</style>
 </head>
 
 
@@ -1989,77 +2001,8 @@ footer p:first-child {
     <button id="promoClose" class="promo-close" aria-label="Close">×</button>
   </div>
 
- <header class="hero" id="contacto">
-
-  <div class="hero-inner">
-
-    
-
-  <h1 style="font-size:clamp(28px,5vw,52px); font-weight:900; line-height:1.15; letter-spacing:-0.5px; margin:12px 0 12px; color:#111;">
-  <span data-i18n="hero_h1_line1">Limpieza profesional de</span><br>
-
-  <span style="color:#b68714;" data-i18n="hero_h1_line2">
-    Sofás, Tapicería, Toldos
-  </span><br>
-
-  <span style="font-weight:700;" data-i18n="hero_h1_line3">
-    y Aire Acondicionado
-  </span>
-</h1>
-
-<p class="hero-subline">
-  <span data-i18n="hero_locations">
-    Costa Brava · Costa del Sol · Andalucía
-  </span>
-</p>
-
-<p class="hero-description" data-i18n="hero_description">
-  Hogares · Airbnb · Empresas
-</p>
-
-<div class="hero-divider"></div>
-
-<p class="hero-slogan" data-i18n="hero_slogan">
-  Aire fresco, tejidos limpios, decisiones claras
-</p>
-
-
-<!-- ✅ Trust line (Google reviews) -->
-<p class="hero-trust">
-  <a class="hero-trust-link" href="https://g.page/r/CVK2NpIvzkvdEBM/review" target="_blank" rel="noopener"
-     data-i18n="hero_trust">
-    ⭐⭐⭐⭐⭐ 5.0 en Google · Clientes satisfechos
-  </a>
-</p>
-
-<div class="hero-ctas">
-
-<a href="https://wa.me/34657336353?text=Hola%2C%20quiero%20solicitar%20un%20presupuesto%20para%20limpieza%20de%20tapicer%C3%ADa.%20Puedo%20enviar%20fotos"
-   target="_blank"
-   class="btn hero-wa js-wa"
-   data-i18n="hero_whatsapp_cta"
-   onclick="gtag('event', 'whatsapp_click');">
-   Envía fotos por WhatsApp
-</a>
-
-  <a href="/airbnb-upholstery-cleaning.html" class="btn hero-secondary">
-  Servicios Airbnb
-</a>
-
-    </div>
-
-
-
-  </div>
-
-</header>
-
-
- <div class="wave-divider" style="line-height:0; overflow:hidden; margin-top:-2px; margin-bottom:-2px; position:relative; z-index:2;">
-  <svg viewBox="0 0 1440 40" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="display:block; width:100%; height:40px;">
-    <path d="M0,20 C360,40 1080,0 1440,20 L1440,40 L0,40 Z" fill="rgba(255,255,255,0.92)"/>
-  </svg>
-</div>
+ <header class="fct2-hero" id="contacto"><div class="fct2-hero-inner"><div><p class="fct2-kicker">FrescaClimaTech · Mediterranean Care</p><h1>Cuidamos tu espacio.<br>Con más criterio.</h1><p class="fct2-lead">Cuidado profesional para hogares, segundas residencias, alojamientos turísticos y espacios profesionales junto al Mediterráneo.</p><div class="fct2-actions"><a class="fct2-btn dark" href="https://wa.me/34657336353?text=Hola%2C%20quiero%20saber%20qu%C3%A9%20servicio%20necesita%20mi%20espacio." target="_blank" rel="noopener">Cuéntanos qué necesitas</a><a class="fct2-btn" href="/mediterranean-club.html">Mediterranean Club</a></div></div><div class="fct2-side">Textile & Upholstery Care · Outdoor & Awning Care · Air Conditioning Care · Property Care<br><br><strong>Costa Brava · Barcelona · Costa del Sol · Andalucía</strong></div></div></header>
+<section class="fct2-finder" aria-labelledby="smart-finder-title"><div class="fct2-finder-inner"><div><p class="fct2-kicker">SMART CARE · PRÓXIMAMENTE</p><h2 id="smart-finder-title">¿Qué necesita tu espacio?</h2><p>No necesitas conocer el nombre del servicio. Describe qué ocurre y FCT te guiará hacia el cuidado adecuado.</p></div><div><form class="fct2-search" id="smartCarePreview"><input id="smartCareInput" aria-label="Describe lo que necesita tu espacio" placeholder="Ej.: Tengo un Airbnb en Lloret, un sofá con olor y dos aires acondicionados…" /><button type="submit">Orientarme</button></form><p class="fct2-note">Vista previa del futuro Smart Service Finder · todavía no envía datos.</p></div></div></section>
 
 <!-- CINEMATIC LIFESTYLE VIDEO -->
 
@@ -4716,5 +4659,8 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
   
+<script>
+(function(){var f=document.getElementById('smartCarePreview');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();var v=document.getElementById('smartCareInput').value.trim();if(!v)return;var u='https://wa.me/34657336353?text='+encodeURIComponent('Hola, necesito orientación para mi espacio: '+v);window.open(u,'_blank','noopener');});})();
+</script>
 </body>
 </html>
