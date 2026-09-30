@@ -1950,6 +1950,18 @@ footer p:first-child {
 .fct2-nav{height:78px;background:#fbf8f1!important;padding:0 34px!important}.fct2-brand img{width:154px!important;max-height:54px;object-fit:contain}.fct2-links{gap:34px!important}.fct2-links a{font-weight:500!important}.fct4-hero{position:relative;min-height:760px;background:url('images/mediterranean_hero.jpg') center 54%/cover no-repeat;color:#171714;font-family:Outfit,Arial,sans-serif;overflow:hidden}.fct4-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(251,248,241,.97) 0%,rgba(251,248,241,.93) 37%,rgba(251,248,241,.46) 58%,rgba(251,248,241,.04) 82%)}.fct4-panel{position:relative;z-index:2;min-height:760px;width:min(760px,58vw);padding:94px 0 62px max(38px,6vw);display:flex;flex-direction:column;justify-content:center}.fct4-panel h1{font:400 clamp(58px,6.4vw,96px)/.91 Outfit,Arial,sans-serif;letter-spacing:-.058em;margin:0}.fct4-panel h1 em{font-style:normal;color:#9b702b}.fct4-panel .fct3-lead{max-width:650px}.fct4-signature{position:absolute;z-index:2;right:38px;bottom:36px;color:#fff;text-align:right;font:500 17px/1.4 Outfit,Arial,sans-serif;text-shadow:0 1px 18px rgba(0,0,0,.28)}.fct4-panel .fct3-locations{max-width:650px;margin-top:38px}.fct2-actions .fct2-btn{border-radius:0!important}.fct2-nav-wa{border-radius:0!important}
 @media(max-width:900px){.fct4-hero{min-height:780px;background-position:62% center}.fct4-overlay{background:linear-gradient(180deg,rgba(251,248,241,.97) 0%,rgba(251,248,241,.9) 55%,rgba(251,248,241,.12) 82%)}.fct4-panel{width:auto;min-height:700px;padding:68px 22px 80px;justify-content:flex-start}.fct4-panel h1{font-size:56px}.fct4-signature{right:20px;bottom:20px;font-size:14px}.fct2-nav{padding:0 18px!important}.fct2-brand img{width:138px!important}}
 </style>
+<style id="fct5-home">
+.fct4-hero{min-height:730px!important;background-position:center 56%!important}
+.fct4-overlay{background:linear-gradient(90deg,rgba(251,248,241,.88) 0%,rgba(251,248,241,.76) 25%,rgba(251,248,241,.34) 47%,rgba(251,248,241,.02) 72%)!important}
+.fct4-panel{width:min(690px,49vw)!important;min-height:730px!important;padding-left:max(42px,6vw)!important;padding-top:72px!important;padding-bottom:50px!important}
+.fct4-panel h1{font-size:clamp(58px,5.8vw,88px)!important;line-height:.92!important;text-shadow:0 1px 22px rgba(251,248,241,.42)}
+.fct4-panel .fct3-lead{max-width:570px!important;font-size:17px!important;color:#3f3b35!important}
+.fct4-panel .fct3-locations{max-width:560px!important}
+.fct4-signature{font-size:16px!important}
+.fct2-nav{position:relative!important;z-index:50!important}
+.fct2-nav-actions .fct-lang{font:600 12px Outfit,Arial,sans-serif!important}
+@media(max-width:900px){.fct4-overlay{background:linear-gradient(180deg,rgba(251,248,241,.92) 0%,rgba(251,248,241,.74) 48%,rgba(251,248,241,.08) 78%)!important}.fct4-panel{width:auto!important;min-height:690px!important;padding:60px 22px 100px!important}.fct4-panel h1{font-size:54px!important}}
+</style>
 </head>
 
 
@@ -1964,13 +1976,13 @@ footer p:first-child {
 <div class="fct2-nav">
   <a class="fct2-brand" href="/" aria-label="FrescaClimaTech home"><img src="FCT_logo_vector.svg" alt="FrescaClimaTech"></a>
   <nav class="fct2-links" aria-label="Primary">
-    <a href="#fct-care">Care</a>
+    <a href="#fct-care"><span class="es-copy">Cuidado</span><span class="en-copy">Care</span></a>
     <a href="/airbnb-upholstery-cleaning.html">Property Care</a>
-    <a href="#areas">Areas</a>
+    <a href="#areas"><span class="es-copy">Zonas</span><span class="en-copy">Areas</span></a>
     <a href="/mediterranean-club.html" class="club-link">Mediterranean Club</a>
   </nav>
   <div class="fct2-nav-actions">
-    <button type="button" onclick="switchLang('es')">ES</button><span>/</span><button type="button" onclick="switchLang('en')">EN</button>
+    <button type="button" class="fct-lang" data-fct-lang="es">ES</button><span>/</span><button type="button" class="fct-lang" data-fct-lang="en">EN</button>
     <a class="fct2-nav-wa" href="https://wa.me/34657336353?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20FrescaClimaTech." target="_blank" rel="noopener">WhatsApp</a>
   </div>
 </div>
@@ -1985,9 +1997,9 @@ footer p:first-child {
   <div class="fct4-overlay"></div>
   <div class="fct4-panel">
     <p class="fct2-kicker">FrescaClimaTech · Mediterranean Care</p>
-    <h1><span class="es-copy">Cuidamos tu espacio.<br><em>Con más criterio.</em></span><span class="en-copy">Better care for<br><em>the spaces you live in.</em></span></h1>
-    <p class="fct3-lead es-copy">Cuidado profesional para hogares, segundas residencias, alojamientos turísticos y espacios profesionales junto al Mediterráneo.</p>
-    <p class="fct3-lead en-copy">Professional care for homes, second homes, holiday rentals and professional spaces by the Mediterranean.</p>
+    <h1><span class="es-copy">Tu espacio,<br><em>mejor cuidado.</em></span><span class="en-copy">Your space,<br><em>better cared for.</em></span></h1>
+    <p class="fct3-lead es-copy">Cuidado profesional y más inteligente para hogares, segundas residencias, alojamientos turísticos y espacios profesionales junto al Mediterráneo.</p>
+    <p class="fct3-lead en-copy">Smarter professional care for homes, second homes, holiday rentals and professional spaces by the Mediterranean.</p>
     <div class="fct2-actions"><a class="fct2-btn dark" href="#smart-care"><span class="es-copy">Cuéntanos qué necesitas</span><span class="en-copy">Tell us what you need</span></a><a class="fct2-btn" href="/mediterranean-club.html">Mediterranean Club</a></div>
     <div class="fct3-locations">Costa Brava · Barcelona · Costa del Sol · Andalucía</div>
   </div>
@@ -4663,16 +4675,20 @@ document.addEventListener("DOMContentLoaded", function () {
 <script>
 (function(){var f=document.getElementById('smartCarePreview');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();var v=document.getElementById('smartCareInput').value.trim();if(!v)return;var u='https://wa.me/34657336353?text='+encodeURIComponent('Hola, necesito orientación para mi espacio: '+v);window.open(u,'_blank','noopener');});})();
 </script>
-<script>
+<script id="fct2-lang">
 (function(){
- function syncFCT3(){
-   var l=(document.documentElement.lang||localStorage.getItem('lang')||'es').toLowerCase().slice(0,2);
-   document.querySelectorAll('.es-copy').forEach(function(x){x.style.display=l==='en'?'none':'';});
+ function setFCTLang(l){
+   l=l==='en'?'en':'es';
+   document.documentElement.lang=l;
+   try{localStorage.setItem('fctLang',l);}catch(e){}
+   document.querySelectorAll('.es-copy').forEach(function(x){x.style.display=l==='es'?'':'none';});
    document.querySelectorAll('.en-copy').forEach(function(x){x.style.display=l==='en'?'':'none';});
  }
- document.addEventListener('DOMContentLoaded',syncFCT3);
- document.addEventListener('click',function(e){if(e.target&&e.target.closest&&e.target.closest('[data-lang],.fct2-nav-actions button'))setTimeout(syncFCT3,50);});
- window.addEventListener('storage',syncFCT3);
+ document.addEventListener('DOMContentLoaded',function(){
+   var saved;try{saved=localStorage.getItem('fctLang');}catch(e){}
+   setFCTLang(saved||((document.documentElement.lang||'es').slice(0,2)));
+   document.querySelectorAll('[data-fct-lang]').forEach(function(b){b.addEventListener('click',function(){setFCTLang(this.getAttribute('data-fct-lang'));});});
+ });
 })();
 </script>
 </body>
