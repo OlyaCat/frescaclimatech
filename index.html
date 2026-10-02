@@ -2150,6 +2150,26 @@ footer p:first-child {
 .fct25-unsure .fct7-command{margin:0}
 @media(max-width:900px){.fct25-help-grid{grid-template-columns:repeat(2,1fr)}.fct25-help-grid>a:nth-child(3){border-left:0;border-top:1px solid rgba(23,23,20,.18)}.fct25-help-grid>a:nth-child(4){border-top:1px solid rgba(23,23,20,.18)}}
 @media(max-width:650px){.fct7-help{padding-top:52px!important}.fct25-help-grid{grid-template-columns:1fr}.fct25-help-grid>a{min-height:130px;border-left:0!important;border-top:1px solid rgba(23,23,20,.18);padding:22px 18px}.fct25-help-grid>a:first-child{border-top:0}.fct25-icon{margin-bottom:24px}.fct25-unsure{grid-template-columns:1fr;gap:14px}}
+</style><style id="fct-area-grid-v2">
+.fct22-inner{grid-template-columns:.5fr 1fr 1.15fr}
+.fct26-area-grid{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid #46443f}
+.fct26-area-grid a{position:relative;min-height:92px;padding:18px 36px 17px 0!important;display:flex!important;flex-direction:column;align-items:flex-start!important;justify-content:flex-start!important;gap:7px}
+.fct26-area-grid a:nth-child(odd){border-right:1px solid #46443f;padding-right:22px!important}
+.fct26-area-grid a:nth-child(even){padding-left:22px!important}
+.fct26-area-grid strong{font:500 16px/1.2 Outfit,Arial,sans-serif;color:#f5f0e7}
+.fct26-area-grid small{font:400 11px/1.45 Outfit,Arial,sans-serif;color:#858078}
+.fct26-area-grid a>span{position:absolute;right:0;top:19px}
+.fct26-area-grid a:nth-child(odd)>span{right:18px}
+.fct26-area-help{grid-column:3;display:inline-block;margin-top:18px;color:#b9b3a9;text-decoration:none;font:400 11px/1.4 Outfit,Arial,sans-serif}
+.fct26-area-help:hover{color:#fff}
+@media(max-width:900px){
+ .fct22-inner{grid-template-columns:1fr}
+ .fct26-area-grid{grid-template-columns:1fr;margin-top:12px}
+ .fct26-area-grid a:nth-child(odd){border-right:0;padding-right:36px!important}
+ .fct26-area-grid a:nth-child(even){padding-left:0!important}
+ .fct26-area-grid a:nth-child(odd)>span{right:0}
+ .fct26-area-help{grid-column:1;margin-top:16px}
+}
 </style></head>
 
 
@@ -2182,7 +2202,7 @@ footer p:first-child {
     <p class="fct3-lead es-copy">Humedad, calima, salitre, sol. Cuidamos tu espacio según lo que realmente necesita.</p>
     <p class="fct3-lead en-copy">Humidity, Saharan dust, sea salt, sun. We care for your space based on what it actually needs.</p>
     <div class="fct2-actions"><a class="fct2-btn dark" href="#smart-care"><span class="es-copy">Cuéntanos qué necesitas</span><span class="en-copy">Tell us what you need</span></a><a class="fct2-btn" href="/mediterranean-club.html">Mediterranean Club</a></div>
-    <div class="fct3-locations">Costa Brava · Costa del Sol · Sevilla</div>
+    <div class="fct3-locations">Costa Brava · Costa del Sol · Sevilla · Granada &amp; Costa Tropical</div>
     <div class="fct24-conditions" aria-label="Mediterranean conditions">
       <span><b class="es-copy">HUMEDAD</b><b class="en-copy">HUMIDITY</b><small>tejidos · secado</small></span>
       <span><b>CALIMA</b><small class="es-copy">polvo · exterior</small><small class="en-copy">dust · outdoors</small></span>
@@ -2361,11 +2381,13 @@ footer p:first-child {
   <div class="fct22-inner">
     <p class="fct2-kicker"><span class="es-copy">DÓNDE TRABAJAMOS</span><span class="en-copy">WHERE WE WORK</span></p>
     <h2><span class="es-copy">¿Trabajamos en tu zona?</span><span class="en-copy">Do we work in your area?</span></h2>
-    <div class="fct22-links">
-      <a href="/costa-brava.html">Costa Brava <span>↗</span></a>
-      <a href="/costa-del-sol.html">Costa del Sol <span>↗</span></a>
-      <a href="/limpieza-sofas-tapiceria.html#sevilla">Sevilla <span>↗</span></a>
+    <div class="fct22-links fct26-area-grid">
+      <a href="/costa-brava.html"><strong>Costa Brava</strong><small>Lloret de Mar · Blanes · Tossa de Mar</small><span>↗</span></a>
+      <a href="/costa-del-sol.html"><strong>Costa del Sol</strong><small>Marbella · Estepona · Mijas</small><span>↗</span></a>
+      <a href="/sevilla.html"><strong>Sevilla</strong><small>Sevilla · Dos Hermanas</small><span>↗</span></a>
+      <a href="/granada.html"><strong>Granada &amp; Costa Tropical</strong><small>Granada · Almuñécar · Costa Tropical</small><span>↗</span></a>
     </div>
+    <a class="fct26-area-help" href="https://wa.me/34657336353?text=Hola%2C%20quiero%20confirmar%20si%20trabaj%C3%A1is%20en%20mi%20zona." target="_blank" rel="noopener"><span class="es-copy">¿No ves tu zona? Envíanos tu código postal →</span><span class="en-copy">Don’t see your area? Send us your postcode →</span></a>
   </div>
 </section>
 
@@ -2399,7 +2421,7 @@ footer p:first-child {
   </div>
   <div class="fct23-bottom">
     <span>© 2026 FrescaClimaTech</span>
-    <span>Costa Brava · Costa del Sol · Sevilla</span>
+    <span>Costa Brava · Costa del Sol · Sevilla · Granada &amp; Costa Tropical</span>
     <div><a href="/privacy.html"><span class="es-copy">Privacidad</span><span class="en-copy">Privacy</span></a><button type="button" onclick="if(window.openCookieSettings)window.openCookieSettings();"><span class="es-copy">Cookies</span><span class="en-copy">Cookies</span></button></div>
   </div>
 </footer>
@@ -2413,7 +2435,7 @@ footer p:first-child {
         hero_h1_line1: "Limpieza profesional de",
         hero_h1_line2: "Sofás, Tapicería, Toldos",
         hero_h1_line3: "y Aire Acondicionado",
-        hero_locations: "Costa Brava · Costa del Sol · Andalucía",
+        hero_locations: "Costa Brava · Costa del Sol · Sevilla · Granada & Costa Tropical",
         hero_description: "Hogares · Airbnb · Empresas",
         hero_slogan: "Aire fresco, tejidos limpios, decisiones claras",
         
@@ -2457,7 +2479,7 @@ footer p:first-child {
         hero_trust: "⭐⭐⭐⭐⭐ 5.0 en Google",
         hero_micro: "Sofás · Tapicería · Alfombras · Aire acondicionado",
         service_available_label: "📍 Servicio disponible en:",
-        service_available_cities: "Costa Brava · Costa del Sol · Sevilla",
+        service_available_cities: "Costa Brava · Costa del Sol · Sevilla · Granada & Costa Tropical",
         reviews_kicker: "Opiniones verificadas",
         reviews_title: "Lo que dicen nuestros clientes",
         reviews_cta: "⭐ Ver todas las opiniones en Google",
