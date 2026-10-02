@@ -2131,7 +2131,26 @@ footer p:first-child {
   .fct24-conditions>span{padding-left:0;border-left:0}
 }
 </style>
-</head>
+<style id="fct-help-first">
+.fct7-help{padding-top:72px!important}
+.fct7-help .fct7-smart-top{margin-bottom:34px}
+.fct7-help .fct7-smart-top h2{max-width:none}
+.fct25-help-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid rgba(23,23,20,.18);border-bottom:1px solid rgba(23,23,20,.18)}
+.fct25-help-grid>a{position:relative;min-height:190px;padding:26px 24px 24px;text-decoration:none;color:inherit;border-left:1px solid rgba(23,23,20,.18);display:flex;flex-direction:column}
+.fct25-help-grid>a:first-child{border-left:0}
+.fct25-help-grid>a:hover{background:rgba(182,135,20,.07)}
+.fct25-icon{font-size:10px;letter-spacing:.14em;color:#9a7618;margin-bottom:42px}
+.fct25-help-grid strong{font-size:20px;font-weight:500;line-height:1.15}
+.fct25-help-grid small{font-size:12px;line-height:1.5;opacity:.62;margin-top:10px}
+.fct25-help-grid i{position:absolute;right:20px;top:24px;font-style:normal;font-size:18px}
+.fct25-unsure{margin-top:34px;display:grid;grid-template-columns:.7fr 1.3fr;gap:40px;align-items:start}
+.fct25-unsure>div{display:flex;flex-direction:column;gap:7px;padding-top:12px}
+.fct25-unsure>div strong{font-size:17px;font-weight:500}
+.fct25-unsure>div span{font-size:13px;opacity:.62}
+.fct25-unsure .fct7-command{margin:0}
+@media(max-width:900px){.fct25-help-grid{grid-template-columns:repeat(2,1fr)}.fct25-help-grid>a:nth-child(3){border-left:0;border-top:1px solid rgba(23,23,20,.18)}.fct25-help-grid>a:nth-child(4){border-top:1px solid rgba(23,23,20,.18)}}
+@media(max-width:650px){.fct7-help{padding-top:52px!important}.fct25-help-grid{grid-template-columns:1fr}.fct25-help-grid>a{min-height:130px;border-left:0!important;border-top:1px solid rgba(23,23,20,.18);padding:22px 18px}.fct25-help-grid>a:first-child{border-top:0}.fct25-icon{margin-bottom:24px}.fct25-unsure{grid-template-columns:1fr;gap:14px}}
+</style></head>
 
 
 
@@ -2173,18 +2192,28 @@ footer p:first-child {
   </div>
   <div class="fct4-signature"><span class="es-copy">Aire fresco.<br>Tejidos limpios.<br>Decisiones claras.</span><span class="en-copy">Fresh air.<br>Clean fabrics.<br>Clear decisions.</span></div>
 </header>
-<section class="fct7-smart" id="smart-care" aria-labelledby="smart-finder-title">
+<section class="fct7-smart fct7-help" id="smart-care" aria-labelledby="smart-finder-title">
   <div class="fct7-smart-top">
-    <div><p class="fct2-kicker"><span class="es-copy">SMART CARE · FCT INTELLIGENCE</span><span class="en-copy">SMART CARE · FCT INTELLIGENCE</span></p>
-    <h2 id="smart-finder-title"><span class="es-copy">Cuéntanos qué ocurre.<br>No qué servicio buscas.</span><span class="en-copy">Tell us what’s happening.<br>Not which service you need.</span></h2></div>
-    <p class="fct7-smart-intro"><span class="es-copy">Describe tu espacio con tus propias palabras. Empezamos por entender la situación y te guiamos hacia el cuidado adecuado.</span><span class="en-copy">Describe your space in your own words. We start by understanding the situation, then guide you to the right care.</span></p>
+    <div>
+      <p class="fct2-kicker"><span class="es-copy">CUIDADO FCT</span><span class="en-copy">FCT CARE</span></p>
+      <h2 id="smart-finder-title"><span class="es-copy">¿Qué necesitas cuidar?</span><span class="en-copy">What do you need help with?</span></h2>
+    </div>
+    <p class="fct7-smart-intro"><span class="es-copy">Elige tu espacio. Te mostramos cómo podemos ayudarte.</span><span class="en-copy">Choose your space. We’ll show you how we can help.</span></p>
   </div>
-  <form class="fct7-command" id="smartCarePreview">
-    <div class="fct7-command-label"><span class="fct7-pulse"></span><span class="es-copy">Describe tu espacio</span><span class="en-copy">Describe your space</span></div>
-    <div class="fct7-command-row"><textarea id="smartCareInput" rows="2" aria-label="Smart Care" placeholder="Ej.: Tengo un apartamento turístico en Lloret, un sofá con olor y dos aires acondicionados…" data-placeholder-es="Ej.: Tengo un apartamento turístico en Lloret, un sofá con olor y dos aires acondicionados…" data-placeholder-en="E.g. I have a holiday rental in Lloret, a sofa with an odour and two air-conditioning units…"></textarea><button type="submit"><span class="es-copy">Orientarme →</span><span class="en-copy">Guide me →</span></button></div>
-  </form>
-  <div class="fct7-flow"><span>01 · <b class="es-copy">Entender</b><b class="en-copy">Understand</b></span><i>→</i><span>02 · <b class="es-copy">Recomendar</b><b class="en-copy">Recommend</b></span><i>→</i><span>03 · <b class="es-copy">Planificar</b><b class="en-copy">Plan</b></span><i>→</i><span>04 · <b class="es-copy">Reservar</b><b class="en-copy">Book</b></span></div>
-  <p class="fct7-beta"><span class="es-copy">Primera versión · por ahora tu consulta continúa en WhatsApp mientras desarrollamos Smart Care.</span><span class="en-copy">First version · for now your request continues in WhatsApp while we build Smart Care.</span></p>
+
+  <div class="fct25-help-grid">
+    <a href="/limpieza-sofas-tapiceria.html"><span class="fct25-icon">01</span><strong><span class="es-copy">Sofá &amp; textiles</span><span class="en-copy">Sofas &amp; textiles</span></strong><small><span class="es-copy">Sofás · colchones · sillas · alfombras</span><span class="en-copy">Sofas · mattresses · chairs · rugs</span></small><i>↗</i></a>
+    <a href="/limpieza-toldos-marbella-estepona.html"><span class="fct25-icon">02</span><strong><span class="es-copy">Toldos &amp; exterior</span><span class="en-copy">Awnings &amp; outdoors</span></strong><small><span class="es-copy">Toldos · tejidos exteriores · terrazas</span><span class="en-copy">Awnings · outdoor fabrics · terraces</span></small><i>↗</i></a>
+    <a href="/limpieza-aire-acondicionado.html"><span class="fct25-icon">03</span><strong><span class="es-copy">Aire acondicionado</span><span class="en-copy">Air conditioning</span></strong><small><span class="es-copy">Cuidado higiénico · coordinación técnica</span><span class="en-copy">Hygienic care · technical coordination</span></small><i>↗</i></a>
+    <a href="/airbnb-upholstery-cleaning.html"><span class="fct25-icon">04</span><strong><span class="es-copy">Propiedad</span><span class="en-copy">Property care</span></strong><small><span class="es-copy">Segunda residencia · alquiler · hospitality</span><span class="en-copy">Second homes · rentals · hospitality</span></small><i>↗</i></a>
+  </div>
+
+  <div class="fct25-unsure">
+    <div><strong><span class="es-copy">¿No sabes qué necesitas?</span><span class="en-copy">Not sure what you need?</span></strong><span><span class="es-copy">Cuéntanos qué ocurre.</span><span class="en-copy">Tell us what’s happening.</span></span></div>
+    <form class="fct7-command" id="smartCarePreview">
+      <div class="fct7-command-row"><textarea id="smartCareInput" rows="2" aria-label="Smart Care" placeholder="Ej.: Mi sofá huele a humedad…" data-placeholder-es="Ej.: Mi sofá huele a humedad…" data-placeholder-en="E.g. my sofa smells damp…"></textarea><button type="submit"><span class="es-copy">Orientarme →</span><span class="en-copy">Guide me →</span></button></div>
+    </form>
+  </div>
 </section>
 
 <section class="fct11-care" id="fct-care">
