@@ -2091,7 +2091,47 @@ footer p:first-child {
 </style><style id="fct23-footer-style">
 .fct23-footer{background:#0e0e0c;color:#f5f0e7;padding:48px max(28px,6vw) 22px;font-family:Outfit,Arial,sans-serif}.fct23-top{max-width:1380px;margin:0 auto 38px;display:grid;grid-template-columns:1.55fr .82fr .82fr .82fr;gap:48px;align-items:start}.fct23-brand img{width:84px;max-height:42px;object-fit:contain;object-position:left center;filter:brightness(0) invert(1);opacity:.9}.fct23-brand p{max-width:285px;margin:17px 0 0;color:#827e76;font:400 12px/1.45 Outfit,Arial,sans-serif}.fct23-label{display:block;color:#b7842b;font:700 9px/1 Outfit,Arial,sans-serif;letter-spacing:.14em;margin-bottom:15px}.fct23-col a{display:block;color:#aaa59c;text-decoration:none;font:400 11px/1.3 Outfit,Arial,sans-serif;margin:0 0 9px}.fct23-col a:hover{color:#f5f0e7}.fct23-bottom{max-width:1380px;margin:0 auto;padding-top:13px;border-top:1px solid #292824;display:grid;grid-template-columns:1fr auto 1fr;gap:24px;color:#65625c;font:500 8px/1.3 Outfit,Arial,sans-serif;letter-spacing:.05em;text-transform:uppercase}.fct23-bottom>span:nth-child(2){text-align:center}.fct23-bottom>div{text-align:right}.fct23-bottom a,.fct23-bottom button{color:#77736c;text-decoration:none;background:none;border:0;padding:0;margin-left:16px;font:inherit;letter-spacing:inherit;text-transform:inherit;cursor:pointer}.fct23-bottom a:hover,.fct23-bottom button:hover{color:#f5f0e7}
 @media(max-width:900px){.fct23-footer{padding:44px 22px 20px}.fct23-top{grid-template-columns:1fr 1fr;gap:30px 24px;margin-bottom:34px}.fct23-brand{grid-column:1/3}.fct23-bottom{grid-template-columns:1fr;gap:8px}.fct23-bottom>span:nth-child(2),.fct23-bottom>div{text-align:left}.fct23-bottom a,.fct23-bottom button{margin:0 16px 0 0}}
-</style></head>
+</style><style id="fct-mediterranean-signature">
+.fct4-panel{max-width:760px}
+.fct4-panel h1{max-width:720px}
+.fct4-panel .fct3-lead{max-width:650px}
+.fct24-conditions{
+  margin-top:30px;
+  padding-top:18px;
+  border-top:1px solid rgba(255,255,255,.42);
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:0;
+  max-width:700px
+}
+.fct24-conditions>span{
+  min-width:0;
+  padding:0 16px;
+  border-left:1px solid rgba(255,255,255,.28);
+  display:flex;
+  flex-direction:column;
+  gap:5px
+}
+.fct24-conditions>span:first-child{padding-left:0;border-left:0}
+.fct24-conditions b{
+  font-size:11px;
+  line-height:1;
+  letter-spacing:.16em;
+  font-weight:600;
+  color:#fff
+}
+.fct24-conditions small{
+  font-size:11px;
+  line-height:1.3;
+  letter-spacing:.02em;
+  color:rgba(255,255,255,.72)
+}
+@media(max-width:760px){
+  .fct24-conditions{grid-template-columns:repeat(2,1fr);row-gap:18px}
+  .fct24-conditions>span{padding-left:0;border-left:0}
+}
+</style>
+</head>
 
 
 
@@ -2118,12 +2158,18 @@ footer p:first-child {
 <header class="fct4-hero" id="contacto">
   <div class="fct4-overlay"></div>
   <div class="fct4-panel">
-    <p class="fct2-kicker">FrescaClimaTech · Mediterranean Care</p>
-    <h1><span class="es-copy">Tu espacio,<br><em>mejor cuidado.</em></span><span class="en-copy">Your space,<br><em>better cared for.</em></span></h1>
-    <p class="fct3-lead es-copy">Cuidado profesional y más inteligente para hogares, segundas residencias, alojamientos turísticos y espacios profesionales junto al Mediterráneo.</p>
-    <p class="fct3-lead en-copy">Smarter professional care for homes, second homes, holiday rentals and professional spaces by the Mediterranean.</p>
+    <p class="fct2-kicker">FrescaClimaTech · Mediterranean Smart Care</p>
+    <h1><span class="es-copy">Tu espacio cambia<br><em>con el Mediterráneo.</em></span><span class="en-copy">Your space changes<br><em>with the Mediterranean.</em></span></h1>
+    <p class="fct3-lead es-copy">Humedad, calima, salitre y sol forman parte de vivir aquí. Cuidamos hogares y propiedades entendiendo primero el espacio, el material y las condiciones que lo rodean.</p>
+    <p class="fct3-lead en-copy">Humidity, Saharan dust, sea salt and sun are part of living here. We care for homes and properties by first understanding the space, the material and the conditions around it.</p>
     <div class="fct2-actions"><a class="fct2-btn dark" href="#smart-care"><span class="es-copy">Cuéntanos qué necesitas</span><span class="en-copy">Tell us what you need</span></a><a class="fct2-btn" href="/mediterranean-club.html">Mediterranean Club</a></div>
     <div class="fct3-locations">Costa Brava · Costa del Sol · Sevilla</div>
+    <div class="fct24-conditions" aria-label="Mediterranean conditions">
+      <span><b class="es-copy">HUMEDAD</b><b class="en-copy">HUMIDITY</b><small>tejidos · secado</small></span>
+      <span><b>CALIMA</b><small class="es-copy">polvo · exterior</small><small class="en-copy">dust · outdoors</small></span>
+      <span><b class="es-copy">SALITRE</b><b class="en-copy">SEA SALT</b><small class="es-copy">terrazas · costa</small><small class="en-copy">terraces · coast</small></span>
+      <span><b class="es-copy">SOL</b><b class="en-copy">SUN</b><small class="es-copy">tejidos · temporada</small><small class="en-copy">fabrics · season</small></span>
+    </div>
   </div>
   <div class="fct4-signature"><span class="es-copy">Aire fresco.<br>Tejidos limpios.<br>Decisiones claras.</span><span class="en-copy">Fresh air.<br>Clean fabrics.<br>Clear decisions.</span></div>
 </header>
