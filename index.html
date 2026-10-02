@@ -4443,7 +4443,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
   
 <script>
-(function(){var f=document.getElementById('smartCarePreview');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();var v=document.getElementById('smartCareInput').value.trim();if(!v)return;var u='https://wa.me/34657336353?text='+encodeURIComponent('Hola, necesito orientación para mi espacio: '+v);window.open(u,'_blank','noopener');});})();
+(function(){var f=document.getElementById('smartCarePreview');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();var v=document.getElementById('smartCareInput').value.trim();if(!v)return;var lang=document.documentElement.lang==='en'?'en':'es';var msg=lang==='en'?'Hi, I need some guidance for my space: '+v:'Hola, necesito orientación para mi espacio: '+v;var u='https://wa.me/34657336353?text='+encodeURIComponent(msg);window.open(u,'_blank','noopener');});})();
 </script>
 <script id="fct2-lang">
 (function(){
