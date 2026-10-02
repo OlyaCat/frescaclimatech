@@ -2588,6 +2588,10 @@ calc_cta_top: "Calcular precio",
         proof_cta: "Enviar fotos por WhatsApp",
         proof_note: "Tip: indica tu código postal para confirmar disponibilidad.",
 
+        micro_ac_1: "Desinfección profesional",
+        micro_ac_2: "Eliminación de moho",
+        micro_ac_3: "Mejora del aire interior",
+
         micro_win_1: "Recupera el aspecto del tejido exterior",
         micro_win_2: "Eliminación de suciedad ambiental y salitre",
         micro_win_3: "Perfecto para Marbella, Estepona y Costa del Sol",
@@ -2599,6 +2603,14 @@ calc_cta_top: "Calcular precio",
         micro_cm_1: "Eliminación de ácaros y alérgenos",
         micro_cm_2: "Limpieza profunda sin dañar fibras",
         micro_cm_3: "Ideal para hogares, alquileres y hoteles",
+
+        micro_hm_1: "Mano de obra profesional",
+        micro_hm_2: "Tareas pequeñas y rápidas",
+        micro_hm_3: "Materiales no incluidos",
+
+        micro_ins_1: "Informe con fotos",
+        micro_ins_2: "Presencial o por vídeo",
+        micro_ins_3: "Entrega rápida de resultados",
     
 
         request_whatsapp: "Pide tu limpieza por WhatsApp",
@@ -2612,6 +2624,7 @@ calc_cta_top: "Calcular precio",
         svc_win_teaser: "Toldos exteriores limpios y cuidados para viviendas, terrazas, restaurantes y negocios.",
         svc_fab_teaser: "Sofás, sillones, sillas, cabeceros, cortinas y tapicería náutica.",
         btn_details: "Explorar servicio",
+        promo_prefill: "Hola, mi código postal es ____ y quiero reservar la limpieza de alfombra GRATIS",
         svc_ac_title: "Limpieza de Aire Acondicionado",
         svc_ac_body:
         
@@ -2876,6 +2889,18 @@ calc_cta_top: "Calcular precio",
 
   "</div>",
         svc_cm_price: "Desde 70 €",
+        svc_hm_title: "Servicios de Manitas",
+        svc_hm_body:
+          "Ayuda fiable para <strong>pequeñas reparaciones</strong> y tareas del hogar: " +
+          "colgar estanterías, montar muebles, cambiar grifos o luminarias, ajustar puertas, etc.<br><br>" +
+          "Cuéntanos qué necesitas y envíanos <strong>fotos o vídeo</strong> para estimar tiempo y coste.",
+        svc_hm_price: "Desde 30 €",
+        svc_ins_title: "Inspección de Propiedades",
+        svc_ins_body:
+          "Revisiones <strong>presenciales o por vídeo</strong> para compradores, vendedores y alquileres. " +
+          "Incluye resumen con fotos, observaciones y lista de tareas. Servicio disponible también en <strong>inglés</strong>.<br><br>" +
+          "Indica dirección y objetivo de la visita para organizar fecha y acceso.",
+        svc_ins_price: "Desde 50 €",
         
 
         faqTitle: "Lo que conviene saber",
@@ -3041,6 +3066,10 @@ calc_cta_top: "Calculate price",
         proof_cta: "Send photos on WhatsApp",
         proof_note: "Tip: include your postal code to confirm availability.",
 
+        micro_ac_1: "Professional disinfection",
+        micro_ac_2: "Mold removal",
+        micro_ac_3: "Improved indoor air quality",
+
         micro_win_1: "Restores the appearance of outdoor fabrics",
         micro_win_2: "Removes environmental dirt, dust, and sea salt residue",
         micro_win_3: "Ideal for Marbella, Estepona, and the Costa del Sol",
@@ -3052,6 +3081,15 @@ calc_cta_top: "Calculate price",
         micro_cm_1: "Removal of dust mites and allergens",
         micro_cm_2: "Deep cleaning without damaging fibers",
         micro_cm_3: "Ideal for homes, rentals, and hotels",
+
+
+        micro_hm_1: "Professional workmanship",
+        micro_hm_2: "Small quick repairs",
+        micro_hm_3: "Materials not included",
+
+        micro_ins_1: "Photo report",
+        micro_ins_2: "On-site or video",
+        micro_ins_3: "Fast results delivery",
         request_whatsapp: "Request your cleaning via WhatsApp",
 
         areas_title: "Service Areas",
@@ -3065,6 +3103,7 @@ calc_cta_top: "Calculate price",
         svc_win_teaser: "Professional awning cleaning for homes, terraces, restaurants and commercial properties.",
         svc_fab_teaser: "Sofas, armchairs, chairs, headboards, curtains and boat upholstery.",
         btn_details: "Explore service",
+        promo_prefill: "Hi! My ZIP code is ____ and I’d like to book the FREE rug cleaning.",
         svc_ac_title: "Air Conditioning Cleaning",
         svc_ac_body: "<div class='svc-details'>" +
 
@@ -3327,6 +3366,18 @@ calc_cta_top: "Calculate price",
   "</div>",
 
         svc_cm_price: "From €70",
+        svc_hm_title: "Handyman Services",
+        svc_hm_body:
+          "Reliable help for <strong>small repairs</strong> and home tasks: " +
+          "hanging shelves, assembling furniture, replacing taps or lights, adjusting doors, etc.<br><br>" +
+          "Tell us what you need and send <strong>photos or video</strong> for time and cost estimates.",
+        svc_hm_price: "From €30",
+        svc_ins_title: "Property Inspection",
+        svc_ins_body:
+          "<strong>In-person or video</strong> inspections for buyers, sellers, and rentals. " +
+          "You receive a summary with photos, notes, and a task list. Service also available in <strong>English</strong>.<br><br>" +
+          "Provide the address and inspection goal so we can arrange the date and access.",
+        svc_ins_price: "From €50",
 
         faqTitle: "Good to know",
         faqs: [
@@ -3338,9 +3389,39 @@ calc_cta_top: "Calculate price",
           ["Do you work with holiday rentals and second homes?", "Yes. Property Care is designed for homes, second homes and holiday rentals, with coordination adapted to each property."]
         ]
       }
-    }; 
+    };
 
-// Refresh clima texts// Refresh clima texts + best-day in current language
+    // --- Promo helpers (declare BEFORE using) ---
+    const PROMO = { phone: "34657336353" };
+
+    // Prefill text for WhatsApp per language
+    function promoMessage(lang) {
+      return (translations[lang] && translations[lang].promo_prefill)
+        ? translations[lang].promo_prefill
+        : "Hi! My ZIP code is ____ and I’d like to book the FREE rug cleaning.";
+    }
+
+    // Write text + link into the promo bar (call on load and on lang change)
+    function updatePromoCTA(lang) {
+      const textEl = document.getElementById("promoText");
+      const ctaEl  = document.getElementById("promoCTA");
+      const bar    = document.getElementById("promoBar");
+      if (!bar || !textEl || !ctaEl) return;
+
+      textEl.textContent = translations[lang]?.promo_text || "";
+      ctaEl.textContent  = translations[lang]?.promo_cta  || "Book on WhatsApp";
+
+      const msg = encodeURIComponent(promoMessage(lang));
+      ctaEl.href = `https://wa.me/${PROMO.phone}?text=${msg}`;
+
+      bar.classList.remove("hidden");
+    
+
+      // 👇 ensure tracking is bound to the CTA
+  bindWhatsAppTracking();
+}
+
+// Refresh clima texts + best-day in current language
 
 
 
@@ -4194,6 +4275,8 @@ if (form) {
   // video: 'mattress_cleaning.mp4' // optional if you have one
 },
 
+  hm:  { title: 'svc_hm_title',  body: 'svc_hm_body',  img: 'card_handyman.png' },
+  ins: { title: 'svc_ins_title', body: 'svc_ins_body', img: 'card_inspection.jpg' },
 };
 
 
