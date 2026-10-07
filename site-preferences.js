@@ -131,7 +131,8 @@
     box.querySelector("#fct-analytics").checked = state.analytics;
     box.querySelector("#fct-ads").checked = state.ads;
     box.addEventListener("click", function (e) {
-      var a = e.target.getAttribute("data-a");
+      var target = e.target.closest ? e.target.closest("[data-a]") : e.target;
+      var a = target && target.getAttribute ? target.getAttribute("data-a") : null;
       if (!a) return;
       if (a === "settings") box.querySelector(".fct-settings").style.display = "block";
       if (a === "accept") { state.analytics=true; state.ads=true; write(); box.remove(); loadGoogle(); }
