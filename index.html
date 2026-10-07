@@ -2205,6 +2205,20 @@ footer p:first-child {
  .fct26-area-grid a:nth-child(odd)>span{right:0}
  .fct26-area-help{grid-column:1;margin-top:16px}
 }
+
+/* Mobile navigation for current fct2 header */
+.fct2-mobile-menu-btn{display:none}
+.fct2-mobile-menu{display:none}
+@media(max-width:900px){
+  .fct2-nav{flex-wrap:wrap!important}
+  .fct2-nav-actions{margin-left:auto}
+  .fct2-mobile-menu-btn{display:flex!important;align-items:center;justify-content:center;width:42px;height:42px;margin-left:8px;border:0;background:transparent;color:#171714;font-size:30px;line-height:1;cursor:pointer}
+  .fct2-mobile-menu{display:none;width:100%;background:#fbf8f1;border-top:1px solid rgba(23,23,20,.09);padding:18px 22px 24px;box-sizing:border-box;position:absolute;left:0;top:78px;z-index:60}
+  .fct2-mobile-menu.open{display:flex!important;flex-direction:column;gap:18px}
+  .fct2-mobile-menu a{color:#171714;text-decoration:none;font:500 18px Outfit,Arial,sans-serif}
+  .fct2-mobile-menu .club-link{color:#9b702b}
+  .fct2-mobile-menu .mobile-wa{border:1px solid #171714;padding:12px 14px;text-align:center;margin-top:4px}
+}
 </style></head>
 
 
@@ -2227,7 +2241,15 @@ footer p:first-child {
   <div class="fct2-nav-actions">
     <button type="button" class="fct-lang" data-fct-lang="es">ES</button><span>/</span><button type="button" class="fct-lang" data-fct-lang="en">EN</button>
     <a class="fct2-nav-wa" href="https://wa.me/34657336353?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20FrescaClimaTech." target="_blank" rel="noopener">WhatsApp</a>
+    <button type="button" class="fct2-mobile-menu-btn" aria-label="Abrir menú" aria-expanded="false" aria-controls="fct2MobileMenu">☰</button>
   </div>
+  <nav id="fct2MobileMenu" class="fct2-mobile-menu" aria-label="Mobile navigation">
+    <a href="#smart-care"><span class="es-copy">Cuidado</span><span class="en-copy">Care</span></a>
+    <a href="/airbnb-upholstery-cleaning.html">Property Care</a>
+    <a href="#areas"><span class="es-copy">Zonas</span><span class="en-copy">Areas</span></a>
+    <a href="/mediterranean-club.html" class="club-link">Mediterranean Club</a>
+    <a class="mobile-wa" href="https://wa.me/34657336353?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20FrescaClimaTech." target="_blank" rel="noopener">WhatsApp</a>
+  </nav>
 </div>
 <header class="fct4-hero" id="contacto">
   <div class="fct4-overlay"></div>
@@ -4502,6 +4524,22 @@ document.addEventListener("DOMContentLoaded", function () {
    setFCTLang(saved);
    document.querySelectorAll('[data-fct-lang]').forEach(function(b){b.addEventListener('click',function(){setFCTLang(this.getAttribute('data-fct-lang'));});});
  });
+})();
+</script>
+
+<script>
+(function(){
+  const btn=document.querySelector('.fct2-mobile-menu-btn');
+  const menu=document.getElementById('fct2MobileMenu');
+  if(!btn||!menu) return;
+  btn.addEventListener('click',function(){
+    const open=menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded',String(open));
+    btn.textContent=open?'×':'☰';
+  });
+  menu.addEventListener('click',function(e){
+    if(e.target.closest('a')){menu.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.textContent='☰';}
+  });
 })();
 </script>
 </body>
