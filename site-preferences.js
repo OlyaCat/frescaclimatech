@@ -3,6 +3,7 @@
 
   var KEY = "fct_cookie_consent_v1";
   var GA = "G-47FC0D03XH";
+  var GA_SRC = "https://www.googletagmanager.com/gtag/js?id=" + GA;
   var ADS = ["AW-17340076883", "AW-17385730363"];
   var state = { necessary: true, analytics: false, ads: false };
   var googleLoaded = false;
@@ -93,7 +94,7 @@
     }
     var s = document.createElement("script");
     s.async = true;
-    s.src = "https://www.googletagmanager.com/gtag/js?id=" + (state.analytics ? GA : ADS[0]);
+    s.src = state.analytics ? GA_SRC : "https://www.googletagmanager.com/gtag/js?id=" + ADS[0];
     s.onload = function () {
       if (state.ads) window.dispatchEvent(new CustomEvent("fct:ads-ready"));
       if (state.analytics) window.dispatchEvent(new CustomEvent("fct:analytics-ready"));
