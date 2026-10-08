@@ -78,6 +78,9 @@
   }
 
   function loadGoogle() {
+    // Netlify deploy permalinks and previews are for testing, not analytics.
+    // Keep consent UI working, but never load Google tags on *.netlify.app.
+    if (/(^|\.)netlify\.app$/i.test(window.location.hostname)) return;
     if (googleLoaded || (!state.analytics && !state.ads)) return;
     googleLoaded = true;
     window.gtag = function () { window.dataLayer.push(arguments); };
