@@ -584,54 +584,26 @@ footer a:hover{
  <div class="fct-cds-note"><span class="es-copy">¿Estás en otra zona de la Costa del Sol? Envíanos tu código postal y te confirmamos cobertura.</span><span class="en-copy">Elsewhere on the Costa del Sol? Send us your postcode and we’ll confirm coverage.</span></div></div>
 </section>
 
-<style>
-.fct-trust-details{max-width:1180px;margin:40px auto 72px;padding:32px 24px;color:#eee9e0;font-family:inherit}
-.fct-trust-details h2{font-size:clamp(26px,3vw,39px);line-height:1.2;margin:10px 0 18px;color:#f6f1e8}
-.fct-trust-details h3{font-size:19px;margin:0 0 12px;color:#f6f1e8}
-.fct-trust-details p,.fct-trust-details li{font-size:15px;line-height:1.75;color:#d5cec3}
-.fct-trust-details .fct-trust-kicker{letter-spacing:.12em;font-size:12px;text-transform:uppercase;color:#d9bb85}
-.fct-trust-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-.fct-trust-panel{border:1px solid rgba(217,187,133,.28);border-radius:14px;background:rgba(255,255,255,.045);padding:24px}
-.fct-trust-details table{width:100%;border-collapse:collapse;font-size:14px;color:#eee9e0}
-.fct-trust-details td{padding:10px 4px;border-bottom:1px solid rgba(255,255,255,.14)}
-.fct-trust-details td:last-child{text-align:right;white-space:nowrap;color:#e8c892;font-weight:700}
-.fct-trust-details ol{padding-left:20px;margin:0}
-.fct-trust-details a{color:#f1d09b;text-decoration:underline}
-@media(max-width:720px){.fct-trust-details{padding:20px 16px;margin:25px auto 50px}.fct-trust-grid{grid-template-columns:1fr}.fct-trust-panel{padding:18px}}
+<style id="fct-local-prices-style">
+.fct-local-prices{max-width:1180px;margin:42px auto 68px;padding:30px 28px;background:#fffdf9;border:1px solid #e6dac8;border-radius:18px;color:#25231f;font-family:'Outfit',sans-serif}
+.fct-local-prices h2{margin:0 0 18px;font-size:clamp(25px,3vw,34px);font-weight:500;line-height:1.2;color:#25231f}
+.fct-local-prices .fct-local-price-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.fct-local-prices .fct-local-price-list>div{padding:15px;border:1px solid #e9e1d5;border-radius:12px;background:#faf7f0}
+.fct-local-prices .fct-local-price-list strong{display:block;margin-top:8px;font-size:20px;color:#946a19}
+.fct-local-prices p{font-size:14px;line-height:1.65;color:#57534d;margin:18px 0 0}
+.fct-local-prices a{color:#805a14;text-decoration:underline;text-underline-offset:3px;font-weight:600}
+html[lang="es"] .fct-local-prices .en-copy,html[lang="en"] .fct-local-prices .es-copy{display:none!important}
+@media(max-width:720px){.fct-local-prices{margin:28px 18px 46px;padding:22px 18px}.fct-local-prices .fct-local-price-list{grid-template-columns:1fr}}
 </style>
-<section class="fct-trust-details" id="precios-y-proceso" aria-label="Precios, proceso y pagos">
-  <p class="fct-trust-kicker"><span class="es-copy">FRESCACLIMATECH · EN ESPAÑA DESDE 2025</span><span class="en-copy">FRESCACLIMATECH · IN SPAIN SINCE 2025</span></p>
-  <h2><span class="es-copy">Precios claros. Limpieza cuidada.</span><span class="en-copy">Clear prices. Thoughtful cleaning.</span></h2>
-  <p><span class="es-copy">Trabajamos en España desde 2025. Atendemos servicios de limpieza de tapicerías en Marbella, Estepona y Costa del Sol. Antes de confirmar, valoramos las fotos, las medidas, el tejido y el estado de cada pieza.</span><span class="en-copy">Working in Spain since 2025. We provide upholstery cleaning services in Marbella, Estepona y Costa del Sol. Before booking, we assess photos, dimensions, fabric and condition.</span></p>
-  <div class="fct-trust-grid">
-    <div class="fct-trust-panel"><h3><span class="es-copy">Precios orientativos</span><span class="en-copy">Guide prices</span></h3>
-      <table><tbody>
-        <tr><td><span class="es-copy">Sofá de 2 plazas</span><span class="en-copy">2-seat sofa</span></td><td>desde 80 €</td></tr>
-        <tr><td><span class="es-copy">Sofá de 3 plazas</span><span class="en-copy">3-seat sofa</span></td><td>desde 90 €</td></tr>
-        <tr><td>Chaise longue</td><td>desde 110 €</td></tr>
-        <tr><td><span class="es-copy">Colchones</span><span class="en-copy">Mattresses</span></td><td>desde 80 €</td></tr>
-        <tr><td><span class="es-copy">Alfombras</span><span class="en-copy">Rugs</span></td><td>10–12 €/m²</td></tr>
-        <tr><td><span class="es-copy">Sillas tapizadas</span><span class="en-copy">Upholstered chairs</span></td><td>desde 15 €</td></tr>
-      </tbody></table>
-      <p><span class="es-copy">Importes orientativos, sujetos a medidas, tejido, suciedad, desplazamiento y alcance del servicio. Confirmamos el presupuesto antes de la visita.</span><span class="en-copy">Guide prices depend on dimensions, fabric, soiling, travel and scope. We confirm your quote before the visit.</span></p>
-    </div>
-    <div class="fct-trust-panel"><h3><span class="es-copy">Nuestro proceso de limpieza</span><span class="en-copy">Our upholstery cleaning process</span></h3>
-      <ol>
-        <li><span class="es-copy">Aspirado profundo para retirar polvo y suciedad superficial.</span><span class="en-copy">Thorough vacuuming to remove dust and surface dirt.</span></li>
-        <li><span class="es-copy">Aplicación de productos adecuados según el tipo de tejido y su estado.</span><span class="en-copy">Application of suitable cleaning products based on fabric type and condition.</span></li>
-        <li><span class="es-copy">Limpieza y extracción de la suciedad con maquinaria especializada, cuando el tejido lo permite.</span><span class="en-copy">Cleaning and dirt extraction using specialist equipment, where suitable for the fabric.</span></li>
-        <li><span class="es-copy">Extracción de humedad y comienzo del secado: la tapicería queda ligeramente húmeda y necesita ventilación hasta secarse por completo.</span><span class="en-copy">Moisture extraction and initial drying: upholstery remains slightly damp and needs ventilation until fully dry.</span></li>
-      </ol>
-      <p><span class="es-copy"><strong>El resultado:</strong> un sofá más limpio y fresco, con menos polvo, suciedad y olores. El secado depende del tejido, la ventilación y la humedad ambiental. Algunas manchas y olores persistentes pueden permanecer.</span><span class="en-copy"><strong>The result:</strong> a cleaner, fresher sofa with less dust, dirt and odour. Drying depends on fabric, ventilation and humidity. Some persistent stains and odours may remain.</span></p>
-    </div>
-    <div class="fct-trust-panel"><h3><span class="es-copy">Pago sencillo</span><span class="en-copy">Simple payment</span></h3>
-      <p><span class="es-copy">Aceptamos Bizum, transferencia bancaria y efectivo. Puedes solicitar factura. El método de pago se acuerda al confirmar el servicio.</span><span class="en-copy">We accept Bizum, bank transfer and cash. An invoice is available on request. Payment method is agreed when booking.</span></p>
-    </div>
-    <div class="fct-trust-panel"><h3><span class="es-copy">Presupuesto por WhatsApp</span><span class="en-copy">Quote via WhatsApp</span></h3>
-      <p><span class="es-copy">Envíanos 2–3 fotos, el código postal y las medidas aproximadas. Te responderemos con un presupuesto personalizado antes de reservar.</span><span class="en-copy">Send 2–3 photos, your postcode and approximate dimensions. We'll provide a personalised quote before booking.</span></p>
-      <a href="https://wa.me/34657336353"><span class="es-copy">Solicitar presupuesto ↗</span><span class="en-copy">Request a quote ↗</span></a>
-    </div>
-  </div>
+<section class="fct-local-prices" id="precios-orientativos" aria-label="Precios orientativos">
+<h2><span class="es-copy">Precios orientativos</span><span class="en-copy">Guide prices</span></h2>
+<div class="fct-local-price-list">
+<div><span class="es-copy">Sofá de 2 plazas</span><span class="en-copy">2-seat sofa</span><strong><span class="es-copy">Desde 80 €</span><span class="en-copy">From €80</span></strong></div>
+<div><span class="es-copy">Sofá de 3 plazas</span><span class="en-copy">3-seat sofa</span><strong><span class="es-copy">Desde 90 €</span><span class="en-copy">From €90</span></strong></div>
+<div><span class="es-copy">Chaise longue</span><span class="en-copy">Chaise longue</span><strong><span class="es-copy">Desde 110 €</span><span class="en-copy">From €110</span></strong></div>
+</div>
+<p><span class="es-copy">Precios orientativos según tamaño, tejido, estado y ubicación. Confirmamos el presupuesto antes del servicio.</span><span class="en-copy">Guide prices depend on size, fabric, condition and location. We confirm the quote before the service.</span></p>
+<p><a href="/limpieza-sofas-tapiceria"><span class="es-copy">Ver todos los servicios y precios ↗</span><span class="en-copy">See all services and prices ↗</span></a></p>
 </section>
 
 <style>
