@@ -2413,7 +2413,14 @@ footer p:first-child {
 
 <!-- FCT REAL CLIENT STORIES: TEXT-FIRST UNTIL VERIFIED CASE PHOTOS ARE AVAILABLE -->
 <style>
-#fct-real-stories{background:#f1e9dd;color:#28251f;padding:65px max(22px,calc((100vw - 1160px)/2));font-family:inherit}
+.fct12-proof{padding-bottom:48px!important}
+#fct-real-stories{position:relative;isolation:isolate;background:linear-gradient(180deg,#f7f0e4 0%,#f1e9dd 44%,#f1e9dd 100%);color:#28251f;padding:95px max(22px,calc((100vw - 1160px)/2)) 65px;font-family:inherit}
+#fct-real-stories .story-wave{position:absolute;left:0;right:0;top:-88px;width:100%;height:90px;display:block;pointer-events:none}
+#fct-real-stories .story-wave .wave-fill{fill:#f7f0e4}
+#fct-real-stories .story-wave .wave-line{fill:none;stroke:#b99757;stroke-width:1.25;vector-effect:non-scaling-stroke}
+#fct-real-stories .story-down{position:absolute;top:-45px;left:50%;transform:translateX(-50%);display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:#fffaf0;color:#a37d37!important;text-decoration:none!important;border:1px solid #e3d2b2;box-shadow:0 5px 18px #8b6b3730;z-index:2;font-size:26px;line-height:1}
+#fct-real-stories .story-down:hover{background:#f7ecd8}
+#fct-real-stories .story-down:focus-visible{outline:3px solid #9d7a37;outline-offset:3px}
 #fct-real-stories .eyebrow{font-size:12px;letter-spacing:.14em;font-weight:700;color:#92702c;margin:0 0 12px}
 #fct-real-stories h2{font-size:clamp(29px,3.7vw,44px);font-weight:500;line-height:1.15;margin:0 0 13px;color:#28251f}
 #fct-real-stories .intro{font-size:16px;line-height:1.65;margin:0 0 27px;max-width:730px}
@@ -2424,9 +2431,11 @@ footer p:first-child {
 #fct-real-stories article p:last-child{font-size:15px;line-height:1.7;margin:0}
 #fct-real-stories .case-photo{display:block;width:100%;height:250px;object-fit:cover;object-position:center 60%;border-radius:7px;margin:0 0 19px}
 @media(max-width:700px){#fct-real-stories .case-photo{height:225px}}
-@media(max-width:700px){#fct-real-stories{padding:48px 18px}#fct-real-stories .cases{grid-template-columns:1fr}#fct-real-stories article{padding:23px}}
+@media(max-width:700px){.fct12-proof{padding-bottom:40px!important}#fct-real-stories{padding:72px 18px 48px}#fct-real-stories .story-wave{top:-65px;height:67px}#fct-real-stories .story-down{top:-35px;width:48px;height:48px}#fct-real-stories .cases{grid-template-columns:1fr}#fct-real-stories article{padding:23px}}
 </style>
 <section id="fct-real-stories" aria-labelledby="fct-real-stories-title">
+<svg class="story-wave" viewBox="0 0 1440 90" preserveAspectRatio="none" aria-hidden="true"><path class="wave-fill" d="M0 27 C240 91 405 2 675 36 S1135 91 1440 7 L1440 90 L0 90 Z"/><path class="wave-line" d="M0 27 C240 91 405 2 675 36 S1135 91 1440 7"/></svg>
+<a class="story-down" href="#fct-real-stories-title" aria-label="Ver historias reales / View real stories">⌄</a>
 <p class="eyebrow"><span class="es-copy">TRABAJOS REALES · ATENCIÓN PERSONAL</span><span class="en-copy">REAL PROJECTS · PERSONAL ATTENTION</span></p>
 <h2 id="fct-real-stories-title"><span class="es-copy">Cada espacio tiene su historia.</span><span class="en-copy">Every space has its own story.</span></h2>
 <p class="intro"><span class="es-copy">No hay dos servicios iguales. Escuchamos lo que necesita cada cliente y adaptamos la organización del trabajo a su espacio.</span><span class="en-copy">No two jobs are the same. We listen to what each client needs and plan the work around their space.</span></p>
