@@ -754,5 +754,5 @@ footer a{
  function setLang(l){l=l==='en'?'en':'es';document.documentElement.lang=l;try{localStorage.setItem('fctLang',l);localStorage.setItem('lang',l);}catch(e){}document.querySelectorAll('.es-copy').forEach(function(x){show(x,l==='es')});document.querySelectorAll('.en-copy').forEach(function(x){show(x,l==='en')});document.querySelectorAll('[data-fct-lang]').forEach(function(b){b.setAttribute('aria-current',b.getAttribute('data-fct-lang')===l?'true':'false')});}
  document.addEventListener('DOMContentLoaded',function(){var l='es';try{l=localStorage.getItem('fctLang')||localStorage.getItem('lang')||'es'}catch(e){};setLang(l);document.querySelectorAll('[data-fct-lang]').forEach(function(b){b.addEventListener('click',function(){setLang(this.getAttribute('data-fct-lang'))})});});
 })();
-</script></body>
+</script><script src="/language-dropdown.js" defer></script></body>
 </html>
