@@ -74,4 +74,4 @@
 const es=document.getElementById("es"),en=document.getElementById("en"),be=document.getElementById("langEs"),bn=document.getElementById("langEn");
 function setLang(l){const isEn=l==="en";es.hidden=isEn;en.hidden=!isEn;be.classList.toggle("on",!isEn);bn.classList.toggle("on",isEn);document.documentElement.lang=l;try{localStorage.setItem("mcLang",l)}catch(e){}}
 be.onclick=()=>setLang("es");bn.onclick=()=>setLang("en");try{setLang(localStorage.getItem("mcLang")||"es")}catch(e){setLang("es")}
-</script></body></html>
+</script><script src="/language-dropdown.js" defer></script></body></html>
