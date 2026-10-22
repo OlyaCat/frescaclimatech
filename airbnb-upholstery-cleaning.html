@@ -111,4 +111,4 @@ footer{padding:28px 5.5vw;border-top:1px solid var(--line);display:flex;justify-
 const es=document.getElementById('es'),en=document.getElementById('en');
 function lang(x){document.body.classList.toggle('en',x==='en');document.documentElement.lang=x;es.classList.toggle('active',x==='es');en.classList.toggle('active',x==='en');localStorage.setItem('fctLang',x)}
 es.onclick=()=>lang('es');en.onclick=()=>lang('en');lang(localStorage.getItem('fctLang')||'es');
-</script></body></html>
+</script><script src="/language-dropdown.js" defer></script></body></html>
