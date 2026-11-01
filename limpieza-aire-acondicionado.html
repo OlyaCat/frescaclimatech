@@ -491,18 +491,42 @@ main section p{line-height:1.7}
 .fct-air-hero .btn-primary,.fct-air-hero .btn-secondary{padding:0 0 8px!important;background:none!important;border:0!important;border-bottom:1px solid #879083!important;border-radius:0!important}
 @media(max-width:700px){.hero.fct-air-hero{height:690px!important;min-height:0!important}.fct-air-hero .hero-content{padding:50px 24px!important}.fct-air-hero .hero-media{grid-column:auto!important;grid-row:auto!important}.fct-air-hero .hero-overlay{background:linear-gradient(90deg,rgba(250,249,245,.97),rgba(250,249,245,.82) 52%,rgba(250,249,245,.24))!important}.fct-air-hero h1,.fct-air-hero h1 span,.fct-air-hero h1 em{font-size:clamp(40px,9vw,54px)!important}}
 </style>
+<style id="fct-air-top-menu-and-left-blur-2026">
+.fct-air-site-nav{position:relative;z-index:9999;display:flex;align-items:center;justify-content:space-between;gap:24px;min-height:80px;padding:12px 5vw;background:#faf9f5;box-sizing:border-box;font-family:Outfit,sans-serif;color:#454f3d}
+.fct-air-site-brand img{display:block;width:54px;max-height:53px;object-fit:contain}
+.fct-air-site-links{display:flex;align-items:center;gap:36px}
+.fct-air-site-links a,.fct-air-site-links summary{font:500 15px Outfit,sans-serif;color:#454f3d;text-decoration:none;cursor:pointer;list-style:none;white-space:nowrap}
+.fct-air-site-links summary::-webkit-details-marker{display:none}
+.fct-air-site-links details{position:relative}
+.fct-air-site-links summary span[aria-hidden]{margin-left:8px}
+.fct-air-menu{position:absolute;top:100%;left:-15px;min-width:215px;display:flex;flex-direction:column;gap:0;background:#faf9f5;box-shadow:0 12px 30px #00000014;padding:12px 0;border:1px solid #e4e0d8}
+.fct-air-menu a{display:block;padding:11px 17px;font-size:14px;white-space:normal}
+.fct-air-menu a:hover{background:#efede7}
+.fct-air-site-actions{display:flex;align-items:center;gap:20px}
+.fct-air-site-actions .fct-air-nav{display:flex;align-items:center;gap:4px}
+.fct-air-site-actions .fct-air-nav button{font:500 12px Outfit,sans-serif;color:#454f3d;background:transparent;border:0;padding:8px;cursor:pointer}
+.fct-air-site-actions .fct-air-nav span{color:#9a9b92}
+.fct-air-site-wa{padding:12px 16px;border:1px solid #454f3d;color:#454f3d;font:500 13px Outfit,sans-serif;text-decoration:none}
+.fct-air-mobile-toggle{display:none;background:none;border:0;font-size:25px;color:#454f3d;cursor:pointer}
+.fct-air-hero .hero-media:after{content:"";position:absolute;inset:0;pointer-events:none;backdrop-filter:blur(5px);-webkit-backdrop-filter:blur(5px);mask-image:linear-gradient(90deg,#000 0%,#000 12%,transparent 56%);-webkit-mask-image:linear-gradient(90deg,#000 0%,#000 12%,transparent 56%)}
+@media(max-width:900px){.fct-air-site-nav{min-height:72px}.fct-air-mobile-toggle{display:block}.fct-air-site-links{display:none;position:absolute;top:100%;left:0;right:0;background:#faf9f5;padding:18px 6vw 26px;flex-direction:column;align-items:stretch;gap:18px;box-shadow:0 12px 24px #00000012}.fct-air-site-links.is-open{display:flex}.fct-air-menu{position:static;box-shadow:none;margin-top:8px}.fct-air-site-actions{gap:12px}}
+@media(max-width:480px){.fct-air-site-wa{padding:9px;font-size:12px}.fct-air-site-brand img{width:44px}}
+</style>
 </head>
 
 <body>
 
 <div class="page">
 
-  <div class="topbar">
-    <a href="/" class="brand"><img src="FCT_logo_vector.svg" alt="FCT"></a>
-    <div class="fct-air-nav">
-      <button type="button" data-fct-lang="es" aria-current="true">ES</button><span>/</span><button type="button" data-fct-lang="en">EN</button>
-      <a class="top-wa" href="https://wa.me/34657336353?text=Hola%2C%20quiero%20una%20valoraci%C3%B3n%20para%20el%20cuidado%20higi%C3%A9nico%20de%20mi%20aire%20acondicionado.%20Puedo%20enviar%20fotos%20ahora." target="_blank" rel="noopener">WhatsApp</a>
-    </div>
+  <div class="fct-air-site-nav">
+    <a class="fct-air-site-brand" href="/" aria-label="FrescaClimaTech home"><img src="FCT_logo_vector.svg" alt="FCT"></a>
+    <nav class="fct-air-site-links" aria-label="Primary navigation">
+      <details><summary><span class="es-copy">Servicios</span><span class="en-copy">Services</span> <span aria-hidden="true">⌄</span></summary><div class="fct-air-menu"><a href="/limpieza-sofas-tapiceria.html"><span class="es-copy">Sofás y tapicerías</span><span class="en-copy">Sofas and upholstery</span></a><a href="/limpieza-toldos-marbella-estepona.html"><span class="es-copy">Toldos y exteriores</span><span class="en-copy">Awnings and outdoors</span></a><a href="/limpieza-aire-acondicionado.html"><span class="es-copy">Aire acondicionado</span><span class="en-copy">Air conditioning</span></a><a href="/property-care.html">Property Care</a><a href="/smart-care.html">Smart Care</a></div></details>
+      <details><summary><span class="es-copy">Zonas</span><span class="en-copy">Areas</span> <span aria-hidden="true">⌄</span></summary><div class="fct-air-menu"><a href="/costa-brava.html">Costa Brava</a><a href="/costa-del-sol.html">Costa del Sol</a><a href="/sevilla.html">Sevilla</a><a href="/granada.html">Granada &amp; Costa Tropical</a></div></details>
+      <a href="/quienes-somos.html"><span class="es-copy">Quiénes somos</span><span class="en-copy">About Us</span></a>
+      <details><summary><span class="es-copy">Descubre</span><span class="en-copy">Explore</span> <span aria-hidden="true">⌄</span></summary><div class="fct-air-menu"><a href="/fresca-haven.html">Fresca Haven</a><a href="/mediterranean-club.html">Mediterranean Club</a></div></details>
+    </nav>
+    <div class="fct-air-site-actions"><div class="fct-air-nav"><button type="button" data-fct-lang="es" aria-current="true">ES</button><span>/</span><button type="button" data-fct-lang="en">EN</button></div><a class="fct-air-site-wa" href="https://wa.me/34657336353" target="_blank" rel="noopener">WhatsApp</a><button class="fct-air-mobile-toggle" type="button" aria-label="Toggle menu" aria-expanded="false" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='true'?'false':'true');document.querySelector('.fct-air-site-links').classList.toggle('is-open')">☰</button></div>
   </div>
 
   <section class="hero fct-air-hero">
