@@ -545,7 +545,14 @@ html[lang="en"] .fct-cds-hero .fct-cds-hero-services .es-copy{display:none!impor
 html[lang="en"] .fct-cds-hero .fct-cds-hero-services .en-copy{display:inline!important}
 .fct-cds-hero .hero-actions{margin-top:22px!important}
 </style>
-</head>
+<style id="fct-cds-language-typography-fix">
+/* Costa del Sol: mutually exclusive translations and consistent editorial typography */
+html[lang="es"] .en-copy,html[lang="en"] .es-copy{display:none!important}
+.fct-cds-care,.fct-cds-context,.fct-cds-area,.fct-cds-final,.cds-faq{font-family:'Manrope',Arial,sans-serif}
+.fct-cds-care h2,.fct-cds-context h2,.fct-cds-area h2,.fct-cds-final h2,.cds-faq h2{font-family:'Manrope',Arial,sans-serif!important;text-align:left;overflow-wrap:break-word}
+.fct-cds-factors>div{min-width:0}
+.fct-cds-factors strong{font-family:'Manrope',Arial,sans-serif;font-size:clamp(17px,1.5vw,20px);line-height:1.35;overflow-wrap:break-word}
+</style></head>
 
 <body>
 
