@@ -510,29 +510,38 @@ main section p{line-height:1.7}
 @media(max-width:768px){main section:not(.hero):not([class*="hero"]){padding-top:54px;padding-bottom:54px}main section h2{line-height:1.2}main section p{line-height:1.65}}
 :root{--fct-ink:#454f3d;--fct-olive:#454f3d}
 </style>
+<style id="fct-cds-hero-nav-2026">
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&display=swap');
+.fct-cds-nav{height:76px;box-sizing:border-box;display:flex;align-items:center;gap:28px;padding:0 5.5vw;background:#fbf8f1;position:relative;z-index:100}
+.fct-cds-brand{flex:0 0 auto;display:flex;align-items:center}.fct-cds-brand img{width:110px;max-height:52px;object-fit:contain}
+.fct-cds-links{display:flex;align-items:center;gap:26px;margin-left:auto}
+.fct-cds-links a,.fct-cds-links summary{font:400 13px/1.4 Manrope,Arial,sans-serif;color:#454f3d;text-decoration:none;cursor:pointer;white-space:nowrap}
+.fct-cds-links details{position:relative}.fct-cds-links summary{list-style:none}.fct-cds-links summary::-webkit-details-marker{display:none}
+.fct-cds-dropdown{position:absolute;top:calc(100% + 18px);left:-18px;min-width:200px;padding:12px;background:#fbf8f1;box-shadow:0 12px 30px #24301c20;display:flex;flex-direction:column}.fct-cds-dropdown a{padding:10px}.fct-cds-dropdown a:hover{background:#f1ede5}
+.fct-cds-actions{display:flex;align-items:center;gap:18px;flex:0 0 auto}.fct-cds-wa{font:500 13px Manrope,Arial,sans-serif;color:#454f3d;text-decoration:none}.fct-cds-toggle{display:none;background:none;border:0;color:#454f3d;font-size:24px}
+.fct-cds-nav .en-copy{display:none!important}.fct-cds-nav .es-copy{display:inline!important}html[lang="en"] .fct-cds-nav .es-copy{display:none!important}html[lang="en"] .fct-cds-nav .en-copy{display:inline!important}
+.fct-cds-nav .lang{display:flex;gap:4px;align-items:center}.fct-cds-nav .lang button{font:500 12px Manrope,Arial,sans-serif!important;padding:7px 9px!important}
+.fct-cds-hero{position:relative!important;isolation:isolate!important;min-height:clamp(600px,78vh,850px)!important;display:flex!important;align-items:center!important;overflow:hidden!important;background:#f8f6f1!important;padding:0!important}
+.fct-cds-hero>.container{position:static!important;width:100%!important;max-width:none!important;padding:0!important}
+.fct-cds-hero .hero-grid{display:block!important;min-height:0!important}
+.fct-cds-hero .hero-grid>div:first-child{position:relative!important;z-index:3!important;width:min(680px,65%)!important;padding:80px 6vw!important;display:block!important}
+.fct-cds-hero .hero-image{position:absolute!important;inset:0!important;min-height:0!important;width:100%!important;height:100%!important;z-index:-2!important;overflow:hidden!important;border-radius:0!important;box-shadow:none!important}
+.fct-cds-hero .hero-image img{width:100%!important;height:100%!important;min-height:0!important;object-fit:cover!important;object-position:center 48%!important}
+.fct-cds-hero .hero-image:before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,#f8f6f1 0%,rgba(248,246,241,.94) 26%,rgba(248,246,241,.73) 46%,rgba(248,246,241,.06) 85%);pointer-events:none}
+.fct-cds-hero .hero-image:after{content:"";position:absolute;inset:0;z-index:1;backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);mask-image:linear-gradient(90deg,#000 0%,#000 12%,transparent 60%);-webkit-mask-image:linear-gradient(90deg,#000 0%,#000 12%,transparent 60%);pointer-events:none}
+.fct-cds-hero .kicker{display:none!important}
+.fct-cds-hero h1{font:400 clamp(36px,3.7vw,58px)/1.12 Manrope,Arial,sans-serif!important;letter-spacing:-.045em!important;color:#454f3d!important;max-width:640px!important;margin:0!important}
+.fct-cds-hero .hero-sub{font:400 clamp(15px,1.2vw,17px)/1.65 Manrope,Arial,sans-serif!important;color:#454f3d!important;max-width:540px!important;margin:23px 0 0!important}
+.fct-cds-hero .hero-actions{margin-top:27px!important;gap:25px!important}
+.fct-cds-hero .hero-actions .btn{font:500 14px/1.5 Manrope,Arial,sans-serif!important;letter-spacing:0!important;text-transform:none!important;color:#454f3d!important;border:0!important;border-bottom:1px solid #8d9488!important;padding:0 0 7px!important;background:none!important;border-radius:0!important}
+@media(max-width:950px){.fct-cds-toggle{display:block}.fct-cds-wa{display:none}.fct-cds-links{display:none;position:absolute;top:76px;left:0;right:0;background:#fbf8f1;padding:24px 6vw;flex-direction:column;align-items:flex-start;box-shadow:0 12px 25px #24301c20}.fct-cds-nav.open .fct-cds-links{display:flex}.fct-cds-dropdown{position:static;box-shadow:none;padding:6px 0 0 12px}.fct-cds-hero .hero-grid>div:first-child{width:75%!important}}
+@media(max-width:600px){.fct-cds-hero{min-height:690px!important;align-items:flex-end!important}.fct-cds-hero .hero-grid>div:first-child{width:100%!important;padding:70px 24px 58px!important}.fct-cds-hero .hero-image:before{background:linear-gradient(0deg,#f8f6f1 0%,rgba(248,246,241,.9) 48%,rgba(248,246,241,.08) 100%)}.fct-cds-hero .hero-image:after{mask-image:linear-gradient(0deg,#000 0%,transparent 65%);-webkit-mask-image:linear-gradient(0deg,#000 0%,transparent 65%)}.fct-cds-hero h1{font-size:clamp(34px,8vw,45px)!important}}
+</style>
 </head>
 
 <body>
 
-<div class="topbar">
-  <div class="container">
-    <div class="topbar-inner">
-
-      <a href="https://frescaclimatech.es/" class="brand">
-        <img class="brand-logo" src="fct_logo_transparent.svg" alt="FrescaClimaTech logo">
-        <span class="brand-name">FrescaClimaTech</span>
-      </a>
-
-      <div class="lang">
-        <span id="langLabel">Idioma:</span>
-        <button id="btnES" class="active" type="button">ES</button>
-        <button id="btnEN" type="button">EN</button>
-      </div>
-
-    </div>
-  </div>
-</div>
-
+<div class="fct-cds-nav"><a class="fct-cds-brand" href="/"><img src="/fct_logo_transparent.svg" alt="FrescaClimaTech"></a><nav class="fct-cds-links" aria-label="Main navigation"><details><summary><span class="es-copy">Servicios</span><span class="en-copy">Services</span> ⌄</summary><div class="fct-cds-dropdown"><a href="/limpieza-sofas-tapiceria.html">Sofas &amp; upholstery</a><a href="/limpieza-toldos-marbella-estepona.html">Awnings</a><a href="/limpieza-aire-acondicionado.html">Air conditioning</a><a href="/property-care.html">Property Care</a></div></details><details><summary><span class="es-copy">Zonas</span><span class="en-copy">Areas</span> ⌄</summary><div class="fct-cds-dropdown"><a href="/costa-brava.html">Costa Brava</a><a href="/costa-del-sol.html">Costa del Sol</a><a href="/sevilla.html">Sevilla</a><a href="/granada.html">Granada</a></div></details><a href="/quienes-somos.html"><span class="es-copy">Quiénes somos</span><span class="en-copy">About Us</span></a><details><summary>Explore ⌄</summary><div class="fct-cds-dropdown"><a href="/fresca-haven.html">Fresca Haven</a><a href="/mediterranean-club.html">Mediterranean Club</a></div></details></nav><div class="fct-cds-actions"><div class="lang"><span id="langLabel" style="display:none">Idioma:</span><button id="btnES" class="active" type="button">ES</button><button id="btnEN" type="button">EN</button></div><a class="fct-cds-wa" href="https://wa.me/34657336353">WhatsApp</a><button type="button" class="fct-cds-toggle" aria-label="Toggle menu" onclick="this.closest('.fct-cds-nav').classList.toggle('open')">☰</button></div></div>
 <header class="hero fct-cds-hero">
   <div class="container">
     <div class="hero-grid">
