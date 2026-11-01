@@ -590,6 +590,12 @@ html[lang="es"] .en-copy,html[lang="en"] .es-copy{display:none!important}
 .fct-cds-final>div a span{font:inherit!important}
 .fct-cds-nav .kicker,.fct-cds-hero .kicker,.fct-cds-final>p,.cds-faq .micro,.fct-cds-region .micro{display:none!important}
 @media(max-width:700px){.fct-cds-final{padding:48px 24px 58px!important}.fct-cds-final>div{flex-direction:column!important;align-items:flex-start!important;gap:17px!important}}
+</style><style id="fct-hero-vivid-right-2026">
+/* Keep the image vivid on the right; blend and blur only behind the left copy. */
+.fct-cds-hero .hero-image:before{background:linear-gradient(90deg,#f8f6f1 0%,rgba(248,246,241,.96) 17%,rgba(248,246,241,.79) 35%,rgba(248,246,241,.27) 53%,rgba(248,246,241,0) 67%)!important}
+.fct-cds-hero .hero-image:after{backdrop-filter:blur(8px)!important;-webkit-backdrop-filter:blur(8px)!important;mask-image:linear-gradient(90deg,#000 0%,#000 13%,rgba(0,0,0,.6) 32%,transparent 54%)!important;-webkit-mask-image:linear-gradient(90deg,#000 0%,#000 13%,rgba(0,0,0,.6) 32%,transparent 54%)!important}
+.fct-cds-hero .hero-image img{filter:none!important;opacity:1!important}
+@media(max-width:600px){.fct-cds-hero .hero-image:before{background:linear-gradient(0deg,#f8f6f1 0%,rgba(248,246,241,.94) 27%,rgba(248,246,241,.15) 57%,transparent 75%)!important}.fct-cds-hero .hero-image:after{mask-image:linear-gradient(0deg,#000 0%,transparent 58%)!important;-webkit-mask-image:linear-gradient(0deg,#000 0%,transparent 58%)!important}}
 </style></head>
 
 <body>
