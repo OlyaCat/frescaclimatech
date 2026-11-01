@@ -495,21 +495,45 @@ main section p{line-height:1.7}
 .fct-awning-hero .hero-actions a,.fct-awning-hero .hero-actions a span{font-family:Outfit,Arial,sans-serif!important;font-size:14px!important;font-weight:500!important;letter-spacing:0!important;color:#fff!important}
 .fct-awning-hero .hero-actions a{background:transparent!important;border:0!important;border-bottom:1px solid rgba(255,255,255,.8)!important;border-radius:0!important;padding:0 0 8px!important;box-shadow:none!important}
 @media(max-width:700px){.hero.fct-awning-hero{height:78svh!important;min-height:570px!important}.fct-awning-hero .hero-overlay{background:linear-gradient(90deg,rgba(20,26,19,.72),rgba(20,26,19,.27))!important}.fct-awning-hero .hero-content{padding:80px 7vw 65px!important}.fct-awning-hero h1{font-size:clamp(43px,10vw,65px)!important}.fct-awning-hero .hero-actions{gap:20px!important}}
-</style></head>
+</style><style id="fct-awning-shared-navigation-2026">
+.topbar.fct-awning-site-nav{height:78px!important;padding:0 5vw!important;background:#faf8f2!important;display:flex!important;justify-content:space-between!important;gap:25px!important;font-family:Outfit,Arial,sans-serif!important}
+.fct-awning-site-nav .brand{flex-shrink:0}.fct-awning-site-nav .brand img{height:42px!important}
+.fct-awning-main-links{display:flex;align-items:center;gap:34px;margin:auto}
+.fct-awning-main-links>a,.fct-awning-menu>button{font:500 16px/1.3 Outfit,Arial,sans-serif!important;color:#454f3d!important;text-decoration:none!important;white-space:nowrap}
+.fct-awning-menu{position:relative}.fct-awning-menu>button{background:none;border:0;cursor:pointer;padding:25px 0}
+.fct-awning-menu>button>span:last-child{margin-left:9px}
+.fct-awning-dropdown{display:none;position:absolute;top:100%;left:-22px;min-width:260px;padding:12px 0;background:#faf8f2;box-shadow:0 12px 28px rgba(35,40,32,.13);z-index:1200}
+.fct-awning-menu:hover .fct-awning-dropdown,.fct-awning-menu:focus-within .fct-awning-dropdown,.fct-awning-menu.open .fct-awning-dropdown{display:block}
+.fct-awning-dropdown a{display:block;padding:12px 22px;font:400 15px Outfit,Arial,sans-serif;color:#454f3d!important;white-space:nowrap}
+.fct-awning-dropdown a:hover{background:#eee9df}
+.fct-awning-site-nav .fct-awning-nav{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.fct-awning-site-nav .fct-awning-nav button[data-fct-lang]{border:0;background:none;color:#454f3d;font:500 13px Outfit,sans-serif;cursor:pointer}
+.fct-awning-site-nav .top-wa{background:transparent!important;color:#454f3d!important;border:1px solid #454f3d!important;border-radius:0!important;padding:10px 15px!important;font-weight:400!important}
+.fct-awning-hamburger{display:none;border:0;background:none;color:#454f3d;font-size:26px;cursor:pointer}
+@media(max-width:1050px){.fct-awning-main-links{gap:18px}.fct-awning-main-links>a,.fct-awning-menu>button{font-size:14px!important}}
+@media(max-width:800px){.fct-awning-hamburger{display:block}.fct-awning-main-links{display:none;position:absolute;top:78px;left:0;right:0;background:#faf8f2;padding:15px 6vw 28px;flex-direction:column;align-items:stretch;gap:0;box-shadow:0 15px 25px rgba(0,0,0,.1);max-height:calc(100svh - 78px);overflow:auto}.fct-awning-main-links.open{display:flex}.fct-awning-menu>button{padding:14px 0}.fct-awning-main-links>a{padding:14px 0}.fct-awning-dropdown{position:static;box-shadow:none;padding:0 0 10px 14px;background:transparent}.fct-awning-dropdown a{padding:9px 10px}.topbar.fct-awning-site-nav{padding:0 5vw!important}}
+</style><script id="fct-awning-menu-interaction-2026">document.addEventListener('DOMContentLoaded',function(){var nav=document.querySelector('.fct-awning-main-links'),toggle=document.querySelector('.fct-awning-hamburger');if(toggle&&nav){toggle.addEventListener('click',function(){var open=nav.classList.toggle('open');toggle.setAttribute('aria-expanded',String(open));toggle.textContent=open?'×':'☰'})}document.querySelectorAll('.fct-awning-menu>button').forEach(function(btn){btn.addEventListener('click',function(){var item=btn.parentElement,open=!item.classList.contains('open');document.querySelectorAll('.fct-awning-menu').forEach(function(m){m.classList.remove('open');m.querySelector('button').setAttribute('aria-expanded','false')});item.classList.toggle('open',open);btn.setAttribute('aria-expanded',String(open))})});document.addEventListener('click',function(e){if(!e.target.closest('.fct-awning-menu'))document.querySelectorAll('.fct-awning-menu').forEach(function(m){m.classList.remove('open');m.querySelector('button').setAttribute('aria-expanded','false')})})});</script></head>
 
 <body>
 
 <div class="page">
 
-  <div class="topbar">
-    <a href="/" class="brand"><img src="FCT_logo_vector.svg" alt="FCT"></a>
-    <div class="fct-awning-nav">
-      <button type="button" data-fct-lang="es" aria-current="true">ES</button><span>/</span><button type="button" data-fct-lang="en">EN</button>
-      <a class="top-wa" href="https://wa.me/34657336353?text=Hola%2C%20quiero%20una%20valoraci%C3%B3n%20para%20limpieza%20de%20toldos.%20Puedo%20enviar%20fotos%20ahora." target="_blank" rel="noopener">WhatsApp</a>
-    </div>
-  </div>
-
-  <section class="hero fct-awning-hero">
+  <div class="topbar fct-awning-site-nav">
+<a href="/" class="brand" aria-label="FrescaClimaTech home"><img src="FCT_logo_vector.svg" alt="FrescaClimaTech"></a>
+<nav class="fct-awning-main-links" aria-label="Primary navigation">
+<div class="fct-awning-menu"><button type="button" aria-expanded="false"><span class="es-copy">Servicios</span><span class="en-copy">Services</span> <span aria-hidden="true">⌄</span></button><div class="fct-awning-dropdown">
+<a href="/limpieza-sofas-tapiceria.html"><span class="es-copy">Sofás y tapicerías</span><span class="en-copy">Sofas and upholstery</span></a>
+<a href="/limpieza-toldos-marbella-estepona.html"><span class="es-copy">Toldos y exteriores</span><span class="en-copy">Awnings and outdoors</span></a>
+<a href="/limpieza-aire-acondicionado.html"><span class="es-copy">Aire acondicionado</span><span class="en-copy">Air conditioning</span></a>
+<a href="/property-care.html">Property Care</a>
+<a href="/smart-care.html">Smart Care</a></div></div>
+<div class="fct-awning-menu"><button type="button" aria-expanded="false"><span class="es-copy">Zonas</span><span class="en-copy">Areas</span> <span aria-hidden="true">⌄</span></button><div class="fct-awning-dropdown"><a href="/costa-brava.html">Costa Brava</a><a href="/costa-del-sol.html">Costa del Sol</a><a href="/sevilla.html">Sevilla</a><a href="/granada.html">Granada &amp; Costa Tropical</a></div></div>
+<a href="/quienes-somos.html"><span class="es-copy">Quiénes somos</span><span class="en-copy">About Us</span></a>
+<div class="fct-awning-menu"><button type="button" aria-expanded="false"><span class="es-copy">Descubre</span><span class="en-copy">Explore</span> <span aria-hidden="true">⌄</span></button><div class="fct-awning-dropdown"><a href="/fresca-haven.html">Fresca Haven</a><a href="/mediterranean-club.html">Mediterranean Club</a></div></div>
+</nav>
+<div class="fct-awning-nav"><button type="button" data-fct-lang="es">ES</button><span>/</span><button type="button" data-fct-lang="en">EN</button><a class="top-wa" href="https://wa.me/34657336353?text=Hola%2C%20quiero%20una%20valoraci%C3%B3n%20para%20limpieza%20de%20toldos." target="_blank" rel="noopener">WhatsApp</a><button class="fct-awning-hamburger" type="button" aria-label="Toggle menu" aria-expanded="false">☰</button></div>
+</div>
+<section class="hero fct-awning-hero">
     <div class="hero-media">
       <video autoplay muted loop playsinline preload="auto" poster="images/toldos-hero.jpg">
         <source src="images/Limpieza-profesional-toldos.mp4" type="video/mp4">
