@@ -46,7 +46,9 @@
 }
   </script>
   
-  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Montserrat:wght@400;500&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet" />
+  <!-- Load non-critical web fonts without blocking the first paint; retain the original families and weights. -->
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Montserrat:wght@400;500&family=Outfit:wght@300;400;600&display=swap" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Montserrat:wght@400;500&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet" /></noscript>
 
 
   
