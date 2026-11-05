@@ -2566,8 +2566,8 @@ main h1,main h2,main h3,main h4,section h2,section h3{font-family:'Manrope',Aria
   </div>
   <div class="fct12-body">
     <div class="fct12-media">
-      <video autoplay muted loop playsinline preload="metadata">
-        <source src="images/Autumn%20movie%20FCT.mp4" type="video/mp4">
+      <video muted loop playsinline preload="none" data-deferred-video aria-label="FrescaClimaTech: cuidado de espacios mediterráneos">
+        <source data-src="images/Autumn%20movie%20FCT.mp4" type="video/mp4">
       </video>
       <div class="fct12-caption"><span class="es-copy">Mediterráneo, vivido y cuidado.</span><span class="en-copy">The Mediterranean, lived in and cared for.</span></div>
     </div>
@@ -4820,5 +4820,31 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 })();
 </script>
-<script src="/language-dropdown.js" defer></script><script id="fct-services-dropdown-2026">document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('.fct-service-menu').forEach(function(menu){var btn=menu.querySelector('.fct-service-trigger');if(!btn)return;btn.addEventListener('click',function(e){e.stopPropagation();var open=!menu.classList.contains('is-open');document.querySelectorAll('.fct-service-menu').forEach(function(m){m.classList.remove('is-open');var b=m.querySelector('.fct-service-trigger');if(b)b.setAttribute('aria-expanded','false')});menu.classList.toggle('is-open',open);btn.setAttribute('aria-expanded',String(open))})});document.addEventListener('click',function(e){if(!e.target.closest('.fct-service-menu'))document.querySelectorAll('.fct-service-menu').forEach(function(m){m.classList.remove('is-open');var b=m.querySelector('.fct-service-trigger');if(b)b.setAttribute('aria-expanded','false')})});document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('.fct-service-menu').forEach(function(m){m.classList.remove('is-open');var b=m.querySelector('.fct-service-trigger');if(b)b.setAttribute('aria-expanded','false')})})});</script><style id="fct-wa-header-final-fix-2026">header a.fct2-nav-wa,header a.fct-awning-site-wa,header a.fct-air-site-wa,header .fct-awning-site-nav .top-wa,header a.top-wa,.fct2-nav-actions>a.fct2-nav-wa{border:none!important;border-width:0!important;box-shadow:none!important;outline:none!important;background:transparent!important;padding:0!important;border-radius:0!important}</style></body>
+<script src="/language-dropdown.js" defer></script><script id="fct-services-dropdown-2026">document.addEventListener('DOMContentLoaded',function(){document.querySelectorAll('.fct-service-menu').forEach(function(menu){var btn=menu.querySelector('.fct-service-trigger');if(!btn)return;btn.addEventListener('click',function(e){e.stopPropagation();var open=!menu.classList.contains('is-open');document.querySelectorAll('.fct-service-menu').forEach(function(m){m.classList.remove('is-open');var b=m.querySelector('.fct-service-trigger');if(b)b.setAttribute('aria-expanded','false')});menu.classList.toggle('is-open',open);btn.setAttribute('aria-expanded',String(open))})});document.addEventListener('click',function(e){if(!e.target.closest('.fct-service-menu'))document.querySelectorAll('.fct-service-menu').forEach(function(m){m.classList.remove('is-open');var b=m.querySelector('.fct-service-trigger');if(b)b.setAttribute('aria-expanded','false')})});document.addEventListener('keydown',function(e){if(e.key==='Escape')document.querySelectorAll('.fct-service-menu').forEach(function(m){m.classList.remove('is-open');var b=m.querySelector('.fct-service-trigger');if(b)b.setAttribute('aria-expanded','false')})})});</script><style id="fct-wa-header-final-fix-2026">header a.fct2-nav-wa,header a.fct-awning-site-wa,header a.fct-air-site-wa,header .fct-awning-site-nav .top-wa,header a.top-wa,.fct2-nav-actions>a.fct2-nav-wa{border:none!important;border-width:0!important;box-shadow:none!important;outline:none!important;background:transparent!important;padding:0!important;border-radius:0!important}</style>
+<script id="fct-deferred-home-video">
+/* Keep the editorial video, but do not download it until visitors approach its section. */
+(function(){
+  var video=document.querySelector('video[data-deferred-video]');
+  if(!video)return;
+  var source=video.querySelector('source[data-src]');
+  var activated=false;
+  function activate(){
+    if(activated||!source)return;
+    activated=true;
+    source.src=source.getAttribute('data-src');
+    source.removeAttribute('data-src');
+    video.load();
+    var playPromise=video.play();
+    if(playPromise&&typeof playPromise.catch==='function')playPromise.catch(function(){});
+  }
+  if(!('IntersectionObserver' in window)){activate();return;}
+  var observer=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){activate();observer.disconnect();}
+    });
+  },{rootMargin:'300px 0px'});
+  observer.observe(video);
+})();
+</script>
+</body>
 </html>
