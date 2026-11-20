@@ -4822,7 +4822,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
   
 <script>
-(function(){var f=document.getElementById('smartCarePreview');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();var v=document.getElementById('smartCareInput').value.trim();if(!v)return;var lang=document.documentElement.lang==='en'?'en':'es';var msg=lang==='en'?'Hi, I need some guidance for my space: '+v:'Hola, necesito orientación para mi espacio: '+v;var u='https://wa.me/34657336353?text='+encodeURIComponent(msg);window.open(u,'_blank','noopener');});})();
+(function(){var f=document.getElementById('smartCarePreview');if(!f)return;f.addEventListener('submit',function(e){e.preventDefault();var v=document.getElementById('smartCareInput').value.trim();if(!v)return;var lang=document.documentElement.lang==='en'?'en':'es';var msg=lang==='en'?'Hi, I need some guidance for my space: '+v:'Hola, necesito orientación para mi espacio: '+v;var u='https://wa.me/34657336353?text='+encodeURIComponent(msg);if(typeof gtag==='function'){gtag('event','whatsapp_click',{transport_type:'beacon',ui_location:'smart_care',language:lang,link_url:u,link_text:'Smart Care'});}window.open(u,'_blank','noopener');});})();
 </script>
 <script id="fct2-lang">
 (function(){
