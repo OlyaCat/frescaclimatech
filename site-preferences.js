@@ -105,6 +105,21 @@
     document.head.appendChild(s);
   }
 
+  // Track WhatsApp enquiries across service and regional pages without
+  // double-counting links already instrumented on the homepage.
+  document.addEventListener("click", function (event) {
+    var link = event.target.closest ? event.target.closest('a[href*="wa.me/"],a[href*="api.whatsapp.com/"]') : null;
+    if (!link || link.dataset.tracked === "1" || !state.analytics) return;
+    if (typeof window.gtag !== "function") return;
+    window.gtag("event", "whatsapp_click", {
+      transport_type: "beacon",
+      page_location: location.href,
+      link_url: link.href,
+      ui_location: link.closest("header,nav") ? "navigation" : "page",
+      language: lang()
+    });
+  }, true);
+
   function clearOptionalCookies() {
     var names = document.cookie.split(";").map(function (c) { return c.split("=")[0].trim(); });
     names.forEach(function (n) {
