@@ -4593,15 +4593,14 @@ if (form) {
       body: new FormData(form),
       headers: { Accept: "application/json" },
     }).then((response) => {
-      if (response.ok) {
-        const thx = document.getElementById("thankYouMessage");
-        if (thx) thx.style.display = "block";
-
-        // ✅ GA4 conversion for lead form
-        gaEvent('generate_lead', { method: 'subscribe_form', form_id: 'contacto' });
-
-        form.reset();
-      }
+      if (!response.ok) throw new Error('Form submission failed');
+      const thx = document.getElementById("thankYouMessage");
+      if (thx) thx.style.display = "block";
+      gaEvent('generate_lead', { method: 'subscribe_form', form_id: 'contacto' });
+      form.reset();
+    }).catch(() => {
+      const lang = document.documentElement.lang === 'en' ? 'en' : 'es';
+      alert(lang === 'en' ? 'We could not send your request. Please contact us via WhatsApp.' : 'No hemos podido enviar tu solicitud. Por favor, escríbenos por WhatsApp.');
     });
   });
 }
